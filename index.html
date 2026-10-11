@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#191919">
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://tjfcors.coolsite.cv http://127.0.0.1:8787 https://totaljerkface.com https://www.totaljerkface.com http://www.totaljerkface.com">
+    <base href="happy-wheels-js/">
+    <title>Happy Wheels</title>
+    <link rel="icon" href="data:,">
+    <script src="./portable-bootstrap.js"></script>
+    <style>
+        * {box-sizing: border-box}
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            background: #000;
+        }
+        body {
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .game-frame {
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        .game {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            background: #000 !important;
+        }
+        .game canvas {
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            width: min(100vw, 180vh) !important;
+            height: min(100vh, 55.5556vw) !important;
+            transform: translate(-50%, -50%) !important;
+        }
+        .account-hud {
+            position: fixed;
+            z-index: 2;
+            flex-direction: column;
+            align-items: flex-end;
+            top: 10px;
+            right: 10px;
+            width: min(280px, calc(100vw - 20px));
+        }
+        .account-toggle, .account-submit, .account-close {
+            min-height: 36px;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            padding: 8px 12px;
+            background: #111;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .account-toggle:hover, .account-toggle:focus-visible,
+        .account-submit:hover, .account-submit:focus-visible,
+        .account-close:hover, .account-close:focus-visible {
+            background: #333;
+        }
+        .account-panel {
+            margin-top: 8px;
+            border: 1px solid #777;
+            border-radius: 4px;
+            padding: 12px;
+            background: rgba(0,0,0,0.92);
+        }
+        .account-fields {
+            display: grid;
+            gap: 8px;
+        }
+        .dialog-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .account-field {
+            display: grid;
+            gap: 4px;
+            color: #fff;
+            font-weight: 700;
+        }
+        .account-field input {
+            width: 100%;
+            min-height: 36px;
+            border: 1px solid #888;
+            border-radius: 3px;
+            padding: 8px;
+            background: #181818;
+            color: #fff;
+            font: 15px Arial, sans-serif;
+        }
+        .account-field input:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 1px;
+        }
+        .account-feedback {
+            min-height: 1.2em;
+            margin: 8px 0 0;
+            color: #ffb3b3;
+            font-size: 13px;
+        }
+        [hidden] { display: none !important; }
+    </style>
+</head>
+<body>
+    <main class="game-frame">
+        <div class="game" id="og-game-holder" aria-label="Happy Wheels game"></div>
+        <section class="account-hud" aria-label="Game account">
+            <button class="account-toggle" id="account-button" type="button" aria-expanded="false" aria-controls="account-panel">Sign in</button>
+            <div class="account-panel" id="account-panel" hidden>
+                <form id="account-form">
+                    <div class="account-fields">
+                        <label class="account-field" for="account-email">Email
+                            <input id="account-email" name="email" type="email" autocomplete="username" maxlength="320" required>
+                        </label>
+                        <label class="account-field" for="account-password">Password
+                            <input id="account-password" name="password" type="password" autocomplete="current-password" maxlength="1024" required>
+                        </label>
+                    </div>
+                    <p class="account-feedback" id="account-feedback" role="status" aria-live="polite"></p>
+                    <div class="dialog-actions">
+                        <button class="account-submit" id="account-submit" type="submit">Sign in</button>
+                        <button class="account-close" id="account-close" type="button">Hide</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script>
+        const accountbutton = document.getElementById("account-button");
+        const accountpanel = document.getElementById("account-panel");
+        const accountform = document.getElementById("account-form");
+        const accountemail = document.getElementById("account-email");
+        const accountpassword = document.getElementById("account-password");
+        const accountfeedback = document.getElementById("account-feedback");
+        const accountsubmit = document.getElementById("account-submit");
+        let accountauthenticated = false;
+
+        function storesessiontoken(token) {
+            try {
+                if (token) sessionStorage.setItem("tjf-portable-session", token);
+                else sessionStorage.removeItem("tjf-portable-session");
+            } catch (error) {}
+        }
+
+        async function calltjfapi(path, options = {}) {
+            const headers = new Headers(options.headers || {});
+            const token = sessionStorage.getItem("tjf-portable-session");
+            if (token && path !== "/api/login") headers.set("Authorization", `Bearer ${token}`);
+            const response = await fetch(`${window.TJF_WORKER_ORIGIN}${path}`, {
+                ...options,
+                headers,
+                credentials: "omit",
+                cache: "no-store"
+            });
+            const refreshedToken = response.headers.get("X-TJF-Session");
+            if (refreshedToken !== null) storesessiontoken(refreshedToken);
+            return response;
+        }
+
+        function setaccountstate(authenticated) {
+            accountauthenticated = authenticated;
+            accountbutton.textContent = authenticated ? "Sign out" : "Sign in";
+            accountpanel.hidden = true;
+            accountbutton.setAttribute("aria-expanded", "false");
+            accountemail.value = "";
+            accountpassword.value = "";
+            accountfeedback.textContent = "";
+            accountfeedback.dataset.state = "";
+        }
+
+        async function refreshaccountstate() {
+            try {
+                const response = await calltjfapi("/api/account");
+                if (response.ok) {
+                    const result = await response.json();
+                    setaccountstate(Boolean(result.authenticated));
+                }
+            } catch (error) {
+                accountauthenticated = false;
+            }
+        }
+
+        accountbutton.addEventListener("click", async () => {
+            const panelwasopen = !accountpanel.hidden;
+            await refreshaccountstate();
+            if (accountauthenticated) {
+                accountbutton.disabled = true;
+                try {
+                    const response = await calltjfapi("/api/logout", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: "{}",
+                        cache: "no-store"
+                    });
+                    if (!response.ok) throw new Error("logout failed");
+                    setaccountstate(false);
+                    window.location.reload();
+                } catch (error) {
+                    accountfeedback.textContent = "Could not sign out. Try again.";
+                    accountfeedback.dataset.state = "error";
+                    accountpanel.hidden = false;
+                    accountbutton.setAttribute("aria-expanded", "true");
+                } finally {
+                    accountbutton.disabled = false;
+                }
+                return;
+            }
+            accountpanel.hidden = panelwasopen;
+            accountbutton.setAttribute("aria-expanded", String(!accountpanel.hidden));
+            if (!accountpanel.hidden) accountemail.focus();
+        });
+        document.getElementById("account-close").addEventListener("click", () => {
+            accountpanel.hidden = true;
+            accountbutton.setAttribute("aria-expanded", "false");
+        });
+        accountform.addEventListener("submit", async event => {
+            event.preventDefault();
+            accountsubmit.disabled = true;
+            accountsubmit.textContent = "Signing in...";
+            accountfeedback.textContent = "Signing in...";
+            accountfeedback.dataset.state = "pending";
+            const credentials = JSON.stringify({ email: accountemail.value, password: accountpassword.value });
+            accountpassword.value = "";
+            try {
+                const response = await calltjfapi("/api/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: credentials,
+                    cache: "no-store"
+                });
+                const result = await response.json();
+                if (response.ok && result.ok && typeof result.token === "string") {
+                    storesessiontoken(result.token);
+                    setaccountstate(true);
+                    window.location.reload();
+                    return;
+                }
+                const messages = {
+                    credentials: "No matching email and password.",
+                    verification: "Verify your email with Totaljerkface before signing in.",
+                    lockout: "Too many login attempts. Wait before trying again.",
+                    origin: "The local sign-in request was rejected.",
+                    format: "Enter a valid email and password.",
+                    unavailable: "Totaljerkface could not complete sign-in. Try again later."
+                };
+                accountfeedback.textContent = messages[result.reason] || messages.unavailable;
+                accountfeedback.dataset.state = "error";
+            } catch (error) {
+                accountfeedback.textContent = "Could not reach the sign-in service. Check your connection and try again.";
+                accountfeedback.dataset.state = "error";
+            } finally {
+                accountsubmit.disabled = false;
+                accountsubmit.textContent = "Sign in";
+            }
+        });
+        refreshaccountstate();
+    </script>
+    <script>
+        (function() {
+            function gettitlelabel() {
+                const labels = [
+                    "JS Edition",
+                    "HTML5 Edition",
+                    "Flashless Version",
+                    "RIP Flash Edition",
+                    "Flash Is Dead!",
+                    "Farewell Flash...",
+                    "Without that plugin",
+                    "Does Jim know I put this here?"
+                ];
+                return labels[Math.floor(Math.random() * labels.length)];
+            }
+
+            function getlatesthwversion() {
+                return fetch("./version.json")
+                    .then(function(response) { return response.json(); });
+            }
+
+            function retryonerror(safemode) {
+                if (safemode) {
+                    const urlparams = new URLSearchParams(window.location.search);
+                    urlparams.set("s", "on");
+                    window.location.search = urlparams;
+                }
+
+                setTimeout(window.location.reload.bind(window.location), (Math.random() * 4000) + 3000);
+            }
+
+            window["HW_SETTINGS"] = {
+                "siteURL": "https://totaljerkface.com/",
+                "pathPrefix": "",
+                "titleLabel": gettitlelabel(),
+                "titleLabelX": 645,
+                "titleLabelY": 250,
+                "titleLabelRotation": 0,
+                "titleLabelSize": 20,
+                "titleLabelColor": 0xfdfd65,
+                "resolutionZoomIncreaseRatio": 0.5,
+                "tesselation": "tess2"
+            };
+
+            const guardedglobalnames = [
+                "focus",
+                "scrollTo",
+                "requestAnimationFrame",
+                "cancelAnimationFrame",
+                "setTimeout",
+                "clearTimeout",
+                "setInterval",
+                "clearInterval",
+                "performance",
+                "HW_SETTINGS",
+                "localStorage",
+                "sessionStorage",
+            ];
+            for (const name of guardedglobalnames) {
+                const descriptor = Object.getOwnPropertyDescriptor(window, name);
+                if (!descriptor) {
+                    continue;
+                }
+                if ("writable" in descriptor) {
+                    descriptor.writable = false;
+                }
+                descriptor.configurable = false;
+                try {
+                    Object.defineProperty(window, name, descriptor);
+                } catch (error) {}
+            }
+
+            const urlparams = new URLSearchParams(window.location.search);
+            const replayid = urlparams.get("replay_id");
+            const levelid = urlparams.get("level_id");
+            if (replayid !== null && replayid !== "" && !isNaN(replayid)) {
+                window["HW_SETTINGS"]["replay_id"] = replayid;
+            }
+            if (levelid !== null && levelid !== "" && !isNaN(levelid)) {
+                window["HW_SETTINGS"]["level_id"] = levelid;
+            }
+
+            const loaddependency = (name, hash, safemode) => {
+                const dependencyelement = document.createElement("script");
+                let dependencyurl = "./js/" + name + "." + hash + ".js";
+                dependencyelement.async = false;
+                if (safemode) {
+                    dependencyurl += "?x=" + Math.random();
+                }
+                dependencyelement.src = dependencyurl;
+                dependencyelement.defer = "defer";
+                dependencyelement.onerror = () => retryonerror(true);
+                document.body.appendChild(dependencyelement);
+            };
+
+            const safemodeenabled = false;
+            try {
+                Promise.all([
+                    getlatesthwversion(),
+                    calltjfapi("/api/account")
+                        .then(function(response) { return response.ok ? response.json() : null; })
+                        .catch(function() { return null; })
+                ]).then(function(results) {
+                    const latest = results[0];
+                    const account = results[1];
+                    const userId = Number(account && account.user_id);
+                    if (account && account.authenticated && Number.isSafeInteger(userId) && typeof account.username === "string") {
+                        window.HW_SETTINGS.user_id = userId;
+                        window.HW_SETTINGS.username = account.username;
+                    }
+                    loaddependency("dependencies", latest["dependencies"], safemodeenabled);
+                    loaddependency("index", latest["index"], safemodeenabled);
+                }).catch(function() {
+                    retryonerror();
+                });
+            } catch (error) {
+                retryonerror();
+            }
+        })();
+    </script>
+</body>
+</html>
