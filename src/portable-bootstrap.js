@@ -24,7 +24,39 @@
         if (token !== null) storeSessionToken(token);
         return response;
     };
-    const localizeGameApiUrl = value => {
+    const localizegameasseturl = value => {
+        let url;
+        try {
+            url = new URL(value instanceof Request ? value.url : value, window.location.href);
+        } catch (error) {
+            return value;
+        }
+        const assetprefix = "/assets-111pu7do4muiyxxfu/";
+        const assetprefixindex = url.pathname.indexOf(assetprefix);
+        if (assetprefixindex < 0) return value;
+        const assetpath = url.pathname.slice(assetprefixindex + assetprefix.length);
+        const assetroot = assetpath.split("/", 1)[0];
+        const assetdirectories = {
+            animate: "assets/images/animate",
+            editor: "assets/images/editor",
+            fonts: "assets/fonts",
+            image: "assets/images",
+            shapes: "assets/static/shapes"
+        };
+        const audiofiles = {
+            "audiosprite.small.mp3": "assets/audio/sfxall.mp3",
+            "audiosprite.small.ogg": "assets/audio/sfxall.ogg"
+        };
+        const assetdirectory = assetdirectories[assetroot];
+        const localassetpath = audiofiles[assetroot] || (assetdirectory && `${assetdirectory}/${assetpath.slice(assetroot.length).replace(/^\/+/, "")}`);
+        if (!localassetpath) return value;
+        const localurl = new URL(localassetpath, new URL("./", window.location.href));
+        localurl.search = url.search;
+        localurl.hash = url.hash;
+        return localurl.href;
+    };
+
+    const localizegameapiurl = value => {
         let url;
         try {
             url = new URL(value instanceof Request ? value.url : value, window.location.href);
@@ -40,15 +72,16 @@
     const nativeXhrOpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function() {
         const args = Array.from(arguments);
-        const localizedUrl = localizeGameApiUrl(args[1]);
-        this.__tjfPortableProxyRequest = localizedUrl !== args[1];
-        args[1] = localizedUrl;
+        const apiurl = localizegameapiurl(args[1]);
+        const localizedurl = localizegameasseturl(apiurl);
+        this.__tjfportableproxyrequest = apiurl !== args[1];
+        args[1] = localizedurl;
         return nativeXhrOpen.apply(this, args);
     };
 
     const nativeXhrSend = XMLHttpRequest.prototype.send;
     XMLHttpRequest.prototype.send = function() {
-        if (this.__tjfPortableProxyRequest) {
+        if (this.__tjfportableproxyrequest) {
             const token = getSessionToken();
             if (token) this.setRequestHeader("Authorization", `Bearer ${token}`);
             this.addEventListener("loadend", () => {
@@ -64,9 +97,15 @@
     if (typeof window.fetch === "function") {
         const nativeFetch = window.fetch.bind(window);
         window.fetch = (input, init) => {
-            const rewritten = localizeGameApiUrl(input);
+            const apiurl = localizegameapiurl(input);
+            const rewritten = localizegameasseturl(apiurl);
             if (rewritten === input || (input instanceof Request && rewritten === input.url)) {
                 return nativeFetch(input, init);
+            }
+            const isgameapirequest = apiurl !== input;
+            if (!isgameapirequest) {
+                const requestInput = input instanceof Request ? new Request(rewritten, input) : rewritten;
+                return nativeFetch(requestInput, init);
             }
             const requestHeaders = input instanceof Request ? input.headers : undefined;
             const headers = new Headers(init?.headers || requestHeaders || {});
@@ -82,6 +121,29 @@
             return nativeFetch(requestInput, requestInit).then(captureSessionToken);
         };
     }
+
+    const localizeurlproperty = (prototype, property) => {
+        const descriptor = Object.getOwnPropertyDescriptor(prototype, property);
+        if (!descriptor || typeof descriptor.set !== "function") return;
+        Object.defineProperty(prototype, property, {
+            configurable: descriptor.configurable,
+            enumerable: descriptor.enumerable,
+            get: descriptor.get,
+            set(value) {
+                descriptor.set.call(this, localizegameasseturl(value));
+            }
+        });
+    };
+    localizeurlproperty(HTMLImageElement.prototype, "src");
+    localizeurlproperty(HTMLLinkElement.prototype, "href");
+    localizeurlproperty(HTMLMediaElement.prototype, "src");
+    localizeurlproperty(HTMLSourceElement.prototype, "src");
+    const nativesetattribute = Element.prototype.setAttribute;
+    Element.prototype.setAttribute = function(name, value) {
+        const normalizedname = name.toLowerCase();
+        if (normalizedname === "src" || normalizedname === "href") value = localizegameasseturl(value);
+        return nativesetattribute.call(this, name, value);
+    };
 
     const viewportWidth = () => document.documentElement.clientWidth || 1280;
     const viewportHeight = () => document.documentElement.clientHeight || 720;

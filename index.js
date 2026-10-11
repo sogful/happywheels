@@ -6,6 +6,10 @@ const accountpassword = document.getElementById("account-password");
 const accountfeedback = document.getElementById("account-feedback");
 const accountsubmit = document.getElementById("account-submit");
 let accountauthenticated = false;
+const gameversions = {
+    dependencies: "da5345844178085e126a21a9f3dee1cd",
+    index: "6f07d1401039d979894513be11bf6ef2"
+};
 
 function storesessiontoken(token) {
     try {
@@ -147,11 +151,6 @@ refreshaccountstate();
         return labels[Math.floor(Math.random() * labels.length)];
     }
 
-    function getlatesthwversion() {
-        return fetch("./version.json")
-            .then(function(response) { return response.json(); });
-    }
-
     function retryonerror(safemode) {
         if (safemode) {
             const urlparams = new URLSearchParams(window.location.search);
@@ -215,7 +214,7 @@ refreshaccountstate();
 
     const loaddependency = (name, hash, safemode) => {
         const dependencyelement = document.createElement("script");
-        let dependencyurl = "./js/" + name + "." + hash + ".js";
+        let dependencyurl = "./src/" + name + "." + hash + ".js";
         dependencyelement.async = false;
         if (safemode) {
             dependencyurl += "?x=" + Math.random();
@@ -228,24 +227,18 @@ refreshaccountstate();
 
     const safemodeenabled = false;
     try {
-        Promise.all([
-            getlatesthwversion(),
-            calltjfapi("/api/account")
-                .then(function(response) { return response.ok ? response.json() : null; })
-                .catch(function() { return null; })
-        ]).then(function(results) {
-            const latest = results[0];
-            const account = results[1];
-            const userId = Number(account && account.user_id);
-            if (account && account.authenticated && Number.isSafeInteger(userId) && typeof account.username === "string") {
-                window.HW_SETTINGS.user_id = userId;
-                window.HW_SETTINGS.username = account.username;
-            }
-            loaddependency("dependencies", latest["dependencies"], safemodeenabled);
-            loaddependency("index", latest["index"], safemodeenabled);
-        }).catch(function() {
-            retryonerror();
-        });
+        calltjfapi("/api/account")
+            .then(function(response) { return response.ok ? response.json() : null; })
+            .catch(function() { return null; })
+            .then(function(account) {
+                const userid = Number(account && account.user_id);
+                if (account && account.authenticated && Number.isSafeInteger(userid) && typeof account.username === "string") {
+                    window.HW_SETTINGS.user_id = userid;
+                    window.HW_SETTINGS.username = account.username;
+                }
+                loaddependency("dependencies", gameversions.dependencies, safemodeenabled);
+                loaddependency("index", gameversions.index, safemodeenabled);
+            });
     } catch (error) {
         retryonerror();
     }
