@@ -6,9 +6,9 @@ const accountpassword = document.getElementById("account-password");
 const accountfeedback = document.getElementById("account-feedback");
 const accountsubmit = document.getElementById("account-submit");
 let accountauthenticated = false;
-const gameversions = {
-    dependencies: "da5345844178085e126a21a9f3dee1cd",
-    index: "6f07d1401039d979894513be11bf6ef2"
+const gamefiles = {
+    dependencies: "./src/cleaned/dependencies.js",
+    index: "./src/cleaned/index.js"
 };
 
 function storesessiontoken(token) {
@@ -212,18 +212,17 @@ refreshaccountstate();
         window["HW_SETTINGS"]["level_id"] = levelid;
     }
 
-    const loaddependency = (name, hash, safemode) => {
+    const loaddependency = (name, safemode) => new Promise((resolve, reject) => {
         const dependencyelement = document.createElement("script");
-        let dependencyurl = "./src/" + name + "." + hash + ".js";
+        let dependencyurl = gamefiles[name];
+        if (safemode) dependencyurl += "?x=" + Math.random();
         dependencyelement.async = false;
-        if (safemode) {
-            dependencyurl += "?x=" + Math.random();
-        }
         dependencyelement.src = dependencyurl;
         dependencyelement.defer = "defer";
-        dependencyelement.onerror = () => retryonerror(true);
+        dependencyelement.onload = resolve;
+        dependencyelement.onerror = reject;
         document.body.appendChild(dependencyelement);
-    };
+    });
 
     const safemodeenabled = false;
     try {
@@ -236,9 +235,11 @@ refreshaccountstate();
                     window.HW_SETTINGS.user_id = userid;
                     window.HW_SETTINGS.username = account.username;
                 }
-                loaddependency("dependencies", gameversions.dependencies, safemodeenabled);
-                loaddependency("index", gameversions.index, safemodeenabled);
-            });
+                return loaddependency("dependencies", safemodeenabled)
+                    .then(() => window.happywheeldependencies)
+                    .then(() => loaddependency("index", safemodeenabled));
+            })
+            .catch(() => retryonerror(true));
     } catch (error) {
         retryonerror();
     }
