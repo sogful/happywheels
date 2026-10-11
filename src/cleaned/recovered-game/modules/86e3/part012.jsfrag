@@ -1,0 +1,800 @@
+        var nu = this["mainBody"]['GetLocalCe' + "nter"]();
+        nu = new q3['RM']((this['_startX'] - nu['x']) * this["character_" + "scale"], (this["_startY"] - nu['y']) * this["character_" + "scale"]);
+        var nl = this["shapeGuide"]['rearVert4'];
+        var no = new q3['RM'](nl['x'] + nu['x'], nl['y'] + nu['y']);
+        this['mainMC']["inner"]['x'] = no['x'];
+        this['mainMC']["inner"]['y'] = no['y'];
+        nu = this["shaftBody"]["GetLocalCe" + "nter"]();
+        nu = new q3['RM']((this["_startX"] - nu['x']) * this["character_" + 'scale'], (this["_startY"] - nu['y']) * this["character_" + "scale"]);
+        nl = this["shapeGuide"]["shaftShape"];
+        no = new q3['RM'](nl['x'] + nu['x'], nl['y'] + nu['y']);
+        this["shaftMC"]["inner"]['x'] = no['x'];
+        this["shaftMC"]["inner"]['y'] = no['y'];
+        this["mainBody"]["SetUserDat" + 'a'](this["mainMC"]);
+        this["backWheelB" + "ody"]["SetUserDat" + 'a'](this['backWheelM' + 'C']);
+        this['frontWheel' + 'Body']["SetUserDat" + 'a'](this["frontWheel" + 'MC']);
+        this["shaftBody"]["SetUserDat" + 'a'](this["shaftMC"]);
+        this["_session"]["containerS" + "prite"]['addChildAt'](this["shockMC"], this["_session"]["containerS" + "prite"]["getChildIn" + "dex"](this["pelvisMC"]));
+        this["_session"]["containerS" + "prite"]["addChildAt"](this["backWheelM" + 'C'], this["_session"]["containerS" + 'prite']["getChildIn" + "dex"](this['pelvisMC']));
+        this["_session"]["containerS" + "prite"]["addChildAt"](this["frontWheel" + 'MC'], this["_session"]["containerS" + 'prite']["getChildIn" + "dex"](this["pelvisMC"]));
+        this["_session"]["containerS" + "prite"]["addChildAt"](this["shaftMC"], this["_session"]["containerS" + "prite"]["getChildIn" + "dex"](this["pelvisMC"]));
+        this["_session"]["containerS" + 'prite']['addChildAt'](this['mainMC'], this["_session"]["containerS" + "prite"]["getChildIn" + "dex"](this["pelvisMC"]));
+        this["_session"]["containerS" + "prite"]["addChildAt"](this["mainBaseMC"], this["_session"]["containerS" + 'prite']["getChildIn" + "dex"](this["pelvisMC"]));
+        this["_session"]['containerS' + "prite"]['addChildAt'](this["mainFrontM" + 'C'], this["_session"]["containerS" + 'prite']['getChildIn' + "dex"](this["pelvisMC"]));
+        this["_session"]["containerS" + "prite"]["addChildAt"](this["mainRearMC"], this['_session']["containerS" + "prite"]['getChildIn' + "dex"](this["pelvisMC"]));
+        this["_session"]["containerS" + "prite"]["addChildAt"](this["mainSeatMC"], this["_session"]["containerS" + "prite"]["getChildIn" + "dex"](this["pelvisMC"]));
+        this["groceryMCs"] = [];
+        for (var ni = 0x0; ni < 0xa; ni++) {
+          var nE = this["sourceObje" + 'ct']["box" + ni];
+          nE["scaleX"] = nE['scaleY'] = 0x1 / this['mc_scale'];
+          this["groceryBod" + 'ies'][ni]["SetUserDat" + 'a'](nE);
+          this["groceryMCs"]["push"](nE);
+          this["_session"]["containerS" + "prite"]["addChildAt"](nE, this["_session"]["containerS" + "prite"]["getChildIn" + "dex"](this['mainMC']));
+        }
+        this["cartMC"] = new qP['kx']();
+        this['cartMC']["scaleX"] = this["cartMC"]["scaleY"] = 0x1 / this["mc_scale"];
+        var nR = this["mainMC"]["inner"]['cart'];
+        this["cartMC"]['addChild'](nR);
+        nR['x'] = nR['x'] + this["mainMC"]["inner"]['x'];
+        nR['y'] = nR['y'] + this["mainMC"]['inner']['y'];
+        this["_session"]["containerS" + "prite"]["addChildAt"](this['cartMC'], this['_session']["containerS" + "prite"]["getChildIn" + "dex"](this["lowerArm1M" + 'C']) + 0x1);
+      };
+      nk["resetMovie" + "Clips"] = function () {
+        nP["prototype"]["resetMovie" + "Clips"]["call"](this);
+        this['mainFrontM' + 'C']['visible'] = !0x1;
+        this['mainBaseMC']["visible"] = !0x1;
+        this["mainSeatMC"]["visible"] = !0x1;
+        this["mainRearMC"]["visible"] = !0x1;
+        this["mainMC"]['visible'] = !0x0;
+        this['cartMC']["visible"] = !0x0;
+        this['mainBody']["SetUserDat" + 'a'](this["mainMC"]);
+        this["backWheelB" + "ody"]["SetUserDat" + 'a'](this['backWheelM' + 'C']);
+        this["frontWheel" + 'Body']['SetUserDat' + 'a'](this["frontWheel" + 'MC']);
+        this["shaftBody"]["SetUserDat" + 'a'](this["shaftMC"]);
+        this["shockMC"]['graphics']["clear"]();
+        for (var nB = 0x0; nB < 0xa; nB++) {
+          var nu = this["groceryBod" + 'ies'][nB];
+          var nl = this["groceryMCs"][nB];
+          nu["SetUserDat" + 'a'](nl);
+          nl["visible"] = !0x0;
+          nl["gotoAndSto" + 'p'](0x1);
+        }
+        var no = this["sourceObje" + 'ct']["cartPieces"];
+        this["_session"]["particleCo" + 'ntroller']["createBMDA" + "rray"]("cart", no);
+        no = this['sourceObje' + 'ct']["crackers"];
+        this["_session"]["particleCo" + 'ntroller']["createBMDA" + "rray"]('crackers', no);
+        no = this['sourceObje' + 'ct']["cola"];
+        this["_session"]["particleCo" + "ntroller"]["createBMDA" + "rray"]("cola", no);
+      };
+      nk["createJoin" + 'ts'] = function () {
+        var nB;
+        var nu;
+        var nl;
+        nP["prototype"]["createJoin" + 'ts']["call"](this);
+        var no = 0xb4 / Math['PI'];
+        this["upperLeg1B" + "ody"]["GetAngle"]();
+        this['pelvisBody']["GetAngle"]();
+        this['upperLeg2B' + "ody"]["GetAngle"]();
+        this['pelvisBody']["GetAngle"]();
+        nu = -0xa / no - (nB = this["head1Body"]["GetAngle"]() - this["chestBody"]['GetAngle']());
+        nl = 0xa / no - nB;
+        this["neckJoint"]["SetLimits"](nu, nl);
+        var ni = new q3['iE']();
+        ni["maxMotorFo" + "rce"] = 0x3e8;
+        ni["enableLimi" + 't'] = !0x0;
+        ni["upperTrans" + "lation"] = 0x0;
+        ni["lowerTrans" + "lation"] = 0x0;
+        var nE = new q3['RM']();
+        var nR = this["shapeGuide"]["backWheelS" + "hape"];
+        nE["Set"](this["_startX"] + nR['x'] / this["character_" + "scale"], this["_startY"] + nR['y'] / this["character_" + "scale"]);
+        ni["Initialize"](this["mainBody"], this["backShockB" + 'ody'], nE, new q3['RM'](0x0, 0x1));
+        this["backShockJ" + "oint"] = this['_session']['m_world']["CreateJoin" + 't'](ni);
+        nR = this["shapeGuide"]["frontWheel" + "Shape"];
+        nE["Set"](this["_startX"] + nR['x'] / this["character_" + "scale"], this["_startY"] + nR['y'] / this["character_" + "scale"]);
+        ni["Initialize"](this["mainBody"], this["frontShock" + "Body"], nE, new q3['RM'](0x0, 0x1));
+        this["frontShock" + "Joint"] = this["_session"]['m_world']["CreateJoin" + 't'](ni);
+        var nW = new q3['Gq']();
+        nW["maxMotorTo" + "rque"] = this["maxTorque"];
+        nW["enableLimi" + 't'] = !0x0;
+        nW["lowerAngle"] = 0x0;
+        nW["upperAngle"] = 0x0;
+        nE = new q3['RM']();
+        nR = this['shapeGuide']["shaftAncho" + 'r'];
+        nE["Set"](this["_startX"] + nR['x'] / this["character_" + "scale"], this['_startY'] + nR['y'] / this["character_" + 'scale']);
+        nW["Initialize"](this['mainBody'], this['shaftBody'], nE);
+        this['mainShaft'] = this["_session"]["m_world"]['CreateJoin' + 't'](nW);
+        this["_session"]['version'] >= 1.11 && (nW["enableLimi" + 't'] = !0x1);
+        nE["Set"](this['pelvisBody']["GetPositio" + 'n']()['x'], this["pelvisBody"]["GetPositio" + 'n']()['y']);
+        nW["Initialize"](this["mainBody"], this["pelvisBody"], nE);
+        this["mainPelvis"] = this['_session']["m_world"]["CreateJoin" + 't'](nW);
+        this['mainPelvis' + "JointDef"] = nW["clone"]();
+        this["pelvisAnch" + "orPoint"] = this["mainBody"]["GetLocalPo" + 'int'](nE);
+        nW["enableLimi" + 't'] = !0x1;
+        nR = this['shapeGuide']['backWheelS' + "hape"];
+        nE["Set"](this["_startX"] + nR['x'] / this["character_" + "scale"], this["_startY"] + nR['y'] / this['character_' + 'scale']);
+        nW["Initialize"](this["backShockB" + "ody"], this["backWheelB" + "ody"], nE);
+        this["backWheelJ" + "oint"] = this['_session']["m_world"]["CreateJoin" + 't'](nW);
+        nR = this["shapeGuide"]["frontWheel" + "Shape"];
+        nE["Set"](this["_startX"] + nR['x'] / this["character_" + 'scale'], this["_startY"] + nR['y'] / this["character_" + 'scale']);
+        nW["Initialize"](this["frontShock" + "Body"], this["frontWheel" + "Body"], nE);
+        this["frontWheel" + "Joint"] = this["_session"]['m_world']["CreateJoin" + 't'](nW);
+        nR = this["shapeGuide"]["handleAnch" + 'or'];
+        nE["Set"](this['_startX'] + nR['x'] / this["character_" + 'scale'], this["_startY"] + nR['y'] / this["character_" + "scale"]);
+        nW["Initialize"](this["mainBody"], this["lowerArm1B" + "ody"], nE);
+        this['mainHand1'] = this["_session"]["m_world"]["CreateJoin" + 't'](nW);
+        this["mainHand1J" + "ointDef"] = nW["clone"]();
+        this["handleAnch" + "orPoint"] = this["mainBody"]["GetLocalPo" + "int"](nE);
+        nW["Initialize"](this['mainBody'], this["lowerArm2B" + "ody"], nE);
+        this["mainHand2"] = this["_session"]["m_world"]["CreateJoin" + 't'](nW);
+        this["mainHand2J" + "ointDef"] = nW["clone"]();
+        nE["Set"](this["upperLeg1B" + "ody"]["GetPositio" + 'n']()['x'], this["upperLeg1B" + "ody"]["GetPositio" + 'n']()['y']);
+        nW["Initialize"](this["mainBody"], this["upperLeg1B" + 'ody'], nE);
+        this["mainLeg1"] = this["_session"]['m_world']["CreateJoin" + 't'](nW);
+        this['mainLeg1Jo' + "intDef"] = nW["clone"]();
+        this["leg1Anchor" + "Point"] = this["mainBody"]["GetLocalPo" + "int"](nE);
+        nE["Set"](this["upperLeg2B" + "ody"]["GetPositio" + 'n']()['x'], this["upperLeg2B" + 'ody']["GetPositio" + 'n']()['y']);
+        nW["Initialize"](this["mainBody"], this["upperLeg2B" + "ody"], nE);
+        this["mainLeg2"] = this["_session"]["m_world"]["CreateJoin" + 't'](nW);
+        this["mainLeg2Jo" + "intDef"] = nW["clone"]();
+        this['leg2Anchor' + "Point"] = this["mainBody"]["GetLocalPo" + "int"](nE);
+        nR = this["shapeGuide"]["sausageAnc" + "hor1"];
+        nE["Set"](this["_startX"] + nR['x'] / this["character_" + "scale"], this["_startY"] + nR['y'] / this["character_" + "scale"]);
+        nW["Initialize"](this["groceryBod" + "ies"][0x7], this["groceryBod" + "ies"][0x8], nE);
+        this["_session"]["m_world"]["CreateJoin" + 't'](nW);
+        nR = this["shapeGuide"]["sausageAnc" + "hor2"];
+        nE["Set"](this["_startX"] + nR['x'] / this["character_" + 'scale'], this["_startY"] + nR['y'] / this["character_" + "scale"]);
+        nW['Initialize'](this["groceryBod" + "ies"][0x8], this["groceryBod" + "ies"][0x9], nE);
+        this["_session"]["m_world"]["CreateJoin" + 't'](nW);
+      };
+      nk["eject"] = function () {
+        if ("Dgqet" === "Dgqet") {
+          if (!this["ejected"]) {
+            if ("ruyKk" !== "ruyKk") {
+              if (this["ejected"]) {
+                this["startGrab"]();
+              } else {
+                if (this["shockJoint"]["IsMotorEna" + "bled"]()) {
+                  var ni = this["shockJoint"]["GetMotorSp" + "eed"]();
+                  ni > 0x0 ? this["shockJoint"]["GetJointTr" + "anslation"]() > this["jumpTransl" + "ation"] && this["shockJoint"]["SetMotorSp" + "eed"](-0x1) : ni < 0x0 && this["shockJoint"]["GetJointTr" + "anslation"]() < 0x0 && (this["shockJoint"]['EnableMoto' + 'r'](!0x1), this["shockJoint"]["SetLimits"](0x0, 0x0), this["shockJoint"]["SetMotorSp" + "eed"](0x0));
+                } else {
+                  this['shockJoint']["SetMotorSp" + "eed"](0x7);
+                  this["shockJoint"]['SetLimits'](0x0, this["jumpTransl" + "ation"]);
+                  this["shockJoint"]["EnableMoto" + 'r'](!0x0);
+                  nK['m']["instance"]["playAreaSo" + "undInstanc" + 'e']("SegwayJump", this["wheelBody"]);
+                }
+              }
+            } else {
+              this["removeActi" + 'on'](this["reAttachin" + 'g']);
+              this["ejected"] = !0x0;
+              this["resetJoint" + "Limits"]();
+              var nB = this["_session"]["m_world"];
+              this["mainPelvis"] && (nB['DestroyJoi' + 'nt'](this["mainPelvis"]), this["mainPelvis"] = null);
+              this["mainHand1"] && (nB["DestroyJoi" + 'nt'](this["mainHand1"]), this["mainHand1"] = null);
+              this["mainHand2"] && (nB["DestroyJoi" + 'nt'](this['mainHand2']), this['mainHand2'] = null);
+              this["mainLeg1"] && (nB["DestroyJoi" + 'nt'](this["mainLeg1"]), this["mainLeg1"] = null);
+              this["mainLeg2"] && (nB["DestroyJoi" + 'nt'](this["mainLeg2"]), this['mainLeg2'] = null);
+              var nu = this["zeroFilter"]['Copy']();
+              nu["groupIndex"] = -0x2;
+              this["frontWheel" + "Body"]["GetShapeLi" + 'st']()["SetFilterD" + "ata"](nu);
+              this["backWheelB" + "ody"]["GetShapeLi" + 'st']()["SetFilterD" + "ata"](nu);
+              nB["Refilter"](this["frontWheel" + "Body"]["GetShapeLi" + 'st']());
+              nB["Refilter"](this["backWheelB" + "ody"]["GetShapeLi" + 'st']());
+              this["backShockJ" + "oint"]["EnableMoto" + 'r'](!0x1);
+              this["frontShock" + "Joint"]["EnableMoto" + 'r'](!0x1);
+              this["backShockJ" + 'oint']["SetLimits"](0x0, 0x0);
+              this["frontShock" + "Joint"]["SetLimits"](0x0, 0x0);
+              this["backShockJ" + "oint"]["SetMotorSp" + "eed"](0x0);
+              this["frontShock" + "Joint"]["SetMotorSp" + "eed"](0x0);
+              for (var nl = this["mainBody"]["GetShapeLi" + 'st'](); nl; nl = nl["m_next"]) {
+                nl["SetFilterD" + "ata"](nu);
+                nB["Refilter"](nl);
+              }
+              for (nl = this["shaftBody"]['GetShapeLi' + 'st'](); nl; nl = nl["m_next"]) {
+                nl["SetFilterD" + "ata"](this['zeroFilter']);
+                nB["Refilter"](nl);
+              }
+              this['lowerArm1M' + 'C']['hand']["gotoAndSto" + 'p'](0x2);
+              this["lowerArm2M" + 'C']["hand"]["gotoAndSto" + 'p'](0x2);
+            }
+          }
+        } else {
+          nk["prototype"]["createBodi" + 'es']["call"](this);
+          var nE = this["session"]["m_world"];
+          var nR = new q5['gv']();
+          var nW = new nl['gv']();
+          var nA = new qB['gv']();
+          var nr = new qW['m2']();
+          var nJ = new qH['_A']();
+          nr["density"] = 0x2;
+          nr["friction"] = 0.3;
+          nr["restitutio" + 'n'] = 0.1;
+          nr["filter"]["categoryBi" + 'ts'] = 0x401;
+          nJ["density"] = 0x5;
+          nJ['friction'] = 0x1;
+          nJ["restitutio" + 'n'] = 0.1;
+          nJ["filter"]["categoryBi" + 'ts'] = 0x401;
+          var nD = this["shapeGuide"]["chair1Shap" + 'e'];
+          var ng = new qk['RM'](this["_startX"] + nD['x'] / this['character_' + "scale"], this['_startY'] + nD['y'] / this['character_' + "scale"]);
+          nr["SetAsOrien" + "tedBox"](nD["width"] / 0x2 / this["character_" + "scale"], nD["height"] / 0x2 / this["character_" + "scale"], ng);
+          this["chairBody"] = nE["CreateBody"](nR);
+          this["chairShape" + '1'] = this["chairBody"]["CreateShap" + 'e'](nr);
+          this["_session"]["contactLis" + "tener"]["registerLi" + "stener"](q4['fI']["RESULT"], this["chairShape" + '1'], this["contactCha" + "irResultHa" + "ndler"]);
+          this['_session']["contactLis" + "tener"]['registerLi' + "stener"](qJ['fI']["ADD"], this["chairShape" + '1'], this["contactAdd" + "Handler"]);
+          nD = this["shapeGuide"]["chair2Shap" + 'e'];
+          ng["Set"](this["_startX"] + nD['x'] / this["character_" + "scale"], this["_startY"] + nD['y'] / this["character_" + "scale"]);
+          nr["SetAsOrien" + "tedBox"](nD['width'] / 0x2 / this['character_' + "scale"], nD['height'] / 0x2 / this["character_" + "scale"], ng);
+          this["chairShape" + '2'] = this["chairBody"]["CreateShap" + 'e'](nr);
+          this["_session"]["contactLis" + "tener"]["registerLi" + 'stener'](qr['fI']["RESULT"], this["chairShape" + '2'], this['contactCha' + "irResultHa" + "ndler"]);
+          this["_session"]["contactLis" + "tener"]["registerLi" + "stener"](qj['fI']["ADD"], this["chairShape" + '2'], this["contactAdd" + "Handler"]);
+          nD = this["shapeGuide"]["chair3Shap" + 'e'];
+          ng["Set"](this["_startX"] + nD['x'] / this["character_" + "scale"], this["_startY"] + nD['y'] / this['character_' + "scale"]);
+          nr["SetAsOrien" + "tedBox"](nD["width"] / 0x2 / this["character_" + 'scale'], nD['height'] / 0x2 / this['character_' + "scale"], ng);
+          this["chairShape" + '3'] = this["chairBody"]["CreateShap" + 'e'](nr);
+          this["_session"]["contactLis" + "tener"]["registerLi" + "stener"](qP['fI']["RESULT"], this["chairShape" + '3'], this["contactCha" + 'irResultHa' + "ndler"]);
+          this["_session"]["contactLis" + 'tener']["registerLi" + "stener"](qn['fI']["ADD"], this['chairShape' + '3'], this["contactAdd" + "Handler"]);
+          this["chairBody"]["SetMassFro" + "mShapes"]();
+          this["paintVecto" + 'r']["push"](this["chairBody"]);
+          nD = this['shapeGuide']["bigWheelSh" + "ape"];
+          nW["position"]["Set"](this["_startX"] + nD['x'] / this["character_" + "scale"], this["_startY"] + nD['y'] / this["character_" + "scale"]);
+          nW["angle"] = nD["rotation"] / qy["oneEightyO" + "verPI"];
+          nJ["radius"] = nD["width"] / 0x2 / this["character_" + "scale"];
+          this["bigWheelBo" + 'dy'] = nE["CreateBody"](nW);
+          this["bigWheelSh" + "ape"] = this["bigWheelBo" + 'dy']["CreateShap" + 'e'](nJ);
+          this["_session"]["contactLis" + "tener"]["registerLi" + "stener"](qg['fI']["RESULT"], this["bigWheelSh" + "ape"], this["contactRes" + "ultHandler"]);
+          this["_session"]["contactLis" + 'tener']["registerLi" + "stener"](qu['fI']["ADD"], this["bigWheelSh" + "ape"], this["wheelConta" + "ctAdd"]);
+          this["_session"]["contactLis" + "tener"]['registerLi' + "stener"](qd['fI']["REMOVE"], this["bigWheelSh" + "ape"], this["wheelConta" + "ctRemove"]);
+          this["bigWheelBo" + 'dy']["SetMassFro" + "mShapes"]();
+          this["paintVecto" + 'r']["push"](this['bigWheelBo' + 'dy']);
+          nD = this["shapeGuide"]["smallWheel" + "Shape"];
+          nA["position"]["Set"](this["_startX"] + nD['x'] / this["character_" + "scale"], this["_startY"] + nD['y'] / this["character_" + "scale"]);
+          nA["angle"] = nD["rotation"] / qm['oneEightyO' + 'verPI'];
+          nJ["radius"] = nD["width"] / 0x2 / this['character_' + "scale"];
+          this["smallWheel" + "Body"] = nE["CreateBody"](nA);
+          this["smallWheel" + "Body"]['CreateShap' + 'e'](nJ);
+          this["smallWheel" + "Body"]["SetMassFro" + "mShapes"]();
+          this["paintVecto" + 'r']["push"](this["smallWheel" + "Body"]);
+          var nS = new qe['z_']();
+          nS["categoryBi" + 'ts'] = 0x204;
+          nS['groupIndex'] = this["groupID"];
+          nS["maskBits"] = 0x208;
+          this["lowerArm1S" + 'hape']["SetFilterD" + "ata"](nS);
+          nE["Refilter"](this["lowerArm1S" + "hape"]);
+          this["lowerArm2S" + "hape"]["SetFilterD" + "ata"](nS);
+          nE["Refilter"](this["lowerArm2S" + "hape"]);
+        }
+      };
+      nk["reAttach"] = function (nB) {
+        throw new Error("this must " + "be called " + "only in su" + "bclass");
+      };
+      nk["reAttachin" + 'g'] = function () {
+        if ('XPypR' === 'TYeyK') {
+          nt["m_mass"] > 0xf ? (this['contactAdd' + "Sounds"]['set'](qs, "ShapeHit4"), this["_session"]["contactLis" + "tener"]["registerLi" + "stener"](qf['f']["ADD"], nk, this["shapeConta" + "ctAdd"])) : q5["m_mass"] > 0xa ? (this["contactAdd" + 'Sounds']["set"](np, "ShapeHit3"), this["_session"]['contactLis' + 'tener']["registerLi" + "stener"](qB['f']["ADD"], qW, this["shapeConta" + "ctAdd"])) : qH["m_mass"] > 0x5 ? (this["contactAdd" + "Sounds"]["set"](qk, "ShapeHit2"), this["_session"]["contactLis" + "tener"]["registerLi" + "stener"](q4['f']["ADD"], qJ, this['shapeConta' + 'ctAdd'])) : qr["m_mass"] > 0x1 && (this["contactAdd" + "Sounds"]["set"](qj, "ShapeHit1"), this['_session']["contactLis" + "tener"]["registerLi" + "stener"](qP['f']["ADD"], qn, this["shapeConta" + "ctAdd"]));
+        } else {
+          throw new Error("this must " + 'be\x20called\x20' + "only in su" + "bclass");
+        }
+      };
+      nk["checkEject"] = function () {
+        this["mainHand1"] || this["mainHand2"] || this["mainLeg1"] || this['mainLeg2'] || this["eject"]();
+      };
+      nk["cartSmash"] = function (nB, nu) {
+        void 0x0 === nu && (nu = !0x0);
+        this["contactImp" + "ulseDict"]["delete"](this["cartShape"]);
+        this['_session']["contactLis" + 'tener']["deleteList" + 'ener'](q4['fI']["RESULT"], this["cartShape"]);
+        this["_session"]["contactLis" + "tener"]["deleteList" + 'ener'](q4['fI']["ADD"], this["cartShape"]);
+        this["mainBody"]['DestroySha' + 'pe'](this["cartShape"]);
+        this["cartMC"]["visible"] = !0x1;
+        var nl = this["mainBody"]["GetLocalCe" + "nter"]();
+        var no = this["mainBody"]["GetWorldPo" + "int"](new q3['RM'](nl['x'] + 0x23 / this["m_physScal" + 'e'], nl['y'] + -0xf / this["m_physScal" + 'e']));
+        this['_session']["particleCo" + "ntroller"]["createPoin" + "tBurst"]("cart", no['x'] * this["m_physScal" + 'e'], no['y'] * this["m_physScal" + 'e'], 0x1e, 0x1e, 0x14);
+        nu && q5['m']["instance"]["playAreaSo" + 'undInstanc' + 'e']("MetalSmash" + "Light", this["mainBody"]);
+      };
+      nk["crackerSma" + 'sh'] = function (nB) {
+        this["contactImp" + "ulseDict"]["delete"](this["crackerSha" + 'pe']);
+        this["_session"]["contactLis" + 'tener']["deleteList" + "ener"](q4['fI']["RESULT"], this["crackerSha" + 'pe']);
+        var nu = this["groceryBod" + "ies"][0x4];
+        this["groceryMCs"][0x4]["visible"] = !0x1;
+        var nl = nu["GetWorldCe" + "nter"]();
+        this["_session"]["m_world"]["DestroyBod" + 'y'](nu);
+        this["_session"]["particleCo" + "ntroller"]['createPoin' + "tBurst"]("crackers", nl['x'] * this["m_physScal" + 'e'], nl['y'] * this["m_physScal" + 'e'], 0x1e, 0x1e, 0x28);
+      };
+      nk["colaSmash"] = function (nB) {
+        var q0F = QW;
+        if ("yqWiY" !== 'yqWiY') {
+          var no = function (ni) {
+            if ("object" != typeof ni || !ni) {
+              return ni;
+            }
+            var nE = ni[no["toPrimitiv" + 'e']];
+            if (void 0x0 !== nE) {
+              var nR = nE["call"](ni, 'string');
+              if ("object" != typeof nR) {
+                return nR;
+              }
+              throw new qc("@@toPrimit" + 'ive\x20must\x20r' + "eturn a pr" + "imitive va" + "lue.");
+            }
+            return qN(ni);
+          }(qI);
+          return 'symbol' == typeof no ? no : no + '';
+        } else {
+          this["contactImp" + 'ulseDict']["delete"](this["sodaShape"]);
+          this["_session"]["contactLis" + "tener"]["deleteList" + 'ener'](q4['fI']["RESULT"], this["sodaShape"]);
+          var nu = this["groceryBod" + "ies"][0x3];
+          this["groceryMCs"][0x3]['gotoAndSto' + 'p'](0x2);
+          this["_session"]["particleCo" + 'ntroller']['createFlow']("cola", 2.5, 0x4, nu, new q3['RM'](0x0, -0xa / this["m_physScal" + 'e']), 0x10e, 0x12c);
+        }
+      };
+      nk["mainSmash"] = function (nB) {
+        if ("NheAa" !== 'NheAa') {
+          var nF;
+          (nF = qF["joint"]) != this["magnetJoin" + 't1'] && nF != this["magnetJoin" + 't2'] && qT["push"](nF);
+        } else {
+          this["trackVehic" + 'leSmashed']();
+          this['contactImp' + "ulseDict"]["delete"](this["mainShape1"]);
+          var nu = this["_session"]["contactLis" + "tener"];
+          nu["deleteList" + "ener"](q4['fI']["RESULT"], this['mainShape1']);
+          nu["deleteList" + "ener"](q4['fI']["RESULT"], this["mainShape2"]);
+          nu["deleteList" + 'ener'](q4['fI']["RESULT"], this["mainShape3"]);
+          nu["deleteList" + "ener"](q4['fI']["ADD"], this["mainShape3"]);
+          nu['deleteList' + 'ener'](q4['fI']["RESULT"], this["mainShape4"]);
+          this["eject"]();
+          this["mainSmashe" + 'd'] = !0x0;
+          this["cartShape"]["m_body"] && this["cartSmash"](0x64, !0x1);
+          var nl = this["_session"]["m_world"];
+          var no = this["mainBody"]["GetPositio" + 'n']();
+          var ni = this["mainBody"]["GetAngle"]();
+          var nE = this["mainBody"]["GetLinearV" + 'elocity']();
+          var nR = this["mainBody"]["GetAngular" + 'Velocity']();
+          var nW = new q3['gv']();
+          nW['position'] = no;
+          nW["angle"] = ni;
+          var nA = new q3['m2']();
+          nA["density"] = 0x4;
+          nA["friction"] = 0.3;
+          nA["restitutio" + 'n'] = 0.1;
+          nA["filter"] = this['zeroFilter'];
+          var nr = nl["CreateBody"](nW);
+          nr["SetLinearV" + "elocity"](nE);
+          nr['SetAngular' + "Velocity"](nR);
+          var nJ = nl["CreateBody"](nW);
+          nJ["SetLinearV" + 'elocity'](nE);
+          nJ["SetAngular" + "Velocity"](nR);
+          var nD = nl['CreateBody'](nW);
+          nD["SetLinearV" + 'elocity'](nE);
+          nD["SetAngular" + "Velocity"](nR);
+          var ng = nl["CreateBody"](nW);
+          ng['SetLinearV' + "elocity"](nE);
+          ng["SetAngular" + 'Velocity'](nR);
+          var nS = this["mainBody"]["GetShapeLi" + 'st']();
+          var nd = nS["GetVertice" + 's']();
+          nA["vertexCoun" + 't'] = 0x4;
+          nA["vertices"] = nd;
+          nr["CreateShap" + 'e'](nA);
+          nr["SetMassFro" + "mShapes"]();
+          nd = (nS = nS["GetNext"]())['GetVertice' + 's']();
+          nA["vertices"] = nd;
+          nJ["CreateShap" + 'e'](nA);
+          nJ["SetMassFro" + "mShapes"]();
+          nd = (nS = nS["GetNext"]())["GetVertice" + 's']();
+          nA["vertices"] = nd;
+          nD["CreateShap" + 'e'](nA);
+          nD["SetMassFro" + "mShapes"]();
+          nd = (nS = nS["GetNext"]())['GetVertice' + 's']();
+          nA["vertices"] = nd;
+          ng["CreateShap" + 'e'](nA);
+          ng['SetMassFro' + "mShapes"]();
+          nl["DestroyBod" + 'y'](this["mainBody"]);
+          nl["DestroyBod" + 'y'](this["frontShock" + "Body"]);
+          nl["DestroyBod" + 'y'](this["backShockB" + "ody"]);
+          this["mainFrontM" + 'C']["visible"] = !0x0;
+          ng["SetUserDat" + 'a'](this["mainFrontM" + 'C']);
+          this["paintVecto" + 'r']["push"](ng);
+          this["mainSeatMC"]['visible'] = !0x0;
+          nJ["SetUserDat" + 'a'](this["mainSeatMC"]);
+          this["paintVecto" + 'r']["push"](nJ);
+          this["mainRearMC"]["visible"] = !0x0;
+          nr["SetUserDat" + 'a'](this["mainRearMC"]);
+          this["paintVecto" + 'r']["push"](nr);
+          this['mainBaseMC']["visible"] = !0x0;
+          nD["SetUserDat" + 'a'](this["mainBaseMC"]);
+          this["paintVecto" + 'r']['push'](nD);
+          this['mainMC']["visible"] = !0x1;
+          this["shockMC"]["graphics"]["clear"]();
+          q5['m']["instance"]["playAreaSo" + "undInstanc" + 'e']("MetalSmash" + "Heavy", this["mainBody"]);
+        }
+      };
+      nk["headSmash1"] = function (nB) {
+        nP['prototype']["headSmash1"]["call"](this, nB);
+        this["eject"]();
+      };
+      nk["chestSmash"] = function (nB) {
+        nP["prototype"]["chestSmash"]["call"](this, nB);
+        this["eject"]();
+      };
+      nk["pelvisSmas" + 'h'] = function (nB) {
+        nP["prototype"]['pelvisSmas' + 'h']["call"](this, nB);
+        this["eject"]();
+      };
+      nk["torsoBreak"] = function (nB, nu, nl) {
+        if ("CSzBp" !== "CSzBp") {
+          void 0x0 === I && (k = 0xa);
+          f["IsMotorEna" + 'bled']() || nt['EnableMoto' + 'r'](!0x0);
+          var ni = -0x1;
+          var nE = B["m_lowerAng" + 'le'] + u;
+          var nR = l["GetJointAn" + "gle"]() - nE;
+          nR < 0x0 && (ni = 0x1, nR = o["abs"](nR));
+          var nW = q2['min'](E * R["pow"](nR, 0x2), W) * ni;
+          A["SetMotorSp" + "eed"](nW);
+        } else {
+          void 0x0 === nu && (nu = !0x0);
+          void 0x0 === nl && (nl = !0x0);
+          nP["prototype"]["torsoBreak"]["call"](this, nB, nu, nl);
+          this['eject']();
+        }
+      };
+      nk["neckBreak"] = function (nB, nu, nl) {
+        void 0x0 === nu && (nu = !0x0);
+        void 0x0 === nl && (nl = !0x0);
+        nP['prototype']["neckBreak"]["call"](this, nB, nu, nl);
+        this["eject"]();
+      };
+      nk["elbowBreak" + '1'] = function (nB) {
+        var q0G = QW;
+        if ("gDVbl" === "gDVbl") {
+          nP["prototype"]["elbowBreak" + '1']["call"](this, nB);
+          this["ejected"] || (this['mainHand1'] && (this["_session"]['m_world']["DestroyJoi" + 'nt'](this["mainHand1"]), this["mainHand1"] = null), this["checkEject"]());
+        } else {
+          var nl = function (no) {
+            if ("object" != typeof no || !no) {
+              return no;
+            }
+            var ni = no[nl["toPrimitiv" + 'e']];
+            if (void 0x0 !== ni) {
+              var nE = ni["call"](no, "string");
+              if ("object" != typeof nE) {
+                return nE;
+              }
+              throw new qc('@@toPrimit' + 'ive\x20must\x20r' + "eturn a pr" + "imitive va" + "lue.");
+            }
+            return qN(no);
+          }(qI);
+          return "symbol" == typeof nl ? nl : nl + '';
+        }
+      };
+      nk["elbowBreak" + '2'] = function (nB) {
+        nP["prototype"]["elbowBreak" + '2']["call"](this, nB);
+        this["ejected"] || (this["mainHand2"] && (this["_session"]["m_world"]['DestroyJoi' + 'nt'](this["mainHand2"]), this["mainHand2"] = null), this["checkEject"]());
+      };
+      nk["kneeBreak1"] = function (nB) {
+        if ('JEPcP' !== "JEPcP") {
+          return this["rotation"];
+        } else {
+          nP["prototype"]['kneeBreak1']['call'](this, nB);
+          this['ejected'] || (this["mainLeg1"] && (this["_session"]["m_world"]["DestroyJoi" + 'nt'](this["mainLeg1"]), this["mainLeg1"] = null), this["checkEject"]());
+        }
+      };
+      nk["kneeBreak2"] = function (nB) {
+        nP["prototype"]["kneeBreak2"]["call"](this, nB);
+        this["ejected"] || (this["mainLeg2"] && (this["_session"]["m_world"]["DestroyJoi" + 'nt'](this["mainLeg2"]), this["mainLeg2"] = null), this['checkEject']());
+      };
+      nk['leanBackPo' + 'se'] = function () {
+        "XVJCn" === "ADZCx" ? (qF["prototype"]["headSmash1"]["call"](this, qT), this["eject"]()) : (this["setJoint"](this['neckJoint'], 0x0, 0x2), this["setJoint"](this["elbowJoint" + '1'], 1.04, 0xf), this["setJoint"](this["elbowJoint" + '2'], 1.04, 0xf));
+      };
+      nk["leanForwar" + "dPose"] = function () {
+        this["setJoint"](this['neckJoint'], 0x1, 0x1);
+        this["setJoint"](this["elbowJoint" + '1'], 0x0, 0xf);
+        this["setJoint"](this["elbowJoint" + '2'], 0x0, 0xf);
+      };
+      nk["lungePoseL" + "eft"] = function () {
+        this["setJoint"](this["neckJoint"], 0.5, 0x2);
+        this["setJoint"](this["hipJoint1"], 3.5, 0x2);
+        this["setJoint"](this["hipJoint2"], 0x0, 0x2);
+        this["setJoint"](this["kneeJoint1"], 0x0, 0xa);
+        this["setJoint"](this["kneeJoint2"], 0x2, 0xa);
+        this["setJoint"](this['shoulderJo' + "int1"], 0x3, 0x14);
+        this["setJoint"](this['shoulderJo' + "int2"], 0x1, 0x14);
+        this['setJoint'](this["elbowJoint" + '1'], 1.5, 0xf);
+        this["setJoint"](this["elbowJoint" + '2'], 0x3, 0xf);
+      };
+      nk["lungePoseR" + "ight"] = function () {
+        this["setJoint"](this["neckJoint"], 0.5, 0x2);
+        this["setJoint"](this["hipJoint1"], 0x0, 0x2);
+        this["setJoint"](this["hipJoint2"], 3.5, 0x2);
+        this["setJoint"](this["kneeJoint1"], 0x2, 0xa);
+        this["setJoint"](this["kneeJoint2"], 0x0, 0xa);
+        this['setJoint'](this["shoulderJo" + "int1"], 0x1, 0x14);
+        this["setJoint"](this['shoulderJo' + "int2"], 0x3, 0x14);
+        this['setJoint'](this["elbowJoint" + '1'], 0x3, 0xf);
+        this["setJoint"](this['elbowJoint' + '2'], 1.5, 0xf);
+      };
+      nm = nt;
+      (nI = [{
+        'key': "vehicleBod" + 'y',
+        'get': function () {
+          if ("APIMb" === 'APIMb') {
+            return this["mainBody"];
+          } else {
+            var nu = qN[qc]["GetBody"]();
+            if (!nu["IsStatic"]()) {
+              var nl = nu["GetWorldCe" + 'nter']();
+              var no = new q5['RM'](nl['x'] - np['x'], nl['y'] - qB['y']);
+              var ni = no["Length"]();
+              var nE = 0x1 - (ni = qW["min"](0x2, ni)) / 0x2;
+              var nR = qH["atan2"](no['y'], no['x']);
+              var nW = qk["cos"](nR) * nE * 0x8;
+              var nA = q4['sin'](nR) * nE * 0x8;
+              nu["ApplyImpul" + 'se'](new qJ['RM'](nW, nA), nl);
+            }
+          }
+        }
+      }, {
+        'key': "vehicleGro" + "unded",
+        'get': function () {
+          return this["wheelConta" + 'cts'] > 0x0;
+        }
+      }, {
+        'key': "dead",
+        'get': function () {
+          return this["_dead"];
+        },
+        'set': function (nB) {
+          this["trackDeath"](nB);
+          this["_dead"] = nB;
+          this["_dead"] && (this["removeActi" + 'on'](this["reAttachin" + 'g']), this["userVehicl" + "eEject"](), this["currentPos" + 'e'] = 0x0, this["releaseGri" + 'p'](), this["backWheelJ" + "oint"]["EnableMoto" + 'r'](!0x1), this["frontWheel" + "Joint"]["EnableMoto" + 'r'](!0x1), this["voiceSound"] && (this["voiceSound"]["stopSound"](), this['voiceSound'] = null));
+        }
+      }]) && function (nB, nu) {
+        for (var nl = 0x0; nl < nu["length"]; nl++) {
+          if ("WRssb" === "wRZDs") {
+            var nE = qz[nI];
+            nE["enumerable"] = nE["enumerable"] || !0x1;
+            nE['configurab' + 'le'] = !0x0;
+            "value" in nE && (nE["writable"] = !0x0);
+            qI["defineProp" + "erty"](qS, qA(nE["key"]), nE);
+          } else {
+            var no = nu[nl];
+            no["enumerable"] = no["enumerable"] || !0x1;
+            no['configurab' + 'le'] = !0x0;
+            "value" in no && (no["writable"] = !0x0);
+            Object["defineProp" + "erty"](nB, qX(no['key']), no);
+          }
+        }
+      }(nm["prototype"], nI);
+      Object["defineProp" + 'erty'](nm, "prototype", {
+        'writable': !0x1
+      });
+      return nm;
+    }
+  }(q6['s']);
+  function qe(nP, np) {
+    var q1I = aM;
+    var q1k = aM;
+    qe = Object["setPrototy" + "peOf"] ? Object['setPrototy' + "peOf"]["bind"]() : function (nK, nm) {
+      if ("xlheX" === "xlheX") {
+        nK["__proto__"] = nm;
+        return nK;
+      } else {
+        if ("object" != typeof P || !p) {
+          return K;
+        }
+        var nk = m[I["toPrimitiv" + 'e']];
+        if (void 0x0 !== nk) {
+          var ns = nk["call"](u, "string");
+          if ("object" != typeof ns) {
+            return ns;
+          }
+          throw new l("@@toPrimit" + "ive must r" + "eturn a pr" + "imitive va" + 'lue.');
+        }
+        return np(B);
+      }
+    };
+    return qe(nP, np);
+  }
+  var qa = function (nP) {
+    var q1i = aM;
+    var q1E = aM;
+    function np(nk, ns, nt, nB) {
+      var nu;
+      (nu = nP["call"](this, nk, ns, nt, nB) || this)["reAttachDi" + "stance"] = 0.25;
+      nu["ejectImpul" + 'se'] = 0x4;
+      nu["reAttachin" + 'g'] = function () {
+        var q1l = q1u;
+        var q1o = q1u;
+        var nl = 0x0;
+        var no = nu["_session"]["m_world"];
+        if (nu["mainHand1"] || nu['elbowJoint' + '1']["broken"] || nu["shoulderJo" + "int1"]["broken"]) {
+          nl += 0x1;
+        } else {
+          var ni = nu["lowerArm1B" + "ody"]["GetWorldPo" + "int"](new q3['RM'](0x0, nu['lowerArm1S' + "hape"]["GetVertice" + 's']()[0x2]['y']));
+          var nE = nu["mainBody"]["GetWorldPo" + "int"](nu["handleAnch" + "orPoint"]);
+          Math["abs"](ni['x'] - nE['x']) < nu["reAttachDi" + 'stance'] && Math["abs"](ni['y'] - nE['y']) < nu["reAttachDi" + "stance"] && (nu["mainHand1"] = no["CreateJoin" + 't'](nu["mainHand1J" + "ointDef"]), nu['lowerArm1M' + 'C']["hand"]["gotoAndSto" + 'p'](0x1), nl += 0x1);
+        }
+        nu['mainHand2'] || nu["elbowJoint" + '2']["broken"] || nu["shoulderJo" + "int2"]['broken'] ? nl += 0x1 : (ni = nu["lowerArm2B" + "ody"]["GetWorldPo" + "int"](new q3['RM'](0x0, nu["lowerArm2S" + "hape"]["GetVertice" + 's']()[0x2]['y'])), nE = nu["mainBody"]['GetWorldPo' + "int"](nu["handleAnch" + 'orPoint']), Math["abs"](ni['x'] - nE['x']) < nu["reAttachDi" + "stance"] && Math["abs"](ni['y'] - nE['y']) < nu["reAttachDi" + "stance"] && (nu["mainHand2"] = no["CreateJoin" + 't'](nu["mainHand2J" + "ointDef"]), nu["lowerArm2M" + 'C']["hand"]["gotoAndSto" + 'p'](0x1), nl += 0x1));
+        var nR = nu["kneeJoint1"]['GetJointAn' + "gle"]();
+        var nW = nu["kneeJoint2"]["GetJointAn" + "gle"]();
+        var nA = !(!(nR < 0.5 && nR > 0.25 || nu["kneeJoint1"]["broken"]) || !(nW < 0.5 && nW > 0.25 || nu["kneeJoint2"]["broken"]));
+        nu["mainPelvis"] ? nl += 0x1 : (ni = nu["pelvisBody"]["GetPositio" + 'n'](), nE = nu['mainBody']["GetWorldPo" + 'int'](nu["pelvisAnch" + "orPoint"]), Math["abs"](ni['x'] - nE['x']) < nu["reAttachDi" + "stance"] && Math["abs"](ni['y'] - nE['y']) < nu['reAttachDi' + "stance"] && nA && (nu["mainPelvis"] = no["CreateJoin" + 't'](nu["mainPelvis" + 'JointDef']), nl += 0x1));
+        nu["mainPelvis"] && (nu["mainLeg1"] ? nl += 0x1 : (ni = nu["upperLeg1B" + "ody"]["GetPositio" + 'n'](), nE = nu["mainBody"]["GetWorldPo" + "int"](nu['leg1Anchor' + "Point"]), Math["abs"](ni['x'] - nE['x']) < nu["reAttachDi" + "stance"] && Math["abs"](ni['y'] - nE['y']) < nu['reAttachDi' + "stance"] && nA && (nu["mainLeg1"] = no['CreateJoin' + 't'](nu["mainLeg1Jo" + 'intDef']), nl += 0x1)), nu["mainLeg2"] ? nl += 0x1 : (ni = nu["upperLeg2B" + "ody"]["GetPositio" + 'n'](), nE = nu["mainBody"]['GetWorldPo' + "int"](nu["leg2Anchor" + "Point"]), Math["abs"](ni['x'] - nE['x']) < nu["reAttachDi" + "stance"] && Math["abs"](ni['y'] - nE['y']) < nu["reAttachDi" + "stance"] && nA && (nu['mainLeg2'] = no['CreateJoin' + 't'](nu["mainLeg2Jo" + "intDef"]), nl += 0x1)));
+        nl >= 0x5 && nu["removeActi" + 'on'](nu["reAttachin" + 'g']);
+      };
+      return nu;
+    }
+    var nK;
+    var nm;
+    nm = nP;
+    (nK = np)['prototype'] = Object["create"](nm["prototype"]);
+    nK["prototype"]["constructo" + 'r'] = nK;
+    qe(nK, nm);
+    var nI = np["prototype"];
+    nI["grabAction"] = function (nk, ns, nt) {
+      if ("rCeoD" === "GvOKO") {
+        this['_session']["m_world"]['DestroyJoi' + 'nt'](this["shoulderJo" + "int2"]);
+        var nR = this["upperArm2B" + "ody"]["GetShapeLi" + 'st']();
+        nR["SetFilterD" + "ata"](this["zeroFilter"]);
+        nR["SetMateria" + 'l'](0x2);
+        nR["SetUserDat" + 'a'](this);
+        this["_session"]["m_world"]["Refilter"](nR);
+        (nR = this["lowerArm2B" + "ody"]['GetShapeLi' + 'st']())["SetFilterD" + "ata"](this["zeroFilter"]);
+        this["_session"]["m_world"]["Refilter"](nR);
+        0x5 == this["upperArm2M" + 'C']["currentFra" + 'me'] ? this["upperArm2M" + 'C']["gotoAndSto" + 'p'](0x7) : this["upperArm2M" + 'C']["gotoAndSto" + 'p'](0x4);
+        if (V && this["chestShape"]["m_userData"] != h['GRIND_STAT' + 'E']) {
+          var nW = this["chestMC"]['wound'];
+          this["shoulder2B" + "loodFlow"] = this["_session"]["particleCo" + "ntroller"]["createBloo" + "dFlow"](0x0, 0x1, this["chestBody"], new p['RM'](nW['x'] / this["character_" + 'scale'], nW['y'] / this["character_" + "scale"]), 0x10e, 0x1f4, this["session"]["containerS" + "prite"], this['session']["containerS" + "prite"]["getChildIn" + "dex"](this['upperArm2M' + 'C']));
+          K['m']["instance"]["playAreaSo" + 'undInstanc' + 'e']("LimbRip2", this["upperArm2B" + "ody"]);
+        }
+        nW = this["shapeGuide"]["upperArm2S" + "hape"];
+        this["arm2BloodF" + 'low'] = this['_session']["particleCo" + "ntroller"]["createBloo" + "dFlow"](0x1, 0x3, this["upperArm2B" + "ody"], new P['RM'](0x0, nW["scaleY"] * -this["shapeRefSc" + 'ale'] / this['character_' + "scale"]), 0x10e, 0xc8, this['_session']["containerS" + "prite"], this['_session']["containerS" + 'prite']["getChildIn" + "dex"](this["chestMC"]));
+        this["addVocals"]("Shoulder2", 0x3);
+      } else {
+        var nB = nk["GetShapeLi" + 'st']();
+        var nu = nk["GetWorldPo" + "int"](new q3['RM'](0x0, nB["GetVertice" + 's']()[0x2]['y']));
+        if (!this["mainSmashe" + 'd'] && !this["_dying"] && !this["userVehicl" + 'e']) {
+          if ("eYzrU" === "xqlQG") {
+            for (var nW = 0x0; nW < V["length"]; nW++) {
+              var nA = p[nW];
+              nA["enumerable"] = nA["enumerable"] || !0x1;
+              nA['configurab' + 'le'] = !0x0;
+              "value" in nA && (nA["writable"] = !0x0);
+              K["defineProp" + "erty"](m, I(nA['key']), nA);
+            }
+          } else {
+            var nl = this["mainBody"]["GetWorldPo" + "int"](this["handleAnch" + "orPoint"]);
+            if (Math["abs"](nu['x'] - nl['x']) < this["reAttachDi" + "stance"] && Math["abs"](nu['y'] - nl['y']) < this['reAttachDi' + 'stance']) {
+              return void this["reAttach"](nk);
+            }
+          }
+        }
+        var no = new q3['Gq']();
+        nt["IsStatic"]() || (no["enableLimi" + 't'] = !0x0);
+        no["maxMotorTo" + "rque"] = 0x4;
+        no["Initialize"](nt, nk, nu);
+        no["userData"] = q6['s']["GRIP_JOINT"];
+        if (nk == this["lowerArm1B" + "ody"]) {
+          this["lowerArm1M" + 'C']["hand"]["gotoAndSto" + 'p'](0x1);
+          this["_session"]["contactLis" + "tener"]["deleteList" + "ener"](q4['fI']["RESULT"], this["lowerArm1S" + "hape"]);
+          if (ns["GetUserDat" + 'a']() instanceof qW['bc']) {
+            var ni = ns["GetUserDat" + 'a']();
+            if (this["userVehicl" + 'e'] && ni != this["userVehicl" + 'e']) {
+              this["gripJoint1"] = this["_session"]["m_world"]["CreateJoin" + 't'](no);
+            } else {
+              this["userVehicl" + 'e'] = ns['GetUserDat' + 'a']();
+              this["userVehicl" + 'e']["addCharact" + 'er'](this);
+              this["vehicleArm" + "1Joint"] = this["_session"]["m_world"]["CreateJoin" + 't'](no);
+              this["currentPos" + 'e'] = 0x0;
+              switch (this['userVehicl' + 'e']['characterP' + "ose"]) {
+                case 0x0:
+                  break;
+                case 0x1:
+                  this["currentPos" + 'e'] = 0xa;
+                  break;
+                case 0x2:
+                  this["currentPos" + 'e'] = 0xb;
+                  break;
+                case 0x3:
+                  this["currentPos" + 'e'] = 0xc;
+              }
+            }
+          } else {
+            this["gripJoint1"] = this["_session"]["m_world"]["CreateJoin" + 't'](no);
+          }
+        }
+        if (nk == this["lowerArm2B" + 'ody']) {
+          this["lowerArm2M" + 'C']["hand"]["gotoAndSto" + 'p'](0x1);
+          this["_session"]["contactLis" + "tener"]["deleteList" + "ener"](q4['fI']["RESULT"], this["lowerArm2S" + "hape"]);
+          if (ns["GetUserDat" + 'a']() instanceof qW['bc']) {
+            ni = ns["GetUserDat" + 'a']();
+            if (this["userVehicl" + 'e'] && ni != this["userVehicl" + 'e']) {
+              this["gripJoint2"] = this["_session"]["m_world"]["CreateJoin" + 't'](no);
+            } else {
+              this["userVehicl" + 'e'] = ns["GetUserDat" + 'a']();
+              this["userVehicl" + 'e']["addCharact" + 'er'](this);
+              this["vehicleArm" + "2Joint"] = this["_session"]["m_world"]["CreateJoin" + 't'](no);
+              this["currentPos" + 'e'] = 0x0;
+              switch (this["userVehicl" + 'e']["characterP" + "ose"]) {
+                case 0x0:
+                  break;
+                case 0x1:
+                  this["currentPos" + 'e'] = 0xa;
+                  break;
+                case 0x2:
+                  this["currentPos" + 'e'] = 0xb;
+                  break;
+                case 0x3:
+                  this["currentPos" + 'e'] = 0xc;
+              }
+            }
+          } else {
+            this["gripJoint2"] = this["_session"]["m_world"]["CreateJoin" + 't'](no);
+          }
+        }
+      }
+    };
+    nI["eject"] = function () {
+      if ("SStyA" !== "lZAks") {
+        if (!this["ejected"]) {
+          nP["prototype"]["eject"]["call"](this);
+          var nk = this["mainBody"]["GetAngle"]() - Math['PI'] / 0x2;
+          var ns = Math["cos"](nk) * this["ejectImpul" + 'se'];
+          var nt = Math["sin"](nk) * this["ejectImpul" + 'se'];
+          this["chestBody"]['ApplyImpul' + 'se'](new q3['RM'](ns, nt), this["chestBody"]["GetWorldCe" + "nter"]());
+          this["pelvisBody"]["ApplyImpul" + 'se'](new q3['RM'](ns, nt), this["pelvisBody"]["GetWorldCe" + "nter"]());
+        }
+      } else {
+        var nu;
+        var nl;
+        var no;
+        var ni = n["oneEightyO" + 'verPI'];
+        nl = -0x14 / ni - (nu = this["head1Body"]["GetAngle"]() - this["chestBody"]["GetAngle"]() - this["neckJoint"]["GetJointAn" + "gle"]());
+        no = 0x14 / ni - nu;
+        this["neckJoint"]["SetLimits"](nl, no);
+        nl = -0x5 / ni - (nu = this["pelvisBody"]["GetAngle"]() - this['chestBody']["GetAngle"]() - this["waistJoint"]["GetJointAn" + "gle"]());
+        no = 0x5 / ni - nu;
+        this["waistJoint"]["SetLimits"](nl, no);
+        nl = -0xb4 / ni - (nu = this["shoulderJo" + "int1"]["m_body2"]["GetAngle"]() - this["shoulderJo" + 'int1']["m_body1"]['GetAngle']() - this["shoulderJo" + "int1"]["GetJointAn" + "gle"]());
+        no = 0x3c / ni - nu;
+        this["shoulderJo" + 'int1']["SetLimits"](nl, no);
+        nl = -0xb4 / ni - (nu = this["shoulderJo" + "int2"]['m_body2']["GetAngle"]() - this["shoulderJo" + "int2"]["m_body1"]["GetAngle"]() - this["shoulderJo" + "int2"]["GetJointAn" + "gle"]());
+        no = 0x3c / ni - nu;
+        this["shoulderJo" + "int2"]["SetLimits"](nl, no);
+        nl = -0xa0 / ni - (nu = this["lowerArm1B" + 'ody']["GetAngle"]() - this["upperArm1B" + "ody"]["GetAngle"]() - this["elbowJoint" + '1']["GetJointAn" + "gle"]());
+        no = 0x0 / ni - nu;
+        this["elbowJoint" + '1']["SetLimits"](nl, no);
+        nl = -0xa0 / ni - (nu = this["lowerArm2B" + "ody"]["GetAngle"]() - this['upperArm2B' + "ody"]["GetAngle"]() - this["elbowJoint" + '2']["GetJointAn" + "gle"]());
+        no = 0x0 / ni - nu;
+        this["elbowJoint" + '2']["SetLimits"](nl, no);
+        nl = -0x96 / ni - (nu = this["hipJoint1"]["m_body2"]['GetAngle']() - this["hipJoint1"]["m_body1"]['GetAngle']() - this["hipJoint1"]["GetJointAn" + "gle"]());
+        no = 0xa / ni - nu;
+        this["hipJoint1"]["SetLimits"](nl, no);
+        nl = -0x96 / ni - (nu = this["hipJoint2"]["m_body2"]["GetAngle"]() - this["hipJoint2"]["m_body1"]['GetAngle']() - this["hipJoint2"]["GetJointAn" + 'gle']());
+        no = 0xa / ni - nu;
+        this["hipJoint2"]["SetLimits"](nl, no);
+        nl = 0x0 / ni - (nu = this['lowerLeg1B' + "ody"]['GetAngle']() - this["upperLeg1B" + 'ody']["GetAngle"]() - this["kneeJoint1"]["GetJointAn" + "gle"]());
+        no = 0x96 / ni - nu;
+        this["kneeJoint1"]["SetLimits"](nl, no);
+        nl = 0x0 / ni - (nu = this["lowerLeg2B" + "ody"]['GetAngle']() - this["upperLeg2B" + "ody"]["GetAngle"]() - this["kneeJoint2"]["GetJointAn" + "gle"]());
+        no = 0x96 / ni - nu;
+        this["kneeJoint2"]["SetLimits"](nl, no);
+      }
+    };
+    nI["reAttach"] = function (nk) {
+      var ns;
+      var nt;
+      var nB;
+      this["_session"]["contactLis" + "tener"]["deleteList" + "ener"](q4['fI']["RESULT"], this["lowerArm1S" + 'hape']);
+      this["_session"]["contactLis" + 'tener']["deleteList" + "ener"](q4['fI']["RESULT"], this["lowerArm2S" + "hape"]);
+      this["contactRes" + "ultBuffer"]["delete"](this["lowerArm1S" + "hape"]);
+      this["contactRes" + "ultBuffer"]["delete"](this["lowerArm2S" + "hape"]);
+      this["ejected"] = !0x1;
+      this["currentPos" + 'e'] = 0x0;
+      this["releaseGri" + 'p']();
+      var nu = 0xb4 / Math['PI'];
+      nt = -0xa / nu - (ns = this["head1Body"]["GetAngle"]() - this["chestBody"]["GetAngle"]() - this["neckJoint"]['GetJointAn' + "gle"]());
+      nB = 0xa / nu - ns;
+      this["neckJoint"]["SetLimits"](nt, nB);
+      var nl = this["_session"]['m_world'];
+      nk == this['lowerArm1B' + "ody"] ? (this["mainHand1"] = nl["CreateJoin" + 't'](this["mainHand1J" + "ointDef"]), this["lowerArm1M" + 'C']["hand"]["gotoAndSto" + 'p'](0x1)) : (this["mainHand2"] = nl["CreateJoin" + 't'](this['mainHand2J' + "ointDef"]), this['lowerArm2M' + 'C']["hand"]["gotoAndSto" + 'p'](0x1));
+      var no = new q3['z_']();
+      no["categoryBi" + 'ts'] = 0x201;
+      no['groupIndex'] = -0x2;
+      this["handleShap" + 'e']["SetFilterD" + 'ata'](no);
+      nl["Refilter"](this["handleShap" + 'e']);
+      (no = this["zeroFilter"]["Copy"]())["groupIndex"] = -0x2;
+      this["shaftShape"]["SetFilterD" + "ata"](no);

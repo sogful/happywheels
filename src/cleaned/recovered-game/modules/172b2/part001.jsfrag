@@ -1,0 +1,800 @@
+function (q0, q1, q2) {
+  'use strict';
+
+  q2['d'](q1, {
+    'i3': () => qu['i3'],
+    '_u': () => qu['_u'],
+    'Ld': () => qu['Ld'],
+    'Fj': () => qu['Fj'],
+    'uW': () => qu['uW'],
+    'l4': () => qu['l4'],
+    'mm': () => qu['mm'],
+    't6': () => qu['t6'],
+    'a2': () => qu['a2'],
+    'sW': () => qu['sW'],
+    'sQ': () => qu['sQ'],
+    'Gj': () => qu['Gj'],
+    'Qj': () => qu['Qj'],
+    'gg': () => qu['gg'],
+    'EK': () => qu['EK'],
+    'H': () => qu['H'],
+    'z5': () => qu['z5'],
+    'nd': () => qu['nd'],
+    'Av': () => qu['Av'],
+    'Ee': () => qu['Ee'],
+    'gi': () => qu['gi'],
+    'dP': () => qu['dP'],
+    'Cy': () => qu['Cy'],
+    'tG': () => qu['tG'],
+    'fj': () => qu['fj'],
+    'aR': () => qu['aR'],
+    'S3': () => qu['S3'],
+    'jX': () => qu['jX'],
+    'hM': () => qu['hM'],
+    'qV': () => qu['qV'],
+    'xH': () => qu['xH'],
+    'kk': () => qu['kk'],
+    'P5': () => qu['P5'],
+    'TV': () => qu['TV'],
+    'XI': () => qu['XI'],
+    'o0': () => qN,
+    'XT': () => qV,
+    'sD': () => qj,
+    'zL': () => qK,
+    'jJ': () => qk,
+    'oe': () => qB,
+    'fI': () => qu['fI'],
+    'G8': () => qu['G8'],
+    'ou': () => qu['ou'],
+    'zH': () => qu['zH'],
+    'Yn': () => qO,
+    'e7': () => qu['e7'],
+    'bc': () => q8,
+    'cA': () => qu['cA']
+  });
+  q2(0xd51a);
+  q2(0xb284);
+  q2(0x15de4);
+  q2(0xcdc3);
+  q2(0x15d77);
+  q2(0x65f3);
+  q2(0xb4c);
+  var q3 = q2(0x5ab6);
+  var q4 = q2(0x88f1);
+  var q5 = q2(0x8ea);
+  function q6(qG) {
+    if ("uwNsH" !== "uwNsH") {
+      for (T = 0x0; V < this['bodiesToRe' + "move"]["length"]; h++) {
+        this["removeJoin" + 't'](this["bodiesToRe" + 'move'][C]);
+      }
+      this["bodiesToRe" + "move"] = [];
+      this["remove"] = !0x1;
+      this["checkZeroJ" + "oints"]();
+    } else {
+      var qQ = function (n1) {
+        var qS7 = qS5;
+        var qS8 = qS5;
+        if ('LAQdY' !== "LAQdY") {
+          var n5;
+          K instanceof m['j7'] ? (n5 = new I['j7'](null))["setPixiMov" + "ieClip"](k) : n5 = new f['kx'](q1);
+          B["name"] && (n5['name'] = n5["pixiSprite"]["name"] = u['name'], l[o["name"]] = n5);
+          q2["push"](n5);
+        } else {
+          if ("object" != typeof n1 || !n1) {
+            return n1;
+          }
+          var n2 = n1[Symbol["toPrimitiv" + 'e']];
+          if (void 0x0 !== n2) {
+            var n3 = n2['call'](n1, "string");
+            if ("object" != typeof n3) {
+              return n3;
+            }
+            throw new TypeError("@@toPrimit" + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+          }
+          return String(n1);
+        }
+      }(qG);
+      return "symbol" == typeof qQ ? qQ : qQ + '';
+    }
+  }
+  function q7(qG, qQ) {
+    if ("ubrWv" !== "QFlhJ") {
+      q7 = Object["setPrototy" + "peOf"] ? Object["setPrototy" + "peOf"]['bind']() : function (n0, n1) {
+        var qSn = qS9;
+        var qSN = qS9;
+        if ("LHIRR" !== "LHIRR") {
+          this["contactImp" + "ulseDict"]["delete"](this['helmetShap' + 'e']);
+          this["head1Shape"] = this["helmetShap" + 'e'];
+          this['contactImp' + 'ulseDict']["set"](this["head1Shape"], this["headSmashL" + 'imit']);
+          this["helmetShap" + 'e'] = null;
+          this["helmetOn"] = !0x1;
+          var n3 = new f['m2']();
+          var n4 = new T['gv']();
+          n3["density"] = 0x1;
+          n3["friction"] = 0.3;
+          n3["restitutio" + 'n'] = 0.1;
+          n3["filter"] = this['zeroFilter'];
+          var n5 = this['head1Body']["GetPositio" + 'n']();
+          n4["position"] = n5;
+          n4["angle"] = this["head1Body"]['GetAngle']();
+          n4['userData'] = this["helmetMC"];
+          this['helmetMC']["visible"] = !0x0;
+          this["head1MC"]["helmet"]["visible"] = !0x1;
+          n3['vertexCoun' + 't'] = 0x4;
+          for (var n6 = 0x0; n6 < 0x4; n6++) {
+            var n7 = this["shapeGuide"]['helmetVert' + [n6 + 0x1]];
+            n3["vertices"][n6] = new h['RM'](n7['x'] / this["character_" + "scale"], n7['y'] / this["character_" + "scale"]);
+          }
+          this["helmetBody"] = this['_session']['m_world']["CreateBody"](n4);
+          this["helmetBody"]["CreateShap" + 'e'](n3);
+          this["helmetBody"]["SetMassFro" + "mShapes"]();
+          this['helmetBody']["SetLinearV" + "elocity"](this["head1Body"]["GetLinearV" + "elocity"]());
+          this["helmetBody"]["SetAngular" + "Velocity"](this["head1Body"]["GetAngular" + "Velocity"]());
+          this['paintVecto' + 'r']["push"](this['helmetBody']);
+        } else {
+          n0['__proto__'] = n1;
+          return n0;
+        }
+      };
+      return q7(qG, qQ);
+    } else {
+      var n1 = this;
+      T['os']["killTweens" + 'Of'](this);
+      this['listItemAr' + "ray"]["forEach"](function (n2) {
+        var qSf = qSq;
+        var qST = qSq;
+        n2['bg']['pixiSprite']["off"]("pointerove" + 'r');
+        n2['bg']["pixiSprite"]["off"]("pointerout");
+        n2['bg']["removeEven" + "tListener"](n1['Cm']["MOUSE_DOWN"], n1["mouseDownH" + "andler"]);
+        n2['bg']["removeEven" + "tListener"](P['Cm']["MOUSE_UP"], n1["mouseUpHan" + "dler"]);
+        n2["characterF" + "aces"]["removeEven" + "tListener"](p['Cm']["MOUSE_UP"], n1["mouseUpHan" + "dler"]);
+      });
+      this["levelSelec" + "tion"] && this["killLevelS" + "election"]();
+    }
+  }
+  var q8 = function (qG) {
+    if ("xbsNP" !== 'sjgwK') {
+      function n4(n5, n6) {
+        var qSh = qSV;
+        var qSC = qSV;
+        if ("PdElP" !== "ViBvB") {
+          var n7;
+          (n7 = qG['call'](this) || this)["maxSpinAV"] = 3.5;
+          n7["impulseOff" + "set"] = 0x1;
+          n7["spaceActio" + 'n'] = 0x0;
+          n7["shiftActio" + 'n'] = 0x0;
+          n7['ctrlAction'] = 0x0;
+          n7["_character" + "Pose"] = 0x0;
+          n7["_body"] = n6;
+          n7["accelerati" + 'on'] = n5['accelerati' + 'on'];
+          n7["leaningStr" + 'ength'] = n5['leaningStr' + 'ength'];
+          n7["spaceActio" + 'n'] = n5['spaceActio' + 'n'];
+          n7["shiftActio" + 'n'] = n5["shiftActio" + 'n'];
+          n7["ctrlAction"] = n5["ctrlAction"];
+          n7['lockJoints'] = n5["lockJoints"];
+          n7["_character" + 'Pose'] = n5["characterP" + "ose"];
+          n7["joints"] = [];
+          n7["jointMotor" + "Speeds"] = [];
+          n7["jointAccel" + 's'] = [];
+          n7["jets"] = [];
+          n7["arrowGuns"] = [];
+          n7["characters"] = [];
+          n7["vehicles"] = [];
+          n7["lastIterat" + "ion"] = -0x1;
+          return n7;
+        } else {
+          this["_addingTar" + 'gets'] = n;
+          this["forceDirty"]();
+        }
+      }
+      var qQ;
+      var n0;
+      n0 = qG;
+      (qQ = n4)["prototype"] = Object['create'](n0["prototype"]);
+      qQ["prototype"]['constructo' + 'r'] = qQ;
+      q7(qQ, n0);
+      var n1;
+      var n2;
+      var n3 = n4["prototype"];
+      n3["setShitUp"] = function () {
+        var qSP = qSV;
+        var qSp = qSV;
+        if ("QqwQU" !== "QqwQU") {
+          var n7 = qF["shape2"]["GetBody"]();
+          n7 == this["triggering" + "Body"] && 0x0 == qT["shape2"]["m_isSensor"] && (this["triggering" + "Count"] -= 0x1, this['triggering' + 'Count'] < 0x1 && n7["m_mass"] > 0x0 && (this["triggering" + "Count"] = 0x0, this["triggering" + "Body"] = null));
+        } else {
+          var n5 = this["_body"]['GetMass']();
+          this["leanImpuls" + 'e'] = n5 * (0.1 * this["leaningStr" + "ength"]);
+        }
+      };
+      n3["addHandle"] = function (n5) {
+        var qSK = qSV;
+        var qSm = qSV;
+        'LQMvR' !== "LQMvR" ? (n['prototype']["createDict" + "ionaries"]['call'](this), this["helmetShap" + 'e'] = this["head1Shape"], this["contactImp" + "ulseDict"]["set"](this["helmetShap" + 'e'], this["helmetSmas" + "hLimit"])) : n5["SetUserDat" + 'a'](this);
+      };
+      n3["checkAddSp" + "ecial"] = function (n5) {
+        var qSI = qSj;
+        var qSk = qSj;
+        if (n5 instanceof qu['Cy']) {
+          var n6 = n5;
+          this["jets"]["indexOf"](n6) < 0x0 && (n6["firingAllo" + "wed"] = !0x1, this["jets"]["push"](n6));
+        } else {
+          if (n5 instanceof qu['_u']) {
+            var n7 = n5;
+            this["arrowGuns"]["indexOf"](n7) < 0x0 && (n7["firingAllo" + "wed"] = !0x1, n7["unlimitedA" + "rrows"] = !0x0, this["arrowGuns"]["push"](n7));
+          }
+        }
+      };
+      n3["checkAddVe" + "hicle"] = function (n5) {
+        var qSs = qSV;
+        var qSt = qSV;
+        this["vehicles"]["indexOf"](n5) < 0x0 && (this["vehicles"]["push"](n5), n5["checkAddVe" + "hicle"](this));
+      };
+      n3["addJoint"] = function (n5) {
+        var qSB = qSj;
+        var qSu = qSj;
+        this["joints"]['push'](n5);
+        var n6 = this["joints"]["length"] - 0x1;
+        if (n5 instanceof q3['Dn']) {
+          var n7 = n5;
+          if (n7["IsMotorEna" + "bled"]()) {
+            if ("kADKb" !== "kADKb") {
+              N["prototype"]["chestSmash"]["call"](this, f);
+              this["eject"]();
+            } else {
+              var n8 = n7["GetMotorSp" + "eed"]();
+              this["jointMotor" + "Speeds"][n6] = n8;
+              this["jointAccel" + 's'][n6] = this["accelerati" + 'on'] < 0xa ? Math['abs'](n8 / (0x64 - 0xa * this["accelerati" + 'on'])) : Math["abs"](n8);
+              this["lockJoints"] && (this["slowAfterE" + "ject"] = !0x0, (n9 = q4['w']["currentSes" + "sion"]["level"]["actionsVec" + 'tor'])["indexOf"](this) < 0x0 && n9["push"](this));
+            }
+          } else {
+            this["jointMotor" + "Speeds"][n6] = null;
+          }
+          n7["EnableMoto" + 'r'](!0x1);
+        } else {
+          if ("eKJjW" === 'KboSb') {
+            void 0x0 === j && (P = !0x0);
+            void 0x0 === p && (K = !0x0);
+            m["prototype"]["torsoBreak"]["call"](this, I, k, f);
+            this["disableRun" + "ning"]();
+          } else {
+            var n9;
+            var nq = n5;
+            nq["IsMotorEna" + "bled"]() ? (n8 = nq["GetMotorSp" + "eed"](), this["jointMotor" + "Speeds"][n6] = n8, this["jointAccel" + 's'][n6] = this["accelerati" + 'on'] < 0xa ? Math["abs"](n8 / (0x64 - 0xa * this["accelerati" + 'on'])) : Math["abs"](n8), this["lockJoints"] && (this["slowAfterE" + "ject"] = !0x0, (n9 = q4['w']["currentSes" + 'sion']["level"]["actionsVec" + "tor"])["indexOf"](this) < 0x0 && n9["push"](this))) : this["jointMotor" + "Speeds"][n6] = null;
+            nq['EnableMoto' + 'r'](!0x1);
+          }
+        }
+      };
+      n3["operateKey" + 's'] = function (n5, n6, n7, n8, n9, nq, nn, nN, nf) {
+        var qSl = qSV;
+        var qSo = qSV;
+        if ("RevnU" === "RevnU") {
+          var nT = '';
+          if (n5 <= this["lastIterat" + 'ion']) {
+            return nT;
+          }
+          this['lastIterat' + "ion"] = n5;
+          var nV = [0x0, 0x0, 0x0, 0x0];
+          n6 ? n7 ? (this["leftAndRig" + "htActions"](), nT += '11') : (this["leftPresse" + "dActions"](), nT += '10') : n7 ? (this["rightPress" + "edActions"](), nT += '01') : (this["leftAndRig" + "htActions"](), nT += '00');
+          n8 ? n9 ? (this["upAndDownA" + "ctions"](), nT += '11') : (this["upPressedA" + "ctions"](), nT += '10') : n9 ? (this['downPresse' + "dActions"](), nT += '01') : (this["upAndDownA" + "ctions"](), nT += '00');
+          if (nq) {
+            var nh = nV[this["spaceActio" + 'n']];
+            nV[this['spaceActio' + 'n']] = nh + 0x1;
+            nT += '1';
+          } else {
+            nT += '0';
+          }
+          nn ? (nh = nV[this["shiftActio" + 'n']], nV[this["shiftActio" + 'n']] = nh + 0x1, nT += '1') : nT += '0';
+          nN ? (nh = nV[this["shiftActio" + 'n']], nV[this["ctrlAction"]] = nh + 0x1, nT += '1') : nT += '0';
+          (nh = nV[0x1]) > 0x0 && this["brake"]();
+          (nh = nV[0x2]) > 0x0 ? this["fireJets"]() : this["stopJets"]();
+          (nh = nV[0x3]) > 0x0 ? this["fireArrows"]() : this["stopArrows"]();
+          for (var nC = 0x0; nC < this["vehicles"]['length']; nC++) {
+            this["vehicles"][nC]["operateKey" + 's'](n5, n6, n7, n8, n9, nq, nn, nN, nf);
+          }
+          nf ? (this["zPressedAc" + "tions"](), nT += '1') : nT += '0';
+          return nT;
+        } else {
+          var nP = V[h];
+          nP["enumerable"] = nP["enumerable"] || !0x1;
+          nP["configurab" + 'le'] = !0x0;
+          "value" in nP && (nP['writable'] = !0x0);
+          C["defineProp" + "erty"](j, P(nP["key"]), nP);
+        }
+      };
+      n3['operateRep' + "layData"] = function (n5, n6, n7) {
+        var qSi = qSj;
+        var qSE = qSj;
+        if ("QDAoO" !== "QDAoO") {
+          this["contactImp" + "ulseDict"]["delete"](this['jetShape']);
+          this['_session']["contactLis" + "tener"]['deleteList' + "ener"](f['fI']['RESULT'], this["jetShape"]);
+          this["_session"]['contactLis' + 'tener']['deleteList' + "ener"](T['fI']["ADD"], this["jetShape"]);
+          var nN = this["jetBody"]["GetWorldCe" + 'nter']();
+          this['jetMC']["visible"] = !0x1;
+          this["session"]['particleCo' + "ntroller"]["createPoin" + "tBurst"]("jetshards", nN['x'] * this['m_physScal' + 'e'], nN['y'] * this["m_physScal" + 'e'], 0x5, 0x32, 0x32, this['session']["containerS" + "prite"]["getChildIn" + "dex"](this["jetMC"]));
+          this["session"]["m_world"]["DestroyBod" + 'y'](this["jetBody"]);
+          V['m']["instance"]["playAreaSo" + "undInstanc" + 'e']('MetalSmash' + 'Light', this["jetBody"]);
+        } else {
+          void 0x0 === n7 && (n7 = null);
+          if (!(n5 <= this["lastIterat" + "ion"])) {
+            if ('Pelbp' === "Pelbp") {
+              this["lastIterat" + "ion"] = n5;
+              var n8 = [0x0, 0x0, 0x0, 0x0];
+              if (n7) {
+                if ("rsgbJ" !== 'pXCuv') {
+                  '1' == n6["charAt"](0x0) ? '1' == n6["charAt"](0x1) ? (this["leftAndRig" + "htActions"](), n7["leftKeyON"](), n7['rightKeyON']()) : (this["leftPresse" + "dActions"](), n7['leftKeyON'](), n7["rightKeyOF" + 'F']()) : '1' == n6["charAt"](0x1) ? (this["rightPress" + "edActions"](), n7["leftKeyOFF"](), n7["rightKeyON"]()) : (this["leftAndRig" + "htActions"](), n7["rightKeyOF" + 'F'](), n7["leftKeyOFF"]());
+                  '1' == n6["charAt"](0x2) ? '1' == n6['charAt'](0x3) ? (this["upAndDownA" + "ctions"](), n7["upKeyON"](), n7['downKeyON']()) : (this["upPressedA" + "ctions"](), n7["upKeyON"](), n7["downKeyOFF"]()) : '1' == n6["charAt"](0x3) ? (this["downPresse" + "dActions"](), n7["upKeyOFF"](), n7["downKeyON"]()) : (this["upAndDownA" + "ctions"](), n7["upKeyOFF"](), n7["downKeyOFF"]());
+                  if ('1' == n6["charAt"](0x4)) {
+                    var n9 = n8[this["spaceActio" + 'n']];
+                    n8[this["spaceActio" + 'n']] = n9 + 0x1;
+                    n7["spaceKeyON"]();
+                  } else {
+                    n7["spaceKeyOF" + 'F']();
+                  }
+                  '1' == n6['charAt'](0x5) ? (n9 = n8[this["shiftActio" + 'n']], n8[this["shiftActio" + 'n']] = n9 + 0x1, n7["shiftKeyON"]()) : n7["shiftKeyOF" + 'F']();
+                  '1' == n6["charAt"](0x6) ? (n9 = n8[this["shiftActio" + 'n']], n8[this["ctrlAction"]] = n9 + 0x1, n7["ctrlKeyON"]()) : n7["ctrlKeyOFF"]();
+                  '1' == n6["charAt"](0x7) ? (this["zPressedAc" + "tions"](), n7["zKeyON"]()) : n7["zKeyOFF"]();
+                } else {
+                  0x7 == this["_currentPo" + 'se'] && (this["currentPos" + 'e'] = 0x0);
+                }
+              } else {
+                '1' == n6["charAt"](0x0) ? '1' == n6["charAt"](0x1) ? this["leftAndRig" + 'htActions']() : this['leftPresse' + "dActions"]() : '1' == n6['charAt'](0x1) ? this["rightPress" + "edActions"]() : this["leftAndRig" + 'htActions']();
+                '1' == n6['charAt'](0x2) ? '1' == n6["charAt"](0x3) ? this["upAndDownA" + "ctions"]() : this["upPressedA" + "ctions"]() : '1' == n6["charAt"](0x3) ? this["downPresse" + 'dActions']() : this['upAndDownA' + "ctions"]();
+                '1' == n6["charAt"](0x4) && (n9 = n8[this["spaceActio" + 'n']], n8[this['spaceActio' + 'n']] = n9 + 0x1);
+                '1' == n6["charAt"](0x5) && (n9 = n8[this["shiftActio" + 'n']], n8[this["shiftActio" + 'n']] = n9 + 0x1);
+                '1' == n6["charAt"](0x6) && (n9 = n8[this['shiftActio' + 'n']], n8[this['ctrlAction']] = n9 + 0x1);
+                '1' == n6["charAt"](0x7) && this["zPressedAc" + "tions"]();
+              }
+              (n9 = n8[0x1]) > 0x0 && this["brake"]();
+              (n9 = n8[0x2]) > 0x0 ? this["fireJets"]() : this["stopJets"]();
+              (n9 = n8[0x3]) > 0x0 ? this["fireArrows"]() : this["stopArrows"]();
+              for (var nq = 0x0; nq < this["vehicles"]["length"]; nq++) {
+                this['vehicles'][nq]["operateRep" + "layData"](n5, n6, n7);
+              }
+            } else {
+              var nT = qV;
+              var nV = new qE['gv']();
+              nV["position"]['Set'](ql['x'], n8['y']);
+              nV["angle"] = n6;
+              nV['isSleeping'] = nT["sleeping"];
+              var nh = this['_session']["m_world"]["CreateBody"](nV);
+              nh["m_userData"] = qs;
+              var nC = new qf['m2']();
+              nC["density"] = nT["density"];
+              this["setShapeFi" + 'lter'](n2["collision"], nq["immovable"], nC);
+              nC["SetAsBox"](0x32 * n7['scaleX'] / this["m_physScal" + 'e'], 0x32 * qB["scaleY"] / this["m_physScal" + 'e']);
+              var nj = nh['CreateShap' + 'e'](nC);
+              nh["SetMassFro" + "mShapes"]();
+              this["paintBodyV" + "ector"]["push"](nh);
+              this["shapeDicti" + "onary"]["set"](qW, nj);
+            }
+          }
+        }
+      };
+      n3["leftPresse" + "dActions"] = function () {
+        var qSR = qSj;
+        var qSW = qSj;
+        if ("QORbb" !== "QORbb") {
+          return qR >= qz['length'] ? {
+            'done': !0x0
+          } : {
+            'done': !0x1,
+            'value': n1[qI++]
+          };
+        } else {
+          if (this['leaningStr' + 'ength'] > 0x0) {
+            if ("aAsxV" !== 'aAsxV') {
+              this["currText"]["destroy"]();
+              this['mc']["removeChil" + 'd'](this["currText"]);
+              q6["prototype"]["destroy"]["call"](this);
+            } else {
+              var n5 = this["_body"]["GetAngle"]();
+              var n6 = (this["_body"]['GetAngular' + "Velocity"]() + this['maxSpinAV']) / this["maxSpinAV"];
+              n6 < 0x0 && (n6 = 0x0);
+              n6 > 0x1 && (n6 = 0x1);
+              var n7 = Math["cos"](n5) * this["leanImpuls" + 'e'] * n6;
+              var n8 = Math["sin"](n5) * this["leanImpuls" + 'e'] * n6;
+              var n9 = this["_body"]["GetLocalCe" + "nter"]();
+              this["_body"]["ApplyImpul" + 'se'](new q3['RM'](n8, -n7), this["_body"]["GetWorldPo" + "int"](new q3['RM'](n9['x'] + this["impulseOff" + "set"], n9['y'])));
+              this["_body"]["ApplyImpul" + 'se'](new q3['RM'](-n8, n7), this["_body"]["GetWorldPo" + "int"](new q3['RM'](n9['x'] - this["impulseOff" + "set"], n9['y'])));
+            }
+          }
+        }
+      };
+      n3["rightPress" + "edActions"] = function () {
+        var qSA = qSj;
+        var qSr = qSj;
+        if (this['leaningStr' + "ength"] > 0x0) {
+          if ("xOsMU" === "yfiqu") {
+            var nn = qT["call"](qR, "string");
+            if ("object" != typeof nn) {
+              return nn;
+            }
+            throw new qz('@@toPrimit' + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+          } else {
+            var n5 = this["_body"]["GetAngle"]();
+            var n6 = (this["_body"]["GetAngular" + "Velocity"]() - this['maxSpinAV']) / -this["maxSpinAV"];
+            n6 < 0x0 && (n6 = 0x0);
+            n6 > 0x1 && (n6 = 0x1);
+            var n7 = Math["cos"](n5) * this["leanImpuls" + 'e'] * n6;
+            var n8 = Math["sin"](n5) * this["leanImpuls" + 'e'] * n6;
+            var n9 = this["_body"]["GetLocalCe" + "nter"]();
+            this["_body"]["ApplyImpul" + 'se'](new q3['RM'](-n8, n7), this["_body"]["GetWorldPo" + "int"](new q3['RM'](n9['x'] + this["impulseOff" + "set"], n9['y'])));
+            this["_body"]["ApplyImpul" + 'se'](new q3['RM'](n8, -n7), this["_body"]["GetWorldPo" + "int"](new q3['RM'](n9['x'] - this["impulseOff" + "set"], n9['y'])));
+          }
+        }
+      };
+      n3["leftAndRig" + "htActions"] = function () {};
+      n3["upPressedA" + "ctions"] = function () {
+        var qSJ = qSj;
+        var qSD = qSj;
+        for (var n5 = 0x0; n5 < this["joints"]['length']; n5++) {
+          var n6 = this["joints"][n5];
+          if (n6 instanceof q3['Dn']) {
+            var n7 = n6;
+            if (this["jointMotor" + "Speeds"][n5]) {
+              if ((nq = this["jointMotor" + "Speeds"][n5]) >= 0x0) {
+                var n8 = this["handlePosi" + "tiveSpeed"](n7, nq, n5);
+              } else {
+                n8 = this["handleNega" + "tiveSpeed"](n7, nq, n5);
+              }
+              if (n7["IsLimitEna" + "bled"]()) {
+                var n9 = n7["GetJointAn" + 'gle']();
+                n9 > n7["m_upperAng" + 'le'] && n8 > 0x0 && n7['SetMotorSp' + 'eed'](0x0);
+                n9 < n7["m_lowerAng" + 'le'] && n8 < 0x0 && n7["SetMotorSp" + "eed"](0x0);
+              }
+            }
+          } else {
+            if ('rAAPu' !== "vSdYi") {
+              var nq;
+              var nn = n6;
+              if (this["jointMotor" + "Speeds"][n5] && (n8 = (nq = this["jointMotor" + "Speeds"][n5]) >= 0x0 ? this["handlePosi" + "tiveSpeedP" + "ris"](nn, nq, n5) : this['handleNega' + "tiveSpeedP" + "ris"](nn, nq, n5), nn["IsLimitEna" + "bled"]())) {
+                var nN = nn['GetJointTr' + "anslation"]();
+                nN > nn["m_upperTra" + "nslation"] && n8 > 0x0 && nn["SetMotorSp" + "eed"](0x0);
+                nN < nn["m_lowerTra" + "nslation"] && n8 < 0x0 && nn["SetMotorSp" + "eed"](0x0);
+              }
+            } else {
+              n['prototype']["zNullActio" + 'ns']["call"](this);
+            }
+          }
+        }
+      };
+      n3["downPresse" + "dActions"] = function () {
+        var qSg = qSV;
+        var qSS = qSV;
+        for (var n5 = 0x0; n5 < this["joints"]["length"]; n5++) {
+          if ("suimk" !== 'suimk') {
+            return this['_limit'];
+          } else {
+            var n6 = this["joints"][n5];
+            if (n6 instanceof q3['Dn']) {
+              if ("noCPZ" === 'noCPZ') {
+                var n7 = n6;
+                if (this["jointMotor" + 'Speeds'][n5]) {
+                  if ("fVKkx" !== "fVKkx") {
+                    nN = qI["setPrototy" + "peOf"] ? qS["setPrototy" + "peOf"]["bind"]() : function (nh, nC) {
+                      nh["__proto__"] = nC;
+                      return nh;
+                    };
+                    return qA(qN, qc);
+                  } else {
+                    var n8 = -this["jointMotor" + "Speeds"][n5];
+                    if (n8 >= 0x0) {
+                      var n9 = this["handlePosi" + "tiveSpeed"](n7, n8, n5);
+                    } else {
+                      n9 = this["handleNega" + "tiveSpeed"](n7, n8, n5);
+                    }
+                    if (n7["IsLimitEna" + "bled"]()) {
+                      var nq = n7["GetJointAn" + "gle"]();
+                      nq > n7['m_upperAng' + 'le'] && n9 > 0x0 && n7["SetMotorSp" + "eed"](0x0);
+                      nq < n7["m_lowerAng" + 'le'] && n9 < 0x0 && n7["SetMotorSp" + "eed"](0x0);
+                    }
+                  }
+                }
+              } else {
+                j["torsoHand1"] && (P["_session"]["m_world"]["DestroyJoi" + 'nt'](p["torsoHand1"]), K["torsoHand1"] = null);
+                m["torsoHand2"] && (I["_session"]["m_world"]['DestroyJoi' + 'nt'](k["torsoHand2"]), f["torsoHand2"] = null);
+              }
+            } else {
+              var nn = n6;
+              if (this["jointMotor" + "Speeds"][n5]) {
+                var nN = -this["jointMotor" + "Speeds"][n5];
+                n9 = nN >= 0x0 ? this["handlePosi" + 'tiveSpeedP' + "ris"](nn, nN, n5) : this['handleNega' + "tiveSpeedP" + "ris"](nn, nN, n5);
+                if (nn["IsLimitEna" + "bled"]()) {
+                  var nf = nn["GetJointTr" + "anslation"]();
+                  nf > nn["m_upperTra" + "nslation"] && n9 > 0x0 && nn['SetMotorSp' + "eed"](0x0);
+                  nf < nn['m_lowerTra' + "nslation"] && n9 < 0x0 && nn["SetMotorSp" + "eed"](0x0);
+                }
+              }
+            }
+          }
+        }
+      };
+      n3['handlePosi' + "tiveSpeed"] = function (n5, n6, n7) {
+        var qSz = qSj;
+        var qSF = qSj;
+        0x0 == n5["IsMotorEna" + "bled"]() && n5['EnableMoto' + 'r'](!0x0);
+        var n8;
+        var n9 = n5["GetJointSp" + "eed"]();
+        if (n9 < 0x0) {
+          n8 = 0x0;
+        } else {
+          var nq = this["jointAccel" + 's'][n7];
+          n8 = n9 < n6 ? Math['min'](n9 + nq, n6) : n9;
+        }
+        n5["SetMotorSp" + 'eed'](n8);
+        return n8;
+      };
+      n3["handleNega" + "tiveSpeed"] = function (n5, n6, n7) {
+        var qSM = qSV;
+        var qSH = qSV;
+        if ("FOVyt" === "VQmjR") {
+          f['__proto__'] = T;
+          return V;
+        } else {
+          0x0 == n5["IsMotorEna" + 'bled']() && n5["EnableMoto" + 'r'](!0x0);
+          var n8;
+          var n9 = n5['GetJointSp' + "eed"]();
+          if (n9 > 0x0) {
+            n8 = 0x0;
+          } else {
+            if ('FjiYY' !== "FjiYY") {
+              var nf = qA["contactAdd" + "Sounds"]["get"](qN);
+              var nT = qc['contactAdd' + 'Buffer']["get"](qV);
+              var nV = qE['min'](nT / 0xc, 0x1);
+              ql['m']["instance"]["playAreaSo" + "undInstanc" + 'e'](nf, n8['m_body'], nV);
+              n6["contactAdd" + "Buffer"]["delete"](qs);
+            } else {
+              var nq = this["jointAccel" + 's'][n7];
+              n8 = n9 > n6 ? Math['max'](n9 - nq, n6) : n9;
+            }
+          }
+          n5["SetMotorSp" + "eed"](n8);
+          return n8;
+        }
+      };
+      n3["handlePosi" + "tiveSpeedP" + "ris"] = function (n5, n6, n7) {
+        var qSb = qSj;
+        var qSZ = qSj;
+        0x0 == n5["IsMotorEna" + "bled"]() && n5["EnableMoto" + 'r'](!0x0);
+        var n8;
+        var n9 = n5["GetJointSp" + "eed"]();
+        if (n9 < 0x0) {
+          n8 = 0x0;
+        } else {
+          if ("ExpvD" === "ExpvD") {
+            var nq = this["jointAccel" + 's'][n7];
+            n8 = n9 < n6 ? Math["min"](n9 + nq, n6) : n9;
+          } else {
+            return this["_author_id"];
+          }
+        }
+        n5["SetMotorSp" + "eed"](n8);
+        return n8;
+      };
+      n3["handleNega" + "tiveSpeedP" + "ris"] = function (n5, n6, n7) {
+        var qSy = qSj;
+        var qSc = qSj;
+        0x0 == n5["IsMotorEna" + "bled"]() && n5["EnableMoto" + 'r'](!0x0);
+        var n8;
+        var n9 = n5["GetJointSp" + "eed"]();
+        if (n9 > 0x0) {
+          n8 = 0x0;
+        } else {
+          if ("NryzO" === "NryzO") {
+            var nq = this['jointAccel' + 's'][n7];
+            n8 = n9 > n6 ? Math["max"](n9 - nq, n6) : n9;
+          } else {
+            return !this["neckVerteb" + "raJoint"] || !this["vertebraHe" + "adJoint"];
+          }
+        }
+        n5["SetMotorSp" + "eed"](n8);
+        return n8;
+      };
+      n3["upAndDownA" + 'ctions'] = function () {
+        var qSX = qSj;
+        var qSx = qSj;
+        if (this["lockJoints"]) {
+          for (var n5 = 0x0; n5 < this["joints"]["length"]; n5++) {
+            var n6 = this['joints'][n5];
+            if (n6 instanceof q3['Dn']) {
+              if ("PiAyI" === 'VpXjF') {
+                var nf = p["bladeShape" + "Array"]["indexOf"](K);
+                if (nf > -0x1) {
+                  var nT = o["bladeConta" + "ctArray"][nf];
+                  q2["impulse"] > nT["impulse"] && (E["bladeConta" + "ctArray"][nf] = R);
+                } else {
+                  n4['bladeShape' + "Array"]['push'](B);
+                  u["bladeConta" + "ctArray"]["push"](l);
+                }
+              } else {
+                var n7 = n6;
+                if (this["jointMotor" + "Speeds"][n5]) {
+                  if ("jtjln" !== 'Paecf') {
+                    0x0 == n7["IsMotorEna" + "bled"]() && n7["EnableMoto" + 'r'](!0x0);
+                    var n8 = n7["GetJointSp" + 'eed']();
+                    var n9 = this["jointAccel" + 's'][n5];
+                    var nq = 0x0;
+                    n8 > 0x0 ? nq = (nq = n8 - n9) > 0x0 ? nq : 0x0 : n8 < 0x0 && (nq = (nq = n8 + n9) < 0x0 ? nq : 0x0);
+                    n7['SetMotorSp' + 'eed'](nq);
+                  } else {
+                    var nT = qB['vertVector'][qW];
+                    var nV = new qH['RM'](qk["scaleX"] * nT['x'] / this["m_physScal" + 'e'], n8['scaleY'] * nT['y'] / this["m_physScal" + 'e']);
+                    qJ = qr["cos"](qj) * nV['x'] - qP["sin"](qn) * nV['y'];
+                    qy = qg["cos"](qu) * nV['y'] + qd["sin"](qm) * nV['x'];
+                    qe['vertices'][qh] = new n3['RM'](qZ['x'] + qo, qK['y'] + n5);
+                  }
+                }
+              }
+            } else {
+              var nn = n6;
+              this["jointMotor" + "Speeds"][n5] && (0x0 == nn["IsMotorEna" + "bled"]() && nn["EnableMoto" + 'r'](!0x0), n8 = nn["GetJointSp" + "eed"](), n9 = this["jointAccel" + 's'][n5], nq = 0x0, n8 > 0x0 ? nq = (nq = n8 - n9) > 0x0 ? nq : 0x0 : n8 < 0x0 && (nq = (nq = n8 + n9) < 0x0 ? nq : 0x0), nn["SetMotorSp" + "eed"](nq));
+            }
+          }
+        } else {
+          for (n5 = 0x0; n5 < this["joints"]["length"]; n5++) {
+            (n6 = this["joints"][n5]) instanceof q3['Dn'] ? (n7 = n6, this["jointMotor" + 'Speeds'][n5] && 0x1 == n7["IsMotorEna" + "bled"]() && n7["EnableMoto" + 'r'](!0x1)) : (nn = n6, this["jointMotor" + "Speeds"][n5] && 0x1 == nn["IsMotorEna" + 'bled']() && nn["EnableMoto" + 'r'](!0x1));
+          }
+        }
+      };
+      n3["zPressedAc" + "tions"] = function () {
+        var qSw = qSj;
+        var qSe = qSj;
+        if ("nplgf" !== "nplgf") {
+          null != this["vertebraHe" + "adJoint"] && (this["vertebraHe" + "adJoint"]["broken"] = !0x0, this["character"]["session"]["m_world"]["DestroyJoi" + 'nt'](this['vertebraHe' + "adJoint"]), this["vertebraHe" + "adJoint"] = null);
+        } else {
+          for (var n5 = 0x0; n5 < this['characters']['length']; n5++) {
+            this["characters"][n5]['userVehicl' + "eEject"]();
+          }
+        }
+      };
+      n3["brake"] = function () {
+        var qSa = qSj;
+        var qSY = qSj;
+        for (var n5 = 0x0; n5 < this["joints"]["length"]; n5++) {
+          if ("UyRDm" === "nJVNV") {
+            n["rollOut"]();
+          } else {
+            var n6 = this['joints'][n5];
+            if (n6 instanceof q3['Dn']) {
+              if ("yICMj" === "yICMj") {
+                var n7 = n6;
+                this["jointMotor" + "Speeds"][n5] && (n7["IsMotorEna" + "bled"]() || n7["EnableMoto" + 'r'](!0x0), n7["SetMotorSp" + "eed"](0x0));
+              } else {
+                n['prototype']["reset"]["call"](this);
+                this['helmetOn'] = !0x0;
+                this["frameSmash" + 'ed'] = !0x1;
+                this["ejected"] = !0x1;
+                this["nubContact" + 's'] = 0x0;
+                this['charging'] = !0x1;
+                this["jumpFrames"] = 0x0;
+                this["jumpFromY"] = null;
+                this['airLean'] = !0x1;
+                this["targetAngl" + 'e'] = this["uprightAng" + 'le'];
+                this["elbowBreak" + "Limit"] = 0x5a;
+                this["elbowLigam" + "entLimit"] = 0x6e;
+                this['kneeBreakL' + "imit"] = 0x78;
+                this["kneeLigame" + 'ntLimit'] = 0x8c;
+                this["currentPos" + 'e'] = 0x9;
+              }
+            } else {
+              if ("TGDle" !== "TGDle") {
+                h["list"]["removeEven" + "tListener"](C['Jh']['ENTER_FRAM' + 'E'], j['listScroll']);
+                P["list"]["addEventLi" + "stener"](p['Jh']["ENTER_FRAM" + 'E'], K["stopScroll"]);
+              } else {
+                var n8 = n6;
+                this["jointMotor" + "Speeds"][n5] && (n8["IsMotorEna" + "bled"]() || n8["EnableMoto" + 'r'](!0x0), n8["SetMotorSp" + "eed"](0x0));
+              }
+            }
+          }
+        }
+      };
+      n3["fireJets"] = function () {
+        var qSv = qSj;
+        var qSL = qSj;
+        if (!this["jetsFiring"]) {
+          if ("YpzNH" === "YpzNH") {
+            this['jetsFiring'] = !0x0;
+            for (var n5 = 0x0; n5 < this["jets"]['length']; n5++) {
+              this["jets"][n5]["firingAllo" + 'wed'] = !0x0;
+            }
+          } else {
+            var n7 = this;
+            this['contactAdd' + "Buffer"]["forEach"](function (n8, n9) {
+              var nq = n7["contactAdd" + "Sounds"]["get"](n9);
+              n9["m_body"] && n7['m']["instance"]["playAreaSo" + 'undInstanc' + 'e'](nq, n9["m_body"]);
+              n7["contactAdd" + "Buffer"]["delete"](n9);
+            });
+          }
+        }
+      };
+      n3["stopJets"] = function () {
+        var qSG = qSV;
+        var qSQ = qSV;
+        if (this["jetsFiring"]) {
+          if ("IEYCk" === "xBpQA") {
+            if (!(qT["totalParti" + "cles"] < qR["maxParticl" + 'es'])) {
+              return void (this['finished'] = !0x0);
+            }
+            this["createPart" + "icle"]();
+            qz["totalParti" + "cles"] += 0x1;
+          } else {
+            this["jetsFiring"] = !0x1;
+            for (var n5 = 0x0; n5 < this["jets"]['length']; n5++) {
+              this["jets"][n5]["firingAllo" + "wed"] = !0x1;
+            }
+          }
+        }
+      };
+      n3["fireArrows"] = function () {
+        var qd0 = qSj;
+        var qd1 = qSj;
+        if (!this["arrowsFiri" + 'ng']) {
+          this["arrowsFiri" + 'ng'] = !0x0;
+          for (var n5 = 0x0; n5 < this['arrowGuns']["length"]; n5++) {
+            this["arrowGuns"][n5]["firingAllo" + "wed"] = !0x0;
+          }
+        }
+      };
+      n3['stopArrows'] = function () {
+        var qd2 = qSV;
+        var qd3 = qSV;
+        if (this['arrowsFiri' + 'ng']) {
+          this["arrowsFiri" + 'ng'] = !0x1;
+          for (var n5 = 0x0; n5 < this['arrowGuns']["length"]; n5++) {
+            this["arrowGuns"][n5]["firingAllo" + "wed"] = !0x1;
+          }
+        }
+      };
+      n3["addCharact" + 'er'] = function (n5) {
+        var qd4 = qSV;
+        var qd5 = qSV;
+        if ("MMDXx" !== 'MMDXx') {
+          if ("object" != typeof qA || !qN) {
+            return qc;
+          }
+          var n9 = qV[qE["toPrimitiv" + 'e']];
+          if (void 0x0 !== n9) {
+            var nq = n9["call"](qf, "string");
+            if ("object" != typeof nq) {
+              return nq;
+            }
+            throw new n2("@@toPrimit" + "ive must r" + "eturn a pr" + 'imitive\x20va' + "lue.");
+          }
+          return n6(qs);
+        } else {
+          if ((n6 = this["characters"]["indexOf"](n5)) < 0x0) {
+            this["characters"]["push"](n5);
+            var n6;
+            var n7 = q4['w']['currentSes' + "sion"]["level"]["actionsVec" + 'tor'];
+            (n6 = n7["indexOf"](this)) > -0x1 && n7["splice"](n6, 0x1);
+          }
+        }
+      };
+      n3["removeChar" + "acter"] = function (n5) {
+        var qd6 = qSj;
+        var qd7 = qSj;
+        var n6 = this["characters"]["indexOf"](n5);
+        if (n6 > -0x1 && (this["characters"]["splice"](n6, 0x1), this['characters']['length'] < 0x1)) {
+          if ('NIvfv' !== "NIvfv") {
+            void 0x0 === j && (P = !0x0);
+            void 0x0 === p && (K = !0x0);
+            m["prototype"]["torsoBreak"]["call"](this, I, k, f);
+            this["eject"]();
+          } else {
+            if (this["slowAfterE" + "ject"]) {
+              var n7 = q4['w']["currentSes" + "sion"]["level"]["actionsVec" + "tor"];
+              n7["indexOf"](this) < 0x0 && n7["push"](this);
+            } else {
+              for (var n8 = 0x0; n8 < this["joints"]["length"]; n8++) {
+                if ("WGCKs" === "WGCKs") {
+                  var n9 = this["joints"][n8];
+                  if (n9 instanceof q3['Dn']) {
+                    if ('TPZdz' === "tQazg") {
+                      n9 = 0x0;
+                    } else {
+                      var nq = n9;
+                      this["jointMotor" + "Speeds"][n8] && 0x1 == nq["IsMotorEna" + "bled"]() && nq['EnableMoto' + 'r'](!0x1);
+                    }
+                  } else {
+                    var nn = n9;

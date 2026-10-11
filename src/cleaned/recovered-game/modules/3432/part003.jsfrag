@@ -1,0 +1,800 @@
+      this["loader"]["addEventLi" + "stener"](qN['BR']["IO_ERROR"], this['securityEr' + 'rorHandler']);
+    };
+    nu["removeLoad" + "erListener" + 's'] = function () {
+      this["loader"]["removeEven" + "tListener"](qN['Jh']["COMPLETE"], this["dataLoadCo" + "mplete"]);
+      this['loader']["removeEven" + "tListener"](qN['BR']['IO_ERROR'], this["securityEr" + "rorHandler"]);
+    };
+    nu["applySearc" + 'h'] = function () {
+      var qRc = qRl;
+      if (void 0x0 !== nI["levelDataA" + "rray"]) {
+        var nl = this["levelSearc" + "hInput"]['text']["toLowerCas" + 'e']();
+        var no = !0x1;
+        var ni = !0x1;
+        if (!this["searchText" + "NotByUser"]) {
+          for (var nE = 0x0, nR = 0x0; nR < nI["levelDataA" + "rray"]["length"]; nR++) {
+            if ("PfJZp" === 'uNMqW') {
+              return T()['w'](function (nJ) {
+                for (;;) {
+                  switch (nJ['p'] = nJ['n']) {
+                    case 0x0:
+                      return nJ['a'](0x2, null);
+                    case 0x1:
+                      nJ['p'] = 0x1;
+                      nJ['n'] = 0x2;
+                      return p["hwNative"]["friends"]['findByTjfN' + 'ame'](K);
+                    case 0x2:
+                      return nJ['a'](0x2, nJ['v']);
+                    case 0x3:
+                      nJ['p'] = 0x3;
+                      nJ['v'];
+                      return nJ['a'](0x2, null);
+                  }
+                }
+              }, C, null, [[0x1, 0x3]]);
+            } else {
+              var nW = nI["levelDataA" + "rray"][nR];
+              if (0x0 == nl["length"] || nW["name"]["toLowerCas" + 'e']()["indexOf"](nl) > -0x1) {
+                if ('MxZdA' !== "kFEdb") {
+                  var nA = null;
+                  nW['isPublic'] || no || (nA = this["privateSep" + "erator"], no = !0x0);
+                  nW["isPublic"] && !ni && (nA = this["publishedS" + "eperator"], ni = !0x0);
+                  null !== nA && (nA['y'] = nE, nA["visible"] = !0x0, nE += nA["height"] - 0x2);
+                  this["levelList"][nR]["visible"] = !0x0;
+                  this["levelList"][nR]['y'] = nE;
+                  nE += this["levelList"][nR]["height"] - 0x2;
+                } else {
+                  return nW['classMappi' + 'ng'];
+                }
+              } else {
+                this['levelList'][nR]["visible"] = !0x1;
+              }
+            }
+          }
+        }
+        no || (this["privateSep" + "erator"]["visible"] = !0x1);
+        ni || (this["publishedS" + "eperator"]['visible'] = !0x1);
+        this["scroller"]["updateScro" + 'llTab']();
+      }
+    };
+    nu['buildList'] = function () {
+      var qRa = qRo;
+      this['levelList'] = [];
+      this["list"] = new qN['kx']();
+      this["listHolder"] = new qN['kx']();
+      this["listMask"] = new qN['kx']();
+      this["listMask"]["graphics"]["beginFill"](0xff0000);
+      this["listMask"]["graphics"]['drawRect'](0x0, 0x0, this["listBg"]["width"] - 0x4, this["listBg"]["height"] - 0x4);
+      this["listMask"]["graphics"]["endFill"]();
+      this["listHolder"]['x'] = this["listMask"]['x'] = this["listBg"]['x'] + 0x2;
+      this["listHolder"]['y'] = this["listMask"]['y'] = this["listBg"]['y'] + 0x2;
+      this["listHolder"]["addChild"](this["list"]);
+      this["addChild"](this["listHolder"]);
+      this["addChild"](this["listMask"]);
+      this["listHolder"]["mask"] = this["listMask"];
+      var nl = 0x0;
+      nI["levelDataA" + "rray"]['some'](function (nW) {
+        return !nW["isPublic"];
+      }) && (this["privateSep" + 'erator'] = new qJ['A']("private le" + "vels:"), this["privateSep" + "erator"]['y'] = nl, this["list"]['addChild'](this["privateSep" + "erator"]), nl += this['privateSep' + "erator"]["height"] - 0x2);
+      for (var no = !0x1, ni = 0x0; ni < nI["levelDataA" + "rray"]["length"]; ni++) {
+        if ("mDiYb" === "idBnR") {
+          C < 0x0 && (j = 0x0);
+          P > p["NUM_ACTION" + 'S'] && (K = m["NUM_ACTION" + 'S']);
+          this["_spaceActi" + 'on'] = I;
+        } else {
+          var nE = nI["levelDataA" + "rray"][ni];
+          nE["isPublic"] && !no && (this["publishedS" + "eperator"] = new qJ['A']('published\x20' + "levels:"), this["publishedS" + 'eperator']['y'] = nl, this["list"]["addChild"](this["publishedS" + "eperator"]), nl += this["publishedS" + "eperator"]['height'] - 0x2, no = !0x0);
+          var nR = new q7['oi'](nE["name"]);
+          nR['y'] = nl;
+          nl += nR["height"] - 0x2;
+          this["list"]["addChild"](nR);
+          this["levelList"]['push'](nR);
+          nR["mouseEnabl" + 'ed'] = !0x0;
+          nR["addEventLi" + "stener"](qN['Cm']["MOUSE_UP"], this["mouseUpHan" + "dler"]);
+        }
+      }
+      this["scroller"] = new q7['Em'](this["list"], this["listMask"], 0x16);
+      this["addChild"](this["scroller"]);
+      this["scroller"]['y'] = this["listMask"]['y'];
+      this['scroller']['x'] = this["listMask"]['x'] + this["listMask"]["graphics"]["width"] - 0xc;
+    };
+    nu['clearList'] = function () {
+      var qRv = qRl;
+      if ("cSOLg" === "cSOLg") {
+        var nl = this;
+        this["list"] && this["list"]["children"]["forEach"](function (no) {
+          return no["removeEven" + 'tListener'](qN['Cm']["MOUSE_UP"], nl["mouseUpHan" + "dler"]);
+        });
+        this["listHolder"] && this["removeChil" + 'd'](this["listHolder"]);
+        this["listMask"] && this["removeChil" + 'd'](this["listMask"]);
+        this["scroller"] && (this["scroller"]["die"](), this["removeChil" + 'd'](this["scroller"]));
+        this["_currentIt" + 'em'] = null;
+      } else {
+        q8["dirty"] = !0x0;
+        null === qI["storeTimer"] && (qS["storeTimer"] = qA(qN["storeStats"], qc["STORE_DELA" + "Y_MS"]));
+      }
+    };
+    nu["buildWindo" + 'w'] = function () {
+      this["_window"] = new q7['p8'](!0x0, this, !0x0);
+      this["_window"]['x'] = nI['windowX'];
+      this["_window"]['y'] = nI["windowY"];
+      this["_window"]["addEventLi" + "stener"](q7['p8']["WINDOW_CLO" + 'SED'], this["windowClos" + 'ed']);
+    };
+    nu["die"] = function () {
+      if ("IObjB" === "IObjB") {
+        this["loadButton"]["removeEven" + "tListener"](qN['Cm']["MOUSE_UP"], this["loadSelect" + 'ed']);
+        this["importButt" + 'on']["removeEven" + "tListener"](qN['Cm']["MOUSE_UP"], this["importLeve" + 'l']);
+        this["refreshBut" + "ton"]['removeEven' + "tListener"](qN['Cm']["MOUSE_UP"], this["loadLevels"]);
+        this['refreshBut' + "ton"]["removeEven" + "tListener"](qN['Jh']["ENTER_FRAM" + 'E'], this['spin']);
+        this["list"] && this["list"]["removeEven" + "tListener"](qN['Cm']['MOUSE_UP'], this["mouseUpHan" + 'dler']);
+        this["_window"]["removeEven" + "tListener"](q7['p8']["WINDOW_CLO" + "SED"], this["windowClos" + 'ed']);
+        this["_window"]["closeWindo" + 'w']();
+        this["loader"] && this["removeLoad" + "erListener" + 's']();
+        this["scroller"] && this["scroller"]["die"]();
+        this["xmlInput"]["destroy"]();
+        this["levelSearc" + "hInput"]["destroy"]();
+      } else {
+        var no = I["impulse"];
+        no > k['contactImp' + "ulseDict"]['get'](f["chairShape" + '1']) && (q1["contactRes" + "ultBuffer"]["get"](B["chairShape" + '1']) ? no > u["contactRes" + "ultBuffer"]["get"](l["chairShape" + '1'])["impulse"] && o["contactRes" + "ultBuffer"]["set"](q2["chairShape" + '1'], E) : R["contactRes" + 'ultBuffer']["set"](W['chairShape' + '1'], A));
+      }
+    };
+    nt = nI;
+    (nB = [{
+      'key': "currentIte" + 'm',
+      'set': function (nl) {
+        this["_currentIt" + 'em'] && (this["_currentIt" + 'em']['selected'] = !0x1);
+        this["_currentIt" + 'em'] = nl;
+        this["_currentIt" + 'em']["selected"] = !0x0;
+      }
+    }, {
+      'key': "currentLev" + "elInfo",
+      'get': function () {
+        if (!this["_currentIt" + 'em']) {
+          return null;
+        }
+        var nl = this["levelList"]["indexOf"](this["_currentIt" + 'em']);
+        return nI["levelDataA" + "rray"][nl];
+      }
+    }, {
+      'key': 'levelData',
+      'get': function () {
+        return this["_leveldata"];
+      }
+    }, {
+      'key': "window",
+      'get': function () {
+        return this["_window"];
+      }
+    }]) && function (nl, no) {
+      for (var ni = 0x0; ni < no["length"]; ni++) {
+        var nE = no[ni];
+        nE["enumerable"] = nE["enumerable"] || !0x1;
+        nE['configurab' + 'le'] = !0x0;
+        'value' in nE && (nE["writable"] = !0x0);
+        Object['defineProp' + "erty"](nl, qD(nE["key"]), nE);
+      }
+    }(nt["prototype"], nB);
+    Object["defineProp" + "erty"](nt, "prototype", {
+      'writable': !0x1
+    });
+    return nt;
+  }(qN['kx']);
+  qS["LOAD_SELEC" + 'TED'] = "loadselect" + 'ed';
+  qS["DELETE_SEL" + "ECTED"] = "deletesele" + "cted";
+  qS["IMPORT_DAT" + 'A'] = "importdata";
+  qS["windowX"] = 0x1e;
+  qS["windowY"] = 0xfa;
+  qS["searchPlac" + "eHolderTex" + 't'] = "Search...";
+  qS["searchPlac" + "eHolderCol" + "orInactive"] = "#808080";
+  qS["searchPlac" + 'eHolderCol' + "orActive"] = "#000000";
+  var qd = q2(0xe7a5);
+  var qz = q2(0x14909);
+  var qF = q2(0xe68c);
+  function qM(nm, nI) {
+    var qWq = qEi;
+    var qWn = qEi;
+    qM = Object["setPrototy" + "peOf"] ? Object["setPrototy" + "peOf"]["bind"]() : function (nk, ns) {
+      return 'UDvVB' === "igwVq" ? (qT["__proto__"] = qR, qz) : (nk['__proto__'] = ns, nk);
+    };
+    return qM(nm, nI);
+  }
+  var qH = function (nm) {
+    var qWj = qEE;
+    var qWP = qEE;
+    function nI(nB, nu, nl, no) {
+      var ni;
+      void 0x0 === nl && (nl = !0x0);
+      void 0x0 === no && (no = 0xc8);
+      (ni = nm["call"](this, nB, nl, no) || this)["mouseUpHan" + "dler"] = function (nE) {
+        var qWh = qWV;
+        var qWC = qWV;
+        ni["dispatchEv" + 'ent'](new qN['Jh'](nI["BUTTON_PRE" + "SSED"]));
+        ni["die"]();
+      };
+      ni["button"] = new q7['Ch'](nu, 0xfd8181, 0x46);
+      ni["addChild"](ni["button"]);
+      ni["button"]['x'] = Math["round"]((no - ni["button"]["_bgWidth"]) / 0x2);
+      ni["adjustSpac" + "ing"]();
+      ni["button"]["addEventLi" + "stener"](qN['Cm']["MOUSE_UP"], ni["mouseUpHan" + 'dler'], !0x1, 0x0, !0x0);
+      return ni;
+    }
+    var nk;
+    var ns;
+    ns = nm;
+    (nk = nI)["prototype"] = Object["create"](ns["prototype"]);
+    nk['prototype']["constructo" + 'r'] = nk;
+    qM(nk, ns);
+    var nt = nI["prototype"];
+    nt["createBg"] = function () {
+      this['bgHeight'] = Math["max"](Math['round'](this["textField"]["_pixiText"]["height"] + 0x28), 0x64);
+      this['bg'] = new qN['kx']();
+      this['bg']["graphics"]["beginFill"](0xcccccc);
+      this['bg']["graphics"]["drawRect"](0x0, 0x0, this["bgWidth"], this["bgHeight"]);
+      this['bg']["graphics"]["endFill"]();
+      this['addChildAt'](this['bg'], 0x0);
+    };
+    nt["adjustSpac" + 'ing'] = function () {
+      var nB = this['bgHeight'] - 0x1e;
+      this["button"]['y'] = nB;
+      this['textField']['y'] = (nB - this["textField"]["_pixiText"]["height"]) / 0x2;
+    };
+    nt["die"] = function () {
+      this["_window"]['closeWindo' + 'w']();
+      this["button"]['removeEven' + "tListener"](qN['Cm']['MOUSE_UP'], this['mouseUpHan' + "dler"]);
+      nm["prototype"]["die"]["call"](this);
+    };
+    return nI;
+  }(qm);
+  qH["BUTTON_PRE" + "SSED"] = 'buttonpres' + "sed";
+  var qb = q2(0x301f);
+  var qZ = q2(0x11d42);
+  var qy = q2(0xb903);
+  var qc = q2(0x1137f);
+  q2(0x977d);
+  var qX = q2(0x41a);
+  var qx = q2(0x900b);
+  var qw = q2(0x370e);
+  var qe = q2(0x133ab);
+  function qa(nm) {
+    var qWu = qEi;
+    var nI = function (nk) {
+      if ("object" != typeof nk || !nk) {
+        return nk;
+      }
+      var ns = nk[Symbol["toPrimitiv" + 'e']];
+      if (void 0x0 !== ns) {
+        var nt = ns["call"](nk, "string");
+        if ('object' != typeof nt) {
+          return nt;
+        }
+        throw new TypeError("@@toPrimit" + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+      }
+      return String(nk);
+    }(nm);
+    return "symbol" == typeof nI ? nI : nI + '';
+  }
+  function qY(nm, nI) {
+    var qWl = qEi;
+    var qWo = qEi;
+    qY = Object["setPrototy" + "peOf"] ? Object["setPrototy" + "peOf"]["bind"]() : function (nk, ns) {
+      if ("IWuvz" !== 'IWuvz') {
+        qS["prototype"] = qA["create"](qN["prototype"]);
+        qc["prototype"]["constructo" + 'r'] = qV;
+        qE(ql, q3);
+      } else {
+        nk["__proto__"] = ns;
+        return nk;
+      }
+    };
+    return qY(nm, nI);
+  }
+  var qv = function (nm) {
+    var qWH = qEE;
+    var qWb = qEE;
+    function nI(nl) {
+      var no;
+      void 0x0 === nl && (nl = null);
+      (no = nm['call'](this) || this)["maxNameCha" + 'rs'] = 0x14;
+      no["minNameCha" + 'rs'] = 0x4;
+      no["maxComment" + "Chars"] = 0xff;
+      no['windowClos' + 'ed'] = function (ni) {
+        var qWA = qWW;
+        var qWr = qWW;
+        if ("FpSKi" === "hGKas") {
+          return this["_keyCode"];
+        } else {
+          qd['u']["instance"]["hide"]();
+          no["dispatchEv" + 'ent'](ni["clone"]());
+        }
+      };
+      no['setCharTex' + 't'] = function (ni) {
+        var qWJ = qWW;
+        var qWD = qWW;
+        var nE = no["maxNameCha" + 'rs'] - no["nameInput"]["text"]["length"];
+        no["nCharsText"]["text"] = nE + (" chars lef" + 't');
+        var nR = no["maxComment" + "Chars"] - no["commentsIn" + 'put']["text"]["length"];
+        no["cCharsText"]["text"] = nR + (" chars lef" + 't');
+      };
+      no["rollOverHa" + "ndler"] = function (ni) {
+        var qWg = qWR;
+        var qWS = qWR;
+        switch (ni["target"]) {
+          case no["saveNewBut" + "ton"]:
+            qd['u']["instance"]["show"]("Your saved" + " levels ca" + "n only be " + "accessed b" + "y you unti" + "l you publ" + "ish them.<" + "br><br>You" + " must save" + " a level b" + "efore publ" + "ishing it.", no["saveNewBut" + "ton"]);
+            break;
+          case no["saveOverwr" + "iteButton"]:
+            qd['u']["instance"]['show']("You may on" + "ly overwri" + "te non-pub" + 'lished\x20lev' + "els. If yo" + "u'd like t" + "o alter a " + "published " + 'level,\x20you' + " must load" + " it in the" + " editor an" + "d save it " + "as a new l" + 'evel.', no["saveOverwr" + "iteButton"]);
+            break;
+          case no["copyLevelB" + "utton"]:
+            qd['u']["instance"]["show"]("Copy your " + 'level\x20as\x20t' + "ext, and p" + "aste it in" + '\x20a\x20text\x20fi' + "le or emai" + "l.  This w" + "ay, if the" + " site is r" + "unning lik" + "e shit and" + " fails to " + "save, you " + "can have a" + " local cop" + "y of your " + "level and " + "try saving" + " it again " + 'later.\x20\x20Yo' + "u can impo" + "rt this da" + 'ta\x20into\x20th' + "e editor t" + "hrough the" + " load menu" + '.', no["copyLevelB" + 'utton']);
+        }
+      };
+      no["savePressH" + "andler"] = function (ni) {
+        var qWd = qWW;
+        var qWz = qWW;
+        if ("WtyDw" !== "EnLft") {
+          var nE;
+          qd['u']["instance"]["hide"]();
+          no['commentsIn' + "put"]["blur"]();
+          switch (ni["target"]) {
+            case no["saveNewBut" + "ton"]:
+              if (no["levelDataO" + "bject"] && no["levelName"] == no['levelDataO' + "bject"]["name"]) {
+                no["errorPromp" + 't'] = new qH('You\x20should' + '\x20save\x20your' + " new level" + " with a ne" + "w name.", 'ok');
+                var nR = no["errorPromp" + 't']["window"];
+                no["stage"]["addChild"](nR);
+                return void nR["center"]();
+              }
+              no['levelName'] = qX['l5']["trimWhites" + "pace"](no["levelName"]);
+              if (no["levelName"]["length"] < no["minNameCha" + 'rs']) {
+                no["errorPromp" + 't'] = new qH("Level name" + " must be a" + 't\x20least\x204\x20' + "characters" + '.', 'ok');
+                var nW = no["errorPromp" + 't']["window"];
+                no["stage"]["addChild"](nW);
+                return void nW["center"]();
+              }
+              nE = new qN['Jh'](nI["SAVE_NEW"]);
+              break;
+            case no["saveOverwr" + "iteButton"]:
+              nE = new qN['Jh'](nI["SAVE_OVER"]);
+              break;
+            default:
+              return;
+          }
+          if (qA['w']["disableUpl" + "oad"]) {
+            no["errorPromp" + 't'] = new qH(qA['w']["disableMes" + 'sage'], "OH FINE");
+            var nA = no["errorPromp" + 't']["window"];
+            no["stage"]["addChild"](nA);
+            return void nA["center"]();
+          }
+          if (0x0 == no["levelName"]["length"]) {
+            no["errorPromp" + 't'] = new qH("Enter a na" + "me for you" + "r level.", 'ok');
+            var nr = no["errorPromp" + 't']["window"];
+            no["stage"]["addChild"](nr);
+            return void nr["center"]();
+          }
+          if (qx['L']["containsBa" + "dWord"](no['levelName'])) {
+            no["errorPromp" + 't'] = new qH("Your level" + " name cont" + "ains some " + 'risky\x20word' + 's.\x20Please\x20' + "remove the" + "m. (sorry," + " I've rece" + 'ntly\x20run\x20t' + "he risk of" + " losing ad" + "vertising)", 'ok');
+            var nJ = no["errorPromp" + 't']["window"];
+            no['stage']["addChild"](nJ);
+            return void nJ["center"]();
+          }
+          if (qx['L']['containsBa' + "dWord"](no["comments"])) {
+            if ("ubFVy" !== "ubFVy") {
+              P["wheelConta" + "cts"] += 0x1;
+              var nS = p["shape1"];
+              var nd = nS["m_body"];
+              var nz = K["shape2"]["m_body"]['m_mass'];
+              if (!(m["contactAdd" + 'Buffer']["get"](nS) || 0x0 != nz && nz < nd["m_mass"])) {
+                var nF = u['x5']["b2Dot"](l["velocity"], o['normal']);
+                (nF = nl["abs"](nF)) > 0x4 && E["contactAdd" + "Buffer"]["set"](nS, nF);
+              }
+            } else {
+              no['errorPromp' + 't'] = new qH("Your level" + " comments " + "contain so" + "me risky w" + "ords. Plea" + "se remove " + "them. (sor" + "ry, I've r" + "ecently ru" + "n the risk" + " of losing" + " advertisi" + "ng)", 'ok');
+              var nD = no['errorPromp' + 't']['window'];
+              no["stage"]['addChild'](nD);
+              return void nD["center"]();
+            }
+          }
+          no["dispatchEv" + "ent"](nE);
+        } else {
+          for (var nd = 0x0; nd < qz["length"]; nd++) {
+            var nz = qN[nd];
+            nz["enumerable"] = nz["enumerable"] || !0x1;
+            nz["configurab" + 'le'] = !0x0;
+            "value" in nz && (nz['writable'] = !0x0);
+            qc["defineProp" + "erty"](qV, qE(nz["key"]), nz);
+          }
+        }
+      };
+      no['copyLevelT' + "ext"] = function (ni) {
+        var qWF = qWR;
+        var qWM = qWR;
+        qd['u']["instance"]["hide"]();
+        var nE = n5["instance"]["createXML"](!0x0)["toXMLStrin" + 'g']();
+        (0x0, qe['e'])(nE, no["copyLevelB" + "utton"]);
+        qX['JD']["trackEvent"](qX['JD']["EDITOR"], qX['JD']["COPY_LEVEL" + "DATA"], "authorID_" + qA['w']["user_id"]);
+      };
+      no["levelDataO" + 'bject'] = nl;
+      no["buildView"]();
+      return no;
+    }
+    var nk;
+    var ns;
+    ns = nm;
+    (nk = nI)["prototype"] = Object["create"](ns["prototype"]);
+    nk["prototype"]["constructo" + 'r'] = nk;
+    qY(nk, ns);
+    var nt;
+    var nB;
+    var nu = nI["prototype"];
+    nu["buildView"] = function () {
+      var qWZ = qWH;
+      var nl = this;
+      var no = new qN['j7']((0x0, qr['zI'])("EditorUI", "SaveMenu"));
+      no['convertChi' + 'ldren']();
+      this["addChild"](no);
+      var ni = qN['A_']["spriteToTe" + "xtField"](no["nameText"], no);
+      var nE = qN['A_']["spriteToTe" + "xtField"](no["commentsTe" + 'xt'], no);
+      this["nCharsText"] = qN['A_']["spriteToTe" + "xtField"](no['nCharsText'], no);
+      this['cCharsText'] = qN['A_']["spriteToTe" + "xtField"](no["cCharsText"], no);
+      var nR = no["_pixiSprit" + 'e']["children"];
+      nR[0x6]['x'] += 0x2b;
+      nR[0x7]['x'] += 0x2b;
+      var nW = nR[0x3];
+      nW['x'] += 0x2b;
+      this["nCharsText"]["selectable"] = this["cCharsText"]["selectable"] = !0x1;
+      var nA = new qR['Sm']({
+        'input': {
+          'multiline': !0x1
+        }
+      });
+      nA["setInputSt" + "yle"]('width', "200px");
+      nA['x'] = ni['x'];
+      nA['y'] = ni['y'];
+      nA["setInputSt" + 'yle']("fontFamily", ni["pixiText"]["style"]["fontFamily"]);
+      nA["setInputSt" + "yle"]('fontSize', ni["pixiText"]["style"]['fontSize'] + 'px');
+      nA["setInputSt" + "yle"]("color", ni["pixiText"]["style"]["fill"]);
+      nA["maxLength"] = this["maxNameCha" + 'rs'];
+      this["pixiSprite"]["addChild"](nA);
+      no["removeChil" + 'd'](ni);
+      ni["destroy"]();
+      this["nameInput"] = nA;
+      var nr = new qR['Sm']({
+        'input': {
+          'multiline': !0x0
+        }
+      });
+      nr["setInputSt" + 'yle']('width', "190px");
+      nr["setInputSt" + "yle"]("height", '92px');
+      nr['x'] = nE['x'];
+      nr['y'] = nE['y'];
+      nr['setInputSt' + "yle"]("fontFamily", nE["pixiText"]["style"]["fontFamily"]);
+      nr['setInputSt' + "yle"]("fontSize", nE["pixiText"]["style"]["fontSize"] + 'px');
+      nr["setInputSt" + "yle"]("color", nE["pixiText"]["style"]['fill']);
+      nr["substitute" + "Text"] = !0x0;
+      nr["maxLength"] = this["maxComment" + "Chars"];
+      this["pixiSprite"]["addChild"](nr);
+      no["removeChil" + 'd'](nE);
+      nE["destroy"]();
+      this['commentsIn' + "put"] = nr;
+      this["addEventLi" + "stener"](qN['Jh']["ENTER_FRAM" + 'E'], this["setCharTex" + 't']);
+      if (qA['w']["user_id"] > 0x0) {
+        var nJ = new qN['lk']("HelveticaN" + "eueLT Std", 0xb, 0x3d88c7, null, null, null, null, null, qN['MA']["LEFT"]);
+        var nD = new qN['A_']();
+        nD["defaultTex" + "tFormat"] = nJ;
+        nD["text"] = "Read these" + " rules and" + " follow th" + "em!";
+        var ng = new qN['A1']();
+        ng["beginFill"](0x0);
+        ng["drawRect"](0x0, 0x0, 0xb4, 0x14);
+        ng["pixiGraphi" + 'cs']["alpha"] = 0x0;
+        this["rulesSprit" + 'e'] = new qN['kx']();
+        this["rulesSprit" + 'e']['x'] = 0x14;
+        this["rulesSprit" + 'e']['y'] = 0xbe;
+        this["rulesSprit" + 'e']["addChild"](nD);
+        this["addChild"](this['rulesSprit' + 'e']);
+        this["rulesSprit" + 'e']["_pixiSprit" + 'e']["addChild"](ng["pixiGraphi" + 'cs']);
+        this["rulesLink"] = new qw['x'](this["rulesSprit" + 'e'], qA['w']["siteURL"] + ("level_rule" + 's.tjf'));
+        this["rulesLink"]["colorTrans" + "form"] = new qN['Ix'](0.71, 0.71, 0.71, 0x1, 0x0, 0x0, 0x0, 0x0);
+        this['rulesLink']["overTint"] = 0x4d8cbc;
+      } else {
+        if ("IBwQD" === "IBwQD") {
+          var nS = new qN['lk']("HelveticaN" + "eueLT Std", 0xb, 0xfd8181, !0x0, null, null, null, null, qN['MA']["CENTER"]);
+          var nd = new qN['A_']();
+          nd["width"] = 0xf0;
+          nd['defaultTex' + "tFormat"] = nS;
+          nd["text"] = 'Log\x20in\x20to\x20' + "upload you" + "r level!";
+          nd['x'] = 0x0;
+          nd['y'] = 0xbe;
+          this["addChild"](nd);
+        } else {
+          qI(qS, qA, qN, qc, nd, "throw", qE);
+        }
+      }
+      this["saveNewBut" + "ton"] = new q7['Ch']("Save New L" + "evel", 0xfd8181, 0xc8);
+      this['saveNewBut' + "ton"]['x'] = 0x14;
+      this['saveNewBut' + "ton"]['y'] = 0xd7;
+      this['addChild'](this['saveNewBut' + 'ton']);
+      this["saveNewBut" + 'ton']["addEventLi" + "stener"](qN['Cm']["MOUSE_UP"], this["savePressH" + "andler"]);
+      this["saveNewBut" + "ton"]["addEventLi" + "stener"](qN['Cm']["ROLL_OVER"], this["rollOverHa" + "ndler"]);
+      if (qA['w']["user_id"] <= 0x0) {
+        this["saveNewBut" + "ton"]["disabled"] = !0x0;
+        this["commentsIn" + "put"]['disabled'] = !0x0;
+        this["nameInput"]["disabled"] = !0x0;
+      } else {
+        var nz = localStorage["getItem"](nI['LAST_RULE_' + 'READ_TIMES' + "TAMP_STORA" + "GE_KEY_NAM" + 'E']);
+        var nF = null === nz;
+        if (null !== nz) {
+          var nM = Number(nz);
+          Date["now"]() - nM > nI["MAX_RULE_R" + "EAD_TIMEOU" + "T_MS"] && (nF = !0x0);
+        }
+        nF && (this["saveNewBut" + "ton"]["disabled"] = !0x0, this["saveNewBut" + "ton"]["label"] = "Read the r" + "ules!", this["rulesLink"]["addEventLi" + "stener"]("linkClicke" + 'd', function () {
+          return nl["startDelay" + "edSaveLeve" + "lUnlock"]();
+        }));
+      }
+      this["levelDataO" + "bject"] && (this["levelDataO" + "bject"]["isPublic"] || (this["saveOverwr" + "iteButton"] = new q7['Ch']("Overwrite " + "Current Le" + 'vel', 0xfd8181, 0xc8), this["saveOverwr" + "iteButton"]['x'] = 0x14, this["saveOverwr" + "iteButton"]['y'] = this["saveNewBut" + "ton"]['y'] + 0x1c, this["addChild"](this["saveOverwr" + "iteButton"]), this["saveOverwr" + 'iteButton']["addEventLi" + "stener"](qN['Cm']['MOUSE_UP'], this["savePressH" + "andler"]), this['saveOverwr' + "iteButton"]["addEventLi" + "stener"](qN['Cm']["ROLL_OVER"], this["rollOverHa" + "ndler"]), this['levelName'] = this["levelDataO" + "bject"]["name"], this["comments"] = this["levelDataO" + 'bject']["comments"]));
+      this["copyLevelB" + "utton"] = new q7['Ch']("Copy Level" + "data to Cl" + 'ipboard', 0x3d88c7, 0xc8);
+      this["copyLevelB" + "utton"]['x'] = 0x14;
+      this["copyLevelB" + "utton"]['y'] = nW['y'] + 0x14;
+      this["addChild"](this['copyLevelB' + "utton"]);
+      this["copyLevelB" + "utton"]["addEventLi" + "stener"](qN['Cm']["MOUSE_UP"], this["copyLevelT" + "ext"]);
+      this["copyLevelB" + 'utton']["addEventLi" + "stener"](qN['Cm']["ROLL_OVER"], this["rollOverHa" + "ndler"]);
+      this["buildWindo" + 'w']();
+      this["_window"]["resize"]();
+    };
+    nu["startDelay" + "edSaveLeve" + "lUnlock"] = function () {
+      var qWw = qWH;
+      var nl = this;
+      this["rulesLink"]["removeEven" + "tListener"]('linkClicke' + 'd');
+      for (var no = function (nE) {
+          setTimeout(function () {
+            nl["stage"] && (nl['saveNewBut' + "ton"]["label"] = "Read the r" + "ules! (" + nE + ')');
+          }, 0x3e80 - 0x3e8 * nE);
+        }, ni = 0xf; 0x0 !== ni; ni--) {
+        no(ni);
+      }
+      setTimeout(function () {
+        if ("qRJTY" === "MCfQJ") {
+          for (var nR = this["singleActi" + "onVector"]["length"]; this["singleActi" + "onVector"]["length"] > 0x0;) {
+            var nW = this["singleActi" + 'onVector'][0x0];
+            nW["singleActi" + 'on']();
+            this["singleActi" + 'onVector']["indexOf"](nW) > -0x1 && this["singleActi" + "onVector"]["splice"](this["singleActi" + 'onVector']['indexOf'](nW), 0x1);
+          }
+          this["singleActi" + "onVector"] = new qF();
+          nR = this["actionsVec" + "tor"]["length"];
+          for (var nA = this["actionsVec" + "tor"]["slice"](), nr = 0x0; nr < nR; nr++) {
+            nA[nr]['actions']();
+          }
+          nR = this["actionsToR" + "emove"]["length"];
+          for (var nJ = 0x0; nJ < nR; nJ++) {
+            var nD = this['actionsToR' + "emove"][nJ];
+            var ng = this["actionsVec" + "tor"]["indexOf"](nD);
+            ng > -0x1 && this["actionsVec" + "tor"]["splice"](ng, 0x1);
+          }
+          this['actionsToR' + "emove"] = new qT();
+        } else {
+          nl["stage"] && (nl["activateSa" + "veLevel"](), localStorage["setItem"](nI['LAST_RULE_' + "READ_TIMES" + "TAMP_STORA" + "GE_KEY_NAM" + 'E'], Date['now']()["toString"]()));
+        }
+      }, 0x3e80);
+    };
+    nu["activateSa" + "veLevel"] = function () {
+      if ('vOtfV' !== "vOtfV") {
+        var no;
+        var ni;
+        var nE;
+        j['prototype']['createJoin' + 'ts']["call"](this);
+        var nR = 0xb4 / P['PI'];
+        this["upperLeg1B" + "ody"]['GetAngle']();
+        this["pelvisBody"]["GetAngle"]();
+        this["upperLeg2B" + "ody"]["GetAngle"]();
+        this['pelvisBody']["GetAngle"]();
+        ni = -0xa / nR - (no = this['head1Body']["GetAngle"]() - this['chestBody']["GetAngle"]());
+        nE = 0xa / nR - no;
+        this["neckJoint"]["SetLimits"](ni, nE);
+        var nW = new p['iE']();
+        nW["maxMotorFo" + 'rce'] = 0x3e8;
+        nW["enableLimi" + 't'] = !0x0;
+        nW["upperTrans" + "lation"] = 0x0;
+        nW["lowerTrans" + "lation"] = 0x0;
+        var nA = new K['RM']();
+        var nr = this["shapeGuide"]["backWheelS" + "hape"];
+        nA["Set"](this['_startX'] + nr['x'] / this["character_" + "scale"], this["_startY"] + nr['y'] / this["character_" + "scale"]);
+        nW["Initialize"](this["mainBody"], this["backShockB" + "ody"], nA, new m['RM'](0x0, 0x1));
+        this["backShockJ" + "oint"] = this["_session"]["m_world"]["CreateJoin" + 't'](nW);
+        nr = this["shapeGuide"]["frontWheel" + "Shape"];
+        nA["Set"](this["_startX"] + nr['x'] / this["character_" + "scale"], this["_startY"] + nr['y'] / this["character_" + "scale"]);
+        nW["Initialize"](this['mainBody'], this["frontShock" + "Body"], nA, new I['RM'](0x0, 0x1));
+        this["frontShock" + "Joint"] = this["_session"]["m_world"]["CreateJoin" + 't'](nW);
+        var nJ = new k['Gq']();
+        nJ["maxMotorTo" + "rque"] = this['maxTorque'];
+        nJ["enableLimi" + 't'] = !0x0;
+        nJ["lowerAngle"] = 0x0;
+        nJ["upperAngle"] = 0x0;
+        nA = new f['RM']();
+        nr = this["shapeGuide"]["shaftAncho" + 'r'];
+        nA["Set"](this['_startX'] + nr['x'] / this["character_" + "scale"], this["_startY"] + nr['y'] / this["character_" + "scale"]);
+        nJ["Initialize"](this["mainBody"], this["shaftBody"], nA);
+        this["mainShaft"] = this["_session"]['m_world']["CreateJoin" + 't'](nJ);
+        this["_session"]["version"] >= 1.11 && (nJ["enableLimi" + 't'] = !0x1);
+        nA['Set'](this["pelvisBody"]["GetPositio" + 'n']()['x'], this["pelvisBody"]["GetPositio" + 'n']()['y']);
+        nJ["Initialize"](this["mainBody"], this["pelvisBody"], nA);
+        this["mainPelvis"] = this["_session"]["m_world"]["CreateJoin" + 't'](nJ);
+        this["mainPelvis" + "JointDef"] = nJ["clone"]();
+        this["pelvisAnch" + "orPoint"] = this['mainBody']["GetLocalPo" + "int"](nA);
+        nJ["enableLimi" + 't'] = !0x1;
+        nr = this["shapeGuide"]["backWheelS" + "hape"];
+        nA['Set'](this["_startX"] + nr['x'] / this["character_" + "scale"], this["_startY"] + nr['y'] / this["character_" + "scale"]);
+        nJ["Initialize"](this["backShockB" + "ody"], this["backWheelB" + "ody"], nA);
+        this["backWheelJ" + "oint"] = this["_session"]["m_world"]["CreateJoin" + 't'](nJ);
+        nr = this['shapeGuide']["frontWheel" + 'Shape'];
+        nA["Set"](this["_startX"] + nr['x'] / this["character_" + "scale"], this["_startY"] + nr['y'] / this["character_" + "scale"]);
+        nJ["Initialize"](this["frontShock" + "Body"], this["frontWheel" + "Body"], nA);
+        this["frontWheel" + "Joint"] = this["_session"]['m_world']['CreateJoin' + 't'](nJ);
+        nr = this['shapeGuide']['handleAnch' + 'or'];
+        nA["Set"](this['_startX'] + nr['x'] / this["character_" + "scale"], this["_startY"] + nr['y'] / this["character_" + "scale"]);
+        nJ["Initialize"](this["mainBody"], this["lowerArm1B" + "ody"], nA);
+        this["mainHand1"] = this['_session']["m_world"]["CreateJoin" + 't'](nJ);
+        this["mainHand1J" + "ointDef"] = nJ["clone"]();
+        this["handleAnch" + "orPoint"] = this["mainBody"]["GetLocalPo" + "int"](nA);
+        nJ["Initialize"](this["mainBody"], this["lowerArm2B" + "ody"], nA);
+        this["mainHand2"] = this["_session"]["m_world"]['CreateJoin' + 't'](nJ);
+        this["mainHand2J" + "ointDef"] = nJ["clone"]();
+        nA["Set"](this["upperLeg1B" + "ody"]["GetPositio" + 'n']()['x'], this["upperLeg1B" + 'ody']["GetPositio" + 'n']()['y']);
+        nJ["Initialize"](this['mainBody'], this["upperLeg1B" + "ody"], nA);
+        this["mainLeg1"] = this['_session']["m_world"]["CreateJoin" + 't'](nJ);
+        this["mainLeg1Jo" + "intDef"] = nJ["clone"]();
+        this["leg1Anchor" + 'Point'] = this["mainBody"]["GetLocalPo" + "int"](nA);
+        nA["Set"](this["upperLeg2B" + "ody"]["GetPositio" + 'n']()['x'], this["upperLeg2B" + "ody"]["GetPositio" + 'n']()['y']);
+        nJ["Initialize"](this["mainBody"], this["upperLeg2B" + "ody"], nA);
+        this["mainLeg2"] = this["_session"]['m_world']["CreateJoin" + 't'](nJ);
+        this["mainLeg2Jo" + "intDef"] = nJ["clone"]();
+        this["leg2Anchor" + "Point"] = this["mainBody"]["GetLocalPo" + 'int'](nA);
+        nr = this["shapeGuide"]["sausageAnc" + "hor1"];
+        nA["Set"](this["_startX"] + nr['x'] / this["character_" + "scale"], this["_startY"] + nr['y'] / this["character_" + "scale"]);
+        nJ["Initialize"](this["groceryBod" + "ies"][0x7], this["groceryBod" + "ies"][0x8], nA);
+        this["_session"]["m_world"]['CreateJoin' + 't'](nJ);
+        nr = this["shapeGuide"]["sausageAnc" + "hor2"];
+        nA["Set"](this['_startX'] + nr['x'] / this["character_" + "scale"], this["_startY"] + nr['y'] / this["character_" + "scale"]);
+        nJ['Initialize'](this["groceryBod" + "ies"][0x8], this["groceryBod" + "ies"][0x9], nA);
+        this['_session']["m_world"]["CreateJoin" + 't'](nJ);
+      } else {
+        this["saveNewBut" + "ton"]["label"] = "Save New L" + 'evel';
+        this["saveNewBut" + "ton"]["disabled"] = !0x1;
+      }
+    };
+    nu["buildWindo" + 'w'] = function () {
+      "OhEBx" !== "OhEBx" ? (this["dragging"] = !0x1, this["scrollTab"]['stopDrag']()) : (this["_window"] = new q7['p8'](!0x0, this, !0x0), this["_window"]['x'] = nI["windowX"], this["_window"]['y'] = nI["windowY"], this["_window"]["addEventLi" + "stener"](q7['p8']["WINDOW_CLO" + "SED"], this["windowClos" + 'ed']));
+    };
+    nu['die'] = function () {
+      qd['u']["instance"]["hide"]();
+      this['_window']["removeEven" + "tListener"](q7['p8']["WINDOW_CLO" + 'SED'], this["windowClos" + 'ed']);
+      this["_window"]["closeWindo" + 'w']();
+      this["rulesLink"] && this["rulesLink"]["removeEven" + "tListener"]('linkClicke' + 'd');
+      this["saveNewBut" + 'ton']["removeEven" + "tListener"](qN['Cm']["MOUSE_UP"], this["savePressH" + "andler"]);
+      this["saveNewBut" + "ton"]["removeEven" + "tListener"](qN['Cm']["ROLL_OVER"], this["rollOverHa" + "ndler"]);
+      this["saveOverwr" + 'iteButton'] && (this["saveOverwr" + "iteButton"]["removeEven" + "tListener"](qN['Cm']["MOUSE_UP"], this["savePressH" + "andler"]), this["saveOverwr" + "iteButton"]["removeEven" + "tListener"](qN['Cm']["ROLL_OVER"], this['rollOverHa' + "ndler"]));
+      this["copyLevelB" + "utton"]["removeEven" + "tListener"](qN['Cm']["MOUSE_UP"], this["copyLevelT" + "ext"]);
+      this['copyLevelB' + "utton"]["removeEven" + 'tListener'](qN['Cm']["ROLL_OVER"], this["rollOverHa" + "ndler"]);
+      this["removeEven" + "tListener"](qN['Jh']["ENTER_FRAM" + 'E'], this["setCharTex" + 't']);
+    };
+    nu["destroy"] = function () {
+      if ("WvVsC" !== "JiRQF") {
+        this["nameInput"]['destroy']();
+        this["commentsIn" + "put"]['destroy']();
+        nm["prototype"]["destroy"]["call"](this);
+      } else {
+        void 0x0 === qR && (qz = 0x1);
+        for (var no = this["numChildre" + 'n'], ni = 0x0; ni < no; ni++) {
+          var nE = this["getChildAt"](ni);
+          0x0 == nE["step"](qS) && (ni -= 0x1, no -= 0x1, qA["totalParti" + 'cles'] -= 0x1, this["removeChil" + 'd'](nE));
+        }
+        return !this["finished"] || 0x0 != no;
+      }
+    };
+    nt = nI;
+    (nB = [{
+      'key': "window",
+      'get': function () {
+        if ("KTrTp" === "KTrTp") {
+          return this["_window"];
+        } else {
+          N["prototype"]["pelvisSmas" + 'h']["call"](this, f);
+          this["eject"]();
+        }
+      }
+    }, {
+      'key': "levelName",
+      'get': function () {
+        return this['nameInput']["text"];
+      },
+      'set': function (nl) {
+        this["nameInput"]["text"] = nl;
+      }
+    }, {
+      'key': "comments",
+      'get': function () {
+        return this['commentsIn' + "put"]["text"];
+      },
+      'set': function (nl) {
+        this["commentsIn" + "put"]["text"] = nl;
+      }
+    }]) && function (nl, no) {
+      for (var ni = 0x0; ni < no['length']; ni++) {
+        if ("ZdfBv" === "bmRad") {
+          qT["__proto__"] = qR;
+          return qz;
+        } else {
+          var nE = no[ni];
+          nE["enumerable"] = nE["enumerable"] || !0x1;
+          nE["configurab" + 'le'] = !0x0;
+          "value" in nE && (nE["writable"] = !0x0);
+          Object['defineProp' + "erty"](nl, qa(nE["key"]), nE);
+        }
+      }
+    }(nt["prototype"], nB);
+    Object["defineProp" + "erty"](nt, "prototype", {
+      'writable': !0x1
+    });
+    return nt;
+  }(qN['kx']);
+  qv["SAVE_NEW"] = "savenew";
+  qv['SAVE_OVER'] = "saveover";
+  qv['windowX'] = 0x1e;
+  qv["windowY"] = 0xfa;
+  qv["LAST_RULE_" + "READ_TIMES" + "TAMP_STORA" + "GE_KEY_NAM" + 'E'] = "lastRuleRe" + "adTimestam" + 'p';
+  qv["MAX_RULE_R" + 'EAD_TIMEOU' + "T_MS"] = 0x48190800;
+  q2(0x6360);
+  q2(0x5cf0);
+  q2(0x7ab7);
+  q2(0xba94);
+  q2(0xf5e9);
+  q2(0x8cc1);
+  q2(0x87de);
+  q2(0x5b7a);
+  q2(0x8d3);
+  var qL = q2(0xfc39);
+  var qU = q2(0xb079);
+  var qO = q2(0x1d80);
+  var qG = q2(0x11d24);
+  var qQ = q2(0x5ab6);
+  var n0 = q2(0x2f77);
+  function n1(nm, nI) {
+    var qAT = qEE;
+    var qAV = qEE;
+    if ("dASKc" === "dASKc") {
+      (null == nI || nI > nm["length"]) && (nI = nm["length"]);
+      for (var nk = 0x0, ns = Array(nI); nk < nI; nk++) {
+        ns[nk] = nm[nk];
+      }
+      return ns;
+    } else {
+      this['_userID'] > 0x0 && (N['w']['user_id'] = this["_userID"], f['w']["username"] = this["_userName"]);
+      -0x1 !== this["_levelID"] ? this["loadLevelB" + "yID"](this["_levelID"]) : -0x1 !== this['_replayID'] ? this["loadReplay" + "ByID"](this["_replayID"]) : this["openMainMe" + 'nu']();
+    }
+  }
+  function n2(nm, nI) {
+    var qAh = qEi;
+    var qAC = qEi;
+    for (var nk = 0x0; nk < nI["length"]; nk++) {
+      if ("xxqKB" === "leRUp") {
+        this["trackDeath"](N);
+        this["_dead"] = f;
+        this["_dead"] && (this["removeActi" + 'on'](this["reAttachin" + 'g']), this["userVehicl" + "eEject"](), this["currentPos" + 'e'] = 0x0, this["releaseGri" + 'p'](), this["backWheelJ" + "oint"]["EnableMoto" + 'r'](!0x1), this["frontWheel" + "Joint"]["EnableMoto" + 'r'](!0x1), this["voiceSound"] && (this['voiceSound']["stopSound"](), this['voiceSound'] = null));
+      } else {
+        var ns = nI[nk];
+        ns["enumerable"] = ns["enumerable"] || !0x1;
+        ns['configurab' + 'le'] = !0x0;
+        "value" in ns && (ns["writable"] = !0x0);
+        Object['defineProp' + "erty"](nm, n3(ns["key"]), ns);
+      }
+    }
+  }
+  function n3(nm) {
+    var qAp = qEi;
+    var nI = function (nk) {
+      if ("Eyrln" === "YygyN") {
+        if (!this["ejected"]) {
+          this["ejected"] = !0x0;
+          var nu = this["session"]["m_world"];
+          this["resetJoint" + "Limits"]();
+          nu["DestroyJoi" + 'nt'](this["chairPelvi" + 's']);
+          this["chairPelvi" + 's'] = null;
+          nu["DestroyJoi" + 'nt'](this["chairChest"]);
+          this["chairChest"] = null;

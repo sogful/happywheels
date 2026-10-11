@@ -1,0 +1,191 @@
+        'key': "triggerDel" + 'ay',
+        'get': function () {
+          return this["_triggerDe" + "lay"];
+        },
+        'set': function (z) {
+          z < W['minDelay'] && (z = W["minDelay"]);
+          z > W["maxDelay"] && (z = W['maxDelay']);
+          this["_triggerDe" + "lay"] = z;
+          this["forceDirty"]();
+        }
+      }, {
+        'key': "typeIndex",
+        'get': function () {
+          return this["_typeIndex"];
+        },
+        'set': function (z) {
+          this["_typeIndex"] = z;
+          if (this['_typeIndex'] > W["typeArray"]["length"] || this["typeIndex"] < 0x1) {
+            throw new Error("TYPE INDEX" + " OUT OF TY" + "PEARRAY RA" + "NGE");
+          }
+          this["triggerTyp" + 'e'] = W["typeArray"][this["_typeIndex"] - 0x1];
+          this["forceDirty"]();
+        }
+      }, {
+        'key': "soundEffec" + 't',
+        'get': function () {
+          return this['_soundEffe' + 'ct'];
+        },
+        'set': function (z) {
+          this["_soundEffe" + 'ct'] = z;
+          this["forceDirty"]();
+        }
+      }, {
+        'key': "panning",
+        'get': function () {
+          return this["_panning"];
+        },
+        'set': function (z) {
+          z < -0x1 && (z = -0x1);
+          z > 0x1 && (z = 0x1);
+          this['_panning'] = z;
+          this["forceDirty"]();
+        }
+      }, {
+        'key': "volume",
+        'get': function () {
+          return this["_volume"];
+        },
+        'set': function (z) {
+          z < 0x0 && (z = 0x0);
+          z > 0x1 && (z = 0x1);
+          this["_volume"] = z;
+          this["forceDirty"]();
+        }
+      }, {
+        'key': "soundLocat" + "ion",
+        'get': function () {
+          return this["_soundLoca" + "tion"];
+        },
+        'set': function (z) {
+          if ("vDRTK" === "vDRTK") {
+            z < 0x1 && (z = 0x1);
+            z > 0x2 && (z = 0x2);
+            this['_soundLoca' + 'tion'] = z;
+            this["setAttribu" + 'tes']();
+            this['forceDirty']();
+          } else {
+            this['mc'] = N['w']["currentSes" + "sion"]["level"]['background'][this['id'] + 'mc'];
+            var M = S['w']["currentSes" + "sion"]["level"]["shapeGuide"][this['id']];
+            this['mc']["inner"]["rotation"] = M["rotation"];
+          }
+        }
+      }, {
+        'key': "triggeredB" + 'y',
+        'get': function () {
+          return this["_triggered" + 'By'];
+        },
+        'set': function (z) {
+          if ('vltwP' === 'vltwP') {
+            z < 0x1 && (z = 0x1);
+            z > 0x6 && (z = 0x6);
+            this["_triggered" + 'By'] = z;
+            0x4 == this["_triggered" + 'By'] ? (this["addChildAt"](this["armSprite"], 0x1), this["selected"] && this["drawBoundi" + "ngBox"]()) : 0x1 != this["_typeIndex"] && this['armSprite']["parent"] && (this['removeChil' + 'd'](this["armSprite"]), this["selected"] && this["drawBoundi" + "ngBox"]());
+            this["forceDirty"]();
+          } else {
+            var Z = W[B];
+            var y = this["_levelVers" + "ion"] < 1.84 ? Z["split"]('.') : Z["split"]('_');
+            var X = new g['RM'](E(y[0x0]), p(y[0x1]));
+            var x = y[0x2] ? new A['RM'](E(y[0x2]), R(y[0x3])) : new W['RM']();
+            var w = y[0x4] ? new A['RM'](P(y[0x4]), J(y[0x5])) : new D['RM']();
+            g["vertVector"]["push"](X);
+            S["handleVect" + 'or']["push"](x);
+            J["handleVect" + 'or']["push"](w);
+          }
+        }
+      }, {
+        'key': "repeatType",
+        'get': function () {
+          return this["_repeatTyp" + 'e'];
+        },
+        'set': function (z) {
+          if ('QCcej' !== "QCcej") {
+            if (!P["levelDataA" + "rray"]) {
+              try {
+                u["levelDataA" + "rray"] = E["parseFeatu" + "redData"](o);
+              } catch (M) {}
+            }
+            I(null !== (k = f["levelDataA" + "rray"]) && void 0x0 !== n ? B : null);
+          } else {
+            z < 0x1 && (z = 0x1);
+            z > 0x4 && (z = 0x4);
+            this["_repeatTyp" + 'e'] = z;
+            this["setAttribu" + "tes"]();
+            this["forceDirty"]();
+          }
+        }
+      }, {
+        'key': "repeatInte" + "rval",
+        'get': function () {
+          return this["_repeatInt" + "erval"];
+        },
+        'set': function (z) {
+          z < 0.1 && (z = 0.1);
+          z > 0x1e && (z = 0x1e);
+          this["_repeatInt" + "erval"] = z;
+          this["forceDirty"]();
+        }
+      }, {
+        'key': 'startDisab' + 'led',
+        'get': function () {
+          if ("cxjAe" !== "PYSmG") {
+            return this['_startDisa' + "bled"];
+          } else {
+            this["grabbing"] && (this["lowerArm1M" + 'C']["hand"]["gotoAndSto" + 'p'](0x2), this["lowerArm2M" + 'C']["hand"]["gotoAndSto" + 'p'](0x2), this["grabbing"] = !0x1, this["endGrab"](), this["gripJoint1"] && (this['_session']["m_world"]["DestroyJoi" + 'nt'](this["gripJoint1"]), this['gripJoint1'] = null), this["gripJoint2"] && (this["_session"]["m_world"]["DestroyJoi" + 'nt'](this["gripJoint2"]), this['gripJoint2'] = null));
+          }
+        },
+        'set': function (z) {
+          if ("bVYPj" === 'bVYPj') {
+            z != this["_startDisa" + "bled"] && (this["_startDisa" + "bled"] = z, this["drawShape"](), this['forceDirty']());
+          } else {
+            return this["_selected"];
+          }
+        }
+      }, {
+        'key': "addingTarg" + "ets",
+        'get': function () {
+          if ("kLzYV" === 'RrAnA') {
+            for (var F = 0x0; F < V["length"]; F++) {
+              var M = D[F];
+              M["enumerable"] = M["enumerable"] || !0x1;
+              M['configurab' + 'le'] = !0x0;
+              "value" in M && (M["writable"] = !0x0);
+              K["defineProp" + "erty"](m, I(M["key"]), M);
+            }
+          } else {
+            return this["_addingTar" + "gets"];
+          }
+        },
+        'set': function (z) {
+          this["_addingTar" + "gets"] = z;
+          this['forceDirty']();
+        }
+      }, {
+        'key': "targets",
+        'get': function () {
+          return this["_targets"];
+        }
+      }, {
+        'key': "cloneTarge" + 'ts',
+        'get': function () {
+          return this["_cloneTarg" + 'ets'];
+        }
+      }]) && function (z, F) {
+        for (var M = 0x0; M < F["length"]; M++) {
+          var H = F[M];
+          H["enumerable"] = H["enumerable"] || !0x1;
+          H['configurab' + 'le'] = !0x0;
+          "value" in H && (H["writable"] = !0x0);
+          Object['defineProp' + "erty"](z, E(H["key"]), H);
+        }
+      }(D["prototype"], g);
+      Object["defineProp" + "erty"](D, 'prototype', {
+        'writable': !0x1
+      });
+      return D;
+    }(m['$']);
+    k["typeArray"] = ['activate\x20o' + "bject", "play sound" + " effect", "level vict" + "ory"];
+    k['minDelay'] = 0x0;
+    k["maxDelay"] = 0x1e;
+  }
+}

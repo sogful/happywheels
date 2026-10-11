@@ -1,0 +1,550 @@
+function (T, V, C) {
+  'use strict';
+
+  C['d'](V, {
+    'f': () => R
+  });
+  C(0x5bcc);
+  C(0xf23a);
+  C(0xb284);
+  C(0x15de4);
+  C(0xcdc3);
+  C(0x15d77);
+  C(0x65f3);
+  C(0xb4c);
+  var j = C(0x17a67);
+  var P = C(0x136b);
+  var K = C(0x17fd7);
+  function m(W) {
+    var A = function (J) {
+      if ("object" != typeof J || !J) {
+        return J;
+      }
+      var D = J[Symbol["toPrimitiv" + 'e']];
+      if (void 0x0 !== D) {
+        var g = D["call"](J, 'string');
+        if ("object" != typeof g) {
+          return g;
+        }
+        throw new TypeError("@@toPrimit" + "ive must r" + "eturn a pr" + 'imitive\x20va' + "lue.");
+      }
+      return String(J);
+    }(W);
+    return "symbol" == typeof A ? A : A + '';
+  }
+  function I(W, A) {
+    I = Object["setPrototy" + "peOf"] ? Object["setPrototy" + "peOf"]["bind"]() : function (J, D) {
+      var qbA = qbW;
+      var qbr = qbW;
+      if ("OwTuG" !== "jtAyn") {
+        J["__proto__"] = D;
+        return J;
+      } else {
+        this["forceDirty"]();
+      }
+    };
+    return I(W, A);
+  }
+  var k = function (W) {
+    function A(F, M, H) {
+      var b;
+      void 0x0 === H && (H = 0x64);
+      (b = W["call"](this) || this)['mc'] = new P['j7']((0x0, K['zI'])("GameUI", "mc_dropmen" + "u_item"));
+      b['mc']["convertChi" + "ldren"]();
+      b["addChild"](b['mc']);
+      b["currText"] = P['A_']['spriteToTe' + "xtField"](b['mc']["currText"], b['mc']);
+      b['bg'] = b['mc']['bg'];
+      b["mouseChild" + "ren"] = !0x1;
+      b["buttonMode"] = !0x0;
+      b["_index"] = M;
+      b["currText"]['autoSize'] = P['wL']["LEFT"];
+      b["currText"]["wordWrap"] = !0x1;
+      b["currText"]["selectable"] = !0x1;
+      b["currText"]["text"] = F;
+      b["_bgWidth"] = H;
+      b['bg'] = new P['kx']();
+      b["addChildAt"](b['bg'], 0x0);
+      b["rollOut"]();
+      return b;
+    }
+    var J;
+    var D;
+    D = W;
+    (J = A)["prototype"] = Object["create"](D["prototype"]);
+    J["prototype"]["constructo" + 'r'] = J;
+    I(J, D);
+    var g;
+    var S;
+    var z = A["prototype"];
+    z["drawBg"] = function (F) {
+      var qbd = qbg;
+      var qbz = qbg;
+      this['bg']['graphics']["clear"]();
+      this['bg']['graphics']["lineStyle"](0x1, 0xcccccc, 0x1, !0x1, P['s9']["NORMAL"], P['Lt']["NONE"], P['ox']["MITER"], 0x3);
+      this['bg']["graphics"]["beginFill"](F);
+      this['bg']["graphics"]['drawRect'](0x0, 0x0, this["_bgWidth"], 0x16);
+      this['bg']["graphics"]['endFill']();
+    };
+    z["rollOver"] = function () {
+      var qbF = qbg;
+      var qbM = qbg;
+      this["drawBg"](0xffffff);
+      this["currText"]["textColor"] = 0x3d88c7;
+    };
+    z["rollOut"] = function () {
+      var qbH = qbS;
+      var qbb = qbS;
+      this["drawBg"](0xefefef);
+      this["currText"]['textColor'] = 0x888888;
+    };
+    z["mouseDown"] = function () {
+      var qbZ = qbg;
+      var qby = qbg;
+      if ("RwuPG" !== "zmMXE") {
+        this["drawBg"](0xcccccc);
+        this["currText"]["textColor"] = 0xffffff;
+      } else {
+        return this["_leveldata"];
+      }
+    };
+    z["destroy"] = function () {
+      var qbc = qbg;
+      var qbX = qbg;
+      if ("BaoBS" === 'BaoBS') {
+        this['currText']["destroy"]();
+        this['mc']["removeChil" + 'd'](this["currText"]);
+        W["prototype"]["destroy"]["call"](this);
+      } else {
+        var M = f["target"];
+        M["parent"] != this["shapes"] && M["parent"] != this["special"] || (this["shapeCount"] = this["_mainCanva" + 's']["shapeCount"] + T["value"], this['tooManySha' + "pes"] = this["_mainCanva" + 's']["shapeCount"] > V["maxShapes"]);
+      }
+    };
+    g = A;
+    (S = [{
+      'key': "height",
+      'get': function () {
+        var qbx = qbS;
+        return this['bg']["height"];
+      }
+    }, {
+      'key': "index",
+      'get': function () {
+        var qbw = qbg;
+        return this["_index"];
+      }
+    }, {
+      'key': "text",
+      'get': function () {
+        var qbe = qbS;
+        var qba = qbS;
+        return this["currText"]["text"];
+      }
+    }, {
+      'key': "textWidth",
+      'get': function () {
+        var qbY = qbS;
+        var qbv = qbS;
+        if ("EbMnS" !== "EbMnS") {
+          void 0x0 === V && (h = !0x0);
+          C["prototype"]["shoulderBr" + "eak2"]["call"](this, j, P);
+          this["ejected"] || this["frameHand2"] && (this["_session"]['m_world']["DestroyJoi" + 'nt'](this["frameHand2"]), this["frameHand2"] = null, this["checkEject"]());
+        } else {
+          return this["currText"]["textWidth"];
+        }
+      }
+    }, {
+      'key': "bgWidth",
+      'get': function () {
+        var qbL = qbg;
+        var qbU = qbg;
+        if ("qhBMb" !== "qhBMb") {
+          var M = function (H) {
+            if ("object" != typeof H || !H) {
+              return H;
+            }
+            var b = H[M["toPrimitiv" + 'e']];
+            if (void 0x0 !== b) {
+              var Z = b["call"](H, "string");
+              if ("object" != typeof Z) {
+                return Z;
+              }
+              throw new K("@@toPrimit" + 'ive\x20must\x20r' + "eturn a pr" + "imitive va" + "lue.");
+            }
+            return p(H);
+          }(C);
+          return 'symbol' == typeof M ? M : M + '';
+        } else {
+          return this['bg']["width"];
+        }
+      },
+      'set': function (F) {
+        var qbQ = qbS;
+        this["_bgWidth"] = F;
+        this['rollOut']();
+      }
+    }]) && function (F, M) {
+      var qZ0 = qbg;
+      var qZ1 = qbg;
+      if ("WQGGa" !== "aBebw") {
+        for (var H = 0x0; H < M["length"]; H++) {
+          var b = M[H];
+          b["enumerable"] = b["enumerable"] || !0x1;
+          b["configurab" + 'le'] = !0x0;
+          "value" in b && (b["writable"] = !0x0);
+          Object['defineProp' + 'erty'](F, m(b["key"]), b);
+        }
+      } else {
+        return this["_triggerTy" + 'pe'];
+      }
+    }(g["prototype"], S);
+    Object["defineProp" + 'erty'](g, "prototype", {
+      'writable': !0x1
+    });
+    return g;
+  }(P['kx']);
+  var B = C(0x88f1);
+  function u(W) {
+    var A = function (J) {
+      if ('HQLNG' !== "HQLNG") {
+        n["_instance"] = null;
+        this["scroller"]["die"]();
+        this["_window"] && this["_window"]['closeWindo' + 'w']();
+        this["textField"]["destroy"]();
+      } else {
+        if ("object" != typeof J || !J) {
+          return J;
+        }
+        var D = J[Symbol["toPrimitiv" + 'e']];
+        if (void 0x0 !== D) {
+          var g = D["call"](J, "string");
+          if ("object" != typeof g) {
+            return g;
+          }
+          throw new TypeError("@@toPrimit" + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+        }
+        return String(J);
+      }
+    }(W);
+    return 'symbol' == typeof A ? A : A + '';
+  }
+  function E(W, A) {
+    E = Object["setPrototy" + 'peOf'] ? Object["setPrototy" + "peOf"]["bind"]() : function (J, D) {
+      var qZ6 = qZ5;
+      J["__proto__"] = D;
+      return J;
+    };
+    return E(W, A);
+  }
+  var R = function (W) {
+    if ("tTlQv" === "tTlQv") {
+      function z(F, M, H, b, Z) {
+        var qZ9 = qZ7;
+        var qZq = qZ7;
+        var y;
+        void 0x0 === b && (b = -0x1);
+        void 0x0 === Z && (Z = 0xcccccc);
+        (y = W["call"](this) || this)["open"] = !0x1;
+        y["menuItems"] = [];
+        y["itemHeight"] = 0x16;
+        y["mobileTogg" + "leState"] = function (w) {
+          y["open"] ? (y["open"] = !0x1, y["removeAll"]()) : (y["open"] = !0x0, y['createMenu']());
+        };
+        y["parentMous" + "eDownHandl" + 'er'] = function (w) {
+          y["hitTestPoi" + 'nt'](w["stageX"], w["stageY"]) || (y["open"] = !0x1, y["removeAll"]());
+        };
+        y["rollOverHa" + "ndler"] = function (w) {
+          var qZV = qZq;
+          var qZh = qZq;
+          if ("pkftU" !== "pkftU") {
+            var v;
+            void 0x0 === B && (u = -0x2);
+            void 0x0 === l && (H = "Elf1");
+            void 0x0 === F && (E = null);
+            void 0x0 === R && (W = 0x32);
+            (v = A["call"](this, r, J, D, g, S, d) || this)["wheelConta" + "cts"] = 0x0;
+            v["legsOk"] = !0x0;
+            v["headAttach" + 'ed'] = !0x0;
+            v['chestAttac' + "hed"] = !0x0;
+            v["strappedIn"] = !0x0;
+            v["minCos"] = 0.9396;
+            v["wheelConta" + "ctAdd"] = function (L) {
+              L["shape2"]["m_isSensor"] || (v["wheelConta" + "cts"] += 0x1);
+            };
+            v["wheelConta" + 'ctRemove'] = function (L) {
+              L["shape2"]['m_isSensor'] || (v["wheelConta" + "cts"] -= 0x1);
+            };
+            v["shapeRefSc" + "ale"] = 0x32;
+            v["santa"] = z;
+            v["verticalOf" + 'fset'] = F;
+            return v;
+          } else {
+            y["open"] || (y["open"] = !0x0, y["createMenu"]());
+          }
+        };
+        y['rollOutHan' + "dler"] = function (w) {
+          y["open"] && (y["open"] = !0x1, y["removeAll"]());
+        };
+        y["mouseOverH" + "andler"] = function (w) {
+          if ("zUBap" === "zUBap") {
+            y["deselectAl" + 'l']();
+            if (w["target"] instanceof k) {
+              var Y = w["target"];
+              w["buttonDown"] ? Y["mouseDown"]() : Y["rollOver"]();
+            }
+          } else {
+            if ("object" != typeof P || !R) {
+              return K;
+            }
+            var L = m[I["toPrimitiv" + 'e']];
+            if (void 0x0 !== L) {
+              var U = L["call"](u, "string");
+              if ("object" != typeof U) {
+                return U;
+              }
+              throw new B("@@toPrimit" + "ive must r" + 'eturn\x20a\x20pr' + 'imitive\x20va' + 'lue.');
+            }
+            return z(B);
+          }
+        };
+        y["mouseDownH" + "andler"] = function (w) {
+          w["target"] instanceof k && w["target"]["mouseDown"]();
+        };
+        y['mouseUpHan' + "dler"] = function (w) {
+          if (w["target"] instanceof k) {
+            B['w']["mobileCont" + "rols"] && (y["open"] = !0x1);
+            y['removeAll']();
+            var Y = w["target"];
+            if (y["currentInd" + 'ex'] != Y["index"]) {
+              y["currentInd" + 'ex'] = Y["index"];
+              var v = new P['Jh'](z["ITEM_SELEC" + "TED"]);
+              v["target"] = y;
+              y["dispatchEv" + "ent"](v);
+              B['w']["mobileCont" + "rols"] && (y["currText"]['mouseEnabl' + 'ed'] = !0x0, y["currText"]["interactiv" + 'e'] = !0x0, y['currText']["_pixiSprit" + 'e']["interactiv" + "eChildren"] = !0x0);
+            }
+          }
+        };
+        y["buildView"]();
+        y["displayLis" + 't'] = M;
+        y["valueList"] = H;
+        y['currText']["mouseEnabl" + 'ed'] = !0x1;
+        y["arrow"]["mouseEnabl" + 'ed'] = !0x1;
+        y['bg']["alpha"] = 0x0;
+        y['labelText']["autoSize"] = P['wL']["RIGHT"];
+        y["currText"]['autoSize'] = P['wL']["LEFT"];
+        y["currText"]["wordWrap"] = y["labelText"]["wordWrap"] = !0x1;
+        y["currText"]['selectable'] = y["labelText"]["selectable"] = !0x1;
+        y["currText"]["multiline"] = y["labelText"]["multiline"] = !0x1;
+        var X = -0x1 != b ? b : y['displayLis' + 't']['length'] - 0x1;
+        y["currentInd" + 'ex'] = X;
+        y["labelText"]["text"] = F;
+        y["labelText"]["textColor"] = Z;
+        y["holder"] = new P['kx']();
+        y["addChildAt"](y["holder"], 0x0);
+        y["menuSprite"] = new P['kx']();
+        y["holder"]["addChild"](y['bg']);
+        y["holder"]["addChild"](y['menuSprite']);
+        var x = new P['GD'](0x3, 0x2d, 0x0, 0.25, 0x8, 0x8, 0x1, 0x3);
+        y["menuSprite"]["filters"] = [x];
+        y["holder"]["mouseEnabl" + 'ed'] = !0x0;
+        B['w']["mobileCont" + "rols"] ? (y["currText"]["mouseEnabl" + 'ed'] = !0x0, y["currText"]["interactiv" + 'e'] = !0x0, y["currText"]["_pixiSprit" + 'e']["interactiv" + "eChildren"] = !0x0, y["currText"]["addEventLi" + "stener"](P['Cm']["MOUSE_DOWN"], y["mobileTogg" + "leState"])) : (y["holder"]["addEventLi" + "stener"](P['Cm']["ROLL_OVER"], y['rollOverHa' + "ndler"]), y["holder"]["addEventLi" + "stener"](P['Cm']["ROLL_OUT"], y["rollOutHan" + "dler"]));
+        return y;
+      }
+      var A;
+      var J;
+      J = W;
+      (A = z)["prototype"] = Object["create"](J["prototype"]);
+      A['prototype']["constructo" + 'r'] = A;
+      E(A, J);
+      var D;
+      var g;
+      var S = z["prototype"];
+      S["buildView"] = function () {
+        var qZl = qZ8;
+        var qZo = qZ8;
+        var F = this;
+        var M = (0x0, K['zI'])('GameUI', "mc_dropmen" + 'u');
+        var H = [];
+        M["children"]["forEach"](function (b) {
+          var Z;
+          b instanceof j['j7'] ? (Z = new P['j7'](null))["setPixiMov" + "ieClip"](b) : Z = new P['kx'](b);
+          b["name"] && (Z["name"] = Z["pixiSprite"]["name"] = b["name"], F[b["name"]] = Z);
+          H["push"](Z);
+        });
+        H["forEach"](function (b) {
+          F["addChild"](b);
+        });
+        this["currText"] = P['A_']["spriteToTe" + "xtField"](this["currText"], this);
+        this["labelText"] = P['A_']["spriteToTe" + "xtField"](this['labelText'], this);
+      };
+      S['deselectAl' + 'l'] = function () {
+        var qZW = qZ7;
+        var qZA = qZ7;
+        for (var F = 0x0; F < this["menuItems"]["length"]; F++) {
+          this["menuItems"][F]["rollOut"]();
+        }
+      };
+      S['removeAll'] = function () {
+        var qZr = qZ7;
+        var qZJ = qZ7;
+        for (var F = 0x0; F < this["menuItems"]["length"]; F++) {
+          var M = this["menuItems"][F];
+          this["menuSprite"]["removeChil" + 'd'](M);
+          M["removeEven" + "tListener"](P['Cm']["MOUSE_OVER"], this["mouseOverH" + "andler"]);
+          M["removeEven" + "tListener"](P['Cm']["MOUSE_DOWN"], this["mouseDownH" + "andler"]);
+          M["removeEven" + "tListener"](P['Cm']["MOUSE_UP"], this["mouseUpHan" + 'dler']);
+          M["destroy"]();
+        }
+        this["menuItems"] = [];
+        B['w']["mobileCont" + "rols"] && this["stage"]["removeEven" + "tListener"](P['Cm']["MOUSE_DOWN"], this["parentMous" + "eDownHandl" + 'er']);
+      };
+      S["createMenu"] = function () {
+        var qZD = qZ8;
+        var qZg = qZ8;
+        if ("hclem" === "UoAyn") {
+          m["position"] = 0x0;
+          I["writeBytes"](k, b, this["blockSize"]);
+          this["key"]["decrypt"](M, B);
+          for (var x = 0x0; x < this["blockSize"]; x++) {
+            S['buffer'][B + x] ^= Z["buffer"][x];
+          }
+          H["position"] = 0x0;
+          E["writeBytes"](R, 0x0, this["blockSize"]);
+        } else {
+          this["menuItems"] = [];
+          for (var F = this['bg']['height'], M = 0x0, H = 0x0; H < this['displayLis' + 't']["length"]; H++) {
+            var b = this["displayLis" + 't'][H];
+            var Z = new k(b, H);
+            this["menuSprite"]['addChild'](Z);
+            Z['y'] = F;
+            this["menuItems"]["push"](Z);
+            M = Math["max"](M, Z["textWidth"]);
+            F += this["itemHeight"];
+            Z["addEventLi" + "stener"](P['Cm']["MOUSE_OVER"], this["mouseOverH" + "andler"]);
+            Z['addEventLi' + 'stener'](P['Cm']["MOUSE_DOWN"], this["mouseDownH" + "andler"]);
+            Z["addEventLi" + "stener"](P['Cm']["MOUSE_UP"], this["mouseUpHan" + "dler"]);
+          }
+          for (var y = 0x0; y < this["menuItems"]["length"]; y++) {
+            this["menuItems"][y]["bgWidth"] = M + 0x14;
+          }
+          B['w']["mobileCont" + "rols"] && this["stage"]["addEventLi" + "stener"](P['Cm']["MOUSE_DOWN"], this["parentMous" + "eDownHandl" + 'er']);
+        }
+      };
+      S["valueIndex"] = function (F) {
+        var qZS = qZ8;
+        var qZd = qZ8;
+        if ('Olwju' === "dIPrz") {
+          this["_completed"] = n;
+        } else {
+          return this['valueList']['indexOf'](F);
+        }
+      };
+      S['containsVa' + "lue"] = function (F) {
+        var qZz = qZ8;
+        var qZF = qZ8;
+        if ("KMYQB" === "KMYQB") {
+          return -0x1 != this['valueList']["indexOf"](F);
+        } else {
+          this["ejected"] ? this["currentPos" + 'e'] = 0x7 : this["jetAngle"] -= 0.1;
+        }
+      };
+      S["addValue"] = function (F, M) {
+        var qZM = qZ8;
+        var qZH = qZ8;
+        this["containsVa" + "lue"](M) || (this["displayLis" + 't']["push"](F), this["valueList"]["push"](M));
+      };
+      S['setDisplay'] = function (F, M) {
+        var qZb = qZ8;
+        var qZZ = qZ8;
+        "zSxel" !== "touwU" ? (this["displayLis" + 't'][F] = M, this["_currentIn" + "dex"] == F && (this["display"] = M)) : void 0x0 !== this["numLabel"] && (this["numLabel"]["text"] = N(f), this["forceDirty"](), this["addChild"](this["numLabel"]));
+      };
+      S["die"] = function () {
+        var qZy = qZ7;
+        var qZc = qZ7;
+        B['w']["mobileCont" + "rols"] && (this["stage"]["removeEven" + "tListener"](P['Cm']["MOUSE_DOWN"], this["parentMous" + "eDownHandl" + 'er']), this['currText']['removeEven' + "tListener"](P['Cm']["MOUSE_DOWN"], this["mobileTogg" + "leState"]));
+        this["holder"]["removeEven" + "tListener"](P['Cm']['ROLL_OVER'], this["rollOverHa" + "ndler"]);
+        this["holder"]["removeEven" + "tListener"](P['Cm']["ROLL_OUT"], this["rollOutHan" + "dler"]);
+      };
+      D = z;
+      (g = [{
+        'key': 'display',
+        'get': function () {
+          var qZX = qZ8;
+          var qZx = qZ8;
+          return "oVYxk" !== "oVYxk" ? "[object Ge" + "nerator]" : this["_display"];
+        },
+        'set': function (F) {
+          var qZw = qZ7;
+          var qZe = qZ7;
+          this["_display"] = F;
+          this["currText"]["text"] = F;
+          this["arrow"]['x'] = this["currText"]["textWidth"] + 0x7;
+          this['bg']["width"] = this['arrow']['x'] + this["arrow"]["width"];
+          this["_currentIn" + "dex"] = this["displayLis" + 't']["indexOf"](F);
+        }
+      }, {
+        'key': "value",
+        'get': function () {
+          var qZa = qZ8;
+          return this["_value"];
+        }
+      }, {
+        'key': "currentInd" + 'ex',
+        'get': function () {
+          var qZY = qZ7;
+          var qZv = qZ7;
+          return this["_currentIn" + "dex"];
+        },
+        'set': function (F) {
+          var qZL = qZ8;
+          var qZU = qZ8;
+          this["_currentIn" + "dex"] = F;
+          this["display"] = this["displayLis" + 't'][F];
+          this["_value"] = this["valueList"][F];
+        }
+      }, {
+        'key': "xLeft",
+        'get': function () {
+          var qZO = qZ7;
+          var qZG = qZ7;
+          return this['x'] - this["labelText"]["width"];
+        },
+        'set': function (F) {
+          var qZQ = qZ7;
+          var qy0 = qZ7;
+          this['x'] = F + this["labelText"]["width"];
+        }
+      }]) && function (F, M) {
+        var qy1 = qZ8;
+        var qy2 = qZ8;
+        for (var H = 0x0; H < M["length"]; H++) {
+          var b = M[H];
+          b["enumerable"] = b["enumerable"] || !0x1;
+          b["configurab" + 'le'] = !0x0;
+          "value" in b && (b["writable"] = !0x0);
+          Object["defineProp" + "erty"](F, u(b["key"]), b);
+        }
+      }(D["prototype"], g);
+      Object["defineProp" + "erty"](D, "prototype", {
+        'writable': !0x1
+      });
+      return D;
+    } else {
+      this['bg'] = new V['kx']();
+      this['addChild'](this['bg']);
+      this['bg']["graphics"]["beginFill"](0x999999);
+      this['bg']["graphics"]["drawRect"](0x0, 0x0, 0x6e, 0x145);
+      this['bg']["graphics"]["beginFill"](0xcccccc);
+      this['bg']['graphics']["drawRect"](0x2, 0x2, 0x6a, 0x141);
+      var M = new h['GD'](0xa, 0x5a, 0x0, 0.75, 0xf, 0xf, 0.25, 0x3);
+      this['bg']["filters"] = [M];
+      var H = new C['lk']("HelveticaN" + "eueLT Std", 0xb, 0xffffff, null, null, null, null, null, j['MA']["CENTER"]);
+      this["menuText"] = new P['A_']();
+      this["addChild"](this["menuText"]);
+      this["menuText"]["defaultTex" + 'tFormat'] = H;
+      this["menuText"]['x'] = 0x18;
+      this["menuText"]['y'] = 0x133;
+      this['menuText']["text"] = "editor men" + 'u';
+    }
+  }(P['kx']);
+  R["ITEM_SELEC" + "TED"] = 'itemselect' + 'ed';
+}

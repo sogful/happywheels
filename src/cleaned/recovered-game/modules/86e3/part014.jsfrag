@@ -1,0 +1,800 @@
+        nt["filter"]["groupIndex"] = 0x0;
+        this['boxBodies'] = [];
+        ni = 0x0;
+        for (; ni < 0x8; ni++) {
+          if ("BrrkO" !== "VUCdB") {
+            var nD = new q3['gv']();
+            no = this["shapeGuide"]["box" + (ni + 0x1)];
+            nD['position']["Set"](this["_startX"] + no['x'] / this["character_" + 'scale'], this["_startY"] + no['y'] / this["character_" + 'scale']);
+            nD["angle"] = no["rotation"] / (0xb4 / Math['PI']);
+            nt["SetAsBox"](no["scaleX"] * this["shapeRefSc" + "ale"] / this["character_" + "scale"], no['scaleY'] * this["shapeRefSc" + "ale"] / this["character_" + "scale"]);
+            var ng = this["_session"]["m_world"]["CreateBody"](nD);
+            ng["CreateShap" + 'e'](nt);
+            ng["SetMassFro" + "mShapes"]();
+            this['paintVecto' + 'r']['push'](ng);
+            this["boxBodies"]["push"](ng);
+            this["antiGravAr" + "ray"]["push"](ng);
+          } else {
+            this["userVehicl" + 'e'] && (this["userVehicl" + 'e']["removeChar" + "acter"](this), this['userVehicl' + 'e'] = null, this["vehicleArm" + "1Joint"] && (this['_session']["m_world"]["DestroyJoi" + 'nt'](this["vehicleArm" + "1Joint"]), this["vehicleArm" + "1Joint"] = null), this["vehicleArm" + "2Joint"] && (this["_session"]["m_world"]["DestroyJoi" + 'nt'](this['vehicleArm' + "2Joint"]), this["vehicleArm" + "2Joint"] = null), this["releaseGri" + 'p'](), this["currentPos" + 'e'] = 0x0);
+          }
+        }
+        nB["localPosit" + "ion"] = new q3['RM']();
+        nB["filter"]["groupIndex"] = 0x0;
+        no = this["shapeGuide"]["backWheel"];
+        nW["position"]["Set"](this["_startX"] + no['x'] / this["character_" + "scale"], this["_startY"] + no['y'] / this["character_" + "scale"]);
+        nW["angle"] = no["rotation"] / np["oneEightyO" + "verPI"];
+        nB["radius"] = no["width"] / 0x2 / this["character_" + "scale"];
+        this["wheelRadiu" + 's'] = 0.5 * no["width"];
+        this["backWheelB" + "ody"] = this["_session"]["m_world"]["CreateBody"](nW);
+        this["backWheelS" + 'hape'] = this["backWheelB" + "ody"]["CreateShap" + 'e'](nB);
+        this["backWheelB" + "ody"]["SetMassFro" + "mShapes"]();
+        this["_session"]["contactLis" + 'tener']["registerLi" + "stener"](q4['fI']["ADD"], this["backWheelS" + "hape"], this["wheelConta" + 'ctAdd']);
+        this["_session"]["contactLis" + "tener"]['registerLi' + "stener"](q4['fI']["REMOVE"], this["backWheelS" + "hape"], this["wheelConta" + "ctRemove"]);
+        no = this['shapeGuide']["midWheel1"];
+        nW["position"]["Set"](this["_startX"] + no['x'] / this["character_" + "scale"], this["_startY"] + no['y'] / this["character_" + "scale"]);
+        nW["angle"] = no["rotation"] / np["oneEightyO" + "verPI"];
+        nB["radius"] = no["width"] / 0x2 / this["character_" + "scale"];
+        this["midWheel1B" + "ody"] = this['_session']["m_world"]["CreateBody"](nW);
+        this["midWheel1S" + "hape"] = this["midWheel1B" + "ody"]["CreateShap" + 'e'](nB);
+        this["midWheel1B" + "ody"]["SetMassFro" + "mShapes"]();
+        no = this["shapeGuide"]['midWheel2'];
+        nB['filter']["groupIndex"] = -0x1;
+        nW["position"]["Set"](this["_startX"] + no['x'] / this["character_" + "scale"], this["_startY"] + no['y'] / this["character_" + 'scale']);
+        nW["angle"] = no["rotation"] / np["oneEightyO" + "verPI"];
+        nB["radius"] = no["width"] / 0x2 / this["character_" + "scale"];
+        this["midWheel2B" + "ody"] = this["_session"]['m_world']["CreateBody"](nW);
+        this["midWheel2S" + "hape"] = this["midWheel2B" + "ody"]["CreateShap" + 'e'](nB);
+        this["midWheel2B" + "ody"]["SetMassFro" + "mShapes"]();
+        nB['filter']["groupIndex"] = 0x0;
+        no = this["shapeGuide"]["frontWheel"];
+        nW["position"]["Set"](this["_startX"] + no['x'] / this["character_" + 'scale'], this["_startY"] + no['y'] / this["character_" + 'scale']);
+        nW["angle"] = no["rotation"] / np["oneEightyO" + "verPI"];
+        nB["radius"] = no["width"] / 0x2 / this["character_" + "scale"];
+        this["frontWheel" + "Body"] = this["_session"]["m_world"]["CreateBody"](nW);
+        this["frontWheel" + "Shape"] = this["frontWheel" + "Body"]['CreateShap' + 'e'](nB);
+        this["frontWheel" + "Body"]["SetMassFro" + 'mShapes']();
+        this["wheelMulti" + 'plier'] = this["wheelRadiu" + 's'] / (0.5 * no["width"]);
+        this["_session"]["contactLis" + "tener"]["registerLi" + 'stener'](q4['fI']["ADD"], this["frontWheel" + "Shape"], this["wheelConta" + "ctAdd"]);
+        this["_session"]["contactLis" + "tener"]["registerLi" + "stener"](q4['fI']["REMOVE"], this["frontWheel" + "Shape"], this["wheelConta" + "ctRemove"]);
+        this["antiGravAr" + "ray"]["push"](this["head1Body"]);
+        this['antiGravAr' + "ray"]["push"](this["chestBody"]);
+        this["antiGravAr" + "ray"]["push"](this["pelvisBody"]);
+        this["antiGravAr" + "ray"]["push"](this["upperArm1B" + "ody"]);
+        this["antiGravAr" + "ray"]['push'](this["upperArm2B" + "ody"]);
+        this['antiGravAr' + "ray"]['push'](this["lowerArm1B" + 'ody']);
+        this["antiGravAr" + "ray"]["push"](this["lowerArm2B" + 'ody']);
+        this["antiGravAr" + "ray"]["push"](this["upperLeg1B" + "ody"]);
+        this["antiGravAr" + "ray"]["push"](this["upperLeg2B" + "ody"]);
+        this["antiGravAr" + 'ray']["push"](this["lowerLeg1B" + "ody"]);
+        this["antiGravAr" + "ray"]['push'](this['lowerLeg2B' + 'ody']);
+        this["antiGravAr" + "ray"]["push"](this["sleighBody"]);
+        this["antiGravAr" + "ray"]["push"](this['reignsBody']);
+        this["antiGravAr" + "ray"]["push"](this["backWheelB" + "ody"]);
+        this["antiGravAr" + 'ray']["push"](this["midWheel1B" + "ody"]);
+        this["antiGravAr" + "ray"]["push"](this["midWheel2B" + "ody"]);
+        this['antiGravAr' + "ray"]["push"](this["frontWheel" + 'Body']);
+        this["vertsBroke" + "nSleigh"] = [];
+        ni = 0x0;
+        for (; ni < 0x7; ni++) {
+          nJ = [];
+          for (var nS = 0x0; nS < 0x6; nS++) {
+            (no = this["shapeGuide"]["broken_" + (ni + 0x1) + '_' + (nS + 0x1)]) && nJ["push"](new q3['RM'](this["_startX"] + no['x'] / this["character_" + "scale"], this["_startY"] + no['y'] / this['character_' + "scale"]));
+          }
+          this["vertsBroke" + "nSleigh"]["push"](nJ);
+        }
+        this['vertsBroke' + "nSki"] = [];
+        ni = 0x0;
+        for (; ni < 0x3; ni++) {
+          nJ = [];
+          nS = 0x0;
+          for (; nS < 0x6; nS++) {
+            (no = this["shapeGuide"]["ski_" + (ni + 0x1) + '_' + (nS + 0x1)]) && nJ["push"](new q3['RM'](this["_startX"] + no['x'] / this["character_" + "scale"], this["_startY"] + no['y'] / this["character_" + "scale"]));
+          }
+          this["vertsBroke" + "nSki"]["push"](nJ);
+        }
+      }
+    };
+    ns["createMovi" + "eClips"] = function () {
+      if ("xJwsJ" !== "qFYhC") {
+        nP["prototype"]["createMovi" + "eClips"]["call"](this);
+        var nt = this["sourceObje" + 'ct']["sleighShar" + 'ds'];
+        this["_session"]['particleCo' + "ntroller"]["createBMDA" + "rray"]("sleighShar" + 'ds', nt);
+        var nB = this["sourceObje" + 'ct']["snowflakes"];
+        var nu = new qP['lU'](0x1, 0x5a, 0xffffff, 0x1, 0x0, 0x1, 2.5, 2.5, 0.7, 0x3);
+        this["_session"]["particleCo" + "ntroller"]["createBMDA" + "rray"]("snowflakes", nB, [nu]);
+        this["_session"]["containerS" + 'prite']["addChildAt"](this["chestMC"], this["_session"]["containerS" + "prite"]["getChildIn" + "dex"](this["lowerLeg1M" + 'C']));
+        this["sleighMC"] = this["sourceObje" + 'ct']["sleigh"];
+        this["sleighMC"]["scaleX"] = this["sleighMC"]["scaleY"] = 0x1 / this["mc_scale"];
+        this["helmetMC"] = this["sourceObje" + 'ct']['helmet'];
+        this['helmetMC']["scaleX"] = this["helmetMC"]["scaleY"] = 0x1 / this['mc_scale'];
+        this["helmetMC"]['visible'] = !0x1;
+        this["_session"]['containerS' + "prite"]["addChildAt"](this["helmetMC"], this['_session']["containerS" + "prite"]["getChildIn" + 'dex'](this["chestMC"]));
+        var nl = this["sleighBody"]["GetLocalCe" + "nter"]();
+        nl = new q3['RM']((this["_startX"] - nl['x']) * this["character_" + "scale"], (this["_startY"] - nl['y']) * this["character_" + "scale"]);
+        var no;
+        var ni = this["shapeGuide"]["rear_1"];
+        var nE = new q3['RM'](ni['x'] + nl['x'], ni['y'] + nl['y']);
+        this["sleighMC"]['inner']['x'] = nE['x'];
+        this["sleighMC"]["inner"]['y'] = nE['y'];
+        this["sleighBody"]["SetUserDat" + 'a'](this["sleighMC"]);
+        this["_session"]["containerS" + "prite"]['addChild'](this["sleighMC"]);
+        this['strapsSpri' + 'te'] = new qP['kx']();
+        this["_session"]["containerS" + "prite"]["addChild"](this["strapsSpri" + 'te']);
+        this["brokenSlei" + "ghMCs"] = [];
+        for (var nR = 0x1; nR < 0x8; nR++) {
+          (no = this["sourceObje" + 'ct']["sleigh" + nR])["scaleX"] = no["scaleY"] = 0x1 / this["mc_scale"];
+          no['visible'] = !0x1;
+          this["brokenSlei" + 'ghMCs']["push"](no);
+          this["_session"]['containerS' + 'prite']["addChild"](no);
+        }
+        (no = this["sourceObje" + 'ct']["stem"])["scaleX"] = no["scaleY"] = 0x1 / this["mc_scale"];
+        no["visible"] = !0x1;
+        this["stemMC"] = no;
+        this["_session"]["containerS" + 'prite']["addChild"](no);
+        this["brokenSkiM" + 'Cs'] = [];
+        nR = 0x1;
+        for (; nR < 0x4; nR++) {
+          (no = this["sourceObje" + 'ct']["ski" + nR])["scaleX"] = no["scaleY"] = 0x1 / this["mc_scale"];
+          no["visible"] = !0x1;
+          this['brokenSkiM' + 'Cs']["push"](no);
+          this["_session"]["containerS" + "prite"]["addChild"](no);
+        }
+        this["boxMCs"] = [];
+        nR = 0x0;
+        for (; nR < 0x8; nR++) {
+          if ("DVOSJ" === "Phuwr") {
+            var nr = V[h];
+            nr["enumerable"] = nr["enumerable"] || !0x1;
+            nr["configurab" + 'le'] = !0x0;
+            "value" in nr && (nr["writable"] = !0x0);
+            C["defineProp" + "erty"](j, P(nr["key"]), nr);
+          } else {
+            var nW = this["sourceObje" + 'ct']["box" + (nR + 0x1)];
+            nW["scaleX"] = nW["scaleY"] = 0x1 / this["mc_scale"];
+            this['boxBodies'][nR]["SetUserDat" + 'a'](nW);
+            this["boxMCs"]["push"](nW);
+            this["_session"]["containerS" + 'prite']["addChildAt"](nW, this['_session']["containerS" + "prite"]["getChildIn" + "dex"](this["sleighMC"]));
+          }
+        }
+        this["boostHolde" + 'r'] = new qP['kx']();
+        this["boostHolde" + 'r']['graphics']['beginFill'](0xcccccc);
+        this["boostHolde" + 'r']["graphics"]["drawRoundR" + "ect"](-0x2, -0x34, 0xa, 0x36, 0x4, 0x4);
+        this["boostHolde" + 'r']["graphics"]["endFill"]();
+        this["boostHolde" + 'r']['graphics']['beginFill'](0xfd8181);
+        this["boostHolde" + 'r']['graphics']["drawRect"](0x0, 0x0, 0x6, -0x32);
+        this["boostHolde" + 'r']["graphics"]["endFill"]();
+        qB['w']["hideHUD"] || this["_session"]["addChild"](this["boostHolde" + 'r']);
+        this["boostHolde" + 'r']['y'] = 0x5a;
+        this["boostHolde" + 'r']['x'] = 0x366;
+        this["boostMeter"] = new qP['kx']();
+        this["boostMeter"]["graphics"]["beginFill"](0xfffe65);
+        this['boostMeter']["graphics"]['drawRect'](0x0, 0x0, 0x6, -0x32);
+        this["boostMeter"]["graphics"]["endFill"]();
+        this['boostHolde' + 'r']["addChild"](this["boostMeter"]);
+      } else {
+        var nJ = this["character"]["session"]["m_world"];
+        var nD = this['character']['character_' + "scale"];
+        var ng = this["character"]["mc_scale"];
+        var nS = new qc['gv']();
+        var nd = new qV['_A']();
+        nd["density"] = 0x1;
+        nd["friction"] = 0.3;
+        nd["restitutio" + 'n'] = 0.1;
+        nd["radius"] = 0x5 / nD;
+        nd["filter"] = this["character"]["zeroFilter"];
+        var nz = this['pelvisBody']["GetShapeLi" + 'st']()["GetVertice" + 's']()[0x0]['y'];
+        var nF = this['pelvisBody']["GetAngle"]() + qE['PI'] / 0x2;
+        var nM = new ql['RM'](this["pelvisBody"]["GetPositio" + 'n']()['x'] + q3["cos"](nF) * nz, this['pelvisBody']["GetPositio" + 'n']()['y'] + q1["sin"](nF) * nz);
+        nz = this["chestBody"]["GetShapeLi" + 'st']()["GetVertice" + 's']()[0x2]['y'];
+        nF = this["chestBody"]['GetAngle']() + qs['PI'] / 0x2;
+        for (var nH = new qf['RM'](this["chestBody"]["GetPositio" + 'n']()['x'] + q9["cos"](nF) * nz, this["chestBody"]["GetPositio" + 'n']()['y'] + q5["sin"](nF) * nz), nb = nM['x'], nZ = nM['y'], ny = nH['x'] - nb, nc = nH['y'] - nZ, nX = ny / (this["totalIntes" + "tines"] + 0x1), nx = nc / (this["totalIntes" + "tines"] + 0x1), nw = [], na = 0x1; na <= this["totalIntes" + 'tines']; na++) {
+          nS["position"]['Set'](nb + nX * na, nZ + nx * na);
+          nS['fixedRotat' + 'ion'] = !0x0;
+          var nY = nJ['CreateBody'](nS);
+          nY["CreateShap" + 'e'](nd);
+          nY["SetMassFro" + "mShapes"]();
+          nY['SetLinearV' + "elocity"](this["chestBody"]['GetLinearV' + "elocity"]());
+          nw['push'](nY);
+          nY["CopyInterp" + "olation"](this['chestBody']);
+        }
+        if (this["antiGrav"]) {
+          for (na = 0x0; na < this["totalIntes" + "tines"]; na++) {
+            this['antiGrav']['push'](nw[na]);
+          }
+        }
+        var nv = new q2['Vy']();
+        var nL = this["intestineL" + 'ength'] / nD;
+        nv["Initialize"](this["pelvisBody"], nw[0x0], nM, nw[0x0]["GetPositio" + 'n']());
+        nv["length"] = nL;
+        nv["collideCon" + "nected"] = !0x1;
+        this["pelvisInte" + "stineJoint"] = nJ["CreateJoin" + 't'](nv);
+        this["intestineJ" + "oints"] = [];
+        na = 0x0;
+        for (; na <= this["totalIntes" + "tines"] - 0x2; na++) {
+          var nU = nw[na];
+          var nO = nw[na + 0x1];
+          nv['Initialize'](nU, nO, nU["GetPositio" + 'n'](), nO['GetPositio' + 'n']());
+          nv["length"] = nL;
+          nv["collideCon" + "nected"] = !0x1;
+          this['intestineJ' + "oints"]["push"](nJ["CreateJoin" + 't'](nv));
+        }
+        nU = nw[this["totalIntes" + "tines"] - 0x1];
+        nv["Initialize"](nU, this['chestBody'], nU["GetPositio" + 'n'](), nH);
+        nv["length"] = nL;
+        nv["collideCon" + "nected"] = !0x1;
+        this["intestineC" + "hestJoint"] = nJ["CreateJoin" + 't'](nv);
+        na = 0x0;
+        for (; na < this["intestineM" + 'Cs']["length"]; na++) {
+          var nG = this["intestineM" + 'Cs'][na];
+          nG['x'] = -0xc8;
+          nG['y'] = -0xc8;
+          nG["visible"] = !0x0;
+          nG['scaleX'] = nG["scaleY"] = 0x1 / ng;
+        }
+      }
+    };
+    ns["createJoin" + 'ts'] = function () {
+      if ('lKxDO' !== "lKxDO") {
+        this["count"]++;
+        qI["totalParti" + "cles"] += 0x1;
+        var nA = qS["random"]();
+        var nr = new qA['RM'](this["startX"] + this["rangeX"] * nA, this["startY"] + this['rangeY'] * nA);
+        var nJ = qN["random"]() * (this['maxSpeed'] - this["minSpeed"]) + this["minSpeed"];
+        var nD = this['targetBody']["GetInterpo" + "latedAngle"]() + this["rot"] + this["angleRange"] * qc["random"]();
+        var ng = this['targetBody']["GetLinearV" + "elocityFro" + "mLocalPoin" + 't'](nr);
+        var nS = qV["cos"](nD) * nJ + ng['x'];
+        var nd = qE['sin'](nD) * nJ + ng['y'];
+        var nz = this["targetBody"]["GetInterpo" + 'latedWorld' + 'Point'](nr);
+        var nF = new this["particleCl" + 'ass'](this["_container"], nz['x'] * this["m_physScal" + 'e'], nz['y'] * this["m_physScal" + 'e'], nS, nd);
+        nF['next'] = this["particleLi" + 'st'];
+        this["particleLi" + 'st'] && (this['particleLi' + 'st']['prev'] = nF);
+        this["particleLi" + 'st'] = nF;
+      } else {
+        var nt;
+        var nB;
+        var nu;
+        nP["prototype"]["createJoin" + 'ts']["call"](this);
+        var nl = 0xb4 / Math['PI'];
+        nB = -0x5 / nl - (nt = this["head1Body"]["GetAngle"]() - this["chestBody"]["GetAngle"]());
+        nu = 0x5 / nl - nt;
+        this['neckJoint']["SetLimits"](nB, nu);
+        var no = new q3['RM']();
+        var ni = new q3['iE']();
+        var nE = this["shapeGuide"]["handAnchor"];
+        no["Set"](this["_startX"] + nE['x'] / this["character_" + "scale"], this['_startY'] + nE['y'] / this["character_" + "scale"]);
+        ni["Initialize"](this["sleighBody"], this['reignsBody'], no, new q3['RM'](0x0, 0x1));
+        ni["enableLimi" + 't'] = !0x0;
+        ni["maxMotorFo" + "rce"] = 0x3e8;
+        ni["upperTrans" + "lation"] = 0xf / this["m_physScal" + 'e'];
+        ni["lowerTrans" + "lation"] = -0x64 / this["m_physScal" + 'e'];
+        this['sleighReig' + 'ns'] = this["_session"]["m_world"]["CreateJoin" + 't'](ni);
+        var nR = new q3['Gq']();
+        nR["maxMotorTo" + "rque"] = this["maxTorque"];
+        nR["enableLimi" + 't'] = !0x1;
+        nR['lowerAngle'] = 0x0;
+        nR["upperAngle"] = 0x0;
+        nR["Initialize"](this["reignsBody"], this["lowerArm1B" + "ody"], no);
+        this["reignsHand" + '1'] = this["_session"]["m_world"]["CreateJoin" + 't'](nR);
+        nR["Initialize"](this["reignsBody"], this["lowerArm2B" + "ody"], no);
+        this["reignsHand" + '2'] = this["_session"]["m_world"]["CreateJoin" + 't'](nR);
+        no["Set"](this["pelvisBody"]["GetWorldCe" + "nter"]()['x'], this['pelvisBody']["GetWorldCe" + "nter"]()['y']);
+        nR["Initialize"](this["sleighBody"], this["pelvisBody"], no);
+        nR["enableLimi" + 't'] = !0x0;
+        this['sleighPelv' + 'is'] = this["_session"]["m_world"]["CreateJoin" + 't'](nR);
+        nR['enableLimi' + 't'] = !0x1;
+        this['pelvisAnch' + "orPoint"] = this["sleighBody"]['GetLocalPo' + "int"](no);
+        nE = this['shapeGuide']["backWheel"];
+        no["Set"](this["_startX"] + nE['x'] / this["character_" + "scale"], this["_startY"] + nE['y'] / this["character_" + "scale"]);
+        nR["Initialize"](this["sleighBody"], this["backWheelB" + "ody"], no);
+        this["backWheelJ" + 'oint'] = this["_session"]["m_world"]["CreateJoin" + 't'](nR);
+        nE = this["shapeGuide"]["midWheel1"];
+        no["Set"](this["_startX"] + nE['x'] / this['character_' + "scale"], this['_startY'] + nE['y'] / this["character_" + "scale"]);
+        nR["Initialize"](this["sleighBody"], this["midWheel1B" + "ody"], no);
+        this['midWheel1J' + "oint"] = this["_session"]["m_world"]["CreateJoin" + 't'](nR);
+        nE = this["shapeGuide"]["midWheel2"];
+        no["Set"](this["_startX"] + nE['x'] / this["character_" + "scale"], this['_startY'] + nE['y'] / this["character_" + "scale"]);
+        nR["Initialize"](this["sleighBody"], this["midWheel2B" + "ody"], no);
+        this['midWheel2J' + 'oint'] = this["_session"]["m_world"]["CreateJoin" + 't'](nR);
+        nE = this["shapeGuide"]["frontWheel"];
+        no["Set"](this["_startX"] + nE['x'] / this["character_" + 'scale'], this["_startY"] + nE['y'] / this["character_" + "scale"]);
+        nR["Initialize"](this["sleighBody"], this["frontWheel" + "Body"], no);
+        this["frontWheel" + "Joint"] = this["_session"]["m_world"]["CreateJoin" + 't'](nR);
+        nE = this["shapeGuide"]["footAnchor"];
+        no["Set"](this["_startX"] + nE['x'] / this["character_" + "scale"], this["_startY"] + nE['y'] / this["character_" + 'scale']);
+        nR["Initialize"](this["sleighBody"], this["lowerLeg1B" + "ody"], no);
+        this["sleighFoot" + '1'] = this["_session"]["m_world"]["CreateJoin" + 't'](nR);
+        this['leg1Anchor' + "Point"] = this['sleighBody']["GetLocalPo" + "int"](no);
+        nR['Initialize'](this['sleighBody'], this["lowerLeg2B" + "ody"], no);
+        this['sleighFoot' + '2'] = this["_session"]["m_world"]["CreateJoin" + 't'](nR);
+        this["leg2Anchor" + "Point"] = this["sleighBody"]["GetLocalPo" + "int"](no);
+      }
+    };
+    ns["createStra" + 'ps'] = function () {
+      this["strapHeadJ" + "oints"] = [];
+      this["strapChest" + "1Joints"] = [];
+      this["strapChest" + "2Joints"] = [];
+      var nt = new q3['Vy']();
+      var nB = new q3['gv']();
+      var nu = new q3['_A']();
+      var nl = 0x8;
+      nu["density"] = 0.25;
+      nu["friction"] = 0x1;
+      nu["restitutio" + 'n'] = 0.1;
+      nu["filter"]["categoryBi" + 'ts'] = 0x0;
+      nu["filter"]["maskBits"] = 0x0;
+      nu["radius"] = 0x3 / this["m_physScal" + 'e'];
+      for (var no, ni = this['reignsBody']['GetPositio' + 'n'](), nE = this["elf1"]["head1Body"]["GetWorldPo" + "int"](new q3['RM'](-0x12 / this["character_" + "scale"], 0x4 / this["character_" + "scale"])), nR = (nE['x'] - ni['x']) / nl, nW = (nE['y'] - ni['y']) / nl, nA = ni['Copy'](), nr = this["reignsBody"], nJ = 0x0; nJ < nl; nJ++) {
+        if ("OfOlY" !== "PYrLb") {
+          nB["position"]["Set"](ni['x'] + nR * (nJ + 0x1), ni['y'] + nW * (nJ + 0x1));
+          nJ < nl - 0x1 ? ((no = this["_session"]["m_world"]['CreateBody'](nB))["CreateShap" + 'e'](nu), no['SetMassFro' + 'mShapes'](), ng = no["GetPositio" + 'n'](), this["antiGravAr" + "ray"]["push"](no)) : (no = this['elf1']["head1Body"], ng = nE);
+          nt["Initialize"](nr, no, nA, ng);
+          var nD = this["_session"]["m_world"]["CreateJoin" + 't'](nt);
+          this['strapHeadJ' + "oints"]["push"](nD);
+          nr = no;
+          nA = ng;
+        } else {
+          for (var nM = 0x0; nM < qz["length"]; nM++) {
+            var nH = nJ[nM];
+            nH["enumerable"] = nH["enumerable"] || !0x1;
+            nH["configurab" + 'le'] = !0x0;
+            "value" in nH && (nH["writable"] = !0x0);
+            qc["defineProp" + "erty"](nS, qE(nH["key"]), nH);
+          }
+        }
+      }
+      nl = 0x4;
+      ni = nE;
+      nR = ((nE = this["elf2"]["head1Body"]["GetWorldPo" + "int"](new q3['RM'](-0x12 / this["character_" + "scale"], 0x4 / this["character_" + 'scale'])))['x'] - ni['x']) / nl;
+      nW = (nE['y'] - ni['y']) / nl;
+      nA = ni["Copy"]();
+      nJ = 0x0;
+      for (; nJ < nl; nJ++) {
+        nB['position']['Set'](ni['x'] + nR * (nJ + 0x1), ni['y'] + nW * (nJ + 0x1));
+        nJ < nl - 0x1 ? ((no = this['_session']["m_world"]["CreateBody"](nB))["CreateShap" + 'e'](nu), no["SetMassFro" + 'mShapes'](), ng = no['GetPositio' + 'n'](), this['antiGravAr' + "ray"]["push"](no)) : (no = this["elf2"]["head1Body"], ng = nE);
+        nt["Initialize"](nr, no, nA, ng);
+        nD = this["_session"]["m_world"]["CreateJoin" + 't'](nt);
+        this["strapHeadJ" + "oints"]["push"](nD);
+        nr = no;
+        nA = ng;
+      }
+      nl = 0x3;
+      var ng;
+      var nS = this["shapeGuide"]["strap1Anch" + 'or'];
+      ni["Set"](this['_startX'] + nS['x'] / this['character_' + 'scale'], this["_startY"] + nS['y'] / this["character_" + "scale"]);
+      nR = ((nE = this["elf1"]["chestBody"]["GetWorldPo" + 'int'](new q3['RM'](0x0, 0x14 / this["character_" + "scale"])))['x'] - ni['x']) / nl;
+      nW = (nE['y'] - ni['y']) / nl;
+      nA = ni['Copy']();
+      nr = this["sleighBody"];
+      nJ = 0x0;
+      for (; nJ < nl; nJ++) {
+        nB["position"]["Set"](ni['x'] + nR * (nJ + 0x1), ni['y'] + nW * (nJ + 0x1));
+        nJ < nl - 0x1 ? ((no = this["_session"]["m_world"]["CreateBody"](nB))["CreateShap" + 'e'](nu), no['SetMassFro' + "mShapes"](), ng = no["GetPositio" + 'n'](), this['antiGravAr' + "ray"]["push"](no)) : (no = this["elf1"]["chestBody"], ng = nE);
+        nt['Initialize'](nr, no, nA, ng);
+        nD = this['_session']["m_world"]["CreateJoin" + 't'](nt);
+        this["strapChest" + "1Joints"]["push"](nD);
+        nr = no;
+        nA = ng;
+      }
+      nl = 0x5;
+      nS = this["shapeGuide"]["strap2Anch" + 'or'];
+      ni['Set'](this["_startX"] + nS['x'] / this["character_" + "scale"], this["_startY"] + nS['y'] / this["character_" + 'scale']);
+      nR = ((nE = this["elf2"]["chestBody"]['GetWorldPo' + 'int'](new q3['RM'](0x0, 0x14 / this["character_" + 'scale'])))['x'] - ni['x']) / nl;
+      nW = (nE['y'] - ni['y']) / nl;
+      nA = ni["Copy"]();
+      nr = this["sleighBody"];
+      this["bells"] = [];
+      var nd = this["_session"]["containerS" + "prite"]["getChildIn" + "dex"](this["strapsSpri" + 'te']) + 0x1;
+      for (nJ = 0x0; nJ < nl; nJ++) {
+        if ("sTUAd" === "xHpsu") {
+          for (var nH = 0x0; nH < qz["length"]; nH++) {
+            var nb = nJ[nH];
+            nb["enumerable"] = nb['enumerable'] || !0x1;
+            nb['configurab' + 'le'] = !0x0;
+            'value' in nb && (nb["writable"] = !0x0);
+            qc['defineProp' + "erty"](nS, qE(nb['key']), nb);
+          }
+        } else {
+          nB["position"]["Set"](ni['x'] + nR * (nJ + 0x1), ni['y'] + nW * (nJ + 0x1));
+          if (nJ < nl - 0x1) {
+            if ('faWxS' === "faWxS") {
+              (no = this["_session"]["m_world"]['CreateBody'](nB))["CreateShap" + 'e'](nu);
+              no['SetMassFro' + 'mShapes']();
+              var nz = new qP['j7']((0x0, qE['zI'])('Character8', "christmas_" + "bell"));
+              nz["scale"]["set"](0.5);
+              this["bells"]["push"](nz);
+              this["_session"]['containerS' + "prite"]["addChildAt"](nz, nd);
+              no["SetUserDat" + 'a'](nz);
+              this["paintVecto" + 'r']["push"](no);
+              ng = no["GetWorldPo" + "int"](new q3['RM'](0x0, -0x1 / this["m_physScal" + 'e']));
+              this["antiGravAr" + "ray"]["push"](no);
+            } else {
+              qz["promptSpri" + 'te'] = new nR['Um']('You\x20must\x20b' + "e logged i" + "n to save " + 'replays.\x20\x20' + qI['w']['registerLo' + "ginMessage"], 'ok');
+              var nb = qS["promptSpri" + 'te']["window"];
+              qA['_window']["parent"]['addChild'](nb);
+              return void nb["center"]();
+            }
+          } else {
+            no = this["elf2"]['chestBody'];
+            ng = nE;
+          }
+          nt["Initialize"](nr, no, nA, ng);
+          nD = this['_session']['m_world']["CreateJoin" + 't'](nt);
+          this["strapChest" + "2Joints"]["push"](nD);
+          nr = no;
+          nA = ng;
+        }
+      }
+    };
+    ns["resetMovie" + "Clips"] = function () {
+      if ('ZfWRQ' === "mQVcL") {
+        return this["heartBody"] ? this["heartBody"] : this["chestBody"];
+      } else {
+        nP["prototype"]['resetMovie' + "Clips"]["call"](this);
+        for (var nt = 0x0; nt < this["brokenSlei" + "ghMCs"]["length"]; nt++) {
+          var nB = this["brokenSlei" + 'ghMCs'][nt];
+          nB["visible"] = !0x1;
+        }
+        for (nt = 0x0; nt < this['brokenSkiM' + 'Cs']["length"]; nt++) {
+          (nB = this["brokenSkiM" + 'Cs'][nt])["visible"] = !0x1;
+        }
+        this["stemMC"]["visible"] = !0x1;
+        this["helmetMC"]["visible"] = !0x1;
+        this["head1MC"]['helmet']["visible"] = !0x0;
+        this["sleighMC"]['visible'] = !0x0;
+        this["sleighMC"]["inner"]["stem"]["visible"] = !0x0;
+        this["sleighMC"]["inner"]["ski"]["visible"] = !0x0;
+        this['strapsSpri' + 'te']["graphics"]["clear"]();
+        var nu = this["sleighBody"]["GetLocalCe" + "nter"]();
+        nu = new q3['RM']((this["_startX"] - nu['x']) * this["character_" + "scale"], (this["_startY"] - nu['y']) * this["character_" + "scale"]);
+        var nl = this["shapeGuide"]["rear_1"];
+        var no = new q3['RM'](nl['x'] + nu['x'], nl['y'] + nu['y']);
+        this["sleighMC"]["inner"]['x'] = no['x'];
+        this['sleighMC']['inner']['y'] = no['y'];
+        this["sleighBody"]["SetUserDat" + 'a'](this["sleighMC"]);
+        nt = 0x0;
+        for (; nt < 0x8; nt++) {
+          var ni = this['boxMCs'][nt];
+          this["boxBodies"][nt]["SetUserDat" + 'a'](ni);
+        }
+        var nE = this["sourceObje" + 'ct']["sleighShar" + 'ds'];
+        this["_session"]["particleCo" + "ntroller"]["createBMDA" + "rray"]("sleighShar" + 'ds', nE);
+        var nR = this["sourceObje" + 'ct']['snowflakes'];
+        var nW = new qP['lU'](0x1, 0x5a, 0xffffff, 0x1, 0x0, 0x1, 2.5, 2.5, 0.7, 0x3);
+        this['_session']["particleCo" + "ntroller"]["createBMDA" + "rray"]("snowflakes", nR, [nW]);
+        qB['w']["hideHUD"] || this["_session"]["addChild"](this["boostHolde" + 'r']);
+      }
+    };
+    ns["handleCont" + "actBuffer"] = function () {
+      nP["prototype"]["handleCont" + 'actBuffer']["call"](this);
+      this["elf1"]["handleCont" + "actBuffer"]();
+      this["elf2"]["handleCont" + "actBuffer"]();
+    };
+    ns["handleCont" + "actResults"] = function () {
+      if ("UFLPG" !== "piRfc") {
+        var nt;
+        this["contactRes" + 'ultBuffer']["get"](this["helmetShap" + 'e']) && (nt = this["contactRes" + 'ultBuffer']["get"](this["helmetShap" + 'e']), this['helmetSmas' + 'h'](nt["impulse"]), this["contactRes" + "ultBuffer"]["delete"](this["head1Shape"]), this["contactAdd" + "Buffer"]["delete"](this['head1Shape']));
+        nP["prototype"]["handleCont" + "actResults"]['call'](this);
+        this["contactRes" + 'ultBuffer']["get"](this["frontShape"]) && (nt = this['contactRes' + "ultBuffer"]["get"](this["frontShape"]), this["sleighSmas" + 'h'](nt['impulse']), this["contactRes" + "ultBuffer"]["delete"](this["frontShape"]), this["contactRes" + 'ultBuffer']["delete"](this["skiShape"]), this["contactRes" + "ultBuffer"]["delete"](this["stem3Shape"]), this["contactAdd" + "Buffer"]["delete"](this["rearShape"]), this["contactAdd" + 'Buffer']["delete"](this["frontShape"]), this["contactAdd" + "Buffer"]["delete"](this["bumperShap" + 'e']), this["contactAdd" + 'Buffer']["delete"](this["baseShape"]), this["contactAdd" + "Buffer"]["delete"](this["stem3Shape"]), this["contactAdd" + "Buffer"]["delete"](this["stem2Shape"]), this["contactAdd" + "Buffer"]["delete"](this["stem1Shape"]), this["contactAdd" + "Buffer"]["delete"](this["frontWheel" + 'Shape']), this["contactAdd" + "Buffer"]["delete"](this["backWheelS" + "hape"]));
+        this["contactRes" + "ultBuffer"]["get"](this["skiShape"]) && (nt = this['contactRes' + "ultBuffer"]["get"](this["skiShape"]), this["skiSmash"](nt["impulse"]), this["contactRes" + "ultBuffer"]["delete"](this["skiShape"]), this["contactAdd" + "Buffer"]["delete"](this["frontWheel" + "Shape"]), this["contactAdd" + "Buffer"]["delete"](this["backWheelS" + "hape"]));
+        this["contactRes" + 'ultBuffer']["get"](this['stem3Shape']) && (nt = this["contactRes" + "ultBuffer"]["get"](this["stem3Shape"]), this["stemSmash"](nt["impulse"]), this["contactRes" + "ultBuffer"]["delete"](this["stem3Shape"]), this["contactAdd" + "Buffer"]["delete"](this["stem3Shape"]), this["contactAdd" + 'Buffer']["delete"](this["stem2Shape"]), this["contactAdd" + "Buffer"]["delete"](this["stem1Shape"]));
+      } else {
+        var nu = this["strapChest" + "1Joints"]["length"] - 0x1;
+        var nl = this['strapChest' + "1Joints"][nu];
+        nk['Initialize'](nl["m_body1"], qI, nl["m_body1"]["GetWorldPo" + "int"](new qS['RM'](0x0, -0.016)), qA['position']);
+        qN['length'] = nl['m_length'];
+        var no = this["_session"]["m_world"]["CreateJoin" + 't'](qc);
+        this['strapChest' + "1Joints"][nu] = no;
+      }
+    };
+    ns["checkJoint" + 's'] = function () {
+      if ("DBZbO" === "KkEBj") {
+        return this["_character" + "Pose"];
+      } else {
+        nP["prototype"]["checkJoint" + 's']["call"](this);
+        if (this['elf1']["strappedIn"]) {
+          var nt = this["strapChest" + "1Joints"][0x0];
+          var nB = Math["abs"](nt['m_impulse']);
+          nB > 0.4 && this["breakStrap"](this['elf1']);
+        }
+        this["elf2"]['strappedIn'] && (nt = this["strapChest" + "2Joints"][0x0], (nB = Math['abs'](nt["m_impulse"])) > 0.4 && this["breakStrap"](this["elf2"]));
+        this["elf1"]["checkJoint" + 's']();
+        this['elf2']["checkJoint" + 's']();
+      }
+    };
+    ns["eject"] = function () {
+      if ("vCtJQ" === "vSxjZ") {
+        if (!(qE["isReplay"] || ql["isEditorTe" + 'st'] || q3["isMenu"])) {
+          var nE = nl["scan"](qJ, qr);
+          qj["hold"](qP["heldToWall"], qn, nE["sonsHead"] && nE["wall"]);
+          qy["hold"](qg['heldToDad'], qu, null !== nE["son"] && null !== nE["dad"] && qd["touching"](nE["son"], nE["dad"]));
+        }
+      } else {
+        if (!this["ejected"]) {
+          if ('EeqFB' !== "TRTTI") {
+            this["ejected"] = !0x0;
+            this["resetJoint" + "Limits"]();
+            var nt = this["_session"]["m_world"];
+            this["sleighFoot" + '1'] && (this["_session"]["m_world"]["DestroyJoi" + 'nt'](this["sleighFoot" + '1']), this["sleighFoot" + '1'] = null);
+            this['sleighFoot' + '2'] && (this["_session"]["m_world"]["DestroyJoi" + 'nt'](this['sleighFoot' + '2']), this["sleighFoot" + '2'] = null);
+            this["sleighPelv" + 'is'] && (this["_session"]["m_world"]["DestroyJoi" + 'nt'](this['sleighPelv' + 'is']), this["sleighPelv" + 'is'] = null);
+            this["reignsHand" + '1'] && (this['_session']["m_world"]["DestroyJoi" + 'nt'](this["reignsHand" + '1']), this['reignsHand' + '1'] = null, this["checkReign" + 's']());
+            this["reignsHand" + '2'] && (this['_session']["m_world"]["DestroyJoi" + 'nt'](this['reignsHand' + '2']), this["reignsHand" + '2'] = null, this["checkReign" + 's']());
+            if (this["_session"]['version'] > 1.51) {
+              if ("gHWep" === "OXevF") {
+                qE["setPrototy" + "peOf"] ? ql['setPrototy' + "peOf"](q3, nB) : (qs["__proto__"] = qf, ns(no, nu, "GeneratorF" + "unction"));
+                qB["prototype"] = qW["create"](qH);
+                return qk;
+              } else {
+                for (var nB = this["sleighBody"]["GetShapeLi" + 'st'](); nB; nB = nB["m_next"]) {
+                  -0x1 == nB["m_filter"]["groupIndex"] && (nB["m_filter"]["groupIndex"] = 0x0, nt["Refilter"](nB));
+                }
+                this["midWheel2S" + "hape"]["m_filter"]["groupIndex"] = 0x0;
+                nt["Refilter"](this['midWheel2S' + 'hape']);
+              }
+            } else {
+              this["seatShape"]["m_filter"]["groupIndex"] = 0x0;
+              this["backShape"]["m_filter"]["groupIndex"] = 0x0;
+              nt["Refilter"](this["seatShape"]);
+              nt["Refilter"](this['backShape']);
+            }
+            this["lowerArm1M" + 'C']["hand"]['gotoAndSto' + 'p'](0x2);
+            this["lowerArm2M" + 'C']["hand"]["gotoAndSto" + 'p'](0x2);
+            var nu = this["sleighBody"]["GetAngle"]() - Math['PI'] / 0x2;
+            var nl = Math["cos"](nu) * this["ejectImpul" + 'se'];
+            var no = Math["sin"](nu) * this["ejectImpul" + 'se'];
+            this["chestBody"]["ApplyImpul" + 'se'](new q3['RM'](nl, no), this["chestBody"]['GetWorldCe' + "nter"]());
+            this["pelvisBody"]["ApplyImpul" + 'se'](new q3['RM'](nl, no), this["pelvisBody"]["GetWorldCe" + "nter"]());
+            this["backWheelJ" + "oint"]["IsMotorEna" + "bled"]() && (this["backWheelJ" + "oint"]["EnableMoto" + 'r'](!0x1), this['midWheel1J' + "oint"]["EnableMoto" + 'r'](!0x1), this['midWheel2J' + 'oint']['EnableMoto' + 'r'](!0x1), this['frontWheel' + 'Joint']["EnableMoto" + 'r'](!0x1));
+            this["snowSpray"] && (this['snowSpray']["stopSpewin" + 'g'](), this['snowSpray'] = null, this["sleighBell" + 'Loop']["fadeOut"](0.5), this['sleighBell' + "Loop"] = null);
+          } else {
+            this["ejected"] ? this["currentPos" + 'e'] = 0x4 : (this["wheelJoint"]["IsMotorEna" + "bled"]() || this["wheelJoint"]["EnableMoto" + 'r'](!0x0), this["wheelCurre" + "ntSpeed"] = this["wheelJoint"]["GetJointSp" + "eed"](), this["wheelCurre" + "ntSpeed"] > 0x0 ? this["wheelNewSp" + "eed"] = 0x0 : this["wheelNewSp" + "eed"] = this["wheelCurre" + "ntSpeed"] > -this["wheelMaxSp" + "eed"] ? this["wheelCurre" + "ntSpeed"] - this["accelStep"] : this["wheelCurre" + "ntSpeed"], this["wheelJoint"]['SetMotorSp' + "eed"](this["wheelNewSp" + "eed"]));
+          }
+        }
+      }
+    };
+    ns["checkEject"] = function () {
+      this['reignsHand' + '1'] || this["reignsHand" + '2'] || this["sleighFoot" + '1'] || this["sleighFoot" + '2'] || this["eject"]();
+    };
+    ns['sleighSmas' + 'h'] = function (nt) {
+      if ("dFqcq" === "dFqcq") {
+        this["trackVehic" + "leSmashed"]();
+        this["contactImp" + "ulseDict"]["delete"](this["frontShape"]);
+        var nB = this["_session"]["contactLis" + "tener"];
+        nB["deleteList" + "ener"](q4['fI']["RESULT"], this["rearShape"]);
+        nB['deleteList' + "ener"](q4['fI']["RESULT"], this["frontShape"]);
+        nB["deleteList" + "ener"](q4['fI']["RESULT"], this["bumperShap" + 'e']);
+        nB["deleteList" + "ener"](q4['fI']["ADD"], this["rearShape"]);
+        nB["deleteList" + "ener"](q4['fI']["ADD"], this["frontShape"]);
+        nB["deleteList" + "ener"](q4['fI']["ADD"], this["bumperShap" + 'e']);
+        this["baseShape"] && (nB["deleteList" + "ener"](q4['fI']["RESULT"], this["baseShape"]), nB["deleteList" + "ener"](q4['fI']["ADD"], this["baseShape"]));
+        var nu = this["sleighBody"]["GetLocalCe" + "nter"]();
+        this["_session"]["particleCo" + "ntroller"]["createPoin" + "tBurst"]("sleighShar" + 'ds', nu['x'] * this["m_physScal" + 'e'], nu['y'] * this["m_physScal" + 'e'], 0x64, 0x1e, 0x14);
+        this["eject"]();
+        this['snowSpray'] && (this["snowSpray"]["stopSpewin" + 'g'](), this["snowSpray"] = null, this['sleighBell' + "Loop"]["fadeOut"](0.5), this["sleighBell" + "Loop"] = null);
+        var nl = this["_session"]["m_world"];
+        var no = this["sleighBody"]["GetPositio" + 'n']();
+        var ni = this["sleighBody"]["GetAngle"]();
+        var nE = this["sleighBody"]["GetAngular" + "Velocity"]();
+        nl["DestroyBod" + 'y'](this["sleighBody"]);
+        this["sleighMC"]["visible"] = !0x1;
+        var nR = new q3['gv']();
+        nR["position"] = no;
+        nR["angle"] = ni;
+        var nW = new q3['m2']();
+        nW['density'] = 0x3;
+        nW["friction"] = 0.3;
+        nW["restitutio" + 'n'] = 0.3;
+        nW["filter"] = this["zeroFilter"];
+        for (var nA = this["vertsBroke" + 'nSleigh']["length"], nr = 0x0; nr < nA; nr++) {
+          var nJ = nl["CreateBody"](nR);
+          var nD = this["vertsBroke" + "nSleigh"][nr];
+          var ng = this["brokenSlei" + "ghMCs"][nr];
+          nW["vertexCoun" + 't'] = nD["length"];
+          nW["vertices"] = nD;
+          nJ["CreateShap" + 'e'](nW);
+          nJ["SetMassFro" + "mShapes"]();
+          nJ["SetAngular" + "Velocity"](nE);
+          nJ["SetLinearV" + "elocity"](this["sleighBody"]["GetLinearV" + "elocityFro" + "mLocalPoin" + 't'](nJ['GetLocalCe' + "nter"]()));
+          nJ["SetUserDat" + 'a'](ng);
+          ng["visible"] = !0x0;
+          this["paintVecto" + 'r']["push"](nJ);
+        }
+        0x1 == this["sleighMC"]["inner"]['ski']["visible"] && this["skiSmash"](0x0);
+        0x1 == this["sleighMC"]["inner"]["stem"]["visible"] && this["stemSmash"](0x0, !0x1);
+        this["elf1"]["strappedIn"] && this["breakStrap"](this["elf1"]);
+        this["elf2"]["strappedIn"] && this["breakStrap"](this["elf2"]);
+        this['elf1']["eject"]();
+        this["elf2"]['eject']();
+        q5['m']['instance']["playAreaSo" + "undInstanc" + 'e']("SleighSmas" + 'h', this["sleighBody"]);
+      } else {
+        qF["prototype"]["elbowBreak" + '1']["call"](this, qT);
+        this["ejected"] || (this["removeFrom" + 'COMArray'](this["lowerArm1B" + "ody"]), this["copterHand" + '1'] && (this["_session"]["m_world"]["DestroyJoi" + 'nt'](this["copterHand" + '1']), this["copterHand" + '1'] = null, this['checkEject']()));
+      }
+    };
+    ns["skiSmash"] = function (nt) {
+      this["contactImp" + "ulseDict"]["delete"](this["skiShape"]);
+      var nB = this["_session"]["contactLis" + "tener"];
+      nB["deleteList" + "ener"](q4['fI']["RESULT"], this['skiShape']);
+      nB["deleteList" + "ener"](q4['fI']["ADD"], this["frontWheel" + "Shape"]);
+      nB["deleteList" + "ener"](q4['fI']["ADD"], this["backWheelS" + "hape"]);
+      nB["deleteList" + "ener"](q4['fI']["REMOVE"], this["frontWheel" + "Shape"]);
+      nB["deleteList" + "ener"](q4['fI']["REMOVE"], this["backWheelS" + "hape"]);
+      var nu = this["_session"]["m_world"];
+      var nl = this["sleighBody"]["GetPositio" + 'n']();
+      var no = this['sleighBody']["GetAngle"]();
+      var ni = this["sleighBody"]["GetAngular" + "Velocity"]();
+      nu["DestroyBod" + 'y'](this["backWheelB" + "ody"]);
+      nu['DestroyBod' + 'y'](this["midWheel1B" + 'ody']);
+      nu["DestroyBod" + 'y'](this["midWheel2B" + "ody"]);
+      nu["DestroyBod" + 'y'](this["frontWheel" + "Body"]);
+      this["skiLoop"] && this["skiLoop"]["stopSound"]();
+      this["frontConta" + "cts"] = 0x0;
+      this["backContac" + 'ts'] = 0x0;
+      var nE = new q3['gv']();
+      nE["position"] = nl;
+      nE['angle'] = no;
+      var nR = new q3['m2']();
+      nR["density"] = 0x3;
+      nR["friction"] = 0.3;
+      nR['restitutio' + 'n'] = 0.3;
+      nR['filter'] = this["zeroFilter"];
+      for (var nW = [], nA = this['vertsBroke' + "nSki"]['length'], nr = 0x0; nr < nA; nr++) {
+        var nJ = nu["CreateBody"](nE);
+        var nD = this["vertsBroke" + "nSki"][nr];
+        var ng = this["brokenSkiM" + 'Cs'][nr];
+        nR["vertexCoun" + 't'] = nD["length"];
+        nR['vertices'] = nD;
+        nJ["CreateShap" + 'e'](nR);
+        nJ["SetMassFro" + "mShapes"]();
+        nJ["SetAngular" + "Velocity"](ni);
+        nJ["SetLinearV" + "elocity"](this["sleighBody"]["GetLinearV" + "elocityFro" + "mLocalPoin" + 't'](nJ["GetLocalCe" + "nter"]()));
+        nJ["SetUserDat" + 'a'](ng);
+        ng["visible"] = !0x0;
+        this["paintVecto" + 'r']['push'](nJ);
+        nW["push"](nJ);
+      }
+      if (this["sleighMC"]["visible"]) {
+        this["sleighMC"]["inner"]["ski"]["visible"] = !0x1;
+        this["sleighBody"]["DestroySha" + 'pe'](this["skiShape"]);
+        nR["vertexCoun" + 't'] = this["newBaseVer" + 'ts']["length"];
+        nR["vertices"] = this["newBaseVer" + 'ts'];
+        this["baseShape"] = this['sleighBody']["CreateShap" + 'e'](nR);
+        this["contactAdd" + "Sounds"]["set"](this["baseShape"], "SleighImpa" + "ct1");
+        this["_session"]["contactLis" + "tener"]["registerLi" + "stener"](q4['fI']["RESULT"], this["baseShape"], this["contactSle" + "ighResultH" + "andler"]);
+        this["_session"]["contactLis" + "tener"]["registerLi" + "stener"](q4['fI']['ADD'], this["baseShape"], this["contactAdd" + "Handler"]);
+        this["sleighBody"]['SetMassFro' + "mShapes"]();
+        var nS = this["sleighBody"]["GetLocalCe" + "nter"]();
+        nS = new q3['RM']((this["_startX"] - nS['x']) * this['character_' + "scale"], (this["_startY"] - nS['y']) * this["character_" + "scale"]);
+        var nd = this["shapeGuide"]["rear_1"];
+        var nz = new q3['RM'](nd['x'] + nS['x'], nd['y'] + nS['y']);
+        this["sleighMC"]["inner"]['x'] = nz['x'];
+        this["sleighMC"]["inner"]['y'] = nz['y'];
+        nA = nW["length"];
+        nr = 0x0;
+        for (; nr < nA; nr++) {
+          this["antiGravAr" + "ray"]["push"](nW[nr]);
+        }
+      }
+      q5['m']["instance"]["playAreaSo" + "undInstanc" + 'e']("SkiSmash", this["sleighBody"]);
+    };
+    ns["stemSmash"] = function (nt, nB) {
+      if ("JCCSq" === 'wjdzH') {
+        void 0x0 === qS && (qA = !0x0);
+        void 0x0 === qN && (qc = !0x0);
+        qV["prototype"]['torsoBreak']["call"](this, qE, ql, q3);
+        this["eject"]();
+      } else {
+        void 0x0 === nB && (nB = !0x0);
+        this["contactImp" + "ulseDict"]["delete"](this["stem3Shape"]);
+        var nu = this["_session"]["contactLis" + "tener"];
+        nu["deleteList" + "ener"](q4['fI']["RESULT"], this["stem1Shape"]);
+        nu["deleteList" + "ener"](q4['fI']["RESULT"], this["stem2Shape"]);
+        nu['deleteList' + "ener"](q4['fI']["RESULT"], this["stem3Shape"]);
+        nu["deleteList" + "ener"](q4['fI']["ADD"], this["stem1Shape"]);
+        nu["deleteList" + "ener"](q4['fI']["ADD"], this['stem2Shape']);
+        nu["deleteList" + "ener"](q4['fI']["ADD"], this["stem3Shape"]);
+        var nl = this["_session"]["m_world"];
+        var no = this["sleighBody"]["GetPositio" + 'n']();
+        var ni = this['sleighBody']["GetAngle"]();
+        var nE = this["sleighBody"]["GetAngular" + "Velocity"]();
+        var nR = new q3['gv']();
+        nR["position"] = no;
+        nR['angle'] = ni;
+        var nW = new q3['m2']();
+        nW["density"] = 0x3;
+        nW["friction"] = 0.3;
+        nW["restitutio" + 'n'] = 0.3;
+        nW["filter"] = this["zeroFilter"];
+        for (var nA = this["vertsBroke" + "nStem"]["length"], nr = nl["CreateBody"](nR), nJ = 0x0; nJ < nA; nJ++) {
+          if ('nZgmU' !== 'nZgmU') {
+            return this["_comments"];
+          } else {
+            var nD = this["vertsBroke" + "nStem"][nJ];
+            nW["vertexCoun" + 't'] = nD["length"];
+            nW["vertices"] = nD;
+            nr["CreateShap" + 'e'](nW);
+          }
+        }
+        nr["SetMassFro" + "mShapes"]();
+        nr["SetAngular" + "Velocity"](nE);
+        nr["SetLinearV" + "elocity"](this["sleighBody"]["GetLinearV" + "elocityFro" + "mLocalPoin" + 't'](nr["GetLocalCe" + "nter"]()));
+        nr["SetUserDat" + 'a'](this["stemMC"]);
+        this["stemMC"]["visible"] = !0x0;
+        this["paintVecto" + 'r']["push"](nr);
+        if (this["sleighMC"]["visible"]) {
+          if ("UyYiP" === "UyYiP") {
+            this["sleighMC"]["inner"]["stem"]['visible'] = !0x1;
+            this['sleighBody']["DestroySha" + 'pe'](this["stem1Shape"]);
+            this["sleighBody"]["DestroySha" + 'pe'](this["stem2Shape"]);
+            this["sleighBody"]['DestroySha' + 'pe'](this["stem3Shape"]);
+            this["sleighBody"]["SetMassFro" + "mShapes"]();
+            var ng = this["sleighBody"]['GetLocalCe' + "nter"]();
+            ng = new q3['RM']((this["_startX"] - ng['x']) * this["character_" + "scale"], (this["_startY"] - ng['y']) * this["character_" + 'scale']);
+            var nS = this["shapeGuide"]["rear_1"];
+            var nd = new q3['RM'](nS['x'] + ng['x'], nS['y'] + ng['y']);
+            this["sleighMC"]["inner"]['x'] = nd['x'];
+            this["sleighMC"]["inner"]['y'] = nd['y'];
+            if (this['elf1']["strappedIn"]) {
+              var nz = this['strapChest' + "1Joints"][0x0];
+              var nF = new q3['Vy']();
+              nF["body1"] = nr;
+              nF['body2'] = nz["m_body2"];
+              nF["localAncho" + 'r1'] = nz["m_localAnc" + "hor1"];
+              nF["localAncho" + 'r2'] = nz["m_localAnc" + "hor2"];
+              nF["length"] = nz['m_length'];
+              var nM = nl["CreateJoin" + 't'](nF);
+              nl['DestroyJoi' + 'nt'](nz);
+              this["strapChest" + "1Joints"][0x0] = nM;
+            }
+            this["elf2"]["strappedIn"] && (nz = this["strapChest" + "2Joints"][0x0], (nF = new q3['Vy']())['body1'] = nr, nF["body2"] = nz["m_body2"], nF["localAncho" + 'r1'] = nz["m_localAnc" + "hor1"], nF["localAncho" + 'r2'] = nz["m_localAnc" + "hor2"], nF["length"] = nz['m_length'], nM = nl['CreateJoin' + 't'](nF), nl["DestroyJoi" + 'nt'](nz), this["strapChest" + "2Joints"][0x0] = nM);
+            this["antiGravAr" + "ray"]["push"](nr);
+          } else {
+            return nl["round"](0x64 * this["scaleX"]);
+          }
+        }
+        nB && q5['m']['instance']["playAreaSo" + "undInstanc" + 'e']('StemSnap', this["sleighBody"]);
+      }
+    };
+    ns["helmetSmas" + 'h'] = function (nt) {
+      this["contactImp" + "ulseDict"]["delete"](this["helmetShap" + 'e']);
+      this["head1Shape"] = this["helmetShap" + 'e'];
+      this['contactImp' + 'ulseDict']["set"](this["head1Shape"], this["headSmashL" + 'imit']);
+      this["helmetShap" + 'e'] = null;
+      var nB = new q3['m2']();
+      var nu = new q3['gv']();
+      nB["density"] = 0x1;
+      nB["friction"] = 0.3;
+      nB["restitutio" + 'n'] = 0.1;
+      nB["filter"] = this["zeroFilter"];
+      var nl = this["head1Body"]["GetPositio" + 'n']();
+      nu["position"] = nl;
+      nu["angle"] = this['head1Body']["GetAngle"]();
+      nu["userData"] = this["helmetMC"];
+      this['helmetMC']["visible"] = !0x0;
+      this['head1MC']['helmet']['visible'] = !0x1;
+      nB["vertexCoun" + 't'] = 0x4;
+      for (var no = 0x0; no < 0x4; no++) {
+        var ni = this["shapeGuide"]["helmetVert" + [no + 0x1]];
+        nB["vertices"][no] = new q3['RM'](ni['x'] / this["character_" + "scale"], ni['y'] / this["character_" + "scale"]);
+      }
+      this["helmetBody"] = this["_session"]['m_world']["CreateBody"](nu);
+      this["helmetBody"]["CreateShap" + 'e'](nB);
+      this['helmetBody']["SetMassFro" + "mShapes"]();
+      this['helmetBody']["SetLinearV" + "elocity"](this["head1Body"]["GetLinearV" + "elocity"]());
+      this["helmetBody"]["SetAngular" + 'Velocity'](this["head1Body"]['GetAngular' + "Velocity"]());
+      this["paintVecto" + 'r']["push"](this["helmetBody"]);
+    };
+    ns["headSmash1"] = function (nt) {
+      nP["prototype"]['headSmash1']["call"](this, nt);
+      this["eject"]();
+    };
+    ns["chestSmash"] = function (nt) {
+      nP["prototype"]['chestSmash']["call"](this, nt);
+    };
+    ns["pelvisSmas" + 'h'] = function (nt) {
+      nP["prototype"]["pelvisSmas" + 'h']["call"](this, nt);
+    };
+    ns["neckBreak"] = function (nt, nB, nu) {
+      if ("JUvOV" !== 'WwudA') {
+        void 0x0 === nB && (nB = !0x0);
+        void 0x0 === nu && (nu = !0x0);

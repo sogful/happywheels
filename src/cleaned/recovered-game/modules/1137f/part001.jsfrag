@@ -1,0 +1,352 @@
+function (T, V, h) {
+  'use strict';
+
+  h['d'](V, {
+    'u': () => p
+  });
+  h(0xf23a);
+  h(0xb284);
+  h(0x15de4);
+  h(0xcdc3);
+  h(0x15d77);
+  h(0x65f3);
+  h(0xb4c);
+  var C = h(0x981b);
+  function j(K) {
+    var m = function (I) {
+      if ("object" != typeof I || !I) {
+        return I;
+      }
+      var k = I[Symbol['toPrimitiv' + 'e']];
+      if (void 0x0 !== k) {
+        var B = k["call"](I, "string");
+        if ('object' != typeof B) {
+          return B;
+        }
+        throw new TypeError("@@toPrimit" + "ive must r" + 'eturn\x20a\x20pr' + "imitive va" + "lue.");
+      }
+      return String(I);
+    }(K);
+    return "symbol" == typeof m ? m : m + '';
+  }
+  function P(K, m) {
+    if ("HvffZ" !== "yXtdN") {
+      P = Object["setPrototy" + "peOf"] ? Object["setPrototy" + "peOf"]["bind"]() : function (I, k) {
+        var qlO = qlL;
+        I["__proto__"] = k;
+        return I;
+      };
+      return P(K, m);
+    } else {
+      const k = j[P];
+      if (void 0x0 !== k) {
+        return k["exports"];
+      }
+      const u = p[K] = {
+        'id': m,
+        'loaded': !0x1,
+        'exports': {}
+      };
+      I[k]["call"](u["exports"], u, u["exports"], C);
+      u['loaded'] = !0x0;
+      return u["exports"];
+    }
+  }
+  var p = function (K) {
+    function m() {
+      var R;
+      (R = K['call'](this) || this)["_spaceActi" + 'on'] = 0x0;
+      R["_shiftActi" + 'on'] = 0x0;
+      R["_ctrlActio" + 'n'] = 0x0;
+      R["_accelerat" + "ion"] = 0x1;
+      R["_character" + 'Pose'] = 0x0;
+      R["_lockJoint" + 's'] = !0x1;
+      R["_leaningSt" + "rength"] = 0x0;
+      R["name"] = 'vehicle';
+      return R;
+    }
+    var I;
+    var k;
+    k = K;
+    (I = m)["prototype"] = Object["create"](k["prototype"]);
+    I["prototype"]["constructo" + 'r'] = I;
+    P(I, k);
+    var B;
+    var u;
+    var E = m["prototype"];
+    E["setAttribu" + 'tes'] = function () {
+      var qo2 = qo0;
+      var qo3 = qo0;
+      this['_attribute' + 's'] = ['x', 'y', "angle", "sleeping", "foreground", 'accelerati' + 'on', 'lockJoints', "leaningStr" + "ength", "spaceActio" + 'n', "shiftActio" + 'n', 'ctrlAction', "characterP" + "ose"];
+      this["addTrigger" + "Properties"]();
+    };
+    E["checkVehic" + 'leAttached'] = function (R) {
+      var qo4 = qo1;
+      var qo5 = qo1;
+      return "ruIBQ" === 'PWHCQ' ? this["pixiSprite"]["position"]['y'] : (void 0x0 === R && (R = null), !0x0);
+    };
+    E["clone"] = function () {
+      var qo6 = qo0;
+      var qo7 = qo0;
+      var R = new m();
+      R["offset"] = this["offset"];
+      R['x'] = this['x'];
+      R['y'] = this['y'];
+      R["angle"] = this["angle"];
+      R["sleeping"] = this["sleeping"];
+      R["foreground"] = this["foreground"];
+      R['joinable'] = this['joinable'];
+      R["accelerati" + 'on'] = this["accelerati" + 'on'];
+      R["leaningStr" + "ength"] = this["leaningStr" + "ength"];
+      R["spaceActio" + 'n'] = this["spaceActio" + 'n'];
+      R["shiftActio" + 'n'] = this["shiftActio" + 'n'];
+      R["ctrlAction"] = this["ctrlAction"];
+      R["characterP" + "ose"] = this['characterP' + "ose"];
+      R['lockJoints'] = this['lockJoints'];
+      for (var W = 0x0; W < this["_shapeCont" + "ainer"]["numChildre" + 'n']; W++) {
+        if ("HsMZA" === "zNlpO") {
+          return N['authorText']["htmlText"] = f['authorText']["text"];
+        } else {
+          var A = this["_shapeCont" + 'ainer']["getChildAt"](W)["clone"]();
+          R["addShape"](A);
+          A["group"] = R;
+          A["inGroup"] = !0x0;
+          A["setFilters"]();
+        }
+      }
+      for (var J = 0x0; J < this["_specialCo" + "ntainer"]["numChildre" + 'n']; J++) {
+        var D = this['_specialCo' + "ntainer"]['getChildAt'](J)["clone"]();
+        D["group"] = R;
+        D["inGroup"] = !0x0;
+        R["addSpecial"](D);
+      }
+      this["transferKe" + 'yedPropert' + "ies"](R);
+      return R;
+    };
+    E["cloneAsGro" + 'up'] = function () {
+      var qo8 = qo0;
+      var qo9 = qo0;
+      var R = new C['D']();
+      R["offset"] = this["offset"];
+      R['x'] = this['x'];
+      R['y'] = this['y'];
+      R["angle"] = this["angle"];
+      R["sleeping"] = this["sleeping"];
+      R["foreground"] = this["foreground"];
+      R["joinable"] = this['joinable'];
+      for (var W = 0x0; W < this["_shapeCont" + "ainer"]["numChildre" + 'n']; W++) {
+        if ("YRNHZ" === "cqjnN") {
+          V && (u = C);
+          var S = 0x0;
+          return function () {
+            return S >= S["length"] ? {
+              'done': !0x0
+            } : {
+              'done': !0x1,
+              'value': K[S++]
+            };
+          };
+        } else {
+          var A = this["_shapeCont" + 'ainer']["getChildAt"](W)["clone"]();
+          A["group"] = R;
+          A["inGroup"] = !0x0;
+          R['addShape'](A);
+        }
+      }
+      for (var J = 0x0; J < this["_specialCo" + "ntainer"]["numChildre" + 'n']; J++) {
+        var D = this["_specialCo" + "ntainer"]["getChildAt"](J)['clone']();
+        D["group"] = R;
+        D["inGroup"] = !0x0;
+        R["addSpecial"](D);
+      }
+      return R;
+    };
+    B = m;
+    (u = [{
+      'key': "functions",
+      'get': function () {
+        var qon = qo1;
+        var qoN = qo1;
+        return ["convertVeh" + "icleToGrou" + 'p'];
+      }
+    }, {
+      'key': "vehiclePos" + "sible",
+      'get': function () {
+        var qof = qo0;
+        var qoT = qo0;
+        if ("HmmzM" === "jTztQ") {
+          var W = this["backDrops"][k];
+          this["_session"]["addChildAt"](W, 0x0);
+        } else {
+          return !0x1;
+        }
+      }
+    }, {
+      'key': "accelerati" + 'on',
+      'get': function () {
+        var qoV = qo0;
+        var qoh = qo0;
+        if ("kFmWD" === 'liSiP') {
+          this["setJoint"](this["neckJoint"], 0.4, 0xa);
+          this["setJoint"](this["elbowJoint" + '1'], 0.5, 0x5);
+          this["setJoint"](this["elbowJoint" + '2'], 0.5, 0x5);
+        } else {
+          return this["_accelerat" + "ion"];
+        }
+      },
+      'set': function (R) {
+        var qoC = qo0;
+        var qoj = qo0;
+        R < 0x1 && (R = 0x1);
+        R > 0xa && (R = 0xa);
+        this["_accelerat" + "ion"] = R;
+      }
+    }, {
+      'key': "lockJoints",
+      'get': function () {
+        var qoP = qo0;
+        var qop = qo0;
+        if ('DWEAS' !== "EIETn") {
+          return this["_lockJoint" + 's'];
+        } else {
+          for (var W = [], A = 0x0; A < this["background"]["numChildre" + 'n']; A++) {
+            var J = this["background"]["getChildAt"](A);
+            'bm' === J["name"] && W["push"](J);
+          }
+          for (var D = 0x0; D < W["length"]; D++) {
+            var g = W[D];
+            var S = u["BM_RASTERS"][D];
+            var d = C["rasterBitm" + 'ap'](j["rasterText" + "ure"](S['n']), 'bm-raster-' + S['n']);
+            d['x'] = S['x'];
+            d['y'] = S['y'];
+            this["background"]["addChildAt"](d, this["background"]["getChildIn" + "dex"](g));
+            this["background"]['removeChil' + 'd'](g);
+            g["destroy"]();
+          }
+        }
+      },
+      'set': function (R) {
+        var qoK = qo0;
+        var qom = qo0;
+        "OYUSM" === "OYUSM" ? this["_lockJoint" + 's'] = R : (this['boostMeter']['scaleY'] = 0x1 - this["boostVal"] / this["boostMax"], this['frontConta' + "cts"] + this["backContac" + 'ts'] > 0x0 && T["abs"](this["backWheelB" + "ody"]["GetAngular" + "Velocity"]()) > 0xc ? this["skiLoop"] || (this["skiLoop"] = V['m']["instance"]["playAreaSo" + "undLoop"]("SkiLoop", this["sleighBody"], 0x0, 0x1388 * h["random"]()), this["skiLoop"]["fadeIn"](0.2)) : this["skiLoop"] && (this["skiLoop"]["fadeOut"](0.2), this["skiLoop"] = null), C["prototype"]["actions"]["call"](this), this["elf1"]["actions"](), this["elf2"]['actions']());
+      }
+    }, {
+      'key': 'leaningStr' + 'ength',
+      'get': function () {
+        var qoI = qo0;
+        return this['_leaningSt' + "rength"];
+      },
+      'set': function (R) {
+        var qok = qo1;
+        var qos = qo1;
+        R < 0x0 && (R = 0x0);
+        R > 0xa && (R = 0xa);
+        this["_leaningSt" + "rength"] = R;
+      }
+    }, {
+      'key': 'spaceActio' + 'n',
+      'get': function () {
+        var qot = qo1;
+        var qoB = qo1;
+        return "KBYxn" === "KBYxn" ? this["_spaceActi" + 'on'] : (j = P, p = 0x0, K = m, I['n'] = k, C);
+      },
+      'set': function (R) {
+        var qou = qo1;
+        var qol = qo1;
+        R < 0x0 && (R = 0x0);
+        R > m["NUM_ACTION" + 'S'] && (R = m["NUM_ACTION" + 'S']);
+        this["_spaceActi" + 'on'] = R;
+      }
+    }, {
+      'key': "shiftActio" + 'n',
+      'get': function () {
+        var qoo = qo0;
+        var qoi = qo0;
+        if ("wWXan" !== "wWXan") {
+          if (this['ejected']) {
+            this["currentPos" + 'e'] = 0x1;
+          } else {
+            var W = this["frameBody"]["GetAngle"]();
+            var A = j['cos'](W) * this["impulseMag" + "nitude"];
+            var J = P["sin"](W) * this["impulseMag" + "nitude"];
+            var D = this["frameBody"]["GetLocalCe" + "nter"]();
+            this["frameBody"]["ApplyImpul" + 'se'](new p['RM'](J, -A), this["frameBody"]["GetWorldPo" + "int"](new K['RM'](D['x'] + this['impulseOff' + "set"], D['y'])));
+          }
+        } else {
+          return this["_shiftActi" + 'on'];
+        }
+      },
+      'set': function (R) {
+        var qoE = qo1;
+        var qoR = qo1;
+        R < 0x0 && (R = 0x0);
+        R > m["NUM_ACTION" + 'S'] && (R = m["NUM_ACTION" + 'S']);
+        this["_shiftActi" + 'on'] = R;
+      }
+    }, {
+      'key': "ctrlAction",
+      'get': function () {
+        var qoW = qo0;
+        return this["_ctrlActio" + 'n'];
+      },
+      'set': function (R) {
+        var qoA = qo0;
+        var qor = qo0;
+        R < 0x0 && (R = 0x0);
+        R > m['NUM_ACTION' + 'S'] && (R = m["NUM_ACTION" + 'S']);
+        this["_ctrlActio" + 'n'] = R;
+      }
+    }, {
+      'key': "characterP" + "ose",
+      'get': function () {
+        var qoJ = qo1;
+        var qoD = qo1;
+        if ("PzVEz" !== "PzVEz") {
+          var W = K['PI'] * m["shakeCount" + 'er'] / 0xa;
+          I['w']["use60FPS"] && (W /= 0x2);
+          k['shapeSprit' + 'e']['rotation'] = f["round"](0x14 * V["sin"](W));
+          B["shakeCount" + 'er'] += u["shakeStep"];
+          '0' != l["shapeSprit" + 'e']["rotation"]["toFixed"](0x0)['toString']() || o["mouseConta" + 'ct'] || (h['shakeActiv' + 'e'] = !0x1);
+        } else {
+          return this["_character" + "Pose"];
+        }
+      },
+      'set': function (R) {
+        var qog = qo1;
+        var qoS = qo1;
+        if ("leuAJ" !== "leuAJ") {
+          var A = f["call"](T, "string");
+          if ("object" != typeof A) {
+            return A;
+          }
+          throw new V('@@toPrimit' + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+        } else {
+          R < 0x0 && (R = 0x0);
+          R > m['NUM_POSES'] && (R = m["NUM_POSES"]);
+          this["_character" + "Pose"] = R;
+        }
+      }
+    }]) && function (R, W) {
+      var qod = qo1;
+      var qoz = qo1;
+      if ("nMjie" === "ZhoIB") {
+        var g = 0x0 == C ? 0x0 : (j - 0x19 / (P + 0xa)) / (p / (K + 0xa));
+        return m["min"](0x5, I["max"](g, 0x0));
+      } else {
+        for (var A = 0x0; A < W['length']; A++) {
+          var J = W[A];
+          J["enumerable"] = J["enumerable"] || !0x1;
+          J["configurab" + 'le'] = !0x0;
+          "value" in J && (J["writable"] = !0x0);
+          Object["defineProp" + "erty"](R, j(J["key"]), J);
+        }
+      }
+    }(B["prototype"], u);
+    Object["defineProp" + "erty"](B, "prototype", {
+      'writable': !0x1
+    });
+    return B;
+  }(C['D']);
+  p["NUM_ACTION" + 'S'] = 0x3;
+  p["NUM_POSES"] = 0x3;
+}

@@ -1,0 +1,800 @@
+    n2(Ni, NE);
+    var NR;
+    var NW;
+    var NA = No["prototype"];
+    NA["createWind" + 'ow'] = function () {
+      "mwejl" === "mwejl" ? this["_window"] = new q3['p8'](!0x1, this, !0x0) : (void 0x0 === qF && (qT = null), this["textField"]["alpha"] = this['mc']["XSprite"]["alpha"] = 0x1);
+    };
+    NA["validateTe" + 'rm'] = function () {
+      this["searchText"]["text"] = this["searchText"]["_pixiTextI" + "nput"]["text"];
+      this["searchText"]["text"] = qN['l5']["trimWhites" + "pace"](this["searchText"]["text"]);
+      if (this["searchText"]["length"] < No["minChars"]) {
+        var Nr = "must be be" + "tween " + No["minChars"] + " and " + No["maxChars"] + (" character" + 's');
+        this["errorText"]['text'] = Nr;
+      } else {
+        this["dispatchEv" + 'ent'](new q5['Jh'](No["SEARCH"]));
+      }
+    };
+    NA["die"] = function () {
+      No["index"] = this["dropMenu"]["currentInd" + 'ex'];
+      this["removeEven" + "tListener"](q5['Cm']["MOUSE_UP"], this["mouseUpHan" + "dler"]);
+      this["dropMenu"]["die"]();
+      this["_window"]["closeWindo" + 'w']();
+    };
+    NR = No;
+    (NW = [{
+      'key': "window",
+      'get': function () {
+        return this["_window"];
+      }
+    }, {
+      'key': "searchType",
+      'get': function () {
+        if ("fzPeB" === "YqZqp") {
+          'bg' === qF["target"]["name"] && qT["target"]["parent"]["parent"]["mouseDown"]();
+        } else {
+          return this["dropMenu"]["value"];
+        }
+      }
+    }, {
+      'key': "searchTerm",
+      'get': function () {
+        return this["searchText"]['text'];
+      }
+    }]) && function (Nr, NJ) {
+      for (var ND = 0x0; ND < NJ["length"]; ND++) {
+        var Ng = NJ[ND];
+        Ng["enumerable"] = Ng["enumerable"] || !0x1;
+        Ng["configurab" + 'le'] = !0x0;
+        "value" in Ng && (Ng["writable"] = !0x0);
+        Object["defineProp" + "erty"](Nr, n1(Ng['key']), Ng);
+      }
+    }(NR["prototype"], NW);
+    Object["defineProp" + "erty"](NR, "prototype", {
+      'writable': !0x1
+    });
+    return NR;
+  }(q5['kx']);
+  function n4(Nl, No) {
+    var kU = jz;
+    var kO = jz;
+    n4 = Object["setPrototy" + "peOf"] ? Object["setPrototy" + 'peOf']['bind']() : function (Ni, NE) {
+      Ni["__proto__"] = NE;
+      return Ni;
+    };
+    return n4(Nl, No);
+  }
+  n3['AUTHOR_NAM' + 'E'] = "author";
+  n3["LEVEL_NAME"] = "level";
+  n3['SEARCH'] = "search";
+  n3["CANCEL"] = "CANCEL";
+  n3["index"] = 0x0;
+  n3["minChars"] = 0x4;
+  n3["maxChars"] = 0xc;
+  var n5 = function (Nl) {
+    var kQ = jz;
+    var s0 = jz;
+    if ("bzPsp" === "pIwkE") {
+      this["eject"]();
+    } else {
+      function NW(NA, Nr, NJ, ND) {
+        if ("GLkop" === "GLkop") {
+          var Ng;
+          void 0x0 === ND && (ND = 0xffffff);
+          (Ng = Nl["call"](this, NA, Nr, NJ, ND) || this)["rollOverHa" + 'ndlerBind'] = Ng["rollOverHa" + "ndler"]["bind"](Ng);
+          Ng["rollOutHan" + 'dlerBind'] = Ng["rollOutHan" + "dler"]['bind'](Ng);
+          return Ng;
+        } else {
+          var Nd;
+          (Nd = qW["call"](this) || this)["triggering" + "Count"] = 0x0;
+          Nd['soundLocat' + 'ion'] = 0x1;
+          Nd["mouseOutHa" + "ndlerBind"] = Nd["mouseOutHa" + "ndler"]['bind'](Nd);
+          Nd["mouseUpHan" + "dlerBind"] = Nd["mouseUpHan" + 'dler']["bind"](Nd);
+          Nd["checkAdd1B" + "ind"] = Nd["checkAdd1"]["bind"](Nd);
+          Nd["checkAdd2B" + 'ind'] = Nd["checkAdd2"]["bind"](Nd);
+          Nd['checkAdd3B' + "ind"] = Nd["checkAdd3"]["bind"](Nd);
+          Nd["checkAdd4B" + 'ind'] = Nd["checkAdd4"]["bind"](Nd);
+          Nd["checkRemov" + "e1Bind"] = Nd["checkRemov" + 'e1']["bind"](Nd);
+          Nd["createShap" + 'e'](qH);
+          Nd["triggerInd" + 'ex'] = qk;
+          Nd['_x'] = ND['x'];
+          Nd['_y'] = qJ['y'];
+          Nd["session"] = qr['w']["currentSes" + "sion"];
+          Nd["delayFrame" + 's'] = qj["floor"](0x1e * qP["triggerDel" + 'ay']);
+          Nd['delayVecto' + 'r'] = new qn();
+          Nd['repeatFram' + 'es'] = Nd["repeatCoun" + 't'] = qy['floor'](0x1e * qg["repeatInte" + "rval"]);
+          Nd["type"] = qu["typeIndex"];
+          0x2 == qd["typeIndex"] && (Nd["soundEffec" + 't'] = qm['Gg']["instance"]["sfxDiction" + 'ary']["get"](qa["soundEffec" + 't']), Nd["soundLocat" + "ion"] = qh["soundLocat" + "ion"], Nd["soundTrans" + 'form'] = new qq['AX'](qZ["volume"], qo["panning"]));
+          Nd['triggeredB' + 'y'] = qK["triggeredB" + 'y'];
+          Nd["repeatType"] = Nl["repeatType"];
+          Nd["activation" + "Dictionary"] = new q7();
+          Nd["targets"] = new qb();
+          return Nd;
+        }
+      }
+      var No;
+      var Ni;
+      Ni = Nl;
+      (No = NW)["prototype"] = Object["create"](Ni["prototype"]);
+      No["prototype"]["constructo" + 'r'] = No;
+      n4(No, Ni);
+      var NE = NW["prototype"];
+      NE["createText" + "Field"] = function () {
+        var NA = new q5['lk']("HelveticaN" + "eueLT Std " + "Med", 0xc, this["_txtColor"], null, null, null, null, null, q5['MA']['CENTER']);
+        this["textField"] = new q5['A_']();
+        this["textField"]["defaultTex" + "tFormat"] = NA;
+        this["textField"]['autoSize'] = q5['wL']["CENTER"];
+        this["textField"]["height"] = 0x14;
+        this["textField"]['y'] = 0x3;
+        this["textField"]["multiline"] = !0x1;
+        this["textField"]["selectable"] = !0x1;
+        this["textField"]["antiAliasT" + "ype"] = q5['BF']["ADVANCED"];
+        this["addChild"](this["textField"]);
+        var Nr = this['mc'] = new q5['j7']((0x0, qK['zI'])("GameUI", 'mc_XButton'));
+        Nr["convertChi" + "ldren"]();
+        this["addChild"](Nr);
+        this['XSprite'] = Nr["XSprite"];
+        this["XSprite"]['tint'] = this["_txtColor"];
+        var NJ = this["XSprite"]['transform']["colorTrans" + "form"];
+        NJ["color"] = this['_txtColor'];
+        this["XSprite"]["transform"]["colorTrans" + "form"] = NJ;
+      };
+      NE["createBg"] = function () {
+        if ("lIMsI" !== "UwdNL") {
+          this["textField"]["autoSize"] = q5['wL']["NONE"];
+          this["textField"]["width"] = Math['ceil'](this["textField"]["width"] + 0x14);
+          this['textField']['x'] = 0x0;
+          var NA = this["textField"]["width"] + 0x2;
+          this["XSprite"]['x'] = NA + 1.5 * this["XSprite"]["width"];
+          this["XSprite"]['y'] = 11.5;
+          this["_bgWidth"] = this["textField"]["width"] + 0x12 + 1.5 * this["XSprite"]["width"];
+          Nl["prototype"]["createBg"]['call'](this);
+        } else {
+          void 0x0 === qs && (qf = null);
+          q9["saveMenu"]["removeEven" + "tListener"](q5["SAVE_NEW"], No["saveNewLev" + 'el']);
+          qB["saveMenu"]['removeEven' + "tListener"](qW["SAVE_OVER"], qH["saveOverLe" + "vel"]);
+          qk["saveMenu"]["removeEven" + "tListener"](NE['p']["WINDOW_CLO" + "SED"], qJ["closeSaveM" + "enu"]);
+          qr["saveMenu"]["die"]();
+          qj["saveMenu"]["destroy"]();
+          qP["saveMenu"] = null;
+          qn["dispatchEv" + "ent"](new qy['Jh'](qg["MENU_IDLE"]));
+        }
+      };
+      NE["rollOverHa" + "ndler"] = function (NA) {
+        void 0x0 === NA && (NA = null);
+        this["textField"]['alpha'] = this['mc']["XSprite"]["alpha"] = 0x1;
+      };
+      NE['rollOutHan' + 'dler'] = function (NA) {
+        if ("kApzi" !== "bTNZo") {
+          void 0x0 === NA && (NA = null);
+          this["_selected"] || (this["textField"]["alpha"] = this['mc']["XSprite"]['alpha'] = this["offAlpha"]);
+        } else {
+          for (var NJ = 0x0; NJ < qF["length"]; NJ++) {
+            var ND = qR[NJ];
+            ND['ignoreWhen' + "Culling"] || (ND["_pixiSprit" + 'e']["visible"] = this["overlapsCa" + "mera"](ND));
+          }
+        }
+      };
+      return NW;
+    }
+  }(q3['Ch']);
+  function n6(Nl, No) {
+    var sn = jz;
+    var sN = jz;
+    n6 = Object["setPrototy" + 'peOf'] ? Object["setPrototy" + "peOf"]["bind"]() : function (Ni, NE) {
+      Ni["__proto__"] = NE;
+      return Ni;
+    };
+    return n6(Nl, No);
+  }
+  var n7 = function (Nl) {
+    var sT = jF;
+    var sV = jF;
+    if ("XdSmL" === "XdSmL") {
+      function NR() {
+        var sh = sV;
+        var sC = sV;
+        if ("XSHVF" !== 'XSHVF') {
+          var ND = this["shapeGuide"]["sidePoint" + qz + '_' + q8];
+          qI["vertices"][qS] = new qA['RM'](this['_startX'] + ND['x'] / this["character_" + "scale"], this["_startY"] + ND['y'] / this["character_" + "scale"]);
+        } else {
+          var NW;
+          (NW = Nl['call'](this) || this)["loadData"] = function (ND) {
+            void 0x0 === ND && (ND = null);
+            for (var Ng = 0x0; Ng < NW["dropMenuAr" + "ray"]["length"]; Ng++) {
+              NR["savedDropS" + "ettings"][Ng] = NR['currentDro' + 'pSettings'][Ng];
+              NR["savedDropS" + "tates"][Ng] = NR['currentDro' + "pStates"][Ng];
+            }
+            NW["refreshBut" + 'ton']["setSpin"](!0x0);
+            NR["savedSearc" + 'h'] = 0x0;
+            NR["levelDataA" + "rray"] = [];
+            var NS = new q5['vg'](q6['w']["siteURL"] + ('get_level.' + 'hw'));
+            NS["method"] = q5['QI']["POST"];
+            NR["urlVariabl" + 'es'] = new q5['Vt']();
+            NR["urlVariabl" + 'es']['action'] = "get_all";
+            NR["urlVariabl" + 'es']["page"] = NR["currentSet"] = NR["currentPag" + 'e'] = 0x1;
+            NR["urlVariabl" + 'es']['sortby'] = NW['sortDropMe' + 'nu']["value"];
+            NR["urlVariabl" + 'es']["uploaded"] = NW["uploadDrop" + "Menu"]['value'];
+            NR["levelSearc" + 'h'] ? (NR["savedSearc" + 'h'] = 0x1, NR["urlVariabl" + 'es']['action'] = "search_by_" + "name", NR["urlVariabl" + 'es']["sterm"] = NR['levelSearc' + 'h']) : NR["authorName" + "Search"] ? (NR["savedSearc" + 'h'] = 0x2, NR["urlVariabl" + 'es']["action"] = "search_by_" + "user", NR["urlVariabl" + 'es']["sterm"] = NR['authorName' + "Search"]) : NR['_favorites'] ? (NR["savedSearc" + 'h'] = 0x3, NS["url"] = q6['w']["siteURL"] + "user.hw", NR["urlVariabl" + 'es'] = new q5['Vt'](), NR["urlVariabl" + 'es']["action"] = "get_favori" + "tes", q6['w']["favoriteLe" + 'velIds'] = []) : NR["_favorites" + "UserId"] > 0x0 ? (NR["savedSearc" + 'h'] = 0x4, NR["urlVariabl" + 'es'] = new q5['Vt'](), NR["urlVariabl" + 'es']["action"] = "get_fav_by" + "_user", NR["urlVariabl" + 'es']["user_id"] = NR["_favorites" + 'UserId'], NR["ownFavorit" + "esListed"]() && (q6['w']['favoriteLe' + "velIds"] = [])) : 0x0 != NW["authorDrop" + 'Menu']['value'] ? (NR['urlVariabl' + 'es']["action"] = 'get_pub_by' + "_user", NR["urlVariabl" + 'es']["user_id"] = NW['authorDrop' + "Menu"]["value"]) : ND && qN['JD']["trackEvent"](qN['JD']["LEVEL_BROW" + "SER"], qN['JD']["REFRESH_LE" + "VELS"], NW['sortDropMe' + 'nu']["value"] + '_' + NW["uploadDrop" + 'Menu']["value"]);
+            NS["data"] = NR["urlVariabl" + 'es'];
+            NW["statusSpri" + 'te'] = new q3['AS']('loading\x20le' + 'vels...');
+            var Nd = NW["statusSpri" + 'te']["window"];
+            NW["addChild"](Nd);
+            Nd["center"]();
+            NW['listLoadPe' + "nding"] = !0x0;
+            NW["loader"] = new q5['NU']();
+            NW["loader"]['addEventLi' + "stener"](q5['Jh']["COMPLETE"], NW['levelDataL' + "oaded"]);
+            NW["loader"]["addEventLi" + 'stener'](q5['BR']["IO_ERROR"], NW["IOErrorHan" + "dler"]);
+            NW["loader"]["addEventLi" + "stener"](q5['Xt']["SECURITY_E" + "RROR"], NW["securityEr" + "rorHandler"]);
+            NW["loader"]["load"](NS);
+          };
+          NW["levelDataL" + "oaded"] = function (ND) {
+            var Ng;
+            NW["listLoadPe" + "nding"] = !0x1;
+            NW["statusSpri" + 'te']["die"]();
+            NW["removeLoad" + "erListener" + 's']();
+            NW["refreshBut" + "ton"]["setSpin"](!0x1);
+            var NS = String(NW['loader']["data"]);
+            var Nd = NS["substr"](0x0, 0x8);
+            if (Nd["indexOf"]("<html>") > -0x1) {
+              NW["createProm" + "ptSprite"]("There was " + "an unexpec" + "ted system" + " Error", 'oh');
+              return void NW["updateRefr" + "eshButton"](!0x0);
+            }
+            if (Nd["indexOf"]("failure") > -0x1) {
+              if ("gXzpf" === "gXzpf") {
+                var Nz = NS['split'](':');
+                "invalid_ac" + 'tion' == Nz[0x1] ? NW["createProm" + "ptSprite"]("An invalid" + " action wa" + "s passed (" + 'you\x20really' + '\x20shouldn\x27t' + " ever be s" + "eeing this" + ').', 'ok') : "bad_param" == Nz[0x1] ? NW["createProm" + "ptSprite"]('A\x20bad\x20para' + "meter was " + "passed (yo" + "u really s" + 'houldn\x27t\x20e' + 'ver\x20be\x20see' + "ing this).", 'ok') : "app_error" == Nz[0x1] ? NW["createProm" + "ptSprite"]("Sorry, the" + 're\x20was\x20an\x20' + "applicatio" + "n error. I" + "t was most" + " likely da" + "tabase rel" + "ated. Plea" + "se try aga" + "in in a mo" + "ment.", 'ok') : NW["createProm" + "ptSprite"]("An unknown" + " Error has" + " occurred.", 'oh');
+                return void NW["updateRefr" + "eshButton"](!0x0);
+              } else {
+                if ("deflate" !== qR) {
+                  throw new qz("Invalid de" + "compressio" + 'n\x20algorith' + "m: '" + Nz + '\x27.');
+                }
+                this["buffer"] = (0x0, qI["inflateRaw" + "Sync"])(this["buffer"]);
+              }
+            }
+            NW['updateRefr' + "eshButton"]();
+            var NF = new q5['_9'](NW["loader"]["data"]);
+            var NM = (0x0, q5['Wh'])(NF["@pp"]);
+            NM > 0x1 && (NR['setLength'] = NM);
+            NR["levelDataA" + "rray"] || (NR["levelDataA" + "rray"] = []);
+            for (var NH = null === (Ng = NF['lv']) || void 0x0 === Ng ? void 0x0 : Ng["length"], Nb = 0x0; Nb < NH; Nb++) {
+              var NZ = NF['lv'][Nb];
+              var Ny = new qo['m3'](NZ["@id"], NZ["@ln"], NZ["@ui"], NZ["@un"], NZ['@rg'], NZ["@vs"], NZ["@ps"], NZ["@dp"], NZ['uc'][0x0]["cdata"], NZ['@pc'], 0x1, 0x1, 0x1, NZ['@dp']);
+              NR["levelDataA" + "rray"]["push"](Ny);
+              NR["ownFavorit" + "esListed"]() && q6['w']["favoriteLe" + 'velIds']["push"](Ny['id']);
+            }
+            NW['list'] && NW["killList"]();
+            NW["buildList"]();
+          };
+          NW["IOErrorHan" + "dler"] = function (ND) {
+            NW["listLoadPe" + 'nding'];
+            NW["listLoadPe" + "nding"] = !0x1;
+            NW["statusSpri" + 'te'] && NW["statusSpri" + 'te']["die"]();
+            NW["removeLoad" + "erListener" + 's']();
+            NW["updateRefr" + "eshButton"]();
+            NW["refreshBut" + "ton"]["setSpin"](!0x1);
+            NW["createProm" + "ptSprite"]("Sorry, the" + 're\x20was\x20an\x20' + 'IO\x20Error.', "ugh, ok");
+          };
+          NW["securityEr" + "rorHandler"] = function (ND) {
+            if ("IOPCa" === "IOPCa") {
+              NW["statusSpri" + 'te'] && NW['statusSpri' + 'te']['die']();
+              NW["removeLoad" + "erListener" + 's']();
+              NW["updateRefr" + "eshButton"]();
+              NW["refreshBut" + "ton"]['setSpin'](!0x1);
+              NW["createProm" + "ptSprite"]("Sorry, the" + 're\x20was\x20a\x20S' + "ecurity Er" + "ror.", "ugh, ok");
+            } else {
+              var NS = qT["call"](qR, "string");
+              if ("object" != typeof NS) {
+                return NS;
+              }
+              throw new qz('@@toPrimit' + "ive must r" + 'eturn\x20a\x20pr' + "imitive va" + "lue.");
+            }
+          };
+          NW["dropMenuSe" + "lected"] = function (ND) {
+            var Ng;
+            var NS;
+            void 0x0 === ND && (ND = null);
+            var Nd = (NS = null != ND ? ND["target"] : NW["authorDrop" + "Menu"])["currentInd" + 'ex'];
+            NS == NW["authorDrop" + "Menu"] ? (Ng = 0x0, NR["currentDro" + 'pStates'] = Nd > 0x0 ? [0x1, 0x0, 0x0] : [0x1, 0x1, 0x1]) : Ng = NS == NW["sortDropMe" + 'nu'] ? 0x1 : 0x2;
+            NR["currentDro" + "pSettings"][Ng] = Nd;
+            NW["organizeDr" + "opMenus"]();
+            NW["updateRefr" + "eshButton"](null == ND);
+          };
+          NW["backPress"] = function (ND) {
+            qN['JD']["trackEvent"](qN['JD']["LEVEL_BROW" + "SER"], qN['JD']["GOTO_MAIN_" + "MENU"]);
+            NW["dispatchEv" + "ent"](new qu['$T'](qu['$T']["MAIN_MENU"]));
+          };
+          NW["listFavori" + "tes"] = function (ND) {
+            NR["_favorites"] || (NW["searchTerm" + 'Button'] && NW["removeSear" + "chTerm"](), qN['JD']["trackEvent"](qN['JD']['LEVEL_BROW' + "SER"], qN['JD']["GET_FAVORI" + "TES"]), NR["_favorites"] = !0x0, NR["_favorites" + "UserId"] = 0x0, NW['createSear' + "chTermButt" + 'on'](0x3), NW["loadData"]());
+          };
+          NW["listDownlo" + "ads"] = function (ND) {};
+          NW['downloadLe' + "vel"] = function (ND) {};
+          NW['deleteDown' + "load"] = function (ND) {};
+          NW["getFavorit" + 'esFromUser'] = function (ND) {
+            var Ng = ND["extra"];
+            NW['searchTerm' + "Button"] && NW["removeSear" + "chTerm"]();
+            qN['JD']["trackEvent"](qN['JD']["LEVEL_BROW" + "SER"], qN['JD']["GET_FAVORI" + "TES"], "userID_" + Ng["author_id"]);
+            NR["_favorites"] = !0x1;
+            NR["_favorites" + "UserId"] = Ng["author_id"];
+            NR["_favorites" + "UserName"] = Ng["author_nam" + 'e'];
+            NW["createSear" + "chTermButt" + 'on'](0x4);
+            NW["loadData"]();
+          };
+          NW["openSearch" + "Menu"] = function (ND) {
+            NW["searchMenu"] = new n3();
+            var Ng = NW['searchMenu']["window"];
+            NW["addChild"](Ng);
+            Ng["center"]();
+            NW["_pixiSprit" + 'e']["interactiv" + 'e'] = !0x1;
+            Ng["interactiv" + 'e'] = !0x0;
+            NW["searchMenu"]["addEventLi" + "stener"](n3["SEARCH"], NW["beginSearc" + 'h']);
+            NW["searchMenu"]["addEventLi" + "stener"](n3["CANCEL"], NW["closeSearc" + "hMenu"]);
+          };
+          NW["closeSearc" + "hMenu"] = function (ND) {
+            void 0x0 === ND && (ND = null);
+            NW["_pixiSprit" + 'e']["interactiv" + 'e'] = !0x0;
+            NW['searchMenu']["removeEven" + "tListener"](n3["SEARCH"], NW["beginSearc" + 'h']);
+            NW["searchMenu"]["removeEven" + "tListener"](n3["CANCEL"], NW["closeSearc" + "hMenu"]);
+            NW['searchMenu']['die']();
+            NW['searchMenu']["destroy"]();
+            NW["searchMenu"] = null;
+          };
+          NW["beginSearc" + 'h'] = function (ND) {
+            if ("gQTcT" !== "qRIhs") {
+              var Ng = NW["searchMenu"]["searchTerm"];
+              var NS = NW["searchMenu"]["searchType"];
+              NW["closeSearc" + "hMenu"]();
+              NW["searchTerm" + "Button"] && NW["removeSear" + "chTerm"]();
+              NS == n3["LEVEL_NAME"] ? (NR["savedTerm"] = Ng, NW["createSear" + "chTermButt" + 'on'](0x1), qN['JD']["trackEvent"](qN['JD']["LEVEL_BROW" + "SER"], qN['JD']["LEVEL_SEAR" + 'CH'], Ng), NW["loadData"]()) : NS == n3["AUTHOR_NAM" + 'E'] && (NR['savedTerm'] = Ng, NW["createSear" + "chTermButt" + 'on'](0x2), qN['JD']["trackEvent"](qN['JD']["LEVEL_BROW" + "SER"], qN['JD']["AUTHOR_SEA" + "RCH"], Ng), NW["loadData"]());
+            } else {
+              qT["__proto__"] = qR;
+              return qz;
+            }
+          };
+          NW["removeSear" + "chTerm"] = function (ND) {
+            void 0x0 === ND && (ND = null);
+            NR['levelSearc' + 'h'] = null;
+            NR['authorName' + 'Search'] = null;
+            NR["_favorites"] = !0x1;
+            NR["_favorites" + "UserId"] = 0x0;
+            NR["_downloads"] = !0x1;
+            NW["searchTerm" + "Button"]["removeEven" + "tListener"](q5['Cm']["MOUSE_UP"], NW['removeSear' + "chTerm"]);
+            NW["removeChil" + 'd'](NW["searchTerm" + "Button"]);
+            NW['searchTerm' + 'Button']['destroy']();
+            NW["searchTerm" + "Button"] = null;
+            NW["dropMenuSe" + "lected"]();
+          };
+          NW['editFavori' + "tes"] = function (ND) {
+            var Ng = ND["type"] == qu['dg']["ADD_TO_FAV" + "ORITES"];
+            if (q6['w']["user_id"] <= 0x0) {
+              NW['createProm' + "ptSprite"]("You must b" + "e logged i" + "n to edit " + "your favor" + "ite levels" + ".  " + q6['w']["registerLo" + "ginMessage"], 'ok');
+            } else {
+              if (q6['w']["disableUpl" + "oad"]) {
+                NW["createProm" + "ptSprite"](q6['w']["disableMes" + "sage"], 'OH\x20FINE');
+              } else {
+                var NS = ND["extra"];
+                var Nd = new q5['vg'](q6['w']["siteURL"] + "user.hw");
+                Nd["method"] = q5['QI']['POST'];
+                var Nz;
+                var NF = new q5['Vt']();
+                NF["level_id"] = NS;
+                Nd["data"] = NF;
+                Ng ? (Nz = "adding lev" + "el to favo" + "rites...", NF["action"] = "set_favori" + 'te', NW["favoriteId"] = NS) : (Nz = 'removing\x20l' + "evel from " + "favorites." + '..', NF["action"] = "delete_fav" + "orite", NW["favoriteId"] = -NS);
+                NW["statusSpri" + 'te'] = new q3['AS'](Nz);
+                var NM = NW['statusSpri' + 'te']["window"];
+                NW['addChild'](NM);
+                NM["center"]();
+                NW["loader"] = new q5['NU']();
+                NW["loader"]['addEventLi' + "stener"](q5['Jh']['COMPLETE'], NW["editFavori" + "tesComplet" + 'e']);
+                NW["loader"]["addEventLi" + "stener"](q5['BR']["IO_ERROR"], NW["IOErrorHan" + "dler"]);
+                NW['loader']["addEventLi" + "stener"](q5['Xt']['SECURITY_E' + "RROR"], NW["securityEr" + "rorHandler"]);
+                NW["loader"]['load'](Nd);
+              }
+            }
+          };
+          NW["editFavori" + 'tesComplet' + 'e'] = function (ND) {
+            NW['statusSpri' + 'te']["die"]();
+            NW["removeLoad" + "erListener" + 's']();
+            var Ng = String(NW["loader"]["data"]);
+            var NS = Ng["substr"](0x0, 0x8);
+            var Nd = Ng['split'](':');
+            if (NS['indexOf']("<html>") > -0x1) {
+              NW["createProm" + "ptSprite"]("There was " + "an unexpec" + "ted system" + " Error", 'oh');
+            } else {
+              if ("failure" == Nd[0x0]) {
+                'not_logged' + '_in' == Nd[0x1] ? NW["createProm" + "ptSprite"]("You must b" + "e logged i" + "n to edit " + "your favor" + "ite levels" + ".  " + q6['w']["registerLo" + "ginMessage"], 'ok') : "duplicate" == Nd[0x1] ? NW["createProm" + "ptSprite"]("This level" + " is alread" + "y one of y" + "our favori" + "te levels.", 'ok') : 'fav_count' == Nd[0x1] ? NW["createProm" + "ptSprite"]("Your favor" + "ites list " + "is full.  " + "Remove som" + "e levels f" + 'rom\x20your\x20f' + "avorites.", 'ok') : "invalid_ac" + "tion" == Nd[0x1] ? NW["createProm" + "ptSprite"]("An invalid" + " action wa" + "s passed (" + "you really" + " shouldn't" + " ever be s" + "eeing this" + ').', 'ok') : "bad_param" == Nd[0x1] ? NW["createProm" + "ptSprite"]("A bad para" + "meter was " + "passed (yo" + "u really s" + "houldn't e" + "ver be see" + "ing this).", 'ok') : "app_error" == Nd[0x1] ? NW["createProm" + "ptSprite"]("Sorry, the" + "re was an " + "applicatio" + "n error. I" + "t was most" + " likely da" + "tabase rel" + "ated. Plea" + "se try aga" + "in in a mo" + "ment.", 'ok') : NW["createProm" + "ptSprite"]("An unknown" + " Error has" + " occurred.", 'oh');
+              } else {
+                if ("success" == Nd[0x0]) {
+                  NW["createProm" + "ptSprite"]("Favorites " + "list updat" + "ed.", 'ok');
+                  if (NW["favoriteId"] > 0x0) {
+                    -0x1 == q6['w']["favoriteLe" + 'velIds']["indexOf"](NW['favoriteId']) && q6['w']["favoriteLe" + "velIds"]["push"](NW['favoriteId']);
+                  } else {
+                    if (NW['favoriteId'] < 0x0) {
+                      var Nz = q6['w']["favoriteLe" + "velIds"]["indexOf"](-NW["favoriteId"]);
+                      Nz > -0x1 && q6['w']['favoriteLe' + 'velIds']["splice"](Nz, 0x1);
+                    }
+                  }
+                }
+              }
+            }
+          };
+          NW["getLevelsF" + "romAuthor"] = function (ND) {
+            if ("XbVbk" === 'XbVbk') {
+              var Ng = ND["extra"];
+              NW["updateAuth" + "ors"](Ng["author_nam" + 'e'], Ng["author_id"]);
+              NW['authorDrop' + "Menu"]["currentInd" + 'ex'] = NW["authorDrop" + 'Menu']["valueIndex"](Ng["author_id"]);
+              NR["currentDro" + "pSettings"][0x0] = NW["authorDrop" + "Menu"]["currentInd" + 'ex'];
+              NW["searchTerm" + "Button"] && NW['removeSear' + "chTerm"]();
+              NR['currentDro' + "pStates"] = [0x1, 0x0, 0x0];
+              NW["organizeDr" + 'opMenus']();
+              NW["loadData"]();
+            } else {
+              var Nd = qF["mask"];
+              qT["mask"] = null;
+              this["targetMask" + "Holder"]["removeChil" + 'd'](Nd);
+            }
+          };
+          NW["flipPage"] = function (ND) {
+            var Ng = NR["currentSet"];
+            NR["currentPag" + 'e'] = NW["pageFlippe" + 'r']["currentPag" + 'e'];
+            NR["currentSet"] = Math["ceil"](NR["currentPag" + 'e'] * NR["pageLength"] / NR["setLength"]);
+            var NS = NR['levelDataA' + "rray"]["length"];
+            NR["currentSet"] > Ng && NS <= (NR["currentSet"] - 0x1) * NR["setLength"] ? NW["loadDataOf" + 'fset']() : (NW['killList'](), NW['buildList']());
+          };
+          NW["cloneAndDi" + "spatchEven" + 't'] = function (ND) {
+            if ("KPIfx" !== 'KPIfx') {
+              var Nd = qS["other"];
+              if (Nd['IsStatic']()) {
+                qA["wall"] = !0x0;
+              } else {
+                var Nz = Nd['GetShapeLi' + 'st']();
+                var NF = Nz && Nz["GetUserDat" + 'a']();
+                NF instanceof NR['s'] && qs["isCore"](Nd, NF) && (NF["isDadsSon"] ? (qf["son"] = NF, Nd === NF['head1Body'] && (q9["sonsHead"] = !0x0)) : NF === q5["character"] && (NW["dad"] = NF));
+              }
+            } else {
+              ND["levelDataO" + "bject"] && (NR["lastLevelI" + 'd'] = ND["levelDataO" + "bject"]['id']);
+              var Ng = ND["clone"]();
+              Ng["target"] = NW;
+              NW["dispatchEv" + "ent"](Ng);
+            }
+          };
+          NW["faceSelect" + 'ed'] = function (ND) {
+            if ("jVPNS" === "jVPNS") {
+              void 0x0 === ND && (ND = null);
+              NR['selectedCh' + "aracter"] = NW["list"]['selectedCh' + "aracter"];
+            } else {
+              var NS = qS['entries'][qA];
+              NS["gapBefore"] && (qN += NS["gapBefore"]);
+              var Nd = new qc['A_']();
+              Nd["multiline"] = !0x0;
+              Nd["defaultTex" + 'tFormat'] = qV;
+              Nd["text"] = NS["text"];
+              Nd['y'] = qE;
+              Nd["pixiText"]["anchor"]["set"](0.5, 0x0);
+              this["creditsSpr" + "ite"]["addChild"](Nd);
+              var Nz = Nd["height"];
+              NS['url'] && (Nd["mouseEnabl" + 'ed'] = !0x0, Nd["mouseChild" + "ren"] = !0x0, new ql['x'](Nd, NS["url"]));
+              q3 += Nz;
+            }
+          };
+          NW['updateScro' + 'ller'] = function (ND) {
+            if ("oImna" !== "yhNog") {
+              void 0x0 === ND && (ND = null);
+              NW["scrollBar"]["updateScro" + 'llTab']();
+            } else {
+              q6["prototype"]["resetMovie" + "Clips"]["call"](this);
+              this["helmetMC"]["visible"] = !0x1;
+              this["head1MC"]["helmet"]["visible"] = !0x0;
+              this['copterFron' + "tMC"]["inner"]["leg1"]["visible"] = !0x0;
+              this["copterFron" + 'tMC']["inner"]["leg2"]["visible"] = !0x0;
+              this['copterFron' + "tMC"]["visible"] = !0x0;
+              this["copterMC"]["visible"] = !0x0;
+              this["copterMC"]["inner"]["propeller"]["visible"] = !0x0;
+              this['copterMC']["inner"]["brokenProp" + "eller"]['visible'] = !0x1;
+              for (var NS = 0x0; NS < 0x7; NS++) {
+                this["brokenCopt" + "erMCs"][NS]["visible"] = !0x1;
+              }
+              this["copterBody"]["SetUserDat" + 'a'](this["copterMC"]);
+              this["magnetBody"]["SetUserDat" + 'a'](this["magnetMC"]);
+              this["magnetMC"]["gotoAndSto" + 'p'](0x1);
+              this["magnetMC"]["lights"]["visible"] = !0x1;
+              this["ropeSprite"]["graphics"]["clear"]();
+              var Nd = this["sourceObje" + 'ct']['copterShar' + 'ds'];
+              this['_session']["particleCo" + 'ntroller']["createBMDA" + "rray"]("copterShar" + 'ds', Nd);
+            }
+          };
+          var NA = (0x0, qK['zI'])("GameUI", 'mc_level_b' + "rowser");
+          NW["__mc"] = NA;
+          var Nr = [];
+          NA["children"]["forEach"](function (ND) {
+            if ("tOdjm" !== "tOdjm") {
+              return this["_selected"];
+            } else {
+              var Ng;
+              ND instanceof qV['j7'] ? (Ng = new q5['j7'](null))["setPixiMov" + "ieClip"](ND) : Ng = new q5['kx'](ND);
+              ND["name"] && (Ng["name"] = Ng["pixiSprite"]["name"] = ND["name"], NW[ND["name"]] = Ng);
+              Nr["push"](Ng);
+            }
+          });
+          Nr["forEach"](function (ND) {
+            if ("dzGWk" !== "NwuVF") {
+              NW["addChild"](ND);
+            } else {
+              void 0x0 === qK && (ND = null);
+              for (var NS = 0x0; NS < Nr["dropMenuAr" + "ray"]["length"]; NS++) {
+                qb["savedDropS" + "ettings"][NS] = qC["currentDro" + "pSettings"][NS];
+              }
+              qt['refreshBut' + "ton"]["setSpin"](!0x0);
+              qM["replayData" + "Array"] = [];
+              var Nd = new qi['vg'](qD['w']["siteURL"] + 'replay.hw');
+              Nd["method"] = qw['QI']['POST'];
+              q0['urlVariabl' + 'es'] = new q1['Vt']();
+              q2["urlVariabl" + 'es']['action'] = "get_all_by" + "_level";
+              q3["urlVariabl" + 'es']["page"] = q4["currentSet"] = q5["currentPag" + 'e'] = 0x1;
+              q6["urlVariabl" + 'es']['level_id'] = q7['_levelId'];
+              q8["urlVariabl" + 'es']["sortby"] = q9["sortDropMe" + 'nu']["value"];
+              Nd['data'] = qq["urlVariabl" + 'es'];
+              qn && qN['JD']["trackEvent"](qf['JD']["REPLAY_BRO" + "WSER"], qT['JD']["REFRESH_RE" + "PLAYS"], qV["sortDropMe" + 'nu']["value"]);
+              qh["statusSpri" + 'te'] = new qC['AS']("loading re" + "plays...");
+              var Nz = qj["statusSpri" + 'te']["window"];
+              qP["addChild"](Nz);
+              Nz["center"]();
+              qp["loader"] = new qK['NU']();
+              qm["loader"]["addEventLi" + "stener"](qI['Jh']['COMPLETE'], qk["replayData" + "Loaded"]);
+              qs["loader"]['addEventLi' + "stener"](qt['BR']["IO_ERROR"], qB["IOErrorHan" + "dler"]);
+              qu["loader"]["addEventLi" + "stener"](ql['Xt']["SECURITY_E" + "RROR"], qo["securityEr" + "rorHandler"]);
+              qi["loader"]["load"](Nd);
+            }
+          });
+          NW["backButton"] = (0x0, qK['Iz'])(q3['yw'], NW, 'backButton', {
+            'fileName': 'GameUI',
+            'mcName': "mc_feature" + "d_back_but" + "ton"
+          });
+          return NW;
+        }
+      }
+      var No;
+      var Ni;
+      Ni = Nl;
+      (No = NR)["prototype"] = Object["create"](Ni['prototype']);
+      No['prototype']["constructo" + 'r'] = No;
+      n6(No, Ni);
+      var NE = NR["prototype"];
+      NE["init"] = function () {
+        this["mouseChild" + "ren"] = !0x1;
+        this['shadow']["mouseEnabl" + 'ed'] = !0x1;
+        this["refreshBut" + "ton"] = new n0();
+        this['addChild'](this["refreshBut" + 'ton']);
+        this["refreshBut" + "ton"]['x'] = this['shadow']['x'] + this["shadow"]["width"] + 0xa;
+        this["refreshBut" + 'ton']['y'] = this["shadow"]['y'] - 0x16;
+        this["refreshBut" + "ton"]['setGlow'](!0x1);
+        this["buildDropM" + "enus"]();
+        this["searchButt" + 'on'] = new q3['Ch']("search by " + "name", 0x3d88c7, 0x78);
+        this["addChild"](this["searchButt" + 'on']);
+        this["searchButt" + 'on']['x'] = this["shadow"]['x'];
+        this["searchButt" + 'on']['y'] = this['shadow']['y'] - 0x1b;
+        this["searchButt" + 'on']['y'] = this['shadow']['y'] + this["shadow"]["height"] + 0x6;
+        q6['w']["user_id"] > 0x0 && (this["favoritesB" + 'utton'] = new q3['Ch']("list favor" + "ites", 0xfffe65, 0x78, 0x605344), this["favoritesB" + "utton"]['x'] = this["searchButt" + 'on']['x'] + this["searchButt" + 'on']["width"] + 0x6, this["favoritesB" + "utton"]['y'] = this['searchButt' + 'on']['y'], this["addChild"](this['favoritesB' + "utton"]), this["favoritesB" + "utton"]["addEventLi" + "stener"](q5['Cm']["MOUSE_UP"], this["listFavori" + "tes"]));
+        this["backButton"]["addEventLi" + "stener"](q5['Cm']["MOUSE_UP"], this["backPress"]);
+        this["searchButt" + 'on']["addEventLi" + "stener"](q5['Cm']["MOUSE_UP"], this['openSearch' + "Menu"]);
+        this["refreshBut" + "ton"]["_pixiSprit" + 'e']['on']("pointertap", this["loadData"]["bind"](this));
+        NR["savedSearc" + 'h'] > 0x0 && this["createSear" + "chTermButt" + 'on'](NR["savedSearc" + 'h']);
+      };
+      NE["activate"] = function () {
+        this["mouseChild" + 'ren'] = !0x0;
+        NR['levelDataA' + "rray"] ? this["buildList"]() : this["loadData"]();
+      };
+      NR["importLeve" + "lDataArray"] = function (NW) {
+        NR['levelDataA' + "rray"] = NW;
+        var NA = NR['levelDataA' + "rray"][0x0];
+        NR["lastLevelI" + 'd'] = NA['id'];
+        NR['currentPag' + 'e'] = 0x1;
+        NR["currentSet"] = 0x1;
+        NR['levelSearc' + 'h'] = null;
+        NR["authorName" + 'Search'] = null;
+        NR["_favorites"] = !0x1;
+        NR['_favorites' + "UserId"] = 0x0;
+        NR["_downloads"] = !0x1;
+      };
+      NR["importAuth" + 'or'] = function (NW, NA) {
+        var Nr = NR["authorValu" + 'es']["indexOf"](NA);
+        -0x1 == Nr ? (NR["authorValu" + 'es']["push"](NA), NR["authorDisp" + "lay"]["push"](NW), NR["currentDro" + "pSettings"] = [NR["authorValu" + 'es']["length"] - 0x1, 0x0, 0x3], NR["savedDropS" + "ettings"] = [NR["authorValu" + 'es']["length"] - 0x1, 0x0, 0x3], NR["currentDro" + "pStates"] = [0x1, 0x0, 0x0], NR["savedDropS" + "tates"] = [0x1, 0x0, 0x0]) : (NR["savedDropS" + "ettings"] = [Nr, 0x0, 0x3], NR["savedDropS" + "tates"] = [0x1, 0x0, 0x0]);
+        NR['authorName' + "Search"] = null;
+        NR["levelSearc" + 'h'] = null;
+        NR["_favorites"] = !0x1;
+        NR["_favorites" + "UserId"] = 0x0;
+        NR["_downloads"] = !0x1;
+        NR["savedSearc" + 'h'] = 0x0;
+        NR["currentPag" + 'e'] = 0x1;
+        NR["currentSet"] = 0x1;
+        NR["urlVariabl" + 'es'] = null;
+        NR["levelDataA" + "rray"] = null;
+      };
+      NR["importFavo" + "rites"] = function (NW, NA) {
+        NR["_favorites" + "UserId"] = NA;
+        NR["_favorites" + "UserName"] = NW;
+        NR["_favorites"] = !0x1;
+        NR["_downloads"] = !0x1;
+        NR["authorName" + 'Search'] = null;
+        NR["levelSearc" + 'h'] = null;
+        NR["savedSearc" + 'h'] = 0x4;
+        NR["currentPag" + 'e'] = 0x1;
+        NR["currentSet"] = 0x1;
+        NR["urlVariabl" + 'es'] = null;
+        NR['levelDataA' + "rray"] = null;
+      };
+      NR["ownFavorit" + "esListed"] = function () {
+        return !!NR["_favorites"] || NR["_favorites" + "UserId"] > 0x0 && NR["_favorites" + "UserId"] === q6['w']["user_id"];
+      };
+      NE["loadDownlo" + "ads"] = function () {};
+      NE["loadDataOf" + "fset"] = function () {
+        this["refreshBut" + "ton"]["setSpin"](!0x0);
+        var NW = new q5['vg'](q6['w']["siteURL"] + ("get_level." + 'hw'));
+        NW["method"] = q5['QI']["POST"];
+        NW["data"] = NR['urlVariabl' + 'es'];
+        NR["urlVariabl" + 'es']["page"] = NR["currentSet"];
+        this["statusSpri" + 'te'] = new q3['AS']("loading le" + "vels...");
+        var NA = this["statusSpri" + 'te']["window"];
+        this['addChild'](NA);
+        NA['center']();
+        "get_all" == NR["urlVariabl" + 'es']["action"] && qN['JD']["trackEvent"](qN['JD']["LEVEL_BROW" + "SER"], qN['JD']["PAGE_LEVEL" + 'S'], this['sortDropMe' + 'nu']["value"] + '_' + this["uploadDrop" + "Menu"]["value"], NR["currentSet"]);
+        this['listLoadPe' + "nding"] = !0x0;
+        this["loader"] = new q5['NU']();
+        this["loader"]["addEventLi" + "stener"](q5['Jh']["COMPLETE"], this["levelDataL" + 'oaded']);
+        this["loader"]["addEventLi" + 'stener'](q5['BR']["IO_ERROR"], this["IOErrorHan" + "dler"]);
+        this['loader']["addEventLi" + "stener"](q5['Xt']['SECURITY_E' + "RROR"], this["securityEr" + "rorHandler"]);
+        this["loader"]["load"](NW);
+      };
+      NE["createProm" + "ptSprite"] = function (NW, NA) {
+        var Nr = new q3['Um'](NW, NA)["window"];
+        this["addChild"](Nr);
+        Nr["center"]();
+      };
+      NE["removeLoad" + "erListener" + 's'] = function () {
+        this["loader"]["removeEven" + "tListener"](q5['Jh']["COMPLETE"], this["levelDataL" + "oaded"]);
+        this["loader"]['removeEven' + "tListener"](q5['Jh']["COMPLETE"], this["editFavori" + "tesComplet" + 'e']);
+        this["loader"]["removeEven" + "tListener"](q5['BR']["IO_ERROR"], this['IOErrorHan' + "dler"]);
+        this['loader']['removeEven' + "tListener"](q5['Xt']["SECURITY_E" + 'RROR'], this["securityEr" + 'rorHandler']);
+      };
+      NE["buildDropM" + "enus"] = function () {
+        var th = sV;
+        if ("LtkTb" === "uXzkl") {
+          var NJ = this;
+          void 0x0 === qE && (ql = null);
+          function ND() {
+            NJ["closeSessi" + 'onMenu'](null, !0x1);
+            NJ['closeSessi' + "onReplayMe" + 'nu'](null, !0x1);
+            NJ["disableSav" + 'e'] = !0x1;
+            NJ['replayData' + "Object"] = null;
+            NJ["removeVict" + "oryMovieCl" + "ipIfNeeded"]();
+            NJ["trackResta" + 'rt']();
+            var NS = NJ["session"]["character"];
+            var Nd = NJ["session"]["level"];
+            var Nz = NJ["session"]["containerS" + "prite"];
+            var NF = NJ["session"]["levelVersi" + 'on'];
+            NJ["session"]["die"]();
+            NJ['session']["removeEven" + "tListener"](Ni['b9']['COMPLETED'], NJ["sessionCom" + "pleteHandl" + "erBind"]);
+            NJ['parent']["removeChil" + 'd'](NJ['session']);
+            (0x0, qJ['j_'])();
+            var NM = new NJ['eM']();
+            ND['w']["currentSes" + "sion"] = new Ng(Nz, qn['w']['CURRENT_VE' + "RSION"], NS, Nd, NF, qy['w']['useDebug']);
+            NJ["session"] = qg['w']["currentSes" + "sion"];
+            NJ["parent"]['addChildAt'](NJ["session"], 0x0);
+            NJ["session"]["create"]();
+            NJ['loadContai' + "ner"]["hide"]();
+            NJ["session"]["addEventLi" + "stener"](qu['b9']["COMPLETED"], NJ["sessionCom" + "pleteHandl" + "erBind"]);
+            NJ["lastSessio" + "nStartTime"] = NM["stop"]();
+          }
+          if (this["lastSessio" + "nStartTime"] < 0xc8) {
+            ND();
+          } else {
+            var Ng = Ni["floor"](qJ["random"]() * this['restartMes' + "sages"]["length"]);
+            this['loadContai' + "ner"]["setText"](this["restartMes" + "sages"][Ng]);
+            this["loadContai" + "ner"]["show"](ND);
+          }
+        } else {
+          var NW = q6['w']["user_id"];
+          NW > 0x0 && -0x1 == NR["authorValu" + 'es']['indexOf'](NW) && (NR["authorValu" + 'es']["push"](NW), NR["authorDisp" + "lay"]["push"](q6['w']["username"]));
+          this["authorDrop" + "Menu"] = new ql['f']("author:", NR["authorDisp" + "lay"], NR["authorValu" + 'es'], NR["savedDropS" + "ettings"][0x0]);
+          this["sortDropMe" + 'nu'] = new ql['f']("sort by:", ["newest", "oldest", "play count", "rating"], ["newest", 'oldest', "plays", "rating"], NR["savedDropS" + "ettings"][0x1]);
+          this["uploadDrop" + "Menu"] = new ql['f']("uploaded:", ["today", "this week", 'this\x20month', "anytime"], ["today", "week", "month", "anytime"], NR["savedDropS" + "ettings"][0x2]);
+          this['addChild'](this["authorDrop" + "Menu"]);
+          this["addChild"](this["sortDropMe" + 'nu']);
+          this["addChild"](this["uploadDrop" + "Menu"]);
+          this["authorDrop" + "Menu"]['y'] = this["sortDropMe" + 'nu']['y'] = this["uploadDrop" + "Menu"]['y'] = this["shadow"]['y'] - 0x15;
+          this["authorDrop" + "Menu"]["addEventLi" + 'stener'](ql['f']["ITEM_SELEC" + "TED"], this["dropMenuSe" + "lected"]);
+          this["sortDropMe" + 'nu']['addEventLi' + "stener"](ql['f']['ITEM_SELEC' + "TED"], this["dropMenuSe" + 'lected']);
+          this["uploadDrop" + "Menu"]["addEventLi" + "stener"](ql['f']['ITEM_SELEC' + "TED"], this["dropMenuSe" + "lected"]);
+          this["dropMenuAr" + "ray"] = [this["authorDrop" + "Menu"], this['sortDropMe' + 'nu'], this['uploadDrop' + "Menu"]];
+          for (var NA = 0x0; NA < this["dropMenuAr" + "ray"]['length']; NA++) {
+            NR["currentDro" + "pStates"][NA] = NR["savedDropS" + "tates"][NA];
+          }
+          this['organizeDr' + 'opMenus']();
+        }
+      };
+      NE["organizeDr" + "opMenus"] = function () {
+        for (var NW = this["shadow"]["width"] + this["shadow"]['x'], NA = this["dropMenuAr" + "ray"]["length"] - 0x1; NA > -0x1; NA--) {
+          var Nr = this["dropMenuAr" + "ray"][NA];
+          0x1 == NR["currentDro" + "pStates"][NA] ? (Nr["visible"] = !0x0, Nr["xLeft"] = NW - Nr["width"], NW = Nr["xLeft"] - NR["dropMenuSp" + "acing"]) : Nr["visible"] = !0x1;
+        }
+      };
+      NE["updateRefr" + "eshButton"] = function (NW) {
+        void 0x0 === NW && (NW = !0x1);
+        for (var NA = 0x0; NA < this["dropMenuAr" + "ray"]["length"]; NA++) {
+          NR["currentDro" + 'pSettings'][NA] != NR["savedDropS" + "ettings"][NA] && (NW = !0x0);
+        }
+        this["refreshBut" + "ton"]["setGlow"](NW);
+      };
+      NE["enterDownl" + "oadsMode"] = function () {};
+      NE['createSear' + "chTermButt" + 'on'] = function (NW) {
+        var NA;
+        var Nr;
+        var NJ;
+        0x1 == NW ? (NR['levelSearc' + 'h'] = NR["savedTerm"], NA = "level name" + ": '" + NR["savedTerm"] + '\x27', Nr = 0x3d88c7, NJ = 0xffffff) : 0x2 == NW ? (NR["authorName" + 'Search'] = NR["savedTerm"], NA = "author nam" + "e: '" + NR["savedTerm"] + '\x27', Nr = 0xfd8181, NJ = 0xffffff) : 0x3 == NW ? (NA = 'favorites', Nr = 0xfffe65, NJ = 0x605344) : 0x4 == NW && (NA = "favorites:" + '\x20\x27' + NR["_favorites" + "UserName"] + '\x27', Nr = 0xfffe65, NJ = 0x605344);
+        this["searchTerm" + "Button"] = new n5(NA, Nr, 0x78, NJ);
+        this["addChild"](this["searchTerm" + "Button"]);
+        this["searchTerm" + "Button"]['x'] = this["shadow"]['x'];
+        this["searchTerm" + "Button"]['y'] = this["shadow"]['y'] - 0x1b;
+        NR["currentDro" + "pStates"] = NW >= 0x3 ? [0x0, 0x0, 0x0] : [0x0, 0x1, 0x0];
+        this["organizeDr" + "opMenus"]();
+        this["searchTerm" + "Button"]["addEventLi" + "stener"](q5['Cm']["MOUSE_UP"], this["removeSear" + "chTerm"]);
+      };
+      NE["updateAuth" + "ors"] = function (NW, NA) {
+        -0x1 == NR['authorValu' + 'es']["indexOf"](NA) && (NR["authorValu" + 'es']["push"](NA), NR["authorDisp" + "lay"]["push"](NW), this["authorDrop" + "Menu"]['addValue'](NW, NA));
+      };
+      NE['buildList'] = function () {
+        var NW = (NR["currentPag" + 'e'] - 0x1) * NR["pageLength"];
+        var NA = NW + NR["pageLength"];
+        NA = Math['min'](NA, NR["levelDataA" + "rray"]["length"]);
+        var Nr = NR["levelDataA" + "rray"]["slice"](NW, NA);
+        this["listContai" + "ner"] = new q5['kx']();
+        this["list"] = new qY(Nr, NR["lastLevelI" + 'd'], NR["selectedCh" + "aracter"]);
+        NR["lastLevelI" + 'd'] = -0x1;
+        this["listMask"] = new q5['kx']();
+        this["listContai" + "ner"]['x'] = this["listHeader"]['x'];
+        this["listContai" + "ner"]['y'] = this["listHeader"]['y'] + this["listHeader"]["height"];
+        this["listMask"]["graphics"]["beginFill"](0xff0000);
+        this["listMask"]["graphics"]['drawRect'](0x0, 0x0, this["shadow"]["width"], this["shadow"]["height"] - this["listHeader"]["height"]);
+        this["listMask"]['graphics']["endFill"]();
+        this["list"]["mask"] = this["listMask"];
+        this["addChildAt"](this["listContai" + "ner"], this['getChildIn' + "dex"](this["listHeader"]));
+        this["listContai" + "ner"]["addChild"](this["list"]);
+        this["listContai" + "ner"]["addChild"](this["listMask"]);
+        this["list"]["mouseEnabl" + 'ed'] = !0x0;
+        this["list"]["addEventLi" + "stener"](qY["UPDATE_SCR" + "OLLER"], this["updateScro" + "ller"]);
+        this["list"]["addEventLi" + "stener"](qY["FACE_SELEC" + "TED"], this["faceSelect" + 'ed']);
+        window["addEventLi" + 'stener']("keydown", this['list']["keyDownHan" + "dler"], !0x1);
+        this["list"]["addEventLi" + "stener"](qu['$T']["SESSION"], this["cloneAndDi" + "spatchEven" + 't']);
+        this["list"]["addEventLi" + 'stener'](qu['$T']["EDITOR"], this["cloneAndDi" + "spatchEven" + 't']);
+        this["list"]['addEventLi' + "stener"](qu['$T']["REPLAY_BRO" + "WSER"], this["cloneAndDi" + 'spatchEven' + 't']);
+        this["list"]["addEventLi" + "stener"](qu['dg']["USER"], this["getLevelsF" + "romAuthor"]);
+        this["list"]["addEventLi" + "stener"](qu['dg']["ADD_TO_FAV" + "ORITES"], this['editFavori' + "tes"]);
+        this["list"]["addEventLi" + "stener"](qu['dg']["REMOVE_FRO" + "M_FAVORITE" + 'S'], this["editFavori" + "tes"]);
+        this["scrollBar"] = new qv['X'](this["list"], this["listMask"], 0x16);
+        this['scrollBar']['x'] = this["shadow"]['x'] + this["shadow"]["width"] + 0xa;
+        this["scrollBar"]['y'] = this["listContai" + "ner"]['y'];
+        this['addChildAt'](this["scrollBar"], 0x2);
+        this["faceSelect" + 'ed']();
+        this["pageFlippe" + 'r'] && (this["pageFlippe" + 'r']["die"](), this["pageFlippe" + 'r']["destroy"](), this['pageFlippe' + 'r']["removeEven" + "tListener"](qO["FLIP_PAGE"], this["flipPage"]), this["removeChil" + 'd'](this["pageFlippe" + 'r']), this["pageFlippe" + 'r'] = null);
+        var NJ = NR["levelDataA" + "rray"]["length"];
+        if (0x0 == NJ) {
+          this["createProm" + "ptSprite"]("no levels " + 'found\x20usin' + "g these pa" + "rameters", 'ok');
+        } else {
+          var ND = NJ % NR["setLength"] > 0x0;
+          this["pageFlippe" + 'r'] = new qO(NR["currentPag" + 'e'], NR["pageLength"], NJ, ND);
+          this["addChild"](this['pageFlippe' + 'r']);
+          this["pageFlippe" + 'r']['x'] = this["shadow"]['x'] + this['shadow']["width"];
+          this["pageFlippe" + 'r']['y'] = this["shadow"]['y'] + this['shadow']["height"] + 0x7;
+          this["pageFlippe" + 'r']["addEventLi" + "stener"](qO["FLIP_PAGE"], this["flipPage"]);
+        }
+      };
+      NE["killList"] = function () {
+        window["removeEven" + "tListener"]("keydown", this["list"]["keyDownHan" + "dler"], !0x1);
+        this["list"]["removeEven" + "tListener"](qY["UPDATE_SCR" + "OLLER"], this["updateScro" + "ller"]);
+        this["list"]["removeEven" + 'tListener'](qY["FACE_SELEC" + "TED"], this["faceSelect" + 'ed']);
+        this["list"]["removeEven" + "tListener"](qu['$T']["SESSION"], this["cloneAndDi" + "spatchEven" + 't']);
+        this["list"]["removeEven" + "tListener"](qu['$T']["EDITOR"], this['cloneAndDi' + "spatchEven" + 't']);
+        this["list"]["removeEven" + "tListener"](qu['$T']["REPLAY_BRO" + "WSER"], this["cloneAndDi" + "spatchEven" + 't']);
+        this["list"]["removeEven" + "tListener"](qu['dg']['USER'], this["getLevelsF" + "romAuthor"]);
+        this['list']['removeEven' + "tListener"](qu['dg']["ADD_TO_FAV" + "ORITES"], this["editFavori" + "tes"]);
+        this['list']['removeEven' + "tListener"](qu['dg']["REMOVE_FRO" + "M_FAVORITE" + 'S'], this["editFavori" + "tes"]);

@@ -1,0 +1,800 @@
+function (q0, q1, q2) {
+  'use strict';
+
+  q2['d'](q1, {
+    'Sl': () => q3['Sl'],
+    'lM': () => q3['lM'],
+    'ob': () => q3['ob'],
+    'bE': () => q3['bE'],
+    'fe': () => q3['fe'],
+    'XP': () => q3['XP'],
+    'Kn': () => q3['Kn'],
+    'gs': () => q3['gs'],
+    'Et': () => q3['Et'],
+    'jd': () => q3['jd'],
+    'cK': () => q3['cK'],
+    'bZ': () => q3['bZ'],
+    'Vm': () => q3['Vm'],
+    'u8': () => q3['u8'],
+    'mA': () => q3['mA'],
+    'kv': () => q3['kv'],
+    'zN': () => q3['zN'],
+    'X8': () => q3['X8'],
+    '$P': () => q6['$P'],
+    'us': () => q9['us'],
+    'Ps': () => q5['Ps'],
+    'yg': () => q9['yg'],
+    'Ej': () => qq['E'],
+    '_c': () => q8['_c'],
+    'tK': () => q8['tK'],
+    'Or': () => q6['Or'],
+    'IX': () => q6['IX'],
+    '$D': () => q6['$D'],
+    'ap': () => q6['ap'],
+    'Ns': () => q6['Ns'],
+    'ab': () => q6['ab'],
+    'tO': () => q6['tO'],
+    'Hl': () => qn['H'],
+    'ZH': () => qV,
+    'tq': () => qj,
+    'TK': () => q6['TK'],
+    'TQ': () => q6['TQ'],
+    'oV': () => q7['oV'],
+    'rg': () => qs,
+    'Wf': () => q5['Wf'],
+    'AN': () => q7['AN'],
+    'ZE': () => q7['ZE'],
+    'fG': () => q7['fG'],
+    'nX': () => q7['nX'],
+    'KE': () => qt['K'],
+    'TM': () => q6['TM'],
+    'hO': () => q6['hO'],
+    'zm': () => q6['zm'],
+    'ON': () => qB,
+    'Ch': () => q7['Ch'],
+    'sN': () => q6['sN'],
+    'gJ': () => qn['g'],
+    'd9': () => q6['d9'],
+    'WJ': () => qu['W'],
+    'RH': () => q6['RH'],
+    '_i': () => q6['_i'],
+    'zt': () => q6['zt'],
+    'dq': () => q9['dq'],
+    'iU': () => q7['iU'],
+    'yw': () => q7['yw'],
+    'oi': () => q7['oi'],
+    'Wd': () => q6['Wd'],
+    'M_': () => q6['M_'],
+    'XU': () => q6['XU'],
+    'uO': () => qd['u'],
+    'HV': () => q6['HV'],
+    'ze': () => q6['ze'],
+    'uB': () => q6['uB'],
+    'ai': () => qz['a'],
+    'kU': () => q5['kU'],
+    'tD': () => q9['tD'],
+    'NO': () => qF['N'],
+    'Um': () => qH,
+    'g_': () => q6['g_'],
+    'RX': () => q5['RX'],
+    'DJ': () => q4['D'],
+    'Sv': () => qb['S'],
+    'HQ': () => q5['HQ'],
+    '$w': () => qZ['$'],
+    'Qs': () => qy['Q'],
+    'uH': () => qc['u'],
+    '$H': () => n5,
+    'wu': () => n7,
+    'y8': () => q9['y8'],
+    'lR': () => q6['lR'],
+    'Cw': () => q7['Cw'],
+    'AX': () => q6['AX'],
+    'HR': () => q6['_c'],
+    'tR': () => q7['tR'],
+    'Bx': () => q7['Bx'],
+    'Em': () => q7['Em'],
+    'Tu': () => q7['Tu'],
+    'kw': () => q9['kw'],
+    'HO': () => q6['HO'],
+    'aX': () => q6['aX'],
+    'ak': () => q6['ak'],
+    'AS': () => qm,
+    'QP': () => q6['QP'],
+    'fL': () => q6['y8'],
+    'ee': () => q6['ee'],
+    'kf': () => q9['kf'],
+    'fx': () => q6['fx'],
+    '$6': () => q6['$6'],
+    'iO': () => nf,
+    'pF': () => nK,
+    'Wz': () => q6['Wz'],
+    'Qu': () => q5['Qu'],
+    'tU': () => q9['tU'],
+    'vq': () => q7['ON'],
+    'tL': () => q6['tL'],
+    'Hm': () => q8['_J'],
+    'p8': () => q7['p8'],
+    'hl': () => q6['hl']
+  });
+  var q3 = q2(0x34b9);
+  var q4 = q2(0x981b);
+  q2(0x1bef);
+  var q5 = q2(0x11445);
+  var q6 = q2(0x543e);
+  q2(0xd029);
+  var q7 = q2(0xc6b5);
+  var q8 = q2(0x15d02);
+  var q9 = q2(0x69a7);
+  var qq = q2(0x42d5);
+  var qn = q2(0x170b0);
+  var qN = q2(0x136b);
+  function qf(nm, nI) {
+    if ("wicUx" === "wicUx") {
+      nm["prototype"] = Object["create"](nI["prototype"]);
+      nm["prototype"]["constructo" + 'r'] = nm;
+      qT(nm, nI);
+    } else {
+      ql = q3[nI];
+      var ns = qs["keyedPrope" + "rtyObject"][qf];
+      ns || (ns = q9["keyedPrope" + "rtyObject"][q5] = new q2());
+      var nt = ns["get"](qB);
+      nt || (nt = [], ns["set"](qW, nt));
+      var nB = qH['@p' + qk];
+      void 0x0 !== nB && (nt[q4] = 't' == nB || 'f' == nB ? 't' == nB : qJ(nB));
+    }
+  }
+  function qT(nm, nI) {
+    qT = Object["setPrototy" + "peOf"] ? Object["setPrototy" + "peOf"]["bind"]() : function (nk, ns) {
+      var qoc = qoy;
+      nk["__proto__"] = ns;
+      return nk;
+    };
+    return qT(nm, nI);
+  }
+  var qV = function (nm) {
+    function nI(ns, nt, nB) {
+      if ("rhpul" === "kjANx") {
+        var no = this;
+        this["mobileTouc" + "hedDown"] = !0x1;
+        V(function () {
+          var qow = qoX;
+          var qoe = qoX;
+          return no["setInterac" + "tiveElemen" + "tsForMobil" + "eScroll"](!0x0);
+        }, 0x32);
+        h['os']["killTweens" + 'Of'](this["list"]);
+        C["abs"](this["mobileLast" + "TouchDiff"]) > 0x1 && j['os']['to'](this["list"], {
+          'duration': 0x1,
+          'y': this["list"]['y'] - 0x3 * this["mobileLast" + "TouchDiff"],
+          'ease': P['MI']["easeOut"],
+          'onUpdate': function () {
+            var qoa = qoX;
+            var qoY = qoX;
+            no["checkScrol" + 'lLimits']();
+            no["createLeve" + "lButtonsIn" + "View"]();
+          }
+        });
+      } else {
+        var nu;
+        (nu = nm["call"](this) || this)["totalWidth"] = 0x384;
+        nu["updateCanv" + 'as'] = function (no) {
+          var qov = qox;
+          var qoL = qox;
+          void 0x0 === no && (no = null);
+          var ni = nu["canvasHold" + 'er']["scaleX"] * qn['H']["canvasWidt" + 'h'] + 0x2 * nu["spacing"];
+          nu['canvasHold' + 'er']['x'] = nu["scrollTab"]['x'] * ni / -nu['bg']["graphics"]["width"] + nu["spacing"];
+          nu["container"]["cullObject" + 's']();
+        };
+        nu["mouseDownH" + "andler"] = function (no) {
+          var qoU = qoX;
+          var qoO = qoX;
+          switch (no['target']) {
+            case nu["scrollTab"]:
+              nu["dragging"] || nu["startScrol" + 'lDrag']();
+              break;
+            case nu['bg']:
+              nu['bgPress']();
+          }
+        };
+        nu["mouseUpHan" + "dler"] = function (no) {
+          var qoG = qoX;
+          var qoQ = qoX;
+          if ('mLWsJ' !== "mLWsJ") {
+            for (var nE = 0x0; nE < 0x2; nE++) {
+              this["tip"] = nE < 0x1;
+              if (!(q8["totalParti" + "cles"] < qI["maxParticl" + 'es'])) {
+                return void (this["finished"] = !0x0);
+              }
+              this["createPart" + "icle"]();
+              qS["totalParti" + "cles"] += 0x1;
+            }
+            this['finished'] = !0x0;
+          } else {
+            nu["stage"]["removeEven" + "tListener"](qN['Cm']["MOUSE_UP"], nu['mouseUpHan' + "dler"]);
+            nu["stage"]["removeEven" + "tListener"](qN['Cm']["MOUSE_MOVE"], nu["updateCanv" + 'as']);
+            nu["stopScroll" + "Drag"]();
+          }
+        };
+        nu["container"] = ns;
+        nu["canvasHold" + 'er'] = nt;
+        nu["spacing"] = nB;
+        nu["updateScro" + "llTab"]();
+        nu["scrollTab"]["addEventLi" + "stener"](qN['Cm']["MOUSE_DOWN"], nu["mouseDownH" + "andler"]);
+        nu['bg']["addEventLi" + "stener"](qN['Cm']["MOUSE_DOWN"], nu["mouseDownH" + 'andler']);
+        return nu;
+      }
+    }
+    qf(nI, nm);
+    var nk = nI["prototype"];
+    nk["updateScro" + "llTab"] = function () {
+      var qi2 = qi1;
+      var qi3 = qi1;
+      if ("cNkrY" !== "qxKid") {
+        var ns = this["canvasHold" + 'er']["scaleX"] * qn['H']["canvasWidt" + 'h'] + 0x2 * this["spacing"];
+        var nt = this["totalWidth"] / ns;
+        nt > 0x1 ? this["visible"] = !0x1 : (this["visible"] = !0x0, this['scrollTab']["graphics"]["width"] = nt * this['bg']["graphics"]["width"], this["scrollTab"]['x'] = (this["canvasHold" + 'er']['x'] - this["spacing"]) * -this['bg']["graphics"]["width"] / ns);
+      } else {
+        this["loader"]["removeEven" + "tListener"](T['Jh']['COMPLETE'], this['levelDataL' + "oaded"]);
+        this["loader"]["removeEven" + 'tListener'](V['Jh']["COMPLETE"], this["editFavori" + "tesComplet" + 'e']);
+        this["loader"]["removeEven" + "tListener"](h['BR']['IO_ERROR'], this["IOErrorHan" + "dler"]);
+        this["loader"]["removeEven" + "tListener"](C['Xt']['SECURITY_E' + "RROR"], this["securityEr" + "rorHandler"]);
+      }
+    };
+    nk["bgPress"] = function () {
+      var qi4 = qi0;
+      var qi5 = qi0;
+      if ("yDhAg" !== "yDhAg") {
+        V['J']["trackEvent"](h['J']['MAIN_MENU'], C['J']["CLICK_IOS_" + "LINK"]);
+        var nt = new j['vg']("https://it" + "unes.apple" + ".com/us/ap" + "p/happy-wh" + "eels/id648" + "668184?mt=" + '8');
+        (0x0, P['is'])(nt, "_blank");
+      } else {
+        this['bg']['mouseX'] > this["scrollTab"]['x'] ? (this["scrollTab"]['x'] = this["scrollTab"]['x'] + this["scrollTab"]["graphics"]["width"], this["scrollTab"]['x'] + this["scrollTab"]['graphics']["width"] > this['bg']["graphics"]["width"] && (this["scrollTab"]['x'] = this['bg']["graphics"]["width"] - this["scrollTab"]["graphics"]["width"])) : (this["scrollTab"]['x'] = this["scrollTab"]['x'] - this["scrollTab"]['graphics']["width"], this["scrollTab"]['x'] < 0x0 && (this['scrollTab']['x'] = 0x0));
+        this["updateCanv" + 'as']();
+      }
+    };
+    nk["startScrol" + "lDrag"] = function () {
+      var qi6 = qi0;
+      var qi7 = qi0;
+      "gbpvo" === "gbpvo" ? (this['dragging'] = !0x0, this['stage']["addEventLi" + "stener"](qN['Cm']["MOUSE_UP"], this['mouseUpHan' + "dler"]), this["stage"]["addEventLi" + "stener"](qN['Cm']["MOUSE_MOVE"], this["updateCanv" + 'as']), this["scrollTab"]['startDrag'](!0x1, new qN['M_'](0x0, 0x0, this['bg']["graphics"]["width"] - this['scrollTab']["graphics"]["width"], 0x0))) : (N["prototype"]["elbowBreak" + '1']["call"](this, f), this["ejected"] || (this["removeFrom" + 'COMArray'](this['lowerArm1B' + "ody"]), this["frameHand1"] && (this["_session"]["m_world"]["DestroyJoi" + 'nt'](this['frameHand1']), this["frameHand1"] = null, this['checkEject']())));
+    };
+    nk['stopScroll' + "Drag"] = function () {
+      var qi8 = qi1;
+      var qi9 = qi1;
+      this["dragging"] = !0x1;
+      this["scrollTab"]["stopDrag"]();
+    };
+    nk["die"] = function () {
+      var qiq = qi0;
+      var qin = qi0;
+      this["stage"]["removeEven" + "tListener"](qN['Cm']["MOUSE_UP"], this["mouseUpHan" + "dler"]);
+      this['stage']['removeEven' + "tListener"](qN['Cm']["MOUSE_MOVE"], this["updateCanv" + 'as']);
+      this["removeEven" + "tListener"](qN['Cm']["MOUSE_DOWN"], this["mouseDownH" + "andler"]);
+      this["scrollTab"]["removeEven" + 'tListener'](qN['Cm']["MOUSE_DOWN"], this["mouseDownH" + 'andler']);
+      this['bg']["removeEven" + "tListener"](qN['Cm']['MOUSE_DOWN'], this["mouseDownH" + 'andler']);
+    };
+    return nI;
+  }(function (nm) {
+    if ("vxbwg" !== "rnLXN") {
+      function nI() {
+        var qiT = qif;
+        var qiV = qif;
+        var nk;
+        (nk = nm["call"](this) || this)['bg'] = new qN['kx']();
+        nk['bg']["graphics"]["beginFill"](0x666666);
+        nk['bg']["graphics"]["drawRect"](0x0, 0x0, 0x1f4, 0xa);
+        nk["addChild"](nk['bg']);
+        nk["scrollTab"] = new qN['kx']();
+        nk["scrollTab"]["graphics"]["beginFill"](0xcccccc);
+        nk["scrollTab"]["graphics"]["drawRect"](0x0, 0x0, 0x1f4, 0xa);
+        nk['addChild'](nk["scrollTab"]);
+        return nk;
+      }
+      qf(nI, nm);
+      return nI;
+    } else {
+      var ns = 0x0;
+      var nt = !0x1;
+      if (-0x1 === this["levelIndex" + "ToOpen"]) {
+        C < this['NUM_LEVEL_' + "ITEMS_VISI" + "BLE_AT_ONC" + 'E'] - 0x1 ? nt = !0x0 : ns = 0xa * this["deferredEx" + 'pensiveIni' + 'ts'];
+      } else {
+        var nB = this["NUM_LEVEL_" + "ITEMS_VISI" + "BLE_AT_ONC" + 'E'] / 0x2;
+        this["browserTyp" + 'e'] == k["Replay"] && (nB += 0x2);
+        (f < this["levelIndex" + "ToOpen"] - nB || q1 > this["levelIndex" + "ToOpen"] + nB) && (nt = !0x0, ns = 0xa * ((B > this["levelIndex" + 'ToOpen'] ? u - this["levelIndex" + "ToOpen"] : this["levelIndex" + "ToOpen"] - l) - nB));
+      }
+      nt || this['deferredEx' + "pensiveIni" + 'ts']++;
+      return ns;
+    }
+  }(qN['kx']));
+  function qh(nm, nI) {
+    nm["prototype"] = Object["create"](nI['prototype']);
+    nm["prototype"]["constructo" + 'r'] = nm;
+    qC(nm, nI);
+  }
+  function qC(nm, nI) {
+    qC = Object["setPrototy" + "peOf"] ? Object["setPrototy" + "peOf"]['bind']() : function (nk, ns) {
+      var qip = qiP;
+      nk["__proto__"] = ns;
+      return nk;
+    };
+    return qC(nm, nI);
+  }
+  var qj = function (nm) {
+    if ("QuSoM" !== 'RlpuX') {
+      function nk(ns, nt, nB) {
+        var qim = qiK;
+        var qiI = qiK;
+        if ("VKSfK" === "ybguK") {
+          h > 0xb4 && (C -= 0x168);
+          j < -0xb4 && (P += 0x168);
+          this['_axisAngle'] = p;
+          K['w']["currentlyI" + "nEditor"] && (this["inner"]["rotation"] = this["_axisAngle"]);
+          this["drawArms"]();
+          this["forceDirty"]();
+        } else {
+          var nu;
+          (nu = nm["call"](this) || this)["totalHeigh" + 't'] = 0x1f4;
+          nu['updateCanv' + 'as'] = function (no) {
+            void 0x0 === no && (no = null);
+            var ni = nu["canvasHold" + 'er']["scaleY"] * qn['H']["canvasHeig" + 'ht'] + 0x2 * nu["spacing"];
+            nu["canvasHold" + 'er']['y'] = nu["scrollTab"]['y'] * ni / -nu['bg']["graphics"]["height"] + nu["spacing"];
+            nu["container"]["cullObject" + 's']();
+          };
+          nu["mouseDownH" + "andler"] = function (no) {
+            if ("aCoUH" === "fwbju") {
+              for (var nE, nR = ["renderResL" + 'abelText', "maxParticl" + "eLabelText", "textureRes" + "LabelText", '60fpsLabel' + "Text", "bloodSetti" + 'ngLabelTex' + 't', "graphicalO" + "ptionsLabe" + "lText", "volumeLabe" + "lText", "musicVolum" + "eLabelText", "fullscreen" + "LabelText", "soundOptLa" + "belText", "kbOptLabel" + "Text", "mobileCont" + "rolsLabelT" + "ext"], nW = 0x0; nW < nR["length"]; nW++) {
+                var nA = nR[nW];
+                this["__mc"][nA]["_pixiSprit" + 'e']["destroy"]({
+                  'children': !0x0,
+                  'baseTexture': !0x0,
+                  'texture': !0x0
+                });
+              }
+              this["customizeC" + "ontrolsBut" + "ton"]['destroy']();
+              null === (nE = this["gamepadCon" + "trolsButto" + 'n']) || void 0x0 === nE || nE["destroy"]();
+              n["prototype"]["destroy"]["call"](this);
+            } else {
+              switch (no["target"]) {
+                case nu["scrollTab"]:
+                  nu["dragging"] || nu["startScrol" + "lDrag"]();
+                  break;
+                case nu['bg']:
+                  nu["bgPress"]();
+              }
+            }
+          };
+          nu["mouseUpHan" + "dler"] = function (no) {
+            nu["stage"]["removeEven" + "tListener"](qN['Cm']["MOUSE_UP"], nu["mouseUpHan" + "dler"]);
+            nu["stage"]["removeEven" + "tListener"](qN['Cm']["MOUSE_MOVE"], nu["updateCanv" + 'as']);
+            nu['stopScroll' + "Drag"]();
+          };
+          nu["container"] = ns;
+          nu["canvasHold" + 'er'] = nt;
+          nu["spacing"] = nB;
+          nu["updateScro" + "llTab"]();
+          nu["scrollTab"]["addEventLi" + "stener"](qN['Cm']["MOUSE_DOWN"], nu["mouseDownH" + "andler"]);
+          nu['bg']['addEventLi' + "stener"](qN['Cm']["MOUSE_DOWN"], nu["mouseDownH" + "andler"]);
+          return nu;
+        }
+      }
+      qh(nk, nm);
+      var nI = nk["prototype"];
+      nI["updateScro" + "llTab"] = function () {
+        var qii = qiK;
+        var qiE = qiK;
+        if ("hbwnz" !== "CIBOf") {
+          var ns = this["canvasHold" + 'er']["scaleY"] * qn['H']["canvasHeig" + 'ht'] + 0x2 * this["spacing"];
+          var nt = this["totalHeigh" + 't'] / ns;
+          nt > 0x1 ? this["visible"] = !0x1 : (this["visible"] = !0x0, this["scrollTab"]["graphics"]["height"] = nt * this['bg']["graphics"]['height'], this['scrollTab']['y'] = (this['canvasHold' + 'er']['y'] - this['spacing']) * -this['bg']["graphics"]["height"] / ns);
+        } else {
+          this["_limit"] = n;
+          this["drawArms"]();
+          this["forceDirty"]();
+        }
+      };
+      nI["bgPress"] = function () {
+        var qiR = qio;
+        var qiW = qio;
+        this['bg']["mouseY"] > this["scrollTab"]['y'] ? (this["scrollTab"]['y'] = this["scrollTab"]['y'] + this["scrollTab"]["graphics"]["height"], this["scrollTab"]['y'] + this['scrollTab']["graphics"]["height"] > this['bg']['graphics']["height"] && (this['scrollTab']['y'] = this['bg']["graphics"]["height"] - this["scrollTab"]["graphics"]["height"])) : (this["scrollTab"]['y'] = this["scrollTab"]['y'] - this["scrollTab"]["graphics"]["height"], this["scrollTab"]['y'] < 0x0 && (this["scrollTab"]['y'] = 0x0));
+        this['updateCanv' + 'as']();
+      };
+      nI["startScrol" + "lDrag"] = function () {
+        var qiA = qio;
+        var qir = qio;
+        "wTBkS" === "NbFDY" ? this["ejected"] && (0x1 != this["_currentPo" + 'se'] && 0x2 != this["_currentPo" + 'se'] || (this["currentPos" + 'e'] = 0x0)) : (this["dragging"] = !0x0, this["stage"]["addEventLi" + "stener"](qN['Cm']["MOUSE_UP"], this["mouseUpHan" + "dler"]), this["stage"]["addEventLi" + "stener"](qN['Cm']["MOUSE_MOVE"], this["updateCanv" + 'as']), this['scrollTab']["startDrag"](!0x1, new qN['M_'](0x0, 0x0, 0x0, this['bg']["graphics"]["height"] - this["scrollTab"]["graphics"]["height"])));
+      };
+      nI["stopScroll" + "Drag"] = function () {
+        var qiJ = qio;
+        var qiD = qio;
+        this["dragging"] = !0x1;
+        this['scrollTab']["stopDrag"]();
+      };
+      nI["die"] = function () {
+        var qig = qio;
+        var qiS = qio;
+        if ("ZtHmZ" !== "ZtHmZ") {
+          for (qR = 0x0; qz < this["cheese"]["length"]; q8++) {
+            this["cheese"]["buffer"][qI] = 0x0;
+          }
+          this["cheese"]["length"] = 0x0;
+          this["cheese"] = null;
+        } else {
+          this["stage"]["removeEven" + "tListener"](qN['Cm']["MOUSE_UP"], this["mouseUpHan" + "dler"]);
+          this["stage"]["removeEven" + "tListener"](qN['Cm']["MOUSE_MOVE"], this['updateCanv' + 'as']);
+          this["removeEven" + "tListener"](qN['Cm']["MOUSE_DOWN"], this["mouseDownH" + "andler"]);
+          this["scrollTab"]["removeEven" + 'tListener'](qN['Cm']["MOUSE_DOWN"], this["mouseDownH" + "andler"]);
+          this['bg']["removeEven" + "tListener"](qN['Cm']["MOUSE_DOWN"], this["mouseDownH" + "andler"]);
+        }
+      };
+      return nk;
+    } else {
+      N["prototype"]["headSmash1"]["call"](this, f);
+      this["eject"]();
+    }
+  }(function (nm) {
+    if ("JJroe" !== "KWHRe") {
+      function nI() {
+        var qiF = qid;
+        var qiM = qid;
+        var nk;
+        (nk = nm["call"](this) || this)['bg'] = new qN['kx']();
+        nk['bg']["graphics"]['beginFill'](0x666666);
+        nk['bg']["graphics"]["drawRect"](0x0, 0x0, 0xa, 0xfa);
+        nk["addChild"](nk['bg']);
+        nk["scrollTab"] = new qN['kx']();
+        nk["scrollTab"]["graphics"]["beginFill"](0xcccccc);
+        nk["scrollTab"]["graphics"]["drawRect"](0x0, 0x0, 0xa, 0xfa);
+        nk["addChild"](nk["scrollTab"]);
+        return nk;
+      }
+      qh(nI, nm);
+      return nI;
+    } else {
+      this["_levelXML"] = q6;
+    }
+  }(qN['kx']));
+  q2(0xb284);
+  q2(0x15de4);
+  q2(0xcdc3);
+  q2(0x15d77);
+  q2(0x65f3);
+  q2(0xb4c);
+  var qP = q2(0xce9);
+  function qp(nm) {
+    if ("riMPK" !== "riMPK") {
+      n["prototype"]["ctrlNullAc" + "tions"]["call"](this);
+    } else {
+      var nI = function (ns) {
+        var qiZ = qiH;
+        var qiy = qiH;
+        if ("object" != typeof ns || !ns) {
+          return ns;
+        }
+        var nt = ns[Symbol["toPrimitiv" + 'e']];
+        if (void 0x0 !== nt) {
+          var nB = nt["call"](ns, 'string');
+          if ("object" != typeof nB) {
+            return nB;
+          }
+          throw new TypeError("@@toPrimit" + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+        }
+        return String(ns);
+      }(nm);
+      return "symbol" == typeof nI ? nI : nI + '';
+    }
+  }
+  function qK(nm, nI) {
+    if ("QdtJG" !== "QdtJG") {
+      var ns = f['call'](T, "string");
+      if ("object" != typeof ns) {
+        return ns;
+      }
+      throw new V("@@toPrimit" + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+    } else {
+      qK = Object["setPrototy" + "peOf"] ? Object["setPrototy" + "peOf"]["bind"]() : function (ns, nt) {
+        var qix = qiX;
+        var qiw = qiX;
+        if ("VsCOD" !== 'VsCOD') {
+          j["_canvasWid" + 'th'] = 0x4e20;
+          P["_canvasHei" + "ght"] = 0x2710;
+          this['graphics']["beginFill"](0x999999, 0.35);
+          this["graphics"]["drawRect"](0x0, 0x0, p["_canvasWid" + 'th'], K['_canvasHei' + "ght"]);
+          this["graphics"]["endFill"]();
+          this["graphics"]["lineStyle"](0x0, 0xffffff, 0x1, !0x0);
+          this["graphics"]["moveTo"](this['_refGroup']['x'] - 0x5, this["refGroup"]['y']);
+          this["graphics"]["lineTo"](this["_refGroup"]['x'] + 0x5, this['refGroup']['y']);
+          this["graphics"]["moveTo"](this["_refGroup"]['x'], this['refGroup']['y'] - 0x5);
+          this["graphics"]["lineTo"](this["_refGroup"]['x'], this["refGroup"]['y'] + 0x5);
+          this["shapes"] = new m['kx']();
+          this["shapes"]["name"] = "shapes";
+          this["special"] = new I['kx']();
+          this['special']["name"] = "special";
+          this["addChild"](this["shapes"]);
+          this["addChild"](this["special"]);
+          this['addEventLi' + "stener"](k['N3']["ART"], this["artStatusH" + 'andler'], !0x1, 0x0, !0x0);
+          this["addEventLi" + "stener"](f['N3']["SHAPE"], this['shapeStatu' + "sHandler"], !0x1, 0x0, !0x0);
+        } else {
+          ns["__proto__"] = nt;
+          return ns;
+        }
+      };
+      return qK(nm, nI);
+    }
+  }
+  var qm = function (nm) {
+    if ("trbbS" === "trbbS") {
+      function nu(nl, no, ni) {
+        var qiY = qia;
+        var qiv = qia;
+        var nE;
+        void 0x0 === no && (no = !0x0);
+        void 0x0 === ni && (ni = 0xc8);
+        (nE = nm["call"](this) || this)["bgHeight"] = 0x64;
+        nE['bgWidth'] = ni;
+        nE["createText" + "Field"]();
+        nE['textField']["htmlText"] = nl;
+        nE["createBg"]();
+        nE["createWind" + 'ow'](no);
+        nE["adjustText"]();
+        return nE;
+      }
+      var nI;
+      var nk;
+      nk = nm;
+      (nI = nu)["prototype"] = Object["create"](nk["prototype"]);
+      nI["prototype"]["constructo" + 'r'] = nI;
+      qK(nI, nk);
+      var ns;
+      var nt;
+      var nB = nu["prototype"];
+      nB["createBg"] = function () {
+        var qiL = qie;
+        var qiU = qie;
+        if ('fpIJb' === "inQMP") {
+          if (!qc) {
+            for (var no = 0x0; no < qB["length"]; no++) {
+              let nE = qj[no][0x0];
+              let nR = qP[no][0x1];
+              let nW = !0x0;
+              for (var ni = 0x0; ni < nE["length"]; ni++) {
+                qn['O']['j'](nE[ni]) ? nE["splice"](ni--, 0x1) : nW = !0x1;
+              }
+              if (nW) {
+                qu["splice"](no--, 0x1);
+                const nA = nR();
+                void 0x0 !== nA && (qd = nA);
+              }
+            }
+            return qr;
+          }
+          q9["push"]([nt, nI]);
+        } else {
+          this["bgHeight"] = Math["max"](0x2 * this["textField"]["height"], 0x64);
+          this['bg'] = new qN['kx']();
+          this['bg']["graphics"]["beginFill"](0xcccccc);
+          this['bg']["graphics"]["drawRect"](0x0, 0x0, this["bgWidth"], this["bgHeight"]);
+          this['bg']['graphics']["endFill"]();
+          this["addChildAt"](this['bg'], 0x0);
+        }
+      };
+      nB["createText" + "Field"] = function () {
+        var qiO = qie;
+        var qiG = qie;
+        var nl = new qN['lk']("HelveticaN" + "eueLT Std", 0xc, 0xffffff, null, null, null, null, null, qN['MA']["CENTER"]);
+        this['textField'] = new qN['A_']();
+        this['textField']["defaultTex" + "tFormat"] = nl;
+        this["textField"]["width"] = this["bgWidth"] - 0x14;
+        this['textField']["height"] = 0x14;
+        this["textField"]["autoSize"] = qN['wL']["LEFT"];
+        this["textField"]['multiline'] = !0x0;
+        this["textField"]["wordWrap"] = !0x0;
+        this["textField"]['selectable'] = !0x1;
+        this["textField"]['antiAliasT' + "ype"] = qN['BF']["ADVANCED"];
+        this["addChild"](this["textField"]);
+      };
+      nB["adjustText"] = function () {
+        var qiQ = qie;
+        var qE0 = qie;
+        this["textField"]['x'] = (this["bgWidth"] - this['textField']["_pixiText"]['width']) / 0x2;
+        this["textField"]['y'] = (this["bgHeight"] - this["textField"]["_pixiText"]["height"]) / 0x2;
+      };
+      nB['createWind' + 'ow'] = function (nl) {
+        var qE1 = qie;
+        this["_window"] = new qP['p'](!0x1, this, nl);
+      };
+      nB["die"] = function () {
+        var qE2 = qia;
+        var qE3 = qia;
+        this["_window"]["closeWindo" + 'w']();
+        this["destroy"]();
+      };
+      ns = nu;
+      (nt = [{
+        'key': 'window',
+        'get': function () {
+          var qE4 = qie;
+          var qE5 = qie;
+          if ("rrwHu" !== "yYASZ") {
+            return this['_window'];
+          } else {
+            var no = this["frames"] / ((qF - this["prevTime"]) / 0x3e8);
+            this["textField"]["text"] = no['toFixed'](0x0) + " fps";
+            this["prevTime"] = qT;
+            this["frames"] = 0x0;
+          }
+        }
+      }]) && function (nl, no) {
+        var qE6 = qia;
+        var qE7 = qia;
+        for (var ni = 0x0; ni < no["length"]; ni++) {
+          if ("mAmRF" === "mAmRF") {
+            var nE = no[ni];
+            nE['enumerable'] = nE["enumerable"] || !0x1;
+            nE['configurab' + 'le'] = !0x0;
+            'value' in nE && (nE['writable'] = !0x0);
+            Object["defineProp" + "erty"](nl, qp(nE["key"]), nE);
+          } else {
+            qR["background" + 'ColorInput']["color"] = qz['H']['background' + 'Color'] = 0xffffff;
+            q8['H']["backDropIn" + "dex"] = qI['backdropDr' + 'op']["currentInd" + 'ex'];
+          }
+        }
+      }(ns["prototype"], nt);
+      Object['defineProp' + "erty"](ns, 'prototype', {
+        'writable': !0x1
+      });
+      return ns;
+    } else {
+      return n["session"];
+    }
+  }(qN['kx']);
+  function qI(nm) {
+    var nI = function (nk) {
+      if ("object" != typeof nk || !nk) {
+        return nk;
+      }
+      var ns = nk[Symbol['toPrimitiv' + 'e']];
+      if (void 0x0 !== ns) {
+        if ("FRKYD" !== "pfiSQ") {
+          var nt = ns["call"](nk, "string");
+          if ('object' != typeof nt) {
+            return nt;
+          }
+          throw new TypeError('@@toPrimit' + 'ive\x20must\x20r' + "eturn a pr" + "imitive va" + "lue.");
+        } else {
+          var nu = qz['w']["currentSes" + "sion"];
+          this["sensor"] && (nu["contactLis" + "tener"]["deleteList" + 'ener'](q8['fI']["ADD"], this["sensor"]), nu["contactLis" + "tener"]["deleteList" + 'ener'](qI['fI']["REMOVE"], this["sensor"]));
+          this['triggering' + "Body"] = null;
+          this["triggering" + "Count"] = 0x0;
+          this["repeatCoun" + 't'] = this["repeatFram" + 'es'];
+          this["delayVecto" + 'r'] = new qS();
+          var nl = nu["level"]["singleActi" + "onVector"];
+          var no = nl['indexOf'](this);
+          no > -0x1 && nl["splice"](no, 0x1);
+          (no = (nl = nu["level"]["actionsVec" + "tor"])["indexOf"](this)) > -0x1 && nl["splice"](no, 0x1);
+          0x6 == this["triggeredB" + 'y'] && (this['buttonSpri' + 'te']["mouseEnabl" + 'ed'] = !0x1, this['buttonSpri' + 'te']["removeEven" + "tListener"](qA['Cm']["MOUSE_UP"], this["mouseUpHan" + "dlerBind"]), this['buttonSpri' + 'te']["interactiv" + 'e'] = !0x1);
+        }
+      }
+      return String(nk);
+    }(nm);
+    return "symbol" == typeof nI ? nI : nI + '';
+  }
+  function qk(nm, nI) {
+    if ("ORLrl" === "ORLrl") {
+      qk = Object["setPrototy" + 'peOf'] ? Object["setPrototy" + "peOf"]["bind"]() : function (nk, ns) {
+        var qEf = qEN;
+        nk["__proto__"] = ns;
+        return nk;
+      };
+      return qk(nm, nI);
+    } else {
+      var ns = new n("test", !0x1);
+      this["featuredLe" + "velButtonH" + "eight"] = ns["height"];
+      ns["destroy"]();
+    }
+  }
+  var qs = function (nm) {
+    if ("HhtFL" !== 'ZCbRf') {
+      function nu(nl, no, ni, nE, nR, nW, nA, nr, nJ, nD) {
+        var qEV = qET;
+        var qEh = qET;
+        if ("ZpFRp" === "XHCrK") {
+          f["__proto__"] = T;
+          return V;
+        } else {
+          var ng;
+          void 0x0 === nE && (nE = !0x0);
+          void 0x0 === nR && (nR = 0xc8);
+          void 0x0 === nW && (nW = 0x46);
+          void 0x0 === nA && (nA = 0xfd8181);
+          void 0x0 === nr && (nr = 0xfd8181);
+          void 0x0 === nJ && (nJ = 0xffffff);
+          void 0x0 === nD && (nD = 0xffffff);
+          (ng = nm["call"](this, nl, nE, nR) || this)["mouseUpHan" + "dler"] = function (nd) {
+            var qEj = qEh;
+            if ("kDIfF" === "aOdri") {
+              h = C["setPrototy" + "peOf"] ? j["setPrototy" + 'peOf']["bind"]() : function (nF, nM) {
+                nF["__proto__"] = nM;
+                return nF;
+              };
+              return P(p, K);
+            } else {
+              if (nd["target"] == ng["answer1Btn"]) {
+                ng["_index"] = 0x0;
+              } else {
+                if (nd["target"] != ng["answer2Btn"]) {
+                  return;
+                }
+                ng["_index"] = 0x1;
+              }
+              ng["dispatchEv" + "ent"](new qN['Jh'](nu["ANSWER_CHO" + "SEN"]));
+            }
+          };
+          ng["createButt" + "ons"](no, ni, nW, nA, nr, nJ, nD);
+          ng["adjustSpac" + "ing"]();
+          ng["addEventLi" + "stener"](qN['Cm']["MOUSE_UP"], ng["mouseUpHan" + "dler"], !0x1, 0x0, !0x0);
+          return ng;
+        }
+      }
+      var nI;
+      var nk;
+      nk = nm;
+      (nI = nu)["prototype"] = Object["create"](nk["prototype"]);
+      nI["prototype"]["constructo" + 'r'] = nI;
+      qk(nI, nk);
+      var ns;
+      var nt;
+      var nB = nu["prototype"];
+      nB['createBg'] = function () {
+        var qEK = qET;
+        var qEm = qET;
+        if ("gTnHu" !== "gbiCF") {
+          this["bgHeight"] = Math["max"](Math["round"](this["textField"]['height'] + 0x28), 0x64);
+          this['bg'] = new qN['kx']();
+          this['bg']['graphics']["beginFill"](0xcccccc);
+          this['bg']["graphics"]["drawRect"](0x0, 0x0, this["bgWidth"], this["bgHeight"]);
+          this['bg']["graphics"]["endFill"]();
+          this["addChildAt"](this['bg'], 0x0);
+        } else {
+          if (nB == this["_currentBu" + "tton"]) {
+            return;
+          }
+          this["_currentBu" + "tton"]["selected"] = !0x1;
+        }
+      };
+      nB["createButt" + "ons"] = function (nl, no, ni, nE, nR, nW, nA) {
+        var qEI = qET;
+        var qEk = qET;
+        this["answer1Btn"] = new q7['Ch'](nl, nE, ni, nW);
+        this["answer2Btn"] = new q7['Ch'](no, nR, ni, nA);
+        this["addChild"](this["answer1Btn"]);
+        this["addChild"](this["answer2Btn"]);
+        var nr = 0x2 * ni + 0x14;
+        var nJ = 0.5 * this['bgWidth'];
+        this["answer1Btn"]['x'] = nJ - 0.5 * nr;
+        this["answer2Btn"]['x'] = nJ + 0xa;
+      };
+      nB["adjustSpac" + "ing"] = function () {
+        var qEs = qEp;
+        var qEt = qEp;
+        if ('ESmru' !== "PIRco") {
+          var nl = this["bgHeight"] - 0x1e;
+          this["answer1Btn"]['y'] = this["answer2Btn"]['y'] = nl;
+          this["textField"]['y'] = (nl - this["textField"]["height"]) / 0x2;
+        } else {
+          n['prototype']["shiftNullA" + "ctions"]['call'](this);
+        }
+      };
+      nB['die'] = function () {
+        var qEB = qEp;
+        var qEu = qEp;
+        this["_window"]["closeWindo" + 'w']();
+        this["removeEven" + "tListener"](qN['Cm']["MOUSE_UP"], this["mouseUpHan" + "dler"]);
+        this['destroy']();
+      };
+      ns = nu;
+      (nt = [{
+        'key': "index",
+        'get': function () {
+          return this['_index'];
+        }
+      }]) && function (nl, no) {
+        var qEl = qET;
+        var qEo = qET;

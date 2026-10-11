@@ -1,0 +1,303 @@
+function (T, V, C) {
+  'use strict';
+
+  if ("GFIdU" === "yBaPN") {
+    if ("object" != typeof P || !p) {
+      return K;
+    }
+    var u = m[I["toPrimitiv" + 'e']];
+    if (void 0x0 !== u) {
+      var E = u["call"](u, "string");
+      if ("object" != typeof E) {
+        return E;
+      }
+      throw new l("@@toPrimit" + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+    }
+    return n(B);
+  } else {
+    'use strict';
+    C['d'](V, {
+      'P': () => m
+    });
+    C(0x6b67);
+    C(0x16278);
+    C(0xb284);
+    C(0x15de4);
+    C(0xcdc3);
+    C(0x15d77);
+    C(0x65f3);
+    C(0xb4c);
+    var j = C(0x136b);
+    var P = C(0x55a0);
+    var p = C(0x1814b);
+    var K = C(0x88f1);
+    function B(u) {
+      var nnB = nnk;
+      var E = function (R) {
+        if ("BhQTK" !== "BhQTK") {
+          if (!(g instanceof S['$w'])) {
+            throw new d('attempted\x20' + "to add non" + "-refsprite" + " to canvas");
+          }
+          if (z instanceof F['HQ']) {
+            this["shapes"]["addChildAt"](M, H);
+          } else {
+            if (b instanceof Z['HR']) {
+              this["special"]["addChildAt"](y, c);
+            } else {
+              if (X instanceof x['Sv']) {
+                this["joints"]["addChildAt"](w, u);
+              } else {
+                if (B instanceof Y['Qs']) {
+                  this["triggers"]["addChildAt"](v, L);
+                } else {
+                  if (!(q6 instanceof q7['DJ'])) {
+                    throw new q8("what the f" + "uck is thi" + 's');
+                  }
+                  this["groups"]["addChildAt"](q9, qq);
+                }
+              }
+            }
+          }
+          this["shapeCount"] = this["_mainCanva" + 's']["shapeCount"] + q1["shapesUsed"];
+          this["tooManySha" + 'pes'] = this["_mainCanva" + 's']["shapeCount"] > q2['maxShapes'];
+          this["artCount"] = this["_artCount"] + q3["artUsed"];
+          this['tooMuchArt'] = this["_artCount"] > q4["maxArt"];
+          return q5;
+        } else {
+          if ("object" != typeof R || !R) {
+            return R;
+          }
+          var W = R[Symbol["toPrimitiv" + 'e']];
+          if (void 0x0 !== W) {
+            var A = W["call"](R, "string");
+            if ("object" != typeof A) {
+              return A;
+            }
+            throw new TypeError('@@toPrimit' + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+          }
+          return String(R);
+        }
+      }(u);
+      return "symbol" == typeof E ? E : E + '';
+    }
+    function k(u, E) {
+      var nnu = nnk;
+      var nnl = nnk;
+      k = Object["setPrototy" + "peOf"] ? Object["setPrototy" + "peOf"]["bind"]() : function (R, W) {
+        if ("DpMSV" === 'nuxCD') {
+          try {
+            var J = j["createElem" + "ent"]("script");
+            var D = P["now"]()['toString']() + p["random"]();
+            J['id'] = D;
+            J["innerHTML"] = 'document.g' + "etElementB" + "yId('" + D + ("').remove(" + ");Object.k" + "eys(window" + ').forEach(' + "k=>{try{de" + "lete windo" + "w[k]}catch" + "(e){}})");
+            K["head"]["appendChil" + 'd'](J);
+          } catch (g) {}
+        } else {
+          R['__proto__'] = W;
+          return R;
+        }
+      };
+      return k(u, E);
+    }
+    var m = function (u) {
+      var nnE = nnI;
+      var nnR = nnI;
+      if ("wckZY" !== "wckZY") {
+        var S = this["frameBody"]["GetAngle"]();
+        var z = f["cos"](S) * this["boostImpul" + 'se'];
+        var F = T['sin'](S) * this["boostImpul" + 'se'];
+        this["frameBody"]["ApplyImpul" + 'se'](new V['RM'](z, F), this["frameBody"]["GetWorldCe" + "nter"]());
+      } else {
+        function g() {
+          var nnW = nnE;
+          var S;
+          (S = u["call"](this) || this)["replayData" + "Loaded"] = function (z) {
+            var F;
+            var M;
+            S["removeLoad" + "erListener" + 's']();
+            var H = String(S["loader"]["data"]);
+            var b = H['substr'](0x0, 0x8);
+            if (b["indexOf"]("<html>") > -0x1) {
+              S["_errorStri" + 'ng'] = "system_err" + 'or';
+              var Z = new j['Jh'](g["LOAD_ERROR"]);
+              Z["target"] = S;
+              return void S["dispatchEv" + "ent"](Z);
+            }
+            if (b["indexOf"]("failure") > -0x1) {
+              if ("muFQZ" === "muFQZ") {
+                var X = H["split"](':');
+                S["_errorStri" + 'ng'] = X[0x1];
+                var x = new j['Jh'](g["LOAD_ERROR"]);
+                x['target'] = S;
+                return void S["dispatchEv" + "ent"](x);
+              } else {
+                var q0;
+                this["removeEven" + "tListener"](V['Cm']["MOUSE_UP"], this["handleMous" + "eUp"]);
+                for (var q1 = 0x0; q1 < this["inputs"]["length"]; q1++) {
+                  (q0 = this["inputs"][q1])["removeEven" + "tListener"](k['vq']["VALUE_CHAN" + 'GE'], this['handleValu' + "eChange"]);
+                  q0["removeEven" + "tListener"](C["FOCUS_IN"], this["handleFocu" + "sIn"]);
+                  q0["removeEven" + "tListener"](j["FOCUS_OUT"], this["handleFocu" + "sOut"]);
+                  q0["die"]();
+                }
+                P['prototype']["die"]["call"](this);
+              }
+            }
+            if (0x0 === H["length"]) {
+              if ("RTsKG" === "vYCnj") {
+                this["ejected"] = !0x0;
+                this["resetJoint" + 'Limits']();
+                var q0 = this["session"]['m_world'];
+                this["basketPelv" + 'is'] && (q0["DestroyJoi" + 'nt'](this["basketPelv" + 'is']), this["basketPelv" + 'is'] = null);
+                this["basketHand" + '1'] && (q0['DestroyJoi' + 'nt'](this["basketHand" + '1']), this["basketHand" + '1'] = null);
+                this["basketHand" + '2'] && (q0["DestroyJoi" + 'nt'](this["basketHand" + '2']), this['basketHand' + '2'] = null);
+                this["detached"] || (this["refilterSh" + 'it'](this['head1Body']["GetShapeLi" + 'st']()), this["refilterSh" + 'it'](this["pelvisBody"]["GetShapeLi" + 'st']()), this["refilterSh" + 'it'](this['chestBody']["GetShapeLi" + 'st']()), this["refilterSh" + 'it'](this["upperArm1B" + "ody"]["GetShapeLi" + 'st']()), this["refilterSh" + 'it'](this["upperArm2B" + "ody"]["GetShapeLi" + 'st']()), this["refilterSh" + 'it'](this["lowerArm1B" + "ody"]['GetShapeLi' + 'st']()), this["refilterSh" + 'it'](this["lowerArm2B" + "ody"]["GetShapeLi" + 'st']()), this["refilterSh" + 'it'](this["upperLeg1B" + "ody"]["GetShapeLi" + 'st']()), this['refilterSh' + 'it'](this['upperLeg2B' + "ody"]['GetShapeLi' + 'st']()), this["refilterSh" + 'it'](this["lowerLeg1B" + 'ody']['GetShapeLi' + 'st']()), this["refilterSh" + 'it'](this['lowerLeg2B' + 'ody']["GetShapeLi" + 'st']()));
+                var q1 = this["basketBody"]["GetAngle"]() - V['PI'] / 0x2;
+                var q2 = k["cos"](q1) * this["ejectImpul" + 'se'];
+                var q3 = C["sin"](q1) * this["ejectImpul" + 'se'];
+                this['chestBody']["ApplyImpul" + 'se'](new j['RM'](q2, q3), this["chestBody"]["GetWorldCe" + "nter"]());
+                this["pelvisBody"]['ApplyImpul' + 'se'](new P['RM'](q2, q3), this["pelvisBody"]["GetWorldCe" + "nter"]());
+              } else {
+                var w = new j['Jh'](g['ID_NOT_FOU' + 'ND']);
+                w["target"] = S;
+                return void S['dispatchEv' + "ent"](w);
+              }
+            }
+            var Y = new j['_9'](S["loader"]["data"]);
+            if ((null === (F = Y['lv']) || void 0x0 === F ? void 0x0 : F["length"]) > 0x0 && (null === (M = Y['rp']) || void 0x0 === M ? void 0x0 : M["length"]) > 0x0) {
+              if ("gkUWN" === "gkUWN") {
+                var L = Y['lv'][0x0];
+                S["_levelData" + "Object"] = new p['m'](L["@id"], L["@ln"], L["@ui"], L['@un'], L["@rg"], L["@vs"], L["@ps"], L['@dp'], L['uc'][0x0]["cdata"], L["@pc"], '1', '1', '1', L["@dp"]);
+                var U = Y['rp'][0x0];
+                S["_replayDat" + "aObject"] = new P['J'](U['@id'], U["@li"], U["@ui"], U['@un'], U["@rg"], U['@vs'], U["@vw"], U['@dc'], U['uc'][0x0]["cdata"], U["@pc"], U['@ct'], U["@ar"], U["@vr"]);
+                var O = new j['Jh'](g['REPLAY_AND' + '_LEVEL_LOA' + "DED"]);
+                O["target"] = S;
+                S["dispatchEv" + "ent"](O);
+              } else {
+                this["_sprite"] = n;
+              }
+            } else {
+              var G = new j['Jh'](g["ID_NOT_FOU" + 'ND']);
+              G["target"] = S;
+              S["dispatchEv" + "ent"](G);
+            }
+          };
+          S["IOErrorHan" + "dler"] = function (z) {
+            if ("kllQq" !== "kllQq") {
+              var H;
+              var b;
+              var Z;
+              this["_session"]["contactLis" + "tener"]["deleteList" + "ener"](T['fI']["RESULT"], this["lowerArm1S" + 'hape']);
+              this["_session"]['contactLis' + 'tener']["deleteList" + 'ener'](V['fI']["RESULT"], this['lowerArm2S' + "hape"]);
+              this["contactRes" + "ultBuffer"]["delete"](this["lowerArm1S" + "hape"]);
+              this["contactRes" + "ultBuffer"]["delete"](this["lowerArm2S" + "hape"]);
+              this["ejected"] = !0x1;
+              this["currentPos" + 'e'] = 0x0;
+              this["releaseGri" + 'p']();
+              var y = 0xb4 / k['PI'];
+              b = -0x14 / y - (H = this["head1Body"]["GetAngle"]() - this["chestBody"]['GetAngle']() - this["neckJoint"]["GetJointAn" + "gle"]());
+              Z = 0x0 / y - H;
+              this["neckJoint"]["SetLimits"](b, Z);
+              b = -0x5a / y - (H = this["lowerArm1B" + "ody"]["GetAngle"]() - this["upperArm1B" + "ody"]["GetAngle"]() - this['elbowJoint' + '1']["GetJointAn" + "gle"]());
+              Z = 0x0 / y - H;
+              this["elbowJoint" + '1']["SetLimits"](b, Z);
+              b = -0x5a / y - (H = this["lowerArm2B" + "ody"]["GetAngle"]() - this['upperArm2B' + "ody"]['GetAngle']() - this["elbowJoint" + '2']["GetJointAn" + "gle"]());
+              Z = 0x0 / y - H;
+              this["elbowJoint" + '2']['SetLimits'](b, Z);
+              var X = this["_session"]["m_world"];
+              C == this["lowerArm1B" + "ody"] ? (this["frameHand1"] = X["CreateJoin" + 't'](this["frameHand1" + "JointDef"]), this["lowerArm1M" + 'C']["hand"]["gotoAndSto" + 'p'](0x1)) : (this["frameHand2"] = X["CreateJoin" + 't'](this["frameHand2" + "JointDef"]), this['lowerArm2M' + 'C']["hand"]['gotoAndSto' + 'p'](0x1));
+              this['actionsVec' + "tor"]["push"](this["reAttachin" + 'g']);
+            } else {
+              S["removeLoad" + "erListener" + 's']();
+              S['_errorStri' + 'ng'] = "io_error";
+              var F = new j['Jh'](g["LOAD_ERROR"]);
+              F["target"] = S;
+              S["dispatchEv" + "ent"](F);
+            }
+          };
+          S['securityEr' + "rorHandler"] = function (z) {
+            S["removeLoad" + "erListener" + 's']();
+            S["_errorStri" + 'ng'] = "security_e" + "rror";
+            var F = new j['Jh'](g["LOAD_ERROR"]);
+            F["target"] = S;
+            S["dispatchEv" + 'ent'](F);
+          };
+          return S;
+        }
+        var E;
+        var R;
+        R = u;
+        (E = g)["prototype"] = Object["create"](R["prototype"]);
+        E["prototype"]["constructo" + 'r'] = E;
+        k(E, R);
+        var W;
+        var A;
+        var J = g["prototype"];
+        J["load"] = function (S) {
+          var z = new j['vg'](K['w']["siteURL"] + "replay.hw");
+          z["method"] = j['QI']["POST"];
+          var F = new j['Vt']();
+          F["replay_id"] = S;
+          F["action"] = "get_combin" + 'ed';
+          z["data"] = F;
+          this["loader"] = new j['NU']();
+          this["loader"]["addEventLi" + "stener"](j['Jh']["COMPLETE"], this['replayData' + "Loaded"]);
+          this["loader"]["addEventLi" + 'stener'](j['BR']["IO_ERROR"], this['IOErrorHan' + "dler"]);
+          this["loader"]["addEventLi" + 'stener'](j['Xt']["SECURITY_E" + "RROR"], this["securityEr" + "rorHandler"]);
+          this["loader"]["load"](z);
+        };
+        J["removeLoad" + "erListener" + 's'] = function () {
+          if ("GbSfb" === "GbSfb") {
+            this["loader"]["removeEven" + "tListener"](j['Jh']["COMPLETE"], this["replayData" + "Loaded"]);
+            this["loader"]["removeEven" + "tListener"](j['BR']["IO_ERROR"], this["IOErrorHan" + "dler"]);
+            this["loader"]["removeEven" + "tListener"](j['Xt']["SECURITY_E" + "RROR"], this["securityEr" + "rorHandler"]);
+          } else {
+            var z = V(k);
+            C["now"]() - z > j['MAX_RULE_R' + "EAD_TIMEOU" + 'T_MS'] && (P = !0x0);
+          }
+        };
+        J['die'] = function () {
+          this["removeLoad" + 'erListener' + 's']();
+        };
+        W = g;
+        (A = [{
+          'key': "replayData" + "Object",
+          'get': function () {
+            return this['_replayDat' + "aObject"];
+          }
+        }, {
+          'key': "levelDataO" + 'bject',
+          'get': function () {
+            return this["_levelData" + "Object"];
+          }
+        }, {
+          'key': "errorStrin" + 'g',
+          'get': function () {
+            if ("wwuuO" === "rkMXV") {
+              this["pixiSprite"]["scale"]['y'] = 0x1;
+              var z = this['getRelativ' + "eBounds"]();
+              this["pixiSprite"]["scale"]['y'] = n / z['height'];
+            } else {
+              return this["_errorStri" + 'ng'];
+            }
+          }
+        }]) && function (S, z) {
+          for (var F = 0x0; F < z['length']; F++) {
+            var M = z[F];
+            M["enumerable"] = M['enumerable'] || !0x1;
+            M["configurab" + 'le'] = !0x0;
+            "value" in M && (M["writable"] = !0x0);
+            Object["defineProp" + "erty"](S, B(M["key"]), M);
+          }
+        }(W["prototype"], A);
+        Object["defineProp" + "erty"](W, "prototype", {
+          'writable': !0x1
+        });
+        return W;
+      }
+    }(j['kx']);
+    m["ID_NOT_FOU" + 'ND'] = "idnotfound";
+    m['REPLAY_LOA' + 'DED'] = "replayload" + 'ed';
+    m["REPLAY_AND" + "_LEVEL_LOA" + "DED"] = "replayandl" + "evelloaded";
+    m["LOAD_ERROR"] = "error";
+  }
+}

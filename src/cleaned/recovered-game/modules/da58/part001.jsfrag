@@ -1,0 +1,62 @@
+function (T, V, h) {
+  'use strict';
+
+  h['d'](V, {
+    'o': () => C
+  });
+  h(0x268c);
+  var C = function () {
+    function j(p) {
+      this["beginTime"] = j["timeSource"]["now"]();
+      this["prevTime"] = this["beginTime"];
+      this['frames'] = 0x0;
+      this["textField"] = p;
+    }
+    var P = j["prototype"];
+    P['_now'] = function () {
+      var qLf = qLN;
+      var qLT = qLN;
+      return j["timeSource"]["now"]();
+    };
+    P["begin"] = function () {
+      var qLh = qLN;
+      var qLC = qLN;
+      if ("vjMWt" === "ODDnX") {
+        this['minLineThi' + "ckness"] = 1.75;
+        this["container"] = k;
+        var K = 0x1e / f['b0']["maxFPS"];
+        V *= B["scaler"] * K;
+        u *= l["scaler"] * K;
+        this["currentPos"] = new o['bR'](h + E, R + W);
+        this['lastPos'] = new A['bR'](r, J);
+      } else {
+        this["beginTime"] = this["_now"]();
+      }
+    };
+    P['end'] = function () {
+      var qLj = qLV;
+      var qLP = qLV;
+      if ("jRaug" !== "jRaug") {
+        V['open'] ? (h["open"] = !0x1, C["removeAll"]()) : (j["open"] = !0x0, P["createMenu"]());
+      } else {
+        this["frames"]++;
+        var p = this["_now"]();
+        if (p >= this["prevTime"] + j["updateInte" + "rvalMs"]) {
+          var K = this["frames"] / ((p - this["prevTime"]) / 0x3e8);
+          this['textField']["text"] = K["toFixed"](0x0) + '\x20fps';
+          this["prevTime"] = p;
+          this["frames"] = 0x0;
+        }
+      }
+    };
+    P["reset"] = function () {
+      var qLp = qLV;
+      var qLK = qLV;
+      this["prevTime"] = this["_now"]();
+      this["frames"] = 0x0;
+    };
+    return j;
+  }();
+  C["timeSource"] = performance || Date;
+  C["updateInte" + "rvalMs"] = 0x3e8;
+}

@@ -1,0 +1,800 @@
+function (q0, q1, q2) {
+  'use strict';
+
+  q2['d'](q1, {
+    'fI': () => q4['f'],
+    'm3': () => q5['m3'],
+    'YI': () => q6['Y'],
+    'Du': () => qt,
+    'cU': () => qN,
+    'JS': () => q5['JS'],
+    'PL': () => qf['P'],
+    'Nn': () => qE['N'],
+    'je': () => qi,
+    'xF': () => nq,
+    'IL': () => nV,
+    'Gp': () => nC,
+    'Vc': () => nP,
+    '_L': () => q3['_'],
+    'Pu': () => qm
+  });
+  var q3 = q2(0x74c4);
+  var q4 = q2(0x1fa6);
+  var q5 = q2(0x83f2);
+  var q6 = q2(0x18496);
+  q2(0x65f3);
+  q2(0x977d);
+  q2(0xb284);
+  q2(0x15de4);
+  q2(0xcdc3);
+  q2(0x15d77);
+  q2(0xb4c);
+  var q7 = q2(0x136b);
+  var q8 = q2(0xfc39);
+  var q9 = function () {
+    if ("UQuSI" === "HqCjH") {
+      var nK = this;
+      this["buttons"] = [];
+      var nm = 0x3d88c7;
+      var nI = 0xfd8181;
+      E['instance']["resize"]();
+      this["creditsBtn"] = new R("CREDITS", 0x19, nI);
+      this['addChild'](this['creditsBtn']);
+      this["optionsBtn"] = new W("OPTIONS", 0x19, nI);
+      this["addChild"](this['optionsBtn']);
+      this["editorBtn"] = new A("LEVEL EDIT" + 'OR', 0x1e, nm);
+      this["addChild"](this["editorBtn"]);
+      this["loadLevelB" + 'tn'] = new r("LOAD LEVEL" + "/REPLAY", 0x1e, nm);
+      this['addChild'](this["loadLevelB" + 'tn']);
+      this["browseBtn"] = new J("BROWSE LEV" + "ELS", 0x1e, nm);
+      this['addChild'](this["browseBtn"]);
+      this["playBtn"] = new D('PLAY', 0x38, nm);
+      this["addChild"](this["playBtn"]);
+      this["creditsBtn"]['x'] = this["loadLevelB" + 'tn']['x'] = this["optionsBtn"]['x'] = this["editorBtn"]['x'] = this["browseBtn"]['x'] = this["playBtn"]['x'] = this["buttonX"];
+      this["buttons"] = [this["playBtn"], this["browseBtn"], this["loadLevelB" + 'tn'], this["editorBtn"], this["optionsBtn"], this['creditsBtn']];
+      this["spaceHeigh" + 't'] = (this["buttons"]["length"] - 0x1) * this["buttonSpac" + "ing"];
+      this["muteBtn"] = new g['j7']();
+      this["muteBtn"]["setPixiMov" + "ieClip"]((0x0, S['zI'])("GameUI", "MuteButton"));
+      d['w']['mobileCont' + "rols"] ? (this["muteBtn"]["scaleX"] = 0x3, this["muteBtn"]["scaleY"] = 0x3, this["muteBtn"]['x'] = this["stage"]["stageWidth"] - 0x3 * this['muteBtn']["width"] - 0x5, this["muteBtn"]['y'] = 0x7) : (this["muteBtn"]['x'] = this["stage"]["stageWidth"] - this["muteBtn"]["width"] - 0x5, this["muteBtn"]['y'] = 0x5);
+      this["muteBtn"]['gotoAndSto' + 'p'](0x1);
+      this["muteBtn"]["buttonMode"] = !0x0;
+      this["muteBtn"]['alpha'] = 0.7;
+      this["addChild"](this["muteBtn"]);
+      this["muteBtn"]["interactiv" + 'e'] = !0x0;
+      this["muteBtn"]["gotoAndSto" + 'p'](z['w']["sharedObje" + 'ct']["data"]['muted'] ? 0x2 : 0x1);
+      this["fullScreen" + "Button"] = new F['j7']();
+      this["fullScreen" + "Button"]["setPixiMov" + "ieClip"]((0x0, M['zI'])("GameUI", 'FullScreen' + "Button"));
+      this["fullScreen" + "Button"]["buttonMode"] = !0x0;
+      this["fullScreen" + "Button"]["interactiv" + 'e'] = !0x0;
+      this["stage"]["displaySta" + 'te'] == H['se']["FULL_SCREE" + 'N_INTERACT' + "IVE"] ? this["fullScreen" + "Button"]["gotoAndSto" + 'p'](0x2) : this["fullScreen" + 'Button']["gotoAndSto" + 'p'](0x1);
+      this['fullScreen' + "Button"]["alpha"] = 0.7;
+      this["fullScreen" + "Button"]["_pixiSprit" + 'e']["pivot"]['x'] = this['fullScreen' + "Button"]["_pixiSprit" + 'e']["width"] / 0x2;
+      this["fullScreen" + 'Button']["_pixiSprit" + 'e']["pivot"]['y'] = this["fullScreen" + "Button"]['_pixiSprit' + 'e']["height"] / 0x2;
+      b['w']["mobileCont" + "rols"] ? (this["fullScreen" + "Button"]['scale']["set"](0x2), this['fullScreen' + "Button"]['x'] = this["stage"]["stageWidth"] - this["muteBtn"]["width"] - 0x2 * this["fullScreen" + "Button"]["width"], this["fullScreen" + "Button"]['y'] = 0x16) : (this['fullScreen' + 'Button']['scale']["set"](0.8), this["fullScreen" + "Button"]['x'] = this["stage"]['stageWidth'] - this['muteBtn']['width'] - this["fullScreen" + 'Button']["width"] - 0x3, this["fullScreen" + "Button"]['y'] = 0xa);
+      this["addChild"](this["fullScreen" + "Button"]);
+      Z['w']["mobileCont" + "rols"] && (this["bounceAnim" + "ationLoopI" + "nterval"] = y["setInterva" + 'l'](function () {
+        var n1K = n1P;
+        var n1m = n1P;
+        nK["stage"]["displaySta" + 'te'] != nK['se']["FULL_SCREE" + "N_INTERACT" + "IVE"] && nm['os']['to'](nK["fullScreen" + 'Button']["scale"], {
+          'duration': 0.5,
+          'x': 2.5,
+          'y': 2.5,
+          'ease': nI['xu']['easeOut'],
+          'onComplete': function () {
+            O['os']['to'](nK['fullScreen' + "Button"]["scale"], {
+              'duration': 0x1,
+              'x': 0x2,
+              'y': 0x2,
+              'ease': G['br']["easeOut"]
+            });
+          }
+        });
+      }, 0x1194));
+    } else {
+      function nK() {
+        var n1s = n1P;
+        this["first"] = 0x0;
+      }
+      nK["prototype"]["mouseData"] = function () {};
+      return nK;
+    }
+  }();
+  function qq(np) {
+    var nK = function (nm) {
+      if ("object" != typeof nm || !nm) {
+        return nm;
+      }
+      var nI = nm[Symbol["toPrimitiv" + 'e']];
+      if (void 0x0 !== nI) {
+        var nk = nI["call"](nm, "string");
+        if ('object' != typeof nk) {
+          return nk;
+        }
+        throw new TypeError("@@toPrimit" + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+      }
+      return String(nm);
+    }(np);
+    return "symbol" == typeof nK ? nK : nK + '';
+  }
+  function qn(np, nK) {
+    qn = Object["setPrototy" + "peOf"] ? Object["setPrototy" + 'peOf']["bind"]() : function (nm, nI) {
+      nm['__proto__'] = nI;
+      return nm;
+    };
+    return qn(np, nK);
+  }
+  var qN = function (np) {
+    if ("qWLXc" !== "qWLXc") {
+      this["ejected"] ? this["currentPos" + 'e'] = 0x3 : (this["backWheelJ" + 'oint']["IsMotorEna" + "bled"]() || (this["backWheelJ" + "oint"]["EnableMoto" + 'r'](!0x0), this["frontWheel" + "Joint"]["EnableMoto" + 'r'](!0x0), this["motorSound"] = n['m']["instance"]["playAreaSo" + "undLoop"]("ElectricMo" + "tor1", this["backWheelB" + "ody"], 0x1)), this['wheelCurre' + "ntSpeed"] = this["backWheelJ" + "oint"]["GetJointSp" + "eed"](), this["wheelCurre" + "ntSpeed"] < 0x0 ? this["wheelNewSp" + "eed"] = 0x0 : this["wheelNewSp" + "eed"] = this["wheelCurre" + "ntSpeed"] < this["wheelMaxSp" + "eed"] ? this["wheelCurre" + "ntSpeed"] + this["accelStep"] : this["wheelCurre" + "ntSpeed"], this["backWheelJ" + "oint"]["SetMotorSp" + "eed"](this["wheelNewSp" + "eed"]), this["frontWheel" + 'Joint']["SetMotorSp" + "eed"](this['wheelNewSp' + "eed"]));
+    } else {
+      function nB() {
+        var n1R = n1E;
+        var n1W = n1E;
+        var nu;
+        (nu = np["call"](this) || this)["_keyByteAr" + "ray"] = new q8['ag']();
+        nu["_mouseByte" + "Array"] = new q8['ag']();
+        return nu;
+      }
+      var nK;
+      var nm;
+      nm = np;
+      (nK = nB)["prototype"] = Object["create"](nm["prototype"]);
+      nK["prototype"]['constructo' + 'r'] = nK;
+      qn(nK, nm);
+      var nI;
+      var nk;
+      var ns = nB["prototype"];
+      ns["isValidMou" + "seData"] = function (nu, nl, no, ni) {
+        if ((no - nl) % 0x4 != 0x0) {
+          return !0x1;
+        }
+        for (var nE = nl; nE < no; nE += 0x4) {
+          if ((0x7fff & (nu[nE] << 0x8 | nu[nE + 0x1])) > ni) {
+            return !0x1;
+          }
+        }
+        return !0x0;
+      };
+      ns["parseByteA" + "rray"] = function (nu) {
+        var n1A = n1i;
+        var n1r = n1i;
+        if ("hJKFk" === "hJKFk") {
+          for (var nl = -0x1, no = 0x0; no < nu["length"]; no++) {
+            if (0xff === nu["buffer"][no] && this["isValidMou" + "seData"](nu['buffer'], no + 0x1, nu["length"], no)) {
+              nl = no;
+              break;
+            }
+          }
+          -0x1 === nl ? (this["_keyByteAr" + "ray"] = nu, this["_mouseByte" + "Array"] = new q8['ag']()) : (this["_keyByteAr" + "ray"] = new q8['ag'](), this["_keyByteAr" + "ray"]["writeBytes"](nu, 0x0, nl), this["_mouseByte" + "Array"] = new q8['ag'](), this["_mouseByte" + 'Array']["writeBytes"](nu, nl + 0x1, nu["length"] - (nl + 0x1)));
+        } else {
+          if (!qS) {
+            throw new qA("Missing al" + "ias name.");
+          }
+          if (!qN) {
+            throw new qc('Missing\x20cl' + "ass object" + '.');
+          }
+          this["classMappi" + 'ng'][qV] = qE;
+          this["aliasMappi" + 'ng'][ql] = nm;
+        }
+      };
+      ns["addKeyEntr" + 'y'] = function (nu, nl) {
+        var n1J = n1E;
+        var n1D = n1E;
+        var no = parseInt(nu, 0x2);
+        this["_keyByteAr" + "ray"]['writeUnsig' + "nedByte"](no);
+      };
+      ns["hasKeyInpu" + 't'] = function () {
+        var n1g = n1i;
+        var n1S = n1i;
+        if ("NdKYU" === 'NdKYU') {
+          for (var nu = this["_keyByteAr" + 'ray']["buffer"], nl = 0x0; nl < this["_keyByteAr" + "ray"]['length']; nl++) {
+            if (0x0 !== nu[nl]) {
+              return !0x0;
+            }
+          }
+          return !0x1;
+        } else {
+          this["editor"]['die']();
+          this["removeChil" + 'd'](this["editor"]);
+          this['editor']["removeEven" + "tListener"](f['$T']['MAIN_MENU'], this["closeEdito" + "rBind"]);
+          this["editor"] = null;
+          T['w']["editor"] = null;
+          V['w']["currentlyI" + "nEditor"] = !0x1;
+          this['openMainMe' + 'nu']();
+        }
+      };
+      ns['getKeyEntr' + 'y'] = function (nu) {
+        var n1d = n1E;
+        var n1z = n1E;
+        var nl = this["_keyByteAr" + "ray"]["buffer"][nu]["toString"](0x2);
+        return this["completeBy" + 'te'](nl);
+      };
+      ns["addMouseEn" + "try"] = function (nu, nl, no) {
+        var n1F = n1E;
+        var n1M = n1E;
+        void 0x0 === no && (no = 0x0);
+        nu > 0x7fff && (nu = 0x7fff);
+        nl > 0xffff && (nl = 0xffff);
+        no > 0x0 && (nu += 0x8000);
+        this['_mouseByte' + "Array"]["writeShort"](nu);
+        this["_mouseByte" + "Array"]["writeShort"](nl);
+      };
+      ns["getMouseCl" + "ickMap"] = function () {
+        var n1H = n1i;
+        var n1b = n1i;
+        var nu = {};
+        this["_mouseByte" + 'Array']["position"] = 0x0;
+        for (var nl = this["_mouseByte" + "Array"]["length"]; this['_mouseByte' + "Array"]["position"] < nl;) {
+          var no = this["_mouseByte" + "Array"]["readUnsign" + "edShort"]();
+          var ni = this["_mouseByte" + "Array"]["readUnsign" + "edShort"]();
+          var nE = !0x1;
+          var nR = !0x1;
+          no > 0x7fff ? (no -= 0x8000, nR = !0x0) : nE = !0x0;
+          var nW = no["toString"]();
+          var nA = void 0x0;
+          nu[nW] ? nA = nu[nW] : (nA = new q9(), nR && (nA['first'] = 0x1));
+          nE ? (nA["click"] = nE, nA["clickTrigg" + "erIndex"] = ni) : nR && (nA['rollOut'] = nR, nA["rollOutTri" + "ggerIndex"] = ni);
+          nu[nW] = nA;
+        }
+        this["_mouseByte" + "Array"]["position"] = 0x0;
+        return nu;
+      };
+      ns["completeBy" + 'te'] = function (nu, nl) {
+        var n1Z = n1i;
+        var n1y = n1i;
+        if ("imFta" === "YwykP") {
+          var ni = qH["target"];
+          ni['removeEven' + "tListener"](qk['Jh']["COMPLETE"], nI["loadComple" + 'te']);
+          ni["removeEven" + "tListener"](qJ['BR']["IO_ERROR"], qr["IOErrorHan" + "dler"]);
+          var nE = qj(ni["data"]);
+          var nR = nE["substr"](0x0, 0x8);
+          if (nR["indexOf"]("<html>") > -0x1) {
+            qP["_errorStri" + 'ng'] = 'system_err' + 'or';
+            return void qn["dispatchEv" + "ent"](new qy['NN'](qg['NN']["ERROR"]));
+          }
+          if (nR['indexOf']("failure") > -0x1) {
+            var nW = nE["split"](':');
+            qM["_errorStri" + 'ng'] = nW[0x1];
+            return void qi["dispatchEv" + "ent"](new qD['NN'](qw['NN']["ERROR"]));
+          }
+          try {
+            var nA = q0['t7']["decryptByt" + 'es'](ni["data"], "eatshit" + q1["authorId"]);
+            q2["_levelXML"] = new q3['_9'](nA);
+          } catch (nr) {
+            q7["dispatchEv" + "ent"](new q8['NN'](q9['NN']["ERROR"]));
+          }
+          qb["dispatchEv" + "ent"](new qC['Jh'](qt['Jh']["COMPLETE"]));
+        } else {
+          for (void 0x0 === nl && (nl = 0x8); nu["length"] < nl;) {
+            nu = '0' + nu;
+          }
+          return nu;
+        }
+      };
+      ns["resetPosit" + "ion"] = function () {
+        var n1c = n1E;
+        var n1X = n1E;
+        this["_keyByteAr" + "ray"]["position"] = 0x0;
+        this["_mouseByte" + "Array"]["position"] = 0x0;
+      };
+      ns["reset"] = function () {
+        var n1x = n1i;
+        var n1w = n1i;
+        this["_keyByteAr" + "ray"] = new q8['ag']();
+        this["_mouseByte" + "Array"] = new q8['ag']();
+        this['resetPosit' + 'ion']();
+      };
+      ns["getLength"] = function () {
+        var n1e = n1E;
+        var n1a = n1E;
+        return this["_keyByteAr" + "ray"]["length"];
+      };
+      nI = nB;
+      (nk = [{
+        'key': "byteArray",
+        'get': function () {
+          var n1Y = n1i;
+          var n1v = n1i;
+          var nu = new q8['ag']();
+          nu["writeBytes"](this["_keyByteAr" + "ray"], 0x0, this["_keyByteAr" + "ray"]["length"]);
+          this["_mouseByte" + 'Array']["length"] > 0x0 && (nu["writeUnsig" + "nedByte"](0xff), nu["writeBytes"](this["_mouseByte" + "Array"], 0x0, this["_mouseByte" + "Array"]["length"]));
+          return nu;
+        },
+        'set': function (nu) {
+          var n1L = n1E;
+          var n1U = n1E;
+          if ("BptAw" !== "XQZcE") {
+            this["parseByteA" + "rray"](nu);
+          } else {
+            var no = new qA['vg'](qN['w']["siteURL"] + ("get_level." + 'hw'));
+            no["method"] = qc['QI']["POST"];
+            var ni = new qV['Vt']();
+            ni["level_id"] = this["levelId"];
+            ni["action"] = "get_record";
+            ni["ip_trackin" + 'g'] = qE['l5']["randomNumS" + "tring"](0x4, 0x8, this["incrementP" + "lays"]);
+            no["data"] = ni;
+            var nE = new ql['NU']();
+            nE["responseTy" + 'pe'] = "blob";
+            nE["dataFormat"] = nm['Uw']["BINARY"];
+            nE["addEventLi" + "stener"](nB['Jh']["COMPLETE"], this["loadComple" + 'te']);
+            nE["addEventLi" + "stener"](qs['BR']["IO_ERROR"], this["IOErrorHan" + "dler"]);
+            nE["load"](no);
+          }
+        }
+      }, {
+        'key': "completed",
+        'get': function () {
+          var n1O = n1i;
+          return this["_completed"];
+        },
+        'set': function (nu) {
+          var n1G = n1E;
+          this["_completed"] = nu;
+        }
+      }]) && function (nu, nl) {
+        var n1Q = n1i;
+        var n20 = n1i;
+        for (var no = 0x0; no < nl["length"]; no++) {
+          if ("WJsLx" === "vnDnA") {
+            V(h, C, function (nR) {
+              return this["_invoke"](p, K, nR);
+            });
+          } else {
+            var ni = nl[no];
+            ni['enumerable'] = ni["enumerable"] || !0x1;
+            ni["configurab" + 'le'] = !0x0;
+            'value' in ni && (ni["writable"] = !0x0);
+            Object["defineProp" + 'erty'](nu, qq(ni['key']), ni);
+          }
+        }
+      }(nI['prototype'], nk);
+      Object["defineProp" + 'erty'](nI, "prototype", {
+        'writable': !0x1
+      });
+      return nI;
+    }
+  }(q7['Qe']);
+  qN['REPLAY_LOA' + "DED"] = "replayload" + 'ed';
+  var qf = q2(0x16fe2);
+  q2(0x6b67);
+  q2(0x16278);
+  q2(0xf23a);
+  q2(0x5cf0);
+  q2(0x7ab7);
+  q2(0xba94);
+  q2(0xf5e9);
+  q2(0x8cc1);
+  q2(0x87de);
+  q2(0x5b7a);
+  q2(0x8d3);
+  var qT = q2(0x3432);
+  var qV = q2(0x41a);
+  var qh = q2(0x88f1);
+  var qC = q2(0x1373c);
+  var qj = q2(0x5ab6);
+  function qP(np, nK) {
+    var n24 = n22;
+    var n25 = n22;
+    (null == nK || nK > np["length"]) && (nK = np["length"]);
+    for (var nm = 0x0, nI = Array(nK); nm < nK; nm++) {
+      nI[nm] = np[nm];
+    }
+    return nI;
+  }
+  function qp(np) {
+    var n26 = n23;
+    var n27 = n23;
+    if ("bkDAI" !== "bkDAI") {
+      var nI = V[h];
+      nI["enumerable"] = nI["enumerable"] || !0x1;
+      nI['configurab' + 'le'] = !0x0;
+      "value" in nI && (nI["writable"] = !0x0);
+      C["defineProp" + 'erty'](j, P(nI["key"]), nI);
+    } else {
+      var nK = function (nI) {
+        if ('object' != typeof nI || !nI) {
+          return nI;
+        }
+        var nk = nI[Symbol["toPrimitiv" + 'e']];
+        if (void 0x0 !== nk) {
+          var ns = nk["call"](nI, "string");
+          if ("object" != typeof ns) {
+            return ns;
+          }
+          throw new TypeError("@@toPrimit" + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+        }
+        return String(nI);
+      }(np);
+      return "symbol" == typeof nK ? nK : nK + '';
+    }
+  }
+  function qK(np, nK) {
+    var n2q = n22;
+    var n2n = n22;
+    qK = Object["setPrototy" + "peOf"] ? Object["setPrototy" + "peOf"]["bind"]() : function (nm, nI) {
+      nm["__proto__"] = nI;
+      return nm;
+    };
+    return qK(np, nK);
+  }
+  var qm = function (np) {
+    var n2P = n23;
+    var n2p = n23;
+    function nK(nB, nu, nl) {
+      var no;
+      void 0x0 === nl && (nl = !0x1);
+      (no = np["call"](this) || this)["IOErrorHan" + "dler"] = function (ni) {
+        var n2V = n2f;
+        var n2h = n2f;
+        if ('spJAk' !== 'AitET') {
+          var nE = ni["target"];
+          nE["removeEven" + "tListener"](q7['Jh']["COMPLETE"], no["loadComple" + 'te']);
+          nE["removeEven" + "tListener"](q7['BR']["IO_ERROR"], no['IOErrorHan' + "dler"]);
+          no["dispatchEv" + "ent"](new q7['Jh'](q7['BR']["IO_ERROR"]));
+        } else {
+          n['SetUserDat' + 'a'](this);
+        }
+      };
+      no["loadComple" + 'te'] = function (ni) {
+        var n2C = n2f;
+        var n2j = n2f;
+        var nE = ni["target"];
+        nE["removeEven" + "tListener"](q7['Jh']['COMPLETE'], no["loadComple" + 'te']);
+        nE["removeEven" + "tListener"](q7['BR']["IO_ERROR"], no["IOErrorHan" + "dler"]);
+        var nR = String(nE["data"]);
+        var nW = nR['substr'](0x0, 0x8);
+        if (nW["indexOf"]("<html>") > -0x1) {
+          no["_errorStri" + 'ng'] = "system_err" + 'or';
+          return void no["dispatchEv" + "ent"](new q7['NN'](q7['NN']["ERROR"]));
+        }
+        if (nW["indexOf"]("failure") > -0x1) {
+          if ("VMDEb" !== 'xoPDI') {
+            var nA = nR["split"](':');
+            no['_errorStri' + 'ng'] = nA[0x1];
+            return void no["dispatchEv" + "ent"](new q7['NN'](q7['NN']["ERROR"]));
+          } else {
+            this["textField"]['htmlText'] = this['levelRatin' + 'gs'][this["_rating"]];
+            this["textField"]['width'] = 0xa;
+            this["textField"]['autoSize'] = nr['wL']["LEFT"];
+            this["textField"]['wordWrap'] = !0x1;
+            this["drawBg"]();
+          }
+        }
+        try {
+          var nr = q8['t7']["decryptByt" + 'es'](nE["data"], "eatshit" + no["authorId"]);
+          no['_levelXML'] = new q7['_9'](nr);
+        } catch (nD) {
+          if ("bbkGq" === 'Yewxu') {
+            var nS = new p['lk']("Clarendon " + "LT Std", K["HW_SETTING" + 'S']["titleLabel" + "Size"] || 0xc, m["HW_SETTING" + 'S']["titleLabel" + "Color"] || 0x0, null, null, null, null, null, I['MA']['CENTER']);
+            this["titleLabel"] = new k['A_']();
+            this["titleLabel"]["defaultTex" + "tFormat"] = nS;
+            this["titleLabel"]["text"] = nl["HW_SETTING" + 'S']["titleLabel"] || '';
+            this['addChild'](this["titleLabel"]);
+            this['titleLabel']['x'] = nB["HW_SETTING" + 'S']['titleLabel' + 'X'] || 0x0;
+            this["titleLabel"]['y'] = B["HW_SETTING" + 'S']["titleLabel" + 'Y'] || 0x0;
+            this['titleLabel']["rotation"] = u["HW_SETTING" + 'S']["titleLabel" + "Rotation"] || 0x0;
+            this["titleLabel"]["pixiText"]["anchor"]["set"](0.5);
+            this["titleLabel"]["scale"]["set"](0x0);
+            var nd = new l['GD'](0x3, 0x5a, 0x0, 0x1, 0x5, 0x5, 0.25, 0x1);
+            this["titleLabel"]["filters"] = [nd];
+          } else {
+            no["dispatchEv" + "ent"](new q7['NN'](q7['NN']['ERROR']));
+          }
+        }
+        no["dispatchEv" + "ent"](new q7['Jh'](q7['Jh']["COMPLETE"]));
+      };
+      no['levelId'] = nB;
+      no["authorId"] = nu;
+      no['incrementP' + 'lays'] = nl;
+      return no;
+    }
+    var nm;
+    var nI;
+    nI = np;
+    (nm = nK)["prototype"] = Object["create"](nI["prototype"]);
+    nm["prototype"]["constructo" + 'r'] = nm;
+    qK(nm, nI);
+    var nk;
+    var ns;
+    var nt = nK["prototype"];
+    nt["loadLocal"] = function () {
+      var n2K = n2p;
+      var nB = new q7['vg']("assets-111" + "pu7do4muiy" + "xxfu/level" + "s/test.xml");
+      nB['method'] = q7['QI']["GET"];
+      nB["data"] = {};
+      var nu = new q7['NU']();
+      nu['addEventLi' + "stener"](q7['Jh']["COMPLETE"], function (nl) {
+        "oJDPG" !== "oJDPG" ? (f["label"] = T, V["disabled"] = !0x1) : (this["_levelXML"] = new q7['_9'](nl["target"]["data"]), this['dispatchEv' + 'ent'](new q7['Jh'](q7['Jh']["COMPLETE"])));
+      }["bind"](this));
+      nu["addEventLi" + "stener"](q7['BR']["IO_ERROR"], this["IOErrorHan" + 'dler']);
+      nu["load"](nB);
+    };
+    nt["loadXML"] = function () {
+      this["_levelXML"] = new q7['_9'](window['xml']);
+      this["dispatchEv" + "ent"](new q7['Jh'](q7['Jh']['COMPLETE']));
+    };
+    nt["loadData"] = function () {
+      if ("ZGWUP" !== "ZGWUP") {
+        var nu = new qI['lk']("Clarendon " + "LT Std Bol" + 'd', 0x4b, 0xfd8181, null, null, null, null, null, qS['MA']["CENTER"]);
+        var nl = new qA['A_']();
+        nl["defaultTex" + "tFormat"] = nu;
+        nl["htmlText"] = 'PLAY!';
+        this["addChild"](nl);
+        this["mobilePlay" + 'Button'] = nl;
+        nl['x'] = 0x28a;
+        nl['y'] = 0x14f;
+        nl["pixiText"]["anchor"]["set"](0.5);
+        nl["scale"]["set"](0x0);
+        var no = new qN['GD'](0x3, 0x5a, 0x0, 0x1, 0x5, 0x5, 0.25, 0x1);
+        nl["filters"] = [no];
+        nl["addEventLi" + "stener"](qc['Cm']["MOUSE_DOWN"], this["mobilePlay" + "ButtonMous" + "eDownHandl" + 'er']);
+        qV['os']['to'](this["mobilePlay" + "Button"]['scale'], {
+          'duration': 0x2,
+          'x': 0x1,
+          'y': 0x1,
+          'ease': qE['Oq']["easeOut"],
+          'delay': 0.3
+        });
+      } else {
+        this["loadFromSe" + "rver"]();
+      }
+    };
+    nt["loadDownlo" + 'aded'] = function () {
+      if ("fvARa" !== 'dJnQS') {
+        return !0x1;
+      } else {
+        var nu;
+        void 0x0 === f && (q1 = 0x64);
+        (nu = B["call"](this, u) || this)['targetBody'] = l;
+        nu["offSet"] = o;
+        nu['initialRan' + 'ge'] = q2;
+        nu["halfInitia" + "lRange"] = E / 0x2;
+        nu["speedRange"] = R;
+        nu["halfSpeedR" + "ange"] = W / 0x2;
+        nu["m_physScal" + 'e'] = A['w']["currentSes" + "sion"]["m_physScal" + 'e'];
+        nu["startVel"] = r["GetLinearV" + 'elocityFro' + "mLocalPoin" + 't'](J);
+        nu['startPos'] = D["GetWorldPo" + "int"](g);
+        nu['createPart' + "icles"]();
+        return nu;
+      }
+    };
+    nt["sendPlayCo" + "unt"] = function () {};
+    nt["loadFromSe" + 'rver'] = function () {
+      if ("ZDRVo" === "truPI") {
+        N != this["_startDisa" + 'bled'] && (this["_startDisa" + "bled"] = f, this["drawShape"](), this["forceDirty"]());
+      } else {
+        var nB = new q7['vg'](qh['w']["siteURL"] + ("get_level." + 'hw'));
+        nB['method'] = q7['QI']['POST'];
+        var nu = new q7['Vt']();
+        nu["level_id"] = this["levelId"];
+        nu["action"] = "get_record";
+        nu["ip_trackin" + 'g'] = qV['l5']["randomNumS" + "tring"](0x4, 0x8, this["incrementP" + "lays"]);
+        nB["data"] = nu;
+        var nl = new q7['NU']();
+        nl["responseTy" + 'pe'] = "blob";
+        nl["dataFormat"] = q7['Uw']["BINARY"];
+        nl["addEventLi" + "stener"](q7['Jh']['COMPLETE'], this["loadComple" + 'te']);
+        nl["addEventLi" + 'stener'](q7['BR']["IO_ERROR"], this["IOErrorHan" + "dler"]);
+        nl['load'](nB);
+      }
+    };
+    nt["buildLevel" + "SourceObje" + 'ct'] = function () {
+      var n2R = n2P;
+      var nB;
+      var nu;
+      var nl;
+      var no;
+      var nE;
+      var nR;
+      var nW;
+      var nA;
+      var nr;
+      var nJ;
+      var nD;
+      var ng;
+      var nS;
+      var nd;
+      var nz;
+      var nF;
+      var nM = new q7['kx']();
+      nM["name"] = "shapeGuide";
+      var nH = new q7['kx']();
+      nH["name"] = 'shapes';
+      var nb = new q7['kx']();
+      nb["name"] = 'joints';
+      var nZ = new q7['kx']();
+      nZ["name"] = "special";
+      var ny = new q7['kx']();
+      ny["name"] = "groups";
+      var nc = new q7['kx']();
+      nc["name"] = "triggers";
+      nM['addChild'](nH);
+      nM["addChild"](nZ);
+      nM["addChild"](ny);
+      nM["addChild"](nb);
+      nM["addChild"](nc);
+      var nX = this["_levelXML"]["info"][0x0];
+      var nx = (null === (nB = this["_levelXML"]) || void 0x0 === nB || null === (nu = nB["shapes"]) || void 0x0 === nu || null === (nl = nu[0x0]) || void 0x0 === nl ? void 0x0 : nl['sh']) || [];
+      var nw = (null === (no = this["_levelXML"]) || void 0x0 === no || null === (nE = no["specials"]) || void 0x0 === nE || null === (nR = nE[0x0]) || void 0x0 === nR ? void 0x0 : nR['sp']) || [];
+      var na = (null === (nW = this['_levelXML']) || void 0x0 === nW || null === (nA = nW["groups"]) || void 0x0 === nA || null === (nr = nA[0x0]) || void 0x0 === nr ? void 0x0 : nr['g']) || [];
+      var nY = (null === (nJ = this['_levelXML']) || void 0x0 === nJ || null === (nD = nJ["joints"]) || void 0x0 === nD || null === (ng = nD[0x0]) || void 0x0 === ng ? void 0x0 : ng['j']) || [];
+      var nv = (null === (nS = this['_levelXML']) || void 0x0 === nS || null === (nd = nS["triggers"]) || void 0x0 === nd || null === (nz = nd[0x0]) || void 0x0 === nz ? void 0x0 : nz['t']) || [];
+      this["_levelVers" + "ion"] = Number(nX['@v']);
+      this["_levelVers" + "ion"] > qh['w']['CURRENT_VE' + "RSION"] && (qh['w']["debugText"]["text"] = qh['w']['newerVersi' + "onLevelMes" + 'sage']);
+      for (var nL = nx['length'], nU = [], nO = [], nG = [], nQ = [], N0 = 0x0; N0 < nL; N0++) {
+        var N1 = nx[N0];
+        var N2 = parseInt(N1['@t']);
+        0x3 == N2 && 'f' == N1['@i'] && (N2 = 0x4);
+        var N3 = qh['w']["shapeList"][N2];
+        var N4 = new ((0x0, qV['k1'])(N3))();
+        'f' == N1['@i'] && (N4['interactiv' + 'e'] = !0x1);
+        't' == N1['@h'] && (N4["vehicleHan" + "dle"] = !0x0);
+        'f' == N1['@h'] && (N4["vehicleHan" + "dle"] = !0x1);
+        var N5 = N4["getFullPro" + "perties"]();
+        var N6 = N5["length"];
+        if (0x3 == N2) {
+          var N7 = N1['v'][0x0];
+          var N8 = parseInt(N7["@id"]);
+          var N9 = N7['@f'];
+          var Nq = nO["indexOf"](N8);
+          if (Nq > -0x1) {
+            var Nn = nU[Nq];
+          } else {
+            var NN = parseInt(N7['@n']);
+            Nn = new Array(NN);
+            for (var Nf = 0x0; Nf < NN; Nf++) {
+              var NT = N7['@v' + Nf];
+              Nn[Nf] = NT;
+            }
+            nU["push"](Nn);
+            nO["push"](N8);
+          }
+          for (var NV = N4, Nh = 0x0; Nh < Nn["length"]; Nh++) {
+            var NC = Nn[Nh];
+            var Nj = this["_levelVers" + "ion"] < 1.84 ? NC["split"]('.') : NC["split"]('_');
+            var NP = new qj['RM'](parseFloat(Nj[0x0]), parseFloat(Nj[0x1]));
+            NV["vertVector"]["push"](NP);
+          }
+          if (!(NV['numVerts'] > 0x1)) {
+            if ("zMpUY" !== "WKxOA") {
+              nH["addChild"](this["createDumm" + "yShape"]());
+              continue;
+            } else {
+              if (!q1["shape2"]['m_isSensor']) {
+                z["shape1"] == F["frontWheel" + "Shape"] ? M["frontConta" + "cts"] += 0x1 : H["backContac" + 'ts'] += 0x1;
+                b["wheelConta" + "cts"] = Z["frontConta" + "cts"] + y["backContac" + 'ts'];
+                var Ts = c["shape1"];
+                var TB = Ts["m_body"];
+                var Tu = X["shape2"]["m_body"]["m_mass"];
+                if (!(x["contactAdd" + "Buffer"]["get"](Ts) || 0x0 != Tu && Tu < TB["m_mass"])) {
+                  var Tl = L['x5']["b2Dot"](U["velocity"], O["normal"]);
+                  (Tl = G['abs'](Tl)) > 0x4 && Q['contactAdd' + "Buffer"]['set'](Ts, "hit");
+                }
+              }
+            }
+          }
+          N4['completeFi' + 'll'] = 't' == N9;
+          N4["vID"] = N8;
+          NV["redraw"]();
+        } else {
+          if (0x4 == N2) {
+            if ('FRhol' === "FRhol") {
+              var Np = N1['v'][0x0];
+              var NK = parseInt(Np["@id"]);
+              var Nm = Np['@f'];
+              var NI = nQ["indexOf"](NK);
+              if (NI > -0x1) {
+                Nn = nG[NI];
+              } else {
+                if ("XVIZJ" !== "XVIZJ") {
+                  this["handNav"] || (this["handNav"] = !0x0, this["currentToo" + 'l'] == this["arrowTool"] ? this["arrowTool"]["deactivate" + "KeepSelect" + "ion"]() : this["currentToo" + 'l'] == this["polygonToo" + 'l'] ? this["polygonToo" + 'l']['deactivate' + "ContinueDr" + "awing"]() : this['currentToo' + 'l'] == this['artTool'] ? this["artTool"]["deactivate" + "ContinueDr" + "awing"]() : this["currentToo" + 'l'] && this['currentToo' + 'l']["deactivate"](), this["handCursor"] = new T(), this["handCursor"]['x'] = this["mouseX"], this["handCursor"]['y'] = this["mouseY"], this['handCursor']["mouseEnabl" + 'ed'] = this["handCursor"]["mouseChild" + "ren"] = !0x1, this["addChild"](this['handCursor']), V['KK']['hide'](), this["stage"]["removeEven" + "tListener"](h['kV']["KEY_DOWN"], this["keyDownHan" + "dler"]), this["stage"]['addEventLi' + "stener"](C['Cm']["MOUSE_MOVE"], this["followCurs" + 'or']));
+                } else {
+                  var Nk = parseInt(Np['@n']);
+                  Nn = new Array(Nk);
+                  for (var Ns = 0x0; Ns < Nk; Ns++) {
+                    var NB = Np['@v' + Ns];
+                    Nn[Ns] = NB;
+                  }
+                  nG["push"](Nn);
+                  nQ['push'](NK);
+                }
+              }
+              for (var Nu = N4, Nl = 0x0; Nl < Nn["length"]; Nl++) {
+                var No = Nn[Nl];
+                var Ni = this["_levelVers" + "ion"] < 1.84 ? No["split"]('.') : No["split"]('_');
+                var NE = new qj['RM'](parseFloat(Ni[0x0]), parseFloat(Ni[0x1]));
+                var NR = Ni[0x2] ? new qj['RM'](parseFloat(Ni[0x2]), parseFloat(Ni[0x3])) : new qj['RM']();
+                var NW = Ni[0x4] ? new qj['RM'](parseFloat(Ni[0x4]), parseFloat(Ni[0x5])) : new qj['RM']();
+                Nu["vertVector"]["push"](NE);
+                Nu["handleVect" + 'or']["push"](NR);
+                Nu["handleVect" + 'or']["push"](NW);
+              }
+              if (!(Nu['numVerts'] > 0x1)) {
+                nH["addChild"](this["createDumm" + 'yShape']());
+                continue;
+              }
+              N4['completeFi' + 'll'] = 't' == Nm;
+              N4["vID"] = NK;
+              Nu["redraw"]();
+            } else {
+              this["beginTime"] = this["_now"]();
+            }
+          }
+        }
+        for (var NA = 0x0; NA < N6; NA++) {
+          var Nr = N5[NA];
+          var NJ = N1['@p' + NA];
+          if (void 0x0 !== NJ) {
+            if ('t' == NJ || 'f' == NJ) {
+              N4[Nr] = 't' == NJ;
+            } else {
+              var ND = parseFloat(NJ);
+              '' != NJ && (N4[Nr] = isNaN(ND) ? NJ : ND);
+            }
+          }
+        }
+        nH["addChild"](N4);
+        N4['x'] = parseFloat(N1["@p0"]);
+        N4['y'] = parseFloat(N1["@p1"]);
+      }
+      nL = nw['length'];
+      for (var Ng = 0x0; Ng < nL; Ng++) {
+        var NS = nw[Ng];
+        var Nd = parseInt(NS['@t']);
+        var Nz = qh['w']["specialLis" + 't'][Nd];
+        var NF = void 0x0;
+        try {
+          NF = (0x0, qV['k1'])(Nz);
+        } catch (Tu) {
+          if ("gTaSS" === "dSTVD") {
+            this["currCOM"] = this["getCenterO" + "fMass"]();
+          } else {
+            continue;
+          }
+        }
+        for (var NM = void 0x0, NH = (NM = "NPCharacte" + 'rRef' === Nz ? new NF(parseInt(NS["@p3"])) : new NF())["getFullPro" + "perties"](), Nb = 0x0; Nb < NH["length"]; Nb++) {
+          if ("msPJr" !== "sPUqK") {
+            var NZ = NH[Nb];
+            if ("string" == typeof NM[NZ]) {
+              var Ny = NS['@p' + Nb] ? NS['@p' + Nb] : NS['p' + Nb][0x0]['cdata'];
+              null == Ny && (Ny = '');
+              NM[NZ] = Ny;
+            } else {
+              var Nc = NS['@p' + Nb];
+              Nc || (Nc = NS['p' + Nb]);
+              if (void 0x0 === Nc) {
+                continue;
+              }
+              Nc instanceof Array && (Nc = Nc[0x0]['cdata']);
+              if ('t' == Nc || 'f' == Nc) {
+                NM[NZ] = 't' == Nc;
+              } else {
+                var NX = parseFloat(Nc);
+                '' != Nc && (NM[NZ] = isNaN(NX) ? Nc : NX);
+              }
+            }
+          } else {
+            void 0x0 === N && (f = 0x1);
+            return !0x1;
+          }
+        }
+        nZ["addChild"](NM);
+        NM['x'] = parseFloat(NS["@p0"]);
+        NM['y'] = parseFloat(NS["@p1"]);
+      }
+      nL = na["length"];
+      for (var Nx = 0x0; Nx < nL; Nx++) {
+        if ("OpPda" === "OpPda") {
+          var Nw;
+          var Na = na[Nx];
+          if ('t' == Na['@v']) {
+            if ("XaRWI" === "XaRWI") {
+              var NY = Nw = new qT['uH']();
+              NY["spaceActio" + 'n'] = parseInt(Na["@sb"]);
+              NY["shiftActio" + 'n'] = parseInt(Na["@sh"]);
+              NY["ctrlAction"] = parseInt(Na["@ct"]);
+              NY["accelerati" + 'on'] = parseInt(Na['@a']);
+              NY["leaningStr" + "ength"] = parseInt(Na['@l']);
+              NY["characterP" + "ose"] = parseInt(Na["@cp"]);
+              NY["lockJoints"] = 't' == Na["@lo"];
+            } else {
