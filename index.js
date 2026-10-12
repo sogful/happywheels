@@ -7,7 +7,7 @@ const accountfeedback = document.getElementById("account-feedback");
 const accountsubmit = document.getElementById("account-submit");
 let accountauthenticated = false;
 const gamefiles = {
-    dependencies: "./src/dependencies.js"
+    dependencies: "./src/dependencies/index.js"
 };
 
 function storesessiontoken(token) {
