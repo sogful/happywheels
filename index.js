@@ -5,6 +5,7 @@ const accountemail = document.getElementById("account-email");
 const accountpassword = document.getElementById("account-password");
 const accountfeedback = document.getElementById("account-feedback");
 const accountsubmit = document.getElementById("account-submit");
+const accounthud = document.querySelector(".account-hud");
 let accountauthenticated = false;
 const gamefiles = {
     dependencies: "./src/dependencies/index.js"
@@ -34,9 +35,9 @@ async function calltjfapi(path, options = {}) {
 
 function setaccountstate(authenticated) {
     accountauthenticated = authenticated;
-    accountbutton.textContent = authenticated ? "Sign out" : "Sign in";
+    accountbutton.textContent = authenticated ? "Log out" : "Log in";
     accountbutton.dataset.authenticated = String(authenticated);
-    accountbutton.setAttribute("aria-label", authenticated ? "Sign out" : "Sign in");
+    accountbutton.setAttribute("aria-label", authenticated ? "Log out" : "Log in");
     accountpanel.hidden = true;
     accountbutton.setAttribute("aria-expanded", "false");
     accountemail.value = "";
@@ -45,15 +46,27 @@ function setaccountstate(authenticated) {
     accountfeedback.dataset.state = "";
 }
 
+function setaccountvisibility(visible) {
+    accounthud.hidden = !visible;
+    if (!visible) {
+        accountpanel.hidden = true;
+        accountbutton.setAttribute("aria-expanded", "false");
+    }
+}
+
+window.setaccountvisibility = setaccountvisibility;
+
 async function refreshaccountstate() {
     try {
         const response = await calltjfapi("/api/account");
         if (response.ok) {
             const result = await response.json();
             setaccountstate(Boolean(result.authenticated));
+        } else {
+            setaccountstate(false);
         }
     } catch (error) {
-        accountauthenticated = false;
+        setaccountstate(false);
     }
 }
 
@@ -73,7 +86,7 @@ accountbutton.addEventListener("click", async () => {
             setaccountstate(false);
             window.location.reload();
         } catch (error) {
-            accountfeedback.textContent = "Could not sign out. Try again.";
+            accountfeedback.textContent = "Could not log out. Try again.";
             accountfeedback.dataset.state = "error";
             accountpanel.hidden = false;
             accountbutton.setAttribute("aria-expanded", "true");
@@ -95,8 +108,8 @@ document.getElementById("account-close").addEventListener("click", () => {
 accountform.addEventListener("submit", async event => {
     event.preventDefault();
     accountsubmit.disabled = true;
-    accountsubmit.setAttribute("aria-label", "Signing in...");
-    accountfeedback.textContent = "Signing in...";
+    accountsubmit.setAttribute("aria-label", "Logging in...");
+    accountfeedback.textContent = "Logging in...";
     accountfeedback.dataset.state = "pending";
     const credentials = JSON.stringify({ email: accountemail.value, password: accountpassword.value });
     accountpassword.value = "";
@@ -129,7 +142,7 @@ accountform.addEventListener("submit", async event => {
         accountfeedback.dataset.state = "error";
     } finally {
         accountsubmit.disabled = false;
-        accountsubmit.setAttribute("aria-label", "Sign in");
+        accountsubmit.setAttribute("aria-label", "Log in");
     }
 });
 

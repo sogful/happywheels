@@ -10813,6 +10813,7 @@ function (q0, q1, q2) {
       Nr["type"] == qo['PL']["ID_NOT_FOU" + 'ND'] ? this["openMainMe" + 'nu']() : (N1['setCurrent' + "Menu"](N1["REPLAY_BRO" + "WSER"]), n7["importLeve" + "lDataArray"]([NJ["levelDataO" + "bject"]]), nv["importRepl" + "ayDataArra" + 'y']([NJ["replayData" + "Object"]], NJ['levelDataO' + "bject"]), this["openSessio" + "nControlle" + 'r'](NJ["levelDataO" + "bject"], NJ["replayData" + "Object"]));
     };
     NA["openMainMe" + 'nu'] = function () {
+      if (typeof window.setaccountvisibility === "function") window.setaccountvisibility(true);
       if ("eJkLY" === 'eJkLY') {
         this["mainMenu"] = new N1();
         this["addChildAt"](this["mainMenu"], 0x0);
@@ -10863,6 +10864,7 @@ function (q0, q1, q2) {
       }
     };
     NA["closeMainM" + "enu"] = function () {
+      if (typeof window.setaccountvisibility === "function") window.setaccountvisibility(false);
       this["mainMenu"] && (this["mainMenu"]['die'](), this["removeChil" + 'd'](this['mainMenu']), this["mainMenu"]['removeEven' + "tListener"](qu['$T']["EDITOR"], this['openEditor' + 'Bind']), this["mainMenu"]["removeEven" + "tListener"](qu['$T']["SESSION"], this["receiveSes" + 'sionFromMa' + "inMenuBind"]), this["mainMenu"] = null);
     };
     NA["openEditor"] = function () {
