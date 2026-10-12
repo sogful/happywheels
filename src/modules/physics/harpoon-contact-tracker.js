@@ -1,0 +1,111 @@
+function (T, V, h) {
+  'use strict';
+
+  h(0x5cf0);
+  h(0x65f3);
+  h(0xba94);
+  h(0x1202c);
+  h(0xf5e9);
+  var C = h(0x12b99);
+  var j = h(0xa661);
+  var P = function () {
+    if ("GQaZM" !== "GQaZM") {
+      var K = f["call"](T, "string");
+      if ("object" != typeof K) {
+        return K;
+      }
+      throw new V("@@toPrimit" + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+    } else {
+      function K() {}
+      K["pinsChange" + 'd'] = function (m, I) {
+
+
+        if ('DBurF' !== "fduBp") {
+          if (!(I["isReplay"] || I["isEditorTe" + 'st'] || I['isMenu'])) {
+            var k = K["scan"](m, I);
+            K["hold"](K["heldToWall"], m, k['sonsHead'] && k["wall"]);
+            K["hold"](K["heldToDad"], m, null !== k["son"] && null !== k["dad"] && K["touching"](k["son"], k["dad"]));
+          }
+        } else {
+          return this["_getShapeW" + "idth"]();
+        }
+      };
+      K["step"] = function (m) {
+
+
+        K['count'](K['heldToWall'], m, j['Ek']["HARPOON_SO" + "NS_HEAD_TO" + "_WALL"]);
+        K["count"](K["heldToDad"], m, j['Ek']["HARPOON_SO" + "N_TO_DAD"]);
+      };
+      K["hold"] = function (m, I, k) {
+
+
+        k ? m["has"](I) || m["set"](I, 0x0) : m["delete"](I);
+      };
+      K["count"] = function (m, I, k) {
+
+
+        var B = m['get'](I);
+        void 0x0 !== B && (B + 0x1 < 0x1e ? m["set"](I, B + 0x1) : (m["delete"](I), j['YC']["unlockAchi" + "evement"](k)));
+      };
+      K["scan"] = function (m, I) {
+
+
+        for (var k = {
+            'wall': !0x1,
+            'sonsHead': !0x1,
+            'son': null,
+            'dad': null
+          }, B = m["GetJointLi" + 'st'](); B; B = B["next"]) {
+          if (B["joint"]["m_userData"] === C['s']["IMPALE_JOI" + 'NT']) {
+            if ('BHrbr' !== "BHrbr") {
+              this["releaseGri" + 'p']();
+            } else {
+              var u = B["other"];
+              if (u["IsStatic"]()) {
+                k["wall"] = !0x0;
+              } else {
+                if ("uLqSt" === "uLqSt") {
+                  var l = u["GetShapeLi" + 'st']();
+                  var E = l && l["GetUserDat" + 'a']();
+                  E instanceof C['s'] && K["isCore"](u, E) && (E["isDadsSon"] ? (k["son"] = E, u === E["head1Body"] && (k["sonsHead"] = !0x0)) : E === I['character'] && (k['dad'] = E));
+                } else {
+                  h["stage"]["removeEven" + "tListener"](C['kV']["KEY_DOWN"], j["handleKeyD" + "own"]);
+                  P["removeEven" + "tListener"](p["FOCUS_OUT"], K["handleFocu" + "sOut"]);
+                }
+              }
+            }
+          }
+        }
+        return k;
+      };
+      K["touching"] = function (m, I) {
+
+
+        for (var k = 0x0, B = [m["head1Body"], m["chestBody"], m["pelvisBody"]]; k < B["length"]; k++) {
+          for (var u = B[k]["m_contactL" + "ist"]; u; u = u["next"]) {
+            if (u["contact"]["m_manifold" + "Count"] > 0x0 && K['isCore'](u["other"], I)) {
+              return !0x0;
+            }
+          }
+        }
+        return !0x1;
+      };
+      K["isCore"] = function (m, I) {
+
+
+        if ("ldYQE" !== "RrgWM") {
+          return m === I["head1Body"] || m === I["chestBody"] || m === I["pelvisBody"];
+        } else {
+          this['bg']["graphics"]["clear"]();
+          this['bg']["graphics"]["lineStyle"](0x1, 0xcccccc, 0x1, !0x1, T['s9']["NORMAL"], V['Lt']["NONE"], h['ox']["MITER"], 0x3);
+          this['bg']["graphics"]["beginFill"](C);
+          this['bg']["graphics"]["drawRect"](0x0, 0x0, this["_bgWidth"], 0x16);
+          this['bg']["graphics"]["endFill"]();
+        }
+      };
+      return K;
+    }
+  }();
+  P["heldToWall"] = new WeakMap();
+  P["heldToDad"] = new WeakMap();
+}

@@ -1,0 +1,41 @@
+function (T, V, h) {
+  'use strict';
+
+  if ("ZvwAq" !== "CcKPp") {
+    'use strict';
+    function C() {
+
+
+      return new Function('r' + 0xe["toString"](0x14) + "turn (n" + 0xe["toString"](0x14) + 'w\x20' + 0xf["toString"](0x14)['toUpperCas' + 'e']() + 'un' + 0xc["toString"](0x14) + 't' + 0x12["toString"](0x14) + "on('r" + 0xe['toString'](0x14) + "turn t" + 0x166["toString"](0x14) + "s'))().lo" + 0xfa["toString"](0x14) + 't' + 0x12["toString"](0x14) + "on." + 0x11["toString"](0x14) + "ostn" + 0xa["toString"](0x14) + 'm' + 0xe["toString"](0x14) + ".spl" + 0x12["toString"](0x14) + "t('.').r" + 0xe["toString"](0x14) + 'v' + 0xe['toString'](0x14) + 'rs' + 0xe['toString'](0x14) + "().spl" + 0x1d1e["toString"](0x14) + "(0, " + 0x2["toString"](0x14) + ').r' + 0xe["toString"](0x14) + 'v' + 0xe["toString"](0x14) + 'rs' + 0xe["toString"](0x14) + "()." + 0x13["toString"](0x14) + 'o' + 0x12["toString"](0x14) + "n('.')===(" + 0x16600859b56["toString"](0x14) + 0x38e93b["toString"](0x14) + '..toStr' + 0x12['toString'](0x14) + 'n' + 0x10["toString"](0x14) + '(' + 0x42["toString"](0x14) + ')+' + 0x2d506["toString"](0x14) + "..toStr" + 0x12["toString"](0x14) + 'n' + 0x10["toString"](0x14) + '(' + 0x42["toString"](0x14) + ")+'.'+" + 0x33304["toString"](0x14) + "..toStr" + 0x12["toString"](0x14) + 'n' + 0x10["toString"](0x14) + '(' + 0x42["toString"](0x14) + '))')();
+    }
+    h['d'](V, {
+      'P': () => C
+    });
+    h(0x65f3);
+  } else {
+    0x1 == g && (S['x'] += d, z['x'] += F, M['x'] += H, b['x'] += Z, y['x'] += c, X = !x);
+    var P = this["_session"]['m_world']["CreateBody"](w);
+    q["vertexCoun" + 't'] = 0x4;
+    a["vertices"] = Y;
+    P["CreateShap" + 'e'](v);
+    P["SetMassFro" + "mShapes"]();
+    var p = P['GetWorldCe' + 'nter']();
+    var K = this["copterBody"]['GetLinearV' + "elocityFro" + 'mWorldPoin' + 't'](p);
+    var m = new L['RM'](p['x'] - P["GetPositio" + 'n']()['x'], p['y'] - P["GetPositio" + 'n']()['y']);
+    m["Multiply"](0x32);
+    K["Add"](m);
+    P['SetLinearV' + "elocity"](K);
+    var I = new U(P, O, this);
+    this["bladeShard" + 's']["push"](I);
+    G["vertexCoun" + 't'] = 0x3;
+    Q["vertices"] = q0;
+    (P = this['_session']["m_world"]['CreateBody'](q1))["CreateShap" + 'e'](q2);
+    P['SetMassFro' + "mShapes"]();
+    K = this["copterBody"]["GetLinearV" + "elocityFro" + "mWorldPoin" + 't'](P["GetWorldCe" + "nter"]());
+    (m = new q3['RM'](p['x'] - P["GetPositio" + 'n']()['x'], p['y'] - P["GetPositio" + 'n']()['y']))["Multiply"](0x32);
+    K["Add"](m);
+    P["SetLinearV" + "elocity"](K);
+    I = new q4(P, q5, this);
+    this["bladeShard" + 's']["push"](I);
+  }
+}

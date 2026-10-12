@@ -1,0 +1,290 @@
+[
+  {
+    "id": 35057,
+    "file": "modules/game/game-settings.js",
+    "name": "game-settings",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 45499,
+    "file": "modules/game/game-client.js",
+    "name": "game-client",
+    "role": "Game initialization, menu, and level/replay loading"
+  },
+  {
+    "id": 76697,
+    "file": "modules/characters/character-physics.js",
+    "name": "character-physics",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 34531,
+    "file": "modules/unclassified/wheel-character-contact-physics.js",
+    "name": "wheel-character-contact-physics",
+    "role": "Wheel, character, and contact physics"
+  },
+  {
+    "id": 17109,
+    "file": "modules/editor/editor-physics-properties.js",
+    "name": "editor-physics-properties",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 94384,
+    "file": "modules/levels/level-rating-dialog.js",
+    "name": "level-rating-dialog",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 97368,
+    "file": "modules/editor/level-editor.js",
+    "name": "level-editor",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 92679,
+    "file": "modules/characters/mobile-controls.js",
+    "name": "mobile-controls",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 59301,
+    "file": "modules/levels/level-metadata-panel.js",
+    "name": "level-metadata-panel",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 84233,
+    "file": "modules/physics/pin-joint-trigger.js",
+    "name": "pin-joint-trigger",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 59020,
+    "file": "modules/physics/prismatic-joint-trigger.js",
+    "name": "prismatic-joint-trigger",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 12319,
+    "file": "modules/characters/character-joints.js",
+    "name": "character-joints",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 73026,
+    "file": "modules/editor/editor-selection-state.js",
+    "name": "editor-selection-state",
+    "role": "Editor selection state and change events"
+  },
+  {
+    "id": 47363,
+    "file": "modules/levels/level-trigger.js",
+    "name": "level-trigger",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 70527,
+    "file": "modules/editor/vehicle-group-tools.js",
+    "name": "vehicle-group-tools",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 13362,
+    "file": "modules/editor/level-editor-ui.js",
+    "name": "level-editor-ui",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 21765,
+    "file": "modules/levels/level-loader.js",
+    "name": "level-loader",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 2282,
+    "file": "modules/levels/level-metadata-row.js",
+    "name": "level-metadata-row",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 94898,
+    "file": "modules/characters/character-classes.js",
+    "name": "character-classes",
+    "role": "Character bodies, parts, and setup"
+  },
+  {
+    "id": 57208,
+    "file": "modules/levels/level-completion-handler.js",
+    "name": "level-completion-handler",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 50367,
+    "file": "modules/game/background-renderer.js",
+    "name": "background-renderer",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 78763,
+    "file": "modules/support/clipboard-copy-button.js",
+    "name": "clipboard-copy-button",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 49078,
+    "file": "modules/editor/editor-dropdown-menu.js",
+    "name": "editor-dropdown-menu",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 5711,
+    "file": "modules/support/scroll-tab-controller.js",
+    "name": "scroll-tab-controller",
+    "role": "Scrollable tab input and content updates"
+  },
+  {
+    "id": 14094,
+    "file": "modules/characters/lawnmower-character.js",
+    "name": "lawnmower-character",
+    "role": "Unclassified module"
+  },
+  {
+    "id": 58640,
+    "file": "modules/game/game-loop.js",
+    "name": "game-loop",
+    "role": "Simulation stepping, frame counters, and camera/world updates"
+  },
+  {
+    "id": 36875,
+    "file": "modules/support/profanity-filter.js",
+    "name": "profanity-filter",
+    "role": "Text profanity matching"
+  },
+  {
+    "id": 71852,
+    "file": "modules/physics/physics-debug-view.js",
+    "name": "physics-debug-view",
+    "role": "Physics debug drawing and debug text"
+  },
+  {
+    "id": 57719,
+    "file": "modules/game/game-session-menu-controller.js",
+    "name": "game-session-menu-controller",
+    "role": "Game session, replay, and level-browser menu actions"
+  },
+  {
+    "id": 55896,
+    "file": "modules/game/fps-counter.js",
+    "name": "fps-counter",
+    "role": "Calculate and display frame rate"
+  },
+  {
+    "id": 80501,
+    "file": "modules/unclassified/vehicle-character-menu.js",
+    "name": "vehicle-character-menu",
+    "role": "Mixed vehicle, character, and menu code"
+  },
+  {
+    "id": 29892,
+    "file": "modules/editor/trigger-shape-properties.js",
+    "name": "trigger-shape-properties",
+    "role": "Trigger shape attributes and editor properties"
+  },
+  {
+    "id": 8102,
+    "file": "modules/support/event-dispatcher.js",
+    "name": "event-dispatcher",
+    "role": "Listener registration, removal, and result events"
+  },
+  {
+    "id": 98635,
+    "file": "modules/levels/level-metadata.js",
+    "name": "level-metadata",
+    "role": "Level author, rating, voting, and play metadata"
+  },
+  {
+    "id": 21920,
+    "file": "modules/replays/replay-metadata.js",
+    "name": "replay-metadata",
+    "role": "Replay metadata fields"
+  },
+  {
+    "id": 33778,
+    "file": "modules/replays/level-replay-models.js",
+    "name": "level-replay-models",
+    "role": "Level and replay model exports"
+  },
+  {
+    "id": 99327,
+    "file": "modules/game/main-menu.js",
+    "name": "main-menu",
+    "role": "Play, Browse Levels, load, replay, and editor menu buttons"
+  },
+  {
+    "id": 99478,
+    "file": "modules/levels/level-load-handler.js",
+    "name": "level-load-handler",
+    "role": "Level load and error events"
+  },
+  {
+    "id": 94178,
+    "file": "modules/replays/replay-load-handler.js",
+    "name": "replay-load-handler",
+    "role": "Replay load events"
+  },
+  {
+    "id": 34060,
+    "file": "modules/physics/harpoon-contact-tracker.js",
+    "name": "harpoon-contact-tracker",
+    "role": "Harpoon attachment tracking"
+  },
+  {
+    "id": 42593,
+    "file": "modules/game/stats-persistence.js",
+    "name": "stats-persistence",
+    "role": "Persist game statistics"
+  },
+  {
+    "id": 93885,
+    "file": "modules/levels/toilet-hazard.js",
+    "name": "toilet-hazard",
+    "role": "Toilet collision and achievement state"
+  },
+  {
+    "id": 7552,
+    "file": "modules/support/value-formatting-utils.js",
+    "name": "value-formatting-utils",
+    "role": "Number formatting and value parsing"
+  },
+  {
+    "id": 72996,
+    "file": "modules/game/analytics-events.js",
+    "name": "analytics-events",
+    "role": "Analytics event names and tracking calls"
+  },
+  {
+    "id": 12151,
+    "file": "modules/support/definition-registry.js",
+    "name": "definition-registry",
+    "role": "Register and retrieve game definitions"
+  },
+  {
+    "id": 1050,
+    "file": "modules/unclassified/character-renderer-lifecycle.js",
+    "name": "character-renderer-lifecycle",
+    "role": "Mixed character setup and renderer cleanup"
+  },
+  {
+    "id": 64569,
+    "file": "modules/unclassified/amf-physics-collision.js",
+    "name": "amf-physics-collision",
+    "role": "Mixed AMF serialization and physics collision code"
+  },
+  {
+    "id": 98957,
+    "file": "modules/physics/helicopter-blade-shards.js",
+    "name": "helicopter-blade-shards",
+    "role": "Helicopter blade debris"
+  }
+]

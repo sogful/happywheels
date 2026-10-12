@@ -7,8 +7,7 @@ const accountfeedback = document.getElementById("account-feedback");
 const accountsubmit = document.getElementById("account-submit");
 let accountauthenticated = false;
 const gamefiles = {
-    dependencies: "./src/cleaned/dependencies.js",
-    index: "./src/cleaned/index.js"
+    dependencies: "./src/dependencies.js"
 };
 
 function storesessiontoken(token) {
@@ -224,6 +223,17 @@ refreshaccountstate();
         document.body.appendChild(dependencyelement);
     });
 
+    const loadscript = scripturl => new Promise((resolve, reject) => {
+        const scriptelement = document.createElement("script");
+        scriptelement.async = false;
+        const cachebustedurl = new URL(scripturl, window.location.href);
+        cachebustedurl.searchParams.set("v", String(Date.now()));
+        scriptelement.src = cachebustedurl.href;
+        scriptelement.onload = resolve;
+        scriptelement.onerror = reject;
+        document.body.appendChild(scriptelement);
+    });
+
     const safemodeenabled = false;
     try {
         calltjfapi("/api/account")
@@ -237,7 +247,21 @@ refreshaccountstate();
                 }
                 return loaddependency("dependencies", safemodeenabled)
                     .then(() => window.happywheeldependencies)
-                    .then(() => loaddependency("index", safemodeenabled));
+                    .then(() => {
+                        window.happywheelrecovery = { branch: true };
+                        return loadscript("./src/assemble.js")
+                            .then(() => {
+                                window.happywheelrecovery.assembler = typeof window.loadrecoveredgamemodules;
+                                return window.loadrecoveredgamemodules();
+                            })
+                            .then(() => {
+                                window.happywheelrecovery.factories = Object.keys(window.happywheelgamemodules).length;
+                                return loadscript("./src/runtime.js");
+                            })
+                            .then(() => {
+                                window.happywheelrecovery.runtime = typeof window.happywheelrequire;
+                            });
+                    });
             })
             .catch(() => retryonerror(true));
     } catch (error) {

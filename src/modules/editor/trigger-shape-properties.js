@@ -1,0 +1,293 @@
+function (T, V, h) {
+  'use strict';
+
+  h['d'](V, {
+    '_': () => K
+  });
+  h(0xb284);
+  h(0x15de4);
+  h(0xcdc3);
+  h(0x15d77);
+  h(0x65f3);
+  h(0xb4c);
+  var C = h(0x136b);
+  var j = h(0x5ab6);
+  var P = h(0x88f1);
+  function p(m) {
+    var I = function (k) {
+      if ("object" != typeof k || !k) {
+        return k;
+      }
+      var B = k[Symbol["toPrimitiv" + 'e']];
+      if (void 0x0 !== B) {
+        if ('gyDHd' !== "gyDHd") {
+          var E = V["body1"];
+          h += "' b1='" + (C = E instanceof j['_c'] ? 's' : E instanceof P['D'] ? 'g' : '') + E["parent"]["getChildIn" + "dex"](E);
+        } else {
+          var u = B["call"](k, "string");
+          if ("object" != typeof u) {
+            return u;
+          }
+          throw new TypeError("@@toPrimit" + "ive must r" + "eturn a pr" + "imitive va" + "lue.");
+        }
+      }
+      return String(k);
+    }(m);
+    return "symbol" == typeof I ? I : I + '';
+  }
+  var K = function () {
+    function m(u, l, E) {
+      'EADhQ' !== "EADhQ" ? void 0x0 !== this["_typeIndex"] && (this["_attribute" + 's'] = ['x', 'y', "shapeWidth", "shapeHeigh" + 't', "angle", "triggeredB" + 'y', "repeatType"], this["_repeatTyp" + 'e'] > 0x2 && this["_attribute" + 's']["push"]("repeatInte" + "rval"), this["_attribute" + 's']["push"]("triggerTyp" + 'e'), 0x1 == this["_typeIndex"] ? this["_attribute" + 's']['push']("triggerDel" + 'ay') : 0x2 == this["_typeIndex"] && (this["_attribute" + 's']["push"]("soundEffec" + 't', "triggerDel" + 'ay', "soundLocat" + "ion", "volume"), 0x1 == this["soundLocat" + "ion"] && this["_attribute" + 's']["push"]("panning")), this["_attribute" + 's']["push"]("startDisab" + 'led'), this["addTrigger" + "Properties"]()) : (this['_tempCount'] = 0x0, this["_tempMax"] = 0x14, this["midX"] = 7.2, this["midY"] = 0x4, this["leftBorder"] = 0x64, this['rightBorde' + 'r'] = 0xc8, this['topBorder'] = 0x64, this["bottomBord" + 'er'] = 0x96, this["minSpeed"] = 0x3, this["moveIncrem" + "ent"] = 0x5, this["upInc"] = 0x1, this["zoom"] = 0x1, this["_container" + "Obj"] = u, this["_focus"] = l, this["_screenBou" + "nds"] = new C['M_'](), this["_screenMot" + "ion"] = new C['bR'](), this["_midScreen"] = new C['bR'](), this["_displacem" + "ent"] = new C['bR'](), this["m_physScal" + 'e'] = E["m_physScal" + 'e'], this['_buttonCon' + 'tainer'] = E["buttonCont" + "ainer"], E['level'] && (this["backDrops"] = E["level"]["backDrops"]));
+    }
+    var I;
+    var k;
+    var B = m["prototype"];
+    B["setLimits"] = function (u, l, E, R) {
+
+
+      this["leftLimit"] = -u;
+      this["rightLimit"] = -(l - 0x384);
+      this["topLimit"] = -E;
+      this["bottomLimi" + 't'] = -(R - 0x1f4);
+    };
+    B["setBorders"] = function (u) {
+
+
+      if ("bfanQ" === "mKKPV") {
+        return !0x1;
+      } else {
+        void 0x0 === u && (u = 0x1);
+        var l = this["_focus"]["GetInterpo" + "latedLinea" + "rVelocity"]();
+        var E = l['x'];
+        var R = l['y'];
+        E > this["minSpeed"] ? (this["leftBorder"] < 0x64 ? this["leftBorder"] += this["moveIncrem" + "ent"] * u : this["leftBorder"] > 0x64 && (this["leftBorder"] -= this["moveIncrem" + "ent"] * u), this["rightBorde" + 'r'] < 0xc8 ? this["rightBorde" + 'r'] += this["moveIncrem" + "ent"] * u : this["rightBorde" + 'r'] > 0xc8 && (this["rightBorde" + 'r'] -= this['moveIncrem' + "ent"] * u)) : E < -this["minSpeed"] ? (this["leftBorder"] < 0x258 ? this["leftBorder"] += this["moveIncrem" + "ent"] * u : this["leftBorder"] > 0x258 && (this["leftBorder"] -= this["moveIncrem" + 'ent'] * u), this["rightBorde" + 'r'] < 0x2bc ? this["rightBorde" + 'r'] += this['moveIncrem' + "ent"] * u : this["rightBorde" + 'r'] > 0x2bc && (this['rightBorde' + 'r'] -= this["moveIncrem" + "ent"] * u)) : (this['leftBorder'] < 0x15e ? this['leftBorder'] += this["moveIncrem" + "ent"] * u : this["leftBorder"] > 0x15e && (this["leftBorder"] -= this["moveIncrem" + "ent"] * u), this["rightBorde" + 'r'] < 0x1c2 ? this["rightBorde" + 'r'] += this["moveIncrem" + "ent"] * u : this["rightBorde" + 'r'] > 0x1c2 && (this["rightBorde" + 'r'] -= this['moveIncrem' + 'ent'] * u));
+        R > this["minSpeed"] ? (this["topBorder"] < 0x64 ? this['topBorder'] += this["upInc"] * u : this["topBorder"] > 0x64 && (this['topBorder'] -= this["moveIncrem" + "ent"] * u), this["bottomBord" + 'er'] < 0x96 ? this["bottomBord" + 'er'] += this["upInc"] * u : this['bottomBord' + 'er'] > 0x96 && (this["bottomBord" + 'er'] -= this['moveIncrem' + "ent"] * u)) : R < -this["minSpeed"] ? (this["topBorder"] < 0x15e ? this["topBorder"] += this["upInc"] * u : this['topBorder'] > 0x15e && (this["topBorder"] -= this["moveIncrem" + "ent"] * u), this['bottomBord' + 'er'] < 0x190 ? this["bottomBord" + 'er'] += this["upInc"] * u : this["bottomBord" + 'er'] > 0x190 && (this["bottomBord" + 'er'] -= this["moveIncrem" + 'ent'] * u)) : (this["topBorder"] < 0x12c ? this["topBorder"] += this['upInc'] * u : this["topBorder"] > 0x12c && (this["topBorder"] -= this["moveIncrem" + "ent"] * u), this["bottomBord" + 'er'] < 0x15e ? this["bottomBord" + 'er'] += this["upInc"] * u : this['bottomBord' + 'er'] > 0x15e && (this["bottomBord" + 'er'] -= this["moveIncrem" + "ent"] * u));
+      }
+    };
+    B["step"] = function (u) {
+
+
+      void 0x0 === u && (u = 0x1);
+      u = u < 0x0 ? 0x0 : u > 0x1 ? 0x1 : u;
+      var l = this["_screenBou" + "nds"]['x'];
+      var E = this["_screenBou" + "nds"]['y'];
+      this["_container" + "Obj"]["scaleX"] = this["_container" + "Obj"]["scaleY"] = this["zoom"];
+      this['setBorders'](u);
+      if (this["_secondFoc" + 'us']) {
+        if ("jVIIR" === "WIHkm") {
+          var D = this["buttons"][n];
+          D["alpha"] = 0.25;
+          D["disable"]();
+        } else {
+          var R = this["_focus"]["GetInterpo" + 'latedPosit' + "ion"]()["Copy"]();
+          R['y'] += this["_secondFoc" + 'us']["GetInterpo" + 'latedPosit' + "ion"]()['y'];
+          R['y'] *= 0.5;
+          this["center"](R);
+        }
+      } else {
+        if (this["_tempFocus"]) {
+          R = this['_focus']['GetInterpo' + "latedPosit" + "ion"]()["Copy"]();
+          var W = 0.5 - 0.5 * this["_tempCount"] / this["_tempMax"];
+          R['y'] = R['y'] * (0x1 - W) + this["_tempFocus"]["GetInterpo" + "latedPosit" + "ion"]()['y'] * W;
+          this['center'](R);
+          this["_tempCount"] >= this["_tempMax"] && (this["_tempFocus"] = null);
+          this["_tempCount"] += u;
+        } else {
+          this["center"](this["_focus"]['GetInterpo' + "latedPosit" + "ion"]());
+        }
+      }
+      this["_buttonCon" + "tainer"] && (this["_buttonCon" + "tainer"]['x'] = this["containerO" + 'bj']['x'], this['_buttonCon' + "tainer"]['y'] = this["containerO" + 'bj']['y']);
+      this["adjustBack" + "Drops"]();
+      P['w']["YParticleL" + "imit"] = this["_focus"]["GetInterpo" + "latedPosit" + "ion"]()['y'] * this["m_physScal" + 'e'] + 0x3e8;
+      var A = this["_focus"] !== this["_steppedFo" + "cus"] || this["_secondFoc" + 'us'] !== this['_steppedSe' + "condFocus"];
+      this["_screenMot" + "ion"]['x'] = A ? 0x0 : this["_screenBou" + 'nds']['x'] - l;
+      this["_screenMot" + "ion"]['y'] = A ? 0x0 : this["_screenBou" + 'nds']['y'] - E;
+      this["_steppedFo" + "cus"] = this["_focus"];
+      this["_steppedSe" + "condFocus"] = this["_secondFoc" + 'us'];
+    };
+    B["center"] = function (u) {
+
+
+      isNaN(u['x']) && (u = new j['RM'](0x0, 0x0));
+      var l = new C['bR'](u['x'] * this["m_physScal" + 'e'], u['y'] * this["m_physScal" + 'e']);
+      var E = this['_container' + "Obj"]["localToGlo" + "bal"](l)['x'] + this["_displacem" + "ent"]['x'];
+      var R = this["_container" + 'Obj']["localToGlo" + "bal"](l)['y'] + this["_displacem" + "ent"]['y'];
+      E > this["rightBorde" + 'r'] && (this["_container" + "Obj"]['x'] -= E - this["rightBorde" + 'r'], this["_container" + "Obj"]['x'] < this["rightLimit"] && (this["_container" + "Obj"]['x'] = this["rightLimit"]));
+      E < this["leftBorder"] && (this["_container" + "Obj"]['x'] += this["leftBorder"] - E, this['_container' + "Obj"]['x'] > this["leftLimit"] && (this["_container" + "Obj"]['x'] = this['leftLimit']));
+      R > this["bottomBord" + 'er'] && (this["_container" + "Obj"]['y'] -= R - this["bottomBord" + 'er'], this["_container" + "Obj"]['y'] < this["bottomLimi" + 't'] && (this["_container" + "Obj"]['y'] = this["bottomLimi" + 't']));
+      R < this["topBorder"] && (this["_container" + "Obj"]['y'] += this["topBorder"] - R, this["_container" + "Obj"]['y'] > this["topLimit"] && (this["_container" + 'Obj']['y'] = this['topLimit']));
+      this['_screenBou' + "nds"]['x'] = -this["_container" + "Obj"]['x'];
+      this['_screenBou' + "nds"]['y'] = -this["_container" + "Obj"]['y'];
+      this["_screenBou" + "nds"]["width"] = 0x384;
+      this["_screenBou" + "nds"]["height"] = 0x1f4;
+      this["_midScreen"]['x'] = this["midX"] - this["_container" + "Obj"]['x'] / this["m_physScal" + 'e'];
+      this["_midScreen"]['y'] = this["midY"] - this["_container" + "Obj"]['y'] / this["m_physScal" + 'e'];
+    };
+    B["removeSeco" + "ndFocus"] = function () {
+
+
+      if ("NZBUx" === "OWnzi") {
+        var l = f[T](V);
+        var E = l["value"];
+      } else {
+        this['_secondFoc' + 'us'] && (this["_tempFocus"] = this["_secondFoc" + 'us'], this["_secondFoc" + 'us'] = null, this['_tempCount'] = 0x0, this["step"](0x1));
+      }
+    };
+    B["adjustBack" + "Drops"] = function () {
+
+
+      for (var u = 0x0; u < this["backDrops"]["length"]; u++) {
+        var l = this["backDrops"][u];
+        l["multiplier"] > 0x0 && (l['x'] = Math["round"](this["_container" + "Obj"]['x'] * l["multiplier"]), l['y'] = Math['round'](this['_container' + "Obj"]['y'] * l["multiplier"]));
+      }
+    };
+    I = m;
+    (k = [{
+      'key': "midScreenP" + "oint",
+      'get': function () {
+
+        return this["_midScreen"];
+      }
+    }, {
+      'key': "screenBoun" + 'ds',
+      'get': function () {
+
+
+        return this["_screenBou" + "nds"];
+      }
+    }, {
+      'key': "screenMoti" + 'on',
+      'get': function () {
+
+
+        if ("FXCKk" !== "KwZnk") {
+          return this["_screenMot" + "ion"];
+        } else {
+          var l = l["children"];
+          var E = o["triggerAct" + "ions"]['get'](h);
+          E || (E = [], E['triggerAct' + "ions"]["set"](R, E));
+          for (var R = 0x0; R < l["length"]; R++) {
+            var W = l[R];
+            var A = (0x0, y['Wh'])(W['@i']);
+            if (c) {
+              var J = q0[A];
+              E["push"](J);
+              var D = q1 ? q2[A] : null;
+              if (D) {
+                for (var g = 0x0; g < D["length"]; g++) {
+                  qN = D[g];
+                  var S = qf['keyedPrope' + "rtyObject"][qT];
+                  S || (S = qV["keyedPrope" + "rtyObject"][qh] = new qC());
+                  var d = S["get"](qj);
+                  d || (d = [], S['set'](qP, d));
+                  var z = W['@p' + g];
+                  void 0x0 !== z && (d[R] = 't' == z || 'f' == z ? 't' == z : qp(z));
+                }
+              }
+            }
+          }
+        }
+      }
+    }, {
+      'key': 'focus',
+      'get': function () {
+
+        return this["_focus"];
+      },
+      'set': function (u) {
+
+        this["_focus"] = u;
+      }
+    }, {
+      'key': "secondFocu" + 's',
+      'get': function () {
+
+
+        if ("lpuqh" !== "XcQtF") {
+          return this["_secondFoc" + 'us'];
+        } else {
+          V(h, C, function (l) {
+            return this["_invoke"](p, K, l);
+          });
+        }
+      },
+      'set': function (u) {
+
+        this["_secondFoc" + 'us'] = u;
+      }
+    }, {
+      'key': "containerO" + 'bj',
+      'get': function () {
+
+        return this['_container' + "Obj"];
+      },
+      'set': function (u) {
+
+
+        if ("CMRzU" !== "CMRzU") {
+          var E = f["vertices"][V];
+          var R = B['cos'](u) * E['x'] - l["sin"](o) * E['y'];
+          var W = h["cos"](E) * E['y'] + R['sin'](W) * E['x'];
+          A["vertices"][r] = new J['RM'](D['x'] + R, g['y'] + W);
+        } else {
+          this["_container" + "Obj"] = u;
+        }
+      }
+    }, {
+      'key': "displaceme" + 'nt',
+      'get': function () {
+
+
+        if ("yPMhR" === "yPMhR") {
+          return this['_displacem' + 'ent'];
+        } else {
+          this["_container" + 'Obj'] = p;
+        }
+      },
+      'set': function (u) {
+
+
+        this["_displacem" + "ent"] = u["clone"]();
+      }
+    }, {
+      'key': "buttonCont" + 'ainer',
+      'get': function () {
+
+
+        if ('vybSz' === "xLiFY") {
+          var l;
+          void 0x0 === V && (B = 0x0);
+          void 0x0 === u && (l = 0x3);
+          void 0x0 === o && (h = !0x1);
+          (l = E["call"](this) || this)["_multiplie" + 'r'] = R;
+          l["blur"] = W;
+          l["quality"] = A;
+          l["transparen" + 't'] = r;
+          J instanceof D['q9'] && !g ? l['pixiSprite']["addChild"](S) : (l["_visual"] = d, l["createBitm" + "aps"]());
+          return l;
+        } else {
+          return this["_buttonCon" + "tainer"];
+        }
+      },
+      'set': function (u) {
+
+
+        this["_buttonCon" + "tainer"] = u;
+      }
+    }]) && function (u, l) {
+
+
+      for (var E = 0x0; E < l["length"]; E++) {
+        var R = l[E];
+        R["enumerable"] = R["enumerable"] || !0x1;
+        R["configurab" + 'le'] = !0x0;
+        "value" in R && (R["writable"] = !0x0);
+        Object['defineProp' + "erty"](u, p(R["key"]), R);
+      }
+    }(I["prototype"], k);
+    Object["defineProp" + "erty"](I, "prototype", {
+      'writable': !0x1
+    });
+    return I;
+  }();
+}

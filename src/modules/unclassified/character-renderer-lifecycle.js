@@ -1,0 +1,43 @@
+function (T, V, C) {
+  'use strict';
+
+  C['d'](V, {
+    'eM': () => K,
+    'l5': () => P['l'],
+    'JD': () => p['J'],
+    'j_': () => u,
+    'k1': () => j['k'],
+    'iG': () => k,
+    'Iy': () => j['I']
+  });
+  var j = C(0x2f77);
+  var P = C(0x1d80);
+  var p = C(0x11d24);
+  var K = function () {
+    function E() {
+      this["startTime"] = Date["now"]();
+    }
+    E["prototype"]["stop"] = function () {
+
+      return Date["now"]() - this['startTime'];
+    };
+    return E;
+  }();
+  var m = C(0x136b);
+  var I = C(0x17fd7);
+  function k(E) {
+    if ("HqtUP" === "mKEHL") {
+      return this["frameBody"];
+    } else {
+      var R = new m['j7']();
+      var W = "Character" + E;
+      R["setPixiMov" + "ieClip"]((0x0, I['zI'])(W));
+      R["convertChi" + "ldren"](R["pixiMovieC" + 'lip']);
+      return R;
+    }
+  }
+  var B = C(0x88f1);
+  function u() {
+    B['w']["rootApp"]["renderer"]["geometry"]["disposeAll"](!0x1);
+  }
+}

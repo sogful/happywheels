@@ -1,0 +1,276 @@
+function (T, V, C) {
+  'use strict';
+
+  C['d'](V, {
+    'W': () => I
+  });
+  C(0xb284);
+  C(0x15de4);
+  C(0xcdc3);
+  C(0x15d77);
+  C(0x65f3);
+  C(0xb4c);
+  var j = C(0x136b);
+  var P = C(0x3432);
+  function p(k, B) {
+    for (var u = 0x0; u < B["length"]; u++) {
+      if ("PIkay" !== "PIkay") {
+        this["frames"]++;
+        var R = this["_now"]();
+        if (R >= this["prevTime"] + K["updateInte" + 'rvalMs']) {
+          var W = this['frames'] / ((R - this["prevTime"]) / 0x3e8);
+          this["textField"]["text"] = W["toFixed"](0x0) + " fps";
+          this["prevTime"] = R;
+          this['frames'] = 0x0;
+        }
+      } else {
+        var l = B[u];
+        l["enumerable"] = l["enumerable"] || !0x1;
+        l["configurab" + 'le'] = !0x0;
+        'value' in l && (l["writable"] = !0x0);
+        Object['defineProp' + "erty"](k, K(l['key']), l);
+      }
+    }
+  }
+  function K(k) {
+    if ("oWpFP" === 'oWpFP') {
+      var B = function (u) {
+
+
+        if ("object" != typeof u || !u) {
+          return u;
+        }
+        var l = u[Symbol["toPrimitiv" + 'e']];
+        if (void 0x0 !== l) {
+          if ('Rzyqs' === 'Rzyqs') {
+            var E = l["call"](u, "string");
+            if ("object" != typeof E) {
+              return E;
+            }
+            throw new TypeError('@@toPrimit' + "ive must r" + 'eturn\x20a\x20pr' + "imitive va" + "lue.");
+          } else {
+            void 0x0 === C && (j = 0x1);
+            for (var W = this['numChildre' + 'n'], A = 0x0; A < W; A++) {
+              var J = this["getChildAt"](A);
+              0x0 == J["step"](k) && (A -= 0x1, W -= 0x1, j["totalParti" + "cles"] -= 0x1, this["removeChil" + 'd'](J));
+            }
+            !this["_accumulat" + "edDelta"] && K["totalParti" + 'cles'] < m["maxParticl" + 'es'] && this["createPart" + "icle"]();
+            this["_accumulat" + "edDelta"] += I;
+            this["_accumulat" + "edDelta"] >= 0x1 && (this["_accumulat" + "edDelta"] = 0x0);
+            return !this["finished"] || 0x0 != W;
+          }
+        }
+        return String(u);
+      }(k);
+      return "symbol" == typeof B ? B : B + '';
+    } else {
+      h = C["setPrototy" + "peOf"] ? j["setPrototy" + "peOf"]["bind"]() : function (l, E) {
+        l['__proto__'] = E;
+        return l;
+      };
+      return P(p, K);
+    }
+  }
+  function m(k, B) {
+    if ("bgATZ" !== "bgATZ") {
+      var l;
+      void 0x0 === T && (V = !0x1);
+      (l = I["call"](this) || this)["m_iteratio" + 'ns'] = 0xa;
+      l["m_timeStep"] = 0x1 / 0x1e;
+      l['m_physScal' + 'e'] = 62.5;
+      l["totalFrame" + 's'] = 0x1e;
+      l['frames'] = 0x0;
+      l["useDebugge" + 'r'] = C;
+      l["parent"] && (l["useDebugge" + 'r'] = !0x0, l["test"]());
+      return l;
+    } else {
+      m = Object['setPrototy' + "peOf"] ? Object["setPrototy" + 'peOf']["bind"]() : function (l, E) {
+
+        l["__proto__"] = E;
+        return l;
+      };
+      return m(k, B);
+    }
+  }
+  var I = function (k) {
+    function B() {
+      var R;
+      (R = k["call"](this) || this)['windowWidt' + 'h'] = 0xc8;
+      R["windowHeig" + 'ht'] = 0x9b;
+      R['windowClos' + 'ed'] = function (W) {
+
+
+        if ("ltgmM" === "ltgmM") {
+          B["windowX"] = R["_window"]['x'];
+          B["windowY"] = R["_window"]['y'];
+          R['_window']["removeEven" + "tListener"](P['p8']["WINDOW_CLO" + "SED"], R['windowClos' + 'ed']);
+          R["_window"] = null;
+          R["dispatchEv" + "ent"](new j['Jh'](P['p8']["WINDOW_CLO" + "SED"]));
+        } else {
+          var J = V[h];
+          J["enumerable"] = J["enumerable"] || !0x1;
+          J["configurab" + 'le'] = !0x0;
+          "value" in J && (J["writable"] = !0x0);
+          C['defineProp' + "erty"](j, P(J["key"]), J);
+        }
+      };
+      if (B["_instance"]) {
+        throw new Error("help windo" + "w already " + "exists");
+      }
+      B["_instance"] = R;
+      R["init"]();
+      return R;
+    }
+    var u;
+    var l;
+    l = k;
+    (u = B)["prototype"] = Object["create"](l['prototype']);
+    u["prototype"]["constructo" + 'r'] = u;
+    m(u, l);
+    var E = B["prototype"];
+    E["init"] = function () {
+
+
+      this["createWind" + 'ow']();
+      this["createShit"]();
+    };
+    E["createWind" + 'ow'] = function () {
+
+
+      if ("pieWh" !== 'pieWh') {
+        var W;
+        (W = T["call"](this) || this)["MOBILE_CON" + "TROL_BUTTO" + "N_NAME_PRE" + "FIX"] = 'mobile-but' + "ton-";
+        W["nextButton" + 'Id'] = 0x0;
+        W['mouseUpHan' + 'dlerBind'] = W["mouseUpHan" + "dler"]["bind"](W);
+        W["mouseDownH" + "andlerBind"] = W["mouseDownH" + "andler"]["bind"](W);
+        W["touchMoveB" + "ind"] = W["touchMove"]["bind"](W);
+        W["controlSta" + 'te'] = V["DefaultVeh" + "icle"];
+        W["mouseUpHan" + "dlerSessio" + 'n'] = E;
+        W["mouseDownH" + 'andlerSess' + "ion"] = C;
+        W["buttons"] = [];
+        W['fingerToPr' + "essedButto" + 'nMap'] = {};
+        W["buttonName" + 'ToKeyCodeM' + 'ap'] = {};
+        W["isFingerOn" + "ButtonMap"] = {};
+        return W;
+      } else {
+        this["_window"] = new P['p8'](!0x0, this);
+        this["_window"]["setDimensi" + "ons"](this['windowWidt' + 'h'], this["windowHeig" + 'ht']);
+        B["windowX"] && (this["_window"]['x'] = B["windowX"], this["_window"]['y'] = B["windowY"]);
+        this["_window"]["addEventLi" + "stener"](P['p8']["WINDOW_CLO" + "SED"], this["windowClos" + 'ed']);
+      }
+    };
+    E["closeWindo" + 'w'] = function () {
+
+
+      "PjQJT" === "PjQJT" ? (B['windowX'] = this["_window"]['x'], B['windowY'] = this["_window"]['y'], this["_window"]["removeEven" + "tListener"](P['p8']["WINDOW_CLO" + "SED"], this["windowClos" + 'ed']), this["_window"]["closeWindo" + 'w'](), this["_window"] = null) : this["_window"] = new N['p'](!0x1, this, f);
+    };
+    E["createShit"] = function () {
+
+
+      if ('qqxTg' !== "qqxTg") {
+        j["strappedIn"] = !0x1;
+        var J = new P['gv']();
+        var D = new p['_A']();
+        D["density"] = 0.25;
+        D["friction"] = 0x1;
+        D["restitutio" + 'n'] = 0.1;
+        D["filter"]["categoryBi" + 'ts'] = 0x0;
+        D["filter"]['maskBits'] = 0x0;
+        D["radius"] = 0.048;
+        if (K == this['elf1']) {
+          var g = this["strapChest" + "1Joints"];
+          var S = new m['RM']();
+          var d = "StrapSnap1";
+        } else {
+          g = this['strapChest' + "2Joints"];
+          S = new I['RM'](0x0, -0.016);
+          d = "StrapSnap2";
+        }
+        var z = g[0x0];
+        var F = z["GetAnchor1"]();
+        J["position"]['SetV'](F);
+        var M = this["_session"]["m_world"]["CreateBody"](J);
+        M["CreateShap" + 'e'](D);
+        M["SetMassFro" + "mShapes"]();
+        M["SetLinearV" + 'elocity'](this["sleighBody"]["GetLinearV" + "elocityFro" + "mWorldPoin" + 't'](F));
+        this['antiGravAr' + "ray"]["push"](M);
+        var H = new k['Vy']();
+        H["Initialize"](M, z['m_body2'], F, z["m_body2"]["GetWorldPo" + "int"](S));
+        H["length"] = z["m_length"];
+        var b = this["_session"]['m_world']["CreateJoin" + 't'](H);
+        this["_session"]["m_world"]["DestroyJoi" + 'nt'](z);
+        g[0x0] = b;
+        f['m']["instance"]['playAreaSo' + "undInstanc" + 'e'](d, M);
+      } else {
+        this["graphics"]["beginFill"](0xffffff);
+        this['graphics']["drawRect"](0x0, 0x0, this["windowWidt" + 'h'], this["windowHeig" + 'ht']);
+        this["graphics"]["endFill"]();
+        var R = new j['lk']("HelveticaN" + "eueLT Std", 0xc, 0x0, null, null, null, null, null, j['MA']["LEFT"]);
+        this['textField'] = new j['A_']();
+        this["textField"]["defaultTex" + "tFormat"] = R;
+        this["textField"]["width"] = this["windowWidt" + 'h'] - 0xc;
+        this["textField"]["height"] = 0x14;
+        this["textField"]['x'] = 0x0;
+        this["textField"]['y'] = 0x0;
+        this['textField']["multiline"] = !0x0;
+        this["textField"]["autoSize"] = j['wL']["LEFT"];
+        this["textField"]["wordWrap"] = !0x0;
+        this['textField']["selectable"] = !0x1;
+        this["textField"]["antiAliasT" + "ype"] = j['BF']["ADVANCED"];
+        this["holder"] = new j['kx']();
+        this['addChild'](this["holder"]);
+        this["holder"]["addChild"](this['textField']);
+        this["maskSprite"] = new j['kx']();
+        this["maskSprite"]["graphics"]["beginFill"](0x0);
+        this["maskSprite"]["graphics"]["drawRect"](0x0, 0x0, this["windowWidt" + 'h'] - 0xc, this["windowHeig" + 'ht']);
+        this["maskSprite"]["graphics"]["endFill"]();
+        this['addChild'](this["maskSprite"]);
+        this["holder"]["mask"] = this["maskSprite"];
+        this["scroller"] = new P['Em'](this["holder"], this["maskSprite"], 0x16);
+        this["addChild"](this["scroller"]);
+        this["scroller"]['x'] = this["windowWidt" + 'h'] - 0xc;
+      }
+    };
+    E['populate'] = function (R) {
+
+
+      if ("RKHPs" === 'NlcWZ') {
+        return this["_currentPa" + 'ge'];
+      } else {
+        this["textField"]["renderHtml"](R);
+        this["holder"]['y'] = 0x0;
+        this["scroller"]["updateScro" + "llTab"]();
+      }
+    };
+    E["die"] = function () {
+
+
+      B["_instance"] = null;
+      this["scroller"]["die"]();
+      this["_window"] && this["_window"]["closeWindo" + 'w']();
+      this["textField"]["destroy"]();
+    };
+    return function (R, W, A) {
+
+
+      W && p(R["prototype"], W);
+      A && p(R, A);
+      Object["defineProp" + "erty"](R, "prototype", {
+        'writable': !0x1
+      });
+      return R;
+    }(B, [{
+      'key': "window",
+      'get': function () {
+
+        return this["_window"];
+      }
+    }], [{
+      'key': "instance",
+      'get': function () {
+
+        return this["_instance"];
+      }
+    }]);
+  }(j['kx']);
+}
