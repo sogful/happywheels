@@ -11,27 +11,28 @@
 </head>
 <body>
     <main class="game-frame">
-        <div class="game" id="og-game-holder" aria-label="Happy Wheels game"></div>
-        <section class="account-hud" aria-label="Game account">
-            <button class="account-toggle" id="account-button" type="button" aria-label="Sign in" aria-expanded="false" aria-controls="account-panel">Sign in</button>
-            <div class="account-panel" id="account-panel" hidden>
-                <form class="account-form" id="account-form">
-                    <div class="account-fields">
-                        <label class="account-field" for="account-email">Email
-                            <input id="account-email" name="email" type="email" autocomplete="username" maxlength="320" required>
-                        </label>
-                        <label class="account-field" for="account-password">Password
-                            <input id="account-password" name="password" type="password" autocomplete="current-password" maxlength="1024" required>
-                        </label>
-                    </div>
-                    <p class="account-feedback" id="account-feedback" role="status" aria-live="polite"></p>
-                    <div class="dialog-actions">
-                        <button class="account-submit" id="account-submit" type="submit" aria-label="Sign in">Sign in</button>
-                        <button class="account-close" id="account-close" type="button">Close</button>
-                    </div>
-                </form>
-            </div>
-        </section>
+        <div class="game" id="og-game-holder" aria-label="Happy Wheels game">
+            <section class="account-hud" aria-label="Game account" hidden>
+                <button class="account-toggle" id="account-button" type="button" aria-label="Log in" aria-expanded="false" aria-controls="account-panel">Log in</button>
+                <div class="account-panel" id="account-panel" hidden>
+                    <form class="account-form" id="account-form">
+                        <div class="account-fields">
+                            <label class="account-field" for="account-email">Email
+                                <input class="account-input" id="account-email" name="email" type="email" autocomplete="username" maxlength="320" required>
+                            </label>
+                            <label class="account-field" for="account-password">Password
+                                <input class="account-input" id="account-password" name="password" type="password" autocomplete="current-password" maxlength="1024" required>
+                            </label>
+                        </div>
+                        <p class="account-feedback" id="account-feedback" role="status" aria-live="polite"></p>
+                        <div class="dialog-actions">
+                            <button class="account-submit" id="account-submit" type="submit" aria-label="Log in">Log in</button>
+                            <button class="account-close" id="account-close" type="button">Close</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
     </main>
     <script src="./src/bootstrap.js"></script>
     <script src="./index.js"></script>
