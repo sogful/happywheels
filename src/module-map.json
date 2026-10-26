@@ -310,5 +310,11 @@
     "file": "modules/shims/noop77199.js",
     "name": "noop77199",
     "role": "Dependency no-op shim"
+  },
+  {
+    "id": "mobileinput",
+    "file": "modules/characters/mobileinput.js",
+    "name": "mobile-input",
+    "role": "Mobile control layout and multi-pointer input"
   }
 ]
