@@ -46,7 +46,7 @@ function (module, exports, require) {
       }
       window.addEventListener("touchend", this.touchendbind);
       window.addEventListener("touchcancel", this.touchendbind);
-      for (const name of ["blur", "pagehide", "resize", "orientationchange"]) {
+      for (const name of ["blur", "pagehide", "resize", "orientationchange", "gameviewportchange"]) {
         window.addEventListener(name, this.releasebind);
       }
       document.addEventListener("visibilitychange", this.visibilitybind);
@@ -183,7 +183,7 @@ function (module, exports, require) {
       }
       window.removeEventListener("touchend", this.touchendbind);
       window.removeEventListener("touchcancel", this.touchendbind);
-      for (const name of ["blur", "pagehide", "resize", "orientationchange"]) {
+      for (const name of ["blur", "pagehide", "resize", "orientationchange", "gameviewportchange"]) {
         window.removeEventListener(name, this.releasebind);
       }
       document.removeEventListener("visibilitychange", this.visibilitybind);

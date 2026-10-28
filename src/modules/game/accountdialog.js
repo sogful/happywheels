@@ -57,6 +57,7 @@ function (module, exports, require) {
       this.frame.addEventListener(widgets.p8.WINDOW_CLOSED, this.closebind);
       this.resizebind = () => {if (this.hoststage) this.place(this.hoststage)};
       window.addEventListener("resize", this.resizebind);
+      window.addEventListener("gameviewportchange", this.resizebind);
       document.addEventListener("keydown", this.keybind, {capture: true});
     }
     place(stage) {
@@ -94,6 +95,7 @@ function (module, exports, require) {
       input._dom_input.setAttribute("aria-label", name);
       input._dom_input.setAttribute("autocomplete", name === "Email" ? "username" : "current-password");
       input._dom_input.setAttribute("inputmode", name === "Email" ? "email" : "text");
+      input._dom_input.style.fontSize = "16px";
       this.pixiSprite.addChild(input);
       return input;
     }
@@ -164,6 +166,7 @@ function (module, exports, require) {
       active = null;
       if (this.request) this.request.abort();
       window.removeEventListener("resize", this.resizebind);
+      window.removeEventListener("gameviewportchange", this.resizebind);
       document.removeEventListener("keydown", this.keybind, {capture: true});
       this.frame.removeEventListener(widgets.p8.WINDOW_CLOSED, this.closebind);
       this.loginbutton.removeEventListener(display.Cm.MOUSE_UP, this.submitbind);
