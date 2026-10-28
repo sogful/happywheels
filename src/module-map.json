@@ -316,5 +316,11 @@
     "file": "modules/characters/mobileinput.js",
     "name": "mobile-input",
     "role": "Mobile control layout and multi-pointer input"
+  },
+  {
+    "id": "accountdialog",
+    "file": "modules/game/accountdialog.js",
+    "name": "tjf-account-dialog",
+    "role": "In-game TJF login window adapted from the Steam edition"
   }
 ]

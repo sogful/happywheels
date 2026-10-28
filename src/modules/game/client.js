@@ -10813,7 +10813,7 @@ function (q0, q1, q2) {
       Nr["type"] == qo['PL']["ID_NOT_FOU" + 'ND'] ? this["openMainMe" + 'nu']() : (N1['setCurrent' + "Menu"](N1["REPLAY_BRO" + "WSER"]), n7["importLeve" + "lDataArray"]([NJ["levelDataO" + "bject"]]), nv["importRepl" + "ayDataArra" + 'y']([NJ["replayData" + "Object"]], NJ['levelDataO' + "bject"]), this["openSessio" + "nControlle" + 'r'](NJ["levelDataO" + "bject"], NJ["replayData" + "Object"]));
     };
     NA["openMainMe" + 'nu'] = function () {
-      if (typeof window.setaccountvisibility === "function") window.setaccountvisibility(true);
+      if (typeof window.setaccountvisibility === "function") window.setaccountvisibility(true, this.stage);
       if ("eJkLY" === 'eJkLY') {
         this["mainMenu"] = new N1();
         this["addChildAt"](this["mainMenu"], 0x0);

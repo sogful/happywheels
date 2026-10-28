@@ -68,134 +68,43 @@ body::before {
     pointer-events: auto;
 }
 
-.account-panel {
-    position: absolute;
-    top: 41px;
-    left: 12px;
-    width: min(320px, calc(100vw - 24px));
-    margin: 0;
-    border: 1px solid #bebebe;
-    padding: 10px;
-    background: #e6e6e6;
-    color: #1e1e1e;
-    pointer-events: auto;
-}
-
-.account-form {
-    width: 100%;
-}
-
-.account-fields {
-    display: grid;
-    gap: 0;
-}
-
-.account-field {
-    display: block;
-    color: #1e1e1e;
-}
-
-.account-input {
-    box-sizing: content-box;
-    display: block;
-    width: min(615px, calc(100% - 8px));
-    height: 35px;
-    margin-top: 30px;
-    border: 2px inset rgb(118, 118, 118);
-    border-radius: 0;
-    padding: 1px 2px;
-    background: #fff;
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.account-input:focus-visible {
-    outline: 2px solid #4eb0e8;
-    outline-offset: 2px;
-}
-
-.dialog-actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-}
-
-.account-toggle,
-.account-submit,
-.account-close {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 80px;
-    height: 21px;
-    border: 0;
-    border-radius: 3px;
-    padding: 0 8px;
+.account-toggle {
+    display: inline-flex; align-items: center;
+    justify-content: center; min-width: 80px;
+    height: 21px; border: 0;
+    border-radius: 3px; padding: 0 8px;
     background: linear-gradient(to bottom, #fda0a0 0%, #fd8181 30%, #fd8181 80%, #de7474 100%);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 0 1px 2px rgba(0, 0, 0, 0.25);
-    color: #fff;
-    cursor: pointer;
+    box-shadow: inset 0 1px rgba(255,255,255,0.4), 0 1px 2px rgba(0,0,0,0.25);
+    color: #fff; cursor: pointer;
     font: 700 10px Georgia, "Times New Roman", Times, serif;
     text-transform: uppercase;
 }
 
-.account-close {
-    margin-top: 17px;
-    background: linear-gradient(to bottom, #fff 0%, #fff 30%, #f4f4f4 80%, #dedede 100%);
-    color: #333;
+.account-toggle:hover {filter: brightness(1.05)}
+
+.account-toggle:disabled {
+    cursor: wait; opacity: 0.55;
 }
 
-.account-submit {
-    margin-top: 17px;
-}
-
-.account-toggle:hover,
-.account-submit:hover {
-    filter: brightness(1.05);
-}
-
-.account-close:hover {
-    filter: brightness(0.97);
-}
-
-.account-toggle:disabled,
-.account-submit:disabled {
-    cursor: wait;
-    opacity: 0.55;
-}
-
-.account-toggle:focus-visible,
-.account-submit:focus-visible,
-.account-close:focus-visible {
-    outline: 2px solid #4eb0e8;
-    outline-offset: 2px;
+.account-toggle:focus-visible {
+    outline: 2px solid #4eb0e8; outline-offset: 2px;
 }
 
 .account-feedback {
-    min-height: 1.2em;
-    margin: 8px 0 0;
-    color: rgb(199, 0, 0);
-    font: 700 13px Georgia, "Times New Roman", Times, serif;
+    position: absolute; width: 1px;
+    height: 1px; overflow: hidden;
+    clip-path: inset(50%); white-space: nowrap;
 }
 
-.account-feedback[data-state="pending"] {
-    color: #555;
-    font: 12px / 14px Georgia, "Times New Roman", Times, serif;
+.accountnotice {
+    top: 38px; width: auto;
+    height: auto; overflow: visible;
+    clip-path: none; white-space: normal;
+    left: 12px; max-width: calc(100% - 24px);
+    margin: 0; color: #fff;
+    font: 11px Arial, sans-serif; pointer-events: none;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    clip-path: inset(50%);
-}
+.account-feedback:empty {display: none}
 
-[hidden] {
-    display: none !important;
-}
+[hidden] {display: none !important}
