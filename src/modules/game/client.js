@@ -6683,7 +6683,7 @@ function (q0, q1, q2) {
           NA["mouseUpHan" + "dler"] = function (ND) {
             switch (ND["target"]) {
               case NA['touchContr' + 'olsCheck']:
-                NA['displayMob' + "ileControl" + "sChangePop" + 'up']();
+                q2("optionsbridge").touch(NA);
                 break;
               case NA["fCheck"]:
                 NA["stage"]["displaySta" + 'te'] == q5['se']["FULL_SCREE" + "N_INTERACT" + "IVE"] ? (NA["stage"]["displaySta" + 'te'] = q5['se']['NORMAL'], NA["stage"]["displaySta" + 'te'] == q5['se']["NORMAL"] && NA["fCheck"]["gotoAndSto" + 'p'](0x1)) : (NA["stage"]["displaySta" + 'te'] = q5['se']["FULL_SCREE" + "N_INTERACT" + "IVE"], NA["stage"]["displaySta" + 'te'] == q5['se']["FULL_SCREE" + "N_INTERACT" + "IVE"] && NA["fCheck"]["gotoAndSto" + 'p'](0x2));
@@ -6710,15 +6710,15 @@ function (q0, q1, q2) {
                 break;
               case NA["textureRes" + "olutionLow" + "Check"]:
                 NA["chosenText" + "ureResolut" + "ion"] = "low";
-                NA["displayTex" + "tureResolu" + "tionChange" + "Popup"]();
+                q2("optionsbridge").quality(NA, NA.chosenTextureResolution);
                 break;
               case NA['textureRes' + "olutionMed" + "iumCheck"]:
                 NA["chosenText" + "ureResolut" + "ion"] = "medium";
-                NA["displayTex" + "tureResolu" + "tionChange" + "Popup"]();
+                q2("optionsbridge").quality(NA, NA.chosenTextureResolution);
                 break;
               case NA["textureRes" + "olutionHig" + 'hCheck']:
                 NA["chosenText" + 'ureResolut' + "ion"] = "high";
-                NA["displayTex" + "tureResolu" + "tionChange" + "Popup"]();
+                q2("optionsbridge").quality(NA, NA.chosenTextureResolution);
                 break;
               case NA["customizeC" + "ontrolsBut" + "ton"]:
                 n9['J']["trackEvent"](n9['J']["OPTIONS"], n9['J']["CUSTOMIZE_" + "CONTROLS"]);
@@ -6842,15 +6842,15 @@ function (q0, q1, q2) {
           NA["increasedF" + "ramesCheck"]["addEventLi" + "stener"](q5['Cm']["MOUSE_OVER"], NA["mouseOverH" + "andler"]);
           NA["textureRes" + 'olutionLow' + "Check"] = NA["__mc"]["textureRes" + 'olutionLow' + "Check"];
           NA["textureRes" + "olutionLow" + 'Check']["buttonMode"] = !0x0;
-          "low" !== q6['w']["textureRes" + "olution"] && NA["textureRes" + "olutionLow" + "Check"]["addEventLi" + "stener"](q5['Cm']["MOUSE_UP"], NA["mouseUpHan" + "dler"]);
+          NA["textureRes" + "olutionLow" + "Check"]["addEventLi" + "stener"](q5['Cm']["MOUSE_UP"], NA["mouseUpHan" + "dler"]);
           NA["textureRes" + 'olutionLow' + "Check"]["addEventLi" + "stener"](q5['Cm']["MOUSE_OVER"], NA["mouseOverH" + 'andler']);
           NA["textureRes" + "olutionMed" + "iumCheck"] = NA["__mc"]["textureRes" + "olutionMed" + "iumCheck"];
           NA["textureRes" + 'olutionMed' + "iumCheck"]["buttonMode"] = !0x0;
-          "medium" !== q6['w']['textureRes' + "olution"] && NA["textureRes" + "olutionMed" + "iumCheck"]["addEventLi" + 'stener'](q5['Cm']["MOUSE_UP"], NA["mouseUpHan" + "dler"]);
+          NA["textureRes" + "olutionMed" + "iumCheck"]["addEventLi" + 'stener'](q5['Cm']["MOUSE_UP"], NA["mouseUpHan" + "dler"]);
           NA["textureRes" + "olutionMed" + "iumCheck"]["addEventLi" + "stener"](q5['Cm']["MOUSE_OVER"], NA["mouseOverH" + "andler"]);
           NA["textureRes" + "olutionHig" + "hCheck"] = NA['__mc']["textureRes" + "olutionHig" + "hCheck"];
           NA["textureRes" + 'olutionHig' + "hCheck"]["buttonMode"] = !0x0;
-          "high" !== q6['w']['textureRes' + "olution"] && NA["textureRes" + "olutionHig" + "hCheck"]["addEventLi" + "stener"](q5['Cm']["MOUSE_UP"], NA["mouseUpHan" + 'dler']);
+          NA["textureRes" + "olutionHig" + "hCheck"]["addEventLi" + "stener"](q5['Cm']["MOUSE_UP"], NA["mouseUpHan" + 'dler']);
           NA["textureRes" + "olutionHig" + "hCheck"]["addEventLi" + "stener"](q5['Cm']["MOUSE_OVER"], NA["mouseOverH" + "andler"]);
           NA["fCheck"] = NA["__mc"]["fCheck"];
           NA["fCheck"]["buttonMode"] = !0x0;
@@ -6871,6 +6871,7 @@ function (q0, q1, q2) {
           NA["touchContr" + "olsCheck"]["addEventLi" + "stener"](q5['Cm']["MOUSE_UP"], NA["mouseUpHan" + "dler"]);
           NA["touchContr" + "olsCheck"]['buttonMode'] = !0x0;
           NA["touchContr" + "olsCheck"]["gotoAndSto" + 'p'](q6['w']["mobileCont" + "rols"] ? 0x2 : 0x1);
+          q2("optionsbridge").attach(NA);
           NA["particleSl" + "ider"] = new nz('', '', 0x4, !0x0, 0x0, 0x7d0, 0xa);
           NA["particleSl" + "ider"]['x'] = 0x1d1;
           NA["particleSl" + "ider"]['y'] = 98.75;
@@ -7054,6 +7055,7 @@ function (q0, q1, q2) {
           null === (NA = this["gamepadCon" + "trolsButto" + 'n']) || void 0x0 === NA || NA["removeEven" + "tListener"](q5['Cm']['MOUSE_OVER'], this["gamepadBut" + "tonOverHan" + "dler"]);
           this["removeEven" + "tListener"](q5['Cm']["MOUSE_UP"], this["mouseUpHan" + "dler"]);
           this["removeEven" + "tListener"](q5['Cm']["MOUSE_OVER"], this["mouseOverH" + 'andler']);
+          q2("optionsbridge").detach(this);
           this["particleSl" + "ider"]["removeEven" + "tListener"](q3['vq']["VALUE_CHAN" + 'GE'], this["sliderChan" + 'ge']);
           this["bloodTypeS" + "lider"]['removeEven' + "tListener"](q3['vq']["VALUE_CHAN" + 'GE'], this['bloodTypeS' + "liderChang" + 'e']);
           this["renderResS" + "lider"]["removeEven" + "tListener"](q3['vq']["VALUE_CHAN" + 'GE'], this['renderResS' + "liderChang" + 'e']);
@@ -9528,6 +9530,8 @@ function (q0, q1, q2) {
       } else {
         this["buildStage"]();
         this["createButt" + "ons"]();
+        this.loginCorner = new (q2("accountcorner").corner)();
+        this.addChild(this.loginCorner);
         this["addEventLi" + "stener"](q5['Jh']['ENTER_FRAM' + 'E'], this["organizeBu" + "ttons"]);
         this["addEventLi" + 'stener'](q5['Cm']["MOUSE_UP"], this['mouseUpHan' + "dler"]);
         this['organizeBu' + "ttons"]();
@@ -10813,7 +10817,7 @@ function (q0, q1, q2) {
       Nr["type"] == qo['PL']["ID_NOT_FOU" + 'ND'] ? this["openMainMe" + 'nu']() : (N1['setCurrent' + "Menu"](N1["REPLAY_BRO" + "WSER"]), n7["importLeve" + "lDataArray"]([NJ["levelDataO" + "bject"]]), nv["importRepl" + "ayDataArra" + 'y']([NJ["replayData" + "Object"]], NJ['levelDataO' + "bject"]), this["openSessio" + "nControlle" + 'r'](NJ["levelDataO" + "bject"], NJ["replayData" + "Object"]));
     };
     NA["openMainMe" + 'nu'] = function () {
-      if (typeof window.setaccountvisibility === "function") window.setaccountvisibility(true, this.stage);
+      if (typeof window.setaccountvisibility === "function") window.setaccountvisibility(true, this.stage, this);
       if ("eJkLY" === 'eJkLY') {
         this["mainMenu"] = new N1();
         this["addChildAt"](this["mainMenu"], 0x0);

@@ -132,7 +132,6 @@ function (module, exports, require) {
         if (this.closed) return;
         if (result.ok) {
           this.close();
-          window.location.reload();
           return;
         }
         const messages = {

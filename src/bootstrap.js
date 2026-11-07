@@ -5,25 +5,9 @@
         ? "http://127.0.0.1:8787"
         : "https://tjfcors.coolsite.cv";
     window.TJF_WORKER_ORIGIN = workerOrigin;
-    const sessionStorageKey = "tjf-portable-session";
-    const getSessionToken = () => {
-        try {
-            return window.sessionStorage.getItem(sessionStorageKey);
-        } catch (error) {
-            return null;
-        }
-    };
-    const storeSessionToken = token => {
-        try {
-            if (token) window.sessionStorage.setItem(sessionStorageKey, token);
-            else window.sessionStorage.removeItem(sessionStorageKey);
-        } catch (error) {}
-    };
-    const captureSessionToken = response => {
-        const token = response.headers.get("X-TJF-Session");
-        if (token !== null) storeSessionToken(token);
-        return response;
-    };
+    const getSessionToken = () => window.happywheelsession.read();
+    const storeSessionToken = token => window.happywheelsession.write(token);
+    const captureSessionToken = (response, previous) => window.happywheelsession.capture(response, previous);
     const localizegameasseturl = value => {
         let url;
         try {
@@ -87,7 +71,7 @@
             this.addEventListener("loadend", () => {
                 try {
                     const refreshedToken = this.getResponseHeader("X-TJF-Session");
-                    if (refreshedToken !== null) storeSessionToken(refreshedToken);
+                    if (refreshedToken !== null && getSessionToken() === token) storeSessionToken(refreshedToken);
                 } catch (error) {}
             }, { once: true });
         }
@@ -118,7 +102,7 @@
                 cache: "no-store"
             };
             const requestInput = input instanceof Request ? new Request(rewritten, input) : rewritten;
-            return nativeFetch(requestInput, requestInit).then(captureSessionToken);
+            return nativeFetch(requestInput, requestInit).then(response => captureSessionToken(response, token));
         };
     }
 

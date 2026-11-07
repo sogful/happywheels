@@ -101,8 +101,10 @@ const gamefiles = {dependencies: "./src/dependencies/index.js"};
 
     const safemodeenabled = false;
     try {
-        window.happywheelaccount.request("/api/account")
-            .then(function(response) { return response.ok ? response.json() : null; })
+        Promise.race([
+            window.happywheelaccount.refresh(),
+            new Promise(resolve => setTimeout(() => resolve(null), 4000))
+        ])
             .catch(function() { return null; })
             .then(function(account) {
                 const userid = Number(account && account.user_id);

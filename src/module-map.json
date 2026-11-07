@@ -322,5 +322,17 @@
     "file": "modules/game/accountdialog.js",
     "name": "tjf-account-dialog",
     "role": "In-game TJF login window adapted from the Steam edition"
+  },
+  {
+    "id": "accountcorner",
+    "file": "modules/game/accountcorner.js",
+    "name": "accountcorner",
+    "role": "Native account and settings integration"
+  },
+  {
+    "id": "optionsbridge",
+    "file": "modules/game/optionsbridge.js",
+    "name": "optionsbridge",
+    "role": "Native account and settings integration"
   }
 ]

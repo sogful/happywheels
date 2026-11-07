@@ -25,6 +25,8 @@ function (module, exports, require) {
         this.movefinger(finger, this.buttons.includes(hit) ? hit : null);
       };
       this.releasebind = () => this.releasebuttons();
+      this.layoutbind = () => {if (this.controlState) this.setControlState(this.controlState); else this.releasebuttons()};
+      window.addEventListener("gametouchlayoutchange", this.layoutbind);
       this.visibilitybind = () => {if (document.hidden) this.releasebuttons()};
       this.endbind = event => {
         if (event.pointerType === "touch" && this.inputmanager.supportsTouchEvents) return;
@@ -129,7 +131,7 @@ function (module, exports, require) {
       button.anchor.set(0.5);
       button.scale.set(mirror ? -0.5 : 0.5, 0.5);
       button.angle = angle;
-      button.position.set(horizontal, vertical);
+      button.position.set(settings.sharedObject.data.touchhand === "left" ? 900 - horizontal : horizontal, vertical);
       button.interactive = true;
       button.alpha = controls.KEY_ALPHA_INACTIVE;
       button.on("pointerdown", this.downbind);
@@ -174,6 +176,7 @@ function (module, exports, require) {
     }
     "destroy"() {
       this.releasebuttons();
+      window.removeEventListener("gametouchlayoutchange", this.layoutbind);
       this.inputmanager.off("pointermove", this.movebind);
       for (const name of ["pointerup", "pointerupoutside", "pointercancel"]) {
         this.inputmanager.off(name, this.upbind);
